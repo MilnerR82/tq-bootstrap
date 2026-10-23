@@ -1,0 +1,147 @@
+// Colour substitutions only. Every size, shape, font, spacing, layout and
+// interaction comes from the unmodified Bootstrap 5.3.8 documentation styles.
+:root,
+[data-bs-theme="light"] {
+  --tq-docs-header-bg: #fff;
+  --tq-docs-header-rgb: 255, 255, 255;
+  --tq-docs-header-color: #373234;
+  --tq-docs-header-accent: #e31b23;
+  --tq-docs-close-filter: none;
+  --bd-toc-color: #8a0008;
+  --bd-callout-link: 138, 0, 8;
+  --bd-callout-code-color: #8a0008;
+  --base02: #d7d2cb;
+  --base03: #696567;
+  --base04: #696567;
+  --base05: #373234;
+  --base06: #fff;
+  --base07: #373234;
+  --base08: #8a0008;
+  --base09: #696567;
+  --base0A: #373234;
+  --base0B: #373234;
+  --base0C: #373234;
+  --base0D: #373234;
+  --base0E: #8a0008;
+  --base0F: #373234;
+  --docsearch-primary-color: #e31b23;
+  --docsearch-highlight-color: #8a0008;
+  --docsearch-logo-color: #e31b23;
+  --docsearch-text-color: #373234;
+  --docsearch-muted-color: #696567;
+  --docsearch-container-background: rgba(55, 50, 52, .8);
+  --docsearch-modal-background: #f1efed;
+  --docsearch-modal-shadow: inset 1px 1px 0 0 rgba(255, 255, 255, .5), 0 3px 8px 0 #696567;
+  --docsearch-searchbox-background: #e1ddd8;
+  --docsearch-searchbox-focus-background: #fff;
+  --docsearch-hit-color: #373234;
+  --docsearch-hit-background: #fff;
+  --docsearch-hit-active-color: #fff;
+  --docsearch-hit-shadow: 0 1px 3px 0 #d7d2cb;
+  --docsearch-key-gradient: linear-gradient(-225deg, #d7d2cb, #f1efed);
+  --docsearch-key-shadow: inset 0 -2px 0 0 #d7d2cb, inset 0 0 1px 1px #fff, 0 1px 2px 1px rgba(55, 50, 52, .4);
+  --docsearch-key-pressed-shadow: inset 0 -2px 0 0 #d7d2cb, inset 0 0 1px 1px #fff, 0 1px 1px 0 rgba(55, 50, 52, .4);
+  --docsearch-footer-background: #fff;
+  --docsearch-footer-shadow: 0 -1px 0 0 #e1ddd8, 0 -3px 6px 0 rgba(55, 50, 52, .12);
+}
+
+[data-bs-theme="dark"] {
+  --tq-docs-header-bg: #373234;
+  --tq-docs-header-rgb: 55, 50, 52;
+  --tq-docs-header-color: #fff;
+  --tq-docs-header-accent: #fff;
+  --tq-docs-close-filter: invert(1) grayscale(100%) brightness(200%);
+  --bd-toc-color: #fff;
+  --bd-callout-link: 255, 255, 255;
+  --bd-callout-code-color: #fff;
+  --base02: #696567;
+  --base03: #d7d2cb;
+  --base04: #d7d2cb;
+  --base05: #fff;
+  --base06: #fff;
+  --base07: #d7d2cb;
+  --base08: #fff;
+  --base09: #d7d2cb;
+  --base0A: #fff;
+  --base0B: #fff;
+  --base0C: #d7d2cb;
+  --base0D: #fff;
+  --base0E: #fff;
+  --base0F: #fff;
+  --docsearch-highlight-color: #fff;
+  --docsearch-logo-color: #fff;
+  --docsearch-text-color: #fff;
+  --docsearch-muted-color: #d7d2cb;
+  --docsearch-container-background: rgba(55, 50, 52, .8);
+  --docsearch-modal-background: #373234;
+  --docsearch-modal-shadow: inset 1px 1px 0 0 #696567, 0 3px 8px 0 #373234;
+  --docsearch-searchbox-background: #373234;
+  --docsearch-searchbox-focus-background: #373234;
+  --docsearch-hit-color: #fff;
+  --docsearch-hit-background: #373234;
+  --docsearch-key-gradient: linear-gradient(-26.5deg, #696567, #373234);
+  --docsearch-key-shadow: inset 0 -2px 0 0 #373234, inset 0 0 1px 1px #696567, 0 2px 2px 0 rgba(55, 50, 52, .3);
+  --docsearch-key-pressed-shadow: inset 0 -2px 0 0 #373234, inset 0 0 1px 1px #696567, 0 1px 1px 0 rgba(55, 50, 52, .4);
+  --docsearch-footer-background: #373234;
+  --docsearch-footer-shadow: inset 0 1px 0 0 rgba(105, 101, 103, .5), 0 -4px 8px 0 rgba(55, 50, 52, .2);
+}
+
+.bd-navbar { background-color: var(--tq-docs-header-bg); }
+.bd-navbar::after {
+  // Preserve the native gradient geometry; substitute both colours with the
+  // reading surface colour to produce the chosen white/charcoal header.
+  background-image: linear-gradient(rgba(var(--tq-docs-header-rgb), 1), rgba(var(--tq-docs-header-rgb), .95));
+}
+.bd-navbar .navbar-brand { color: var(--tq-docs-header-accent); }
+.bd-navbar .navbar-toggler,
+.bd-navbar .navbar-toggler:hover,
+.bd-navbar .navbar-toggler:focus,
+.bd-navbar .nav-link,
+.bd-navbar .nav-link:hover,
+.bd-navbar .nav-link:focus,
+.bd-navbar .nav-link.active { color: var(--tq-docs-header-color); }
+.bd-navbar .offcanvas-lg { background-color: var(--tq-docs-header-bg); }
+.bd-navbar .text-white,
+.bd-navbar .text-white-50 { color: var(--tq-docs-header-color) !important; }
+.bd-navbar .btn-close-white { filter: var(--tq-docs-close-filter); }
+.bd-navbar .dropdown-menu {
+  --bs-dropdown-bg: var(--bs-body-bg);
+  --bs-dropdown-color: var(--bs-body-color);
+  --bs-dropdown-link-color: var(--bs-body-color);
+  --bs-dropdown-link-hover-color: var(--bs-body-color);
+  --bs-dropdown-link-hover-bg: var(--bs-tertiary-bg);
+  --bs-dropdown-link-active-color: var(--bs-body-color);
+  --bs-dropdown-link-active-bg: var(--bs-tertiary-bg);
+}
+.DocSearch-Button {
+  --docsearch-searchbox-background: rgba(55, 50, 52, .1);
+  --docsearch-searchbox-color: var(--tq-docs-header-color);
+  --docsearch-searchbox-focus-background: rgba(55, 50, 52, .25);
+  --docsearch-searchbox-shadow: 0 0 0 .25rem rgba(138, 0, 8, .4);
+  --docsearch-text-color: var(--tq-docs-header-color);
+  --docsearch-muted-color: rgba(55, 50, 52, .65);
+  border-color: rgba(55, 50, 52, .4);
+}
+[data-bs-theme="dark"] .DocSearch-Button {
+  --docsearch-searchbox-color: #fff;
+  --docsearch-text-color: #fff;
+  --docsearch-muted-color: rgba(255, 255, 255, .65);
+  --docsearch-searchbox-shadow: 0 0 0 .25rem rgba(215, 210, 203, .4);
+  border-color: rgba(255, 255, 255, .4);
+}
+.DocSearch-Button-Key { color: var(--tq-docs-header-color); }
+.btn-bd-light {
+  --btn-custom-color: var(--bs-body-color);
+  --bs-btn-color: var(--bs-body-color);
+  --bs-btn-active-color: var(--bs-body-color);
+  --bs-btn-active-bg: var(--bs-body-bg);
+}
+.bd-masthead {
+  // Original Bootstrap gradient positions, stops and alpha values, with white
+  // replacing the decorative hue stops. No gradient/layout geometry changes.
+  background-image: linear-gradient(180deg, rgba(var(--bs-body-bg-rgb), .01), rgba(var(--bs-body-bg-rgb), 1) 85%),
+                    radial-gradient(ellipse at top left, rgba(var(--bs-body-bg-rgb), .5), transparent 50%),
+                    radial-gradient(ellipse at top right, rgba(var(--bs-body-bg-rgb), .5), transparent 50%),
+                    radial-gradient(ellipse at center right, rgba(var(--bs-body-bg-rgb), .5), transparent 50%),
+                    radial-gradient(ellipse at center left, rgba(var(--bs-body-bg-rgb), .5), transparent 50%);
+}

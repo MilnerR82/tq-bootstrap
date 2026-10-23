@@ -1,0 +1,46 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+import {chromium,firefox} from 'playwright';
+const root=path.resolve(import.meta.dirname,'../..'),base='http://127.0.0.1:5198',candidate=process.argv.includes('--candidate');
+const candidateCSS= candidate?await fs.readFile(path.join(root,'.cache/remediation-20261022/paint-candidate.css'),'utf8'):'';
+const candidateForced=candidate?candidateCSS.slice(candidateCSS.lastIndexOf('@media (forced-colors: active)')):'';
+const routes=['/docs/5.3/components/carousel/','/docs/5.3/examples/carousel/'];
+const sha=b=>createHash('sha256').update(b).digest('hex');
+const report={suite:'Actual published carousel glyph contrast against its real slide host',started:new Date().toISOString(),candidate,method:'Original served pages, markup, CSS and slides. Candidate mode appends only the exact reviewed forced-colours block from the hashed candidate distribution; final mode uses only actual published bytes. Both automatic forced-palette engines, schemes and page themes. Real keyboard focus and native resting/focused opacity. At each icon screenshot, a separately recorded temporary visibility:hidden on the glyph alone samples the exact same underlying host pixels without changing its box or any outer control paint; visibility is restored immediately. No guessed Canvas backdrop is substituted. Core glyph pixels must show at least3:1. No claim is made about arbitrary future slide images.',checks:[],visits:[],findings:[],sourceHashes:{}};
+const paths=['qa/remediation/carousel-host-paint.mjs',...routes.map(r=>r.slice(1)+'index.html'),'dist/css/bootstrap.css','dist/css/bootstrap.min.css',...(candidate?['.cache/remediation-20261022/paint-candidate.css']:[])];
+for(const p of paths)report.sourceHashes[p]=sha(await fs.readFile(path.join(root,p)));
+const pictures='qa/results/remediation/carousel-host-paint'+(candidate?'-candidate':'-published');await fs.mkdir(path.join(root,pictures),{recursive:true});
+for(const [engine,type]of Object.entries({chromium,firefox})){
+ const browser=await type.launch();
+ for(const scheme of ['light','dark'])for(const theme of ['light','dark'])for(const route of routes){
+  const info={engine,scheme,theme,route};const context=await browser.newContext({viewport:{width:1184,height:1002},deviceScaleFactor:1,colorScheme:scheme,forcedColors:'active',reducedMotion:'reduce'});
+  await context.addInitScript(t=>localStorage.setItem('theme',t),theme);const page=await context.newPage();
+  try{
+   await page.goto(base+route,{waitUntil:'load'});if(candidate)await page.addStyleTag({content:candidateForced});await page.evaluate(()=>document.fonts.ready);await page.screenshot();
+   const usedStylesheets=await page.locator('link[rel=stylesheet]').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('href')));for(const href of usedStylesheets){const url=new URL(href,base+route);if(url.origin===new URL(base).origin){const local=url.pathname.slice(1);if(!(local in report.sourceHashes))report.sourceHashes[local]=sha(await fs.readFile(path.join(root,local)));}}
+   const controls=page.locator('.carousel-control-prev,.carousel-control-next');
+   for(let index=0;index<await controls.count();index++){
+    const control=controls.nth(index);if(!await control.isVisible())continue;const icon=control.locator('.carousel-control-prev-icon,.carousel-control-next-icon');if(!await icon.count())continue;
+    await control.evaluate(el=>el.scrollIntoView({block:'center'}));
+    for(const state of ['resting','focused']){
+     await page.mouse.move(0,0);if(state==='focused'){await control.focus();await page.keyboard.press('Shift+Tab');await page.keyboard.press('Tab');}else await control.evaluate(el=>el.blur());
+     const actual=await icon.evaluate(el=>{const s=getComputedStyle(el),c=getComputedStyle(el.parentElement),r=el.getBoundingClientRect(),outer=el.parentElement.getBoundingClientRect(),slide=el.closest('.carousel').querySelector('.carousel-item.active');return{direction:el.parentElement.classList.contains('carousel-control-prev')?'prev':'next',outerRect:{x:outer.x,y:outer.y,width:outer.width,height:outer.height},outline:{width:c.outlineWidth,offset:c.outlineOffset,style:c.outlineStyle},opacity:c.opacity,active:document.activeElement===el.parentElement,focusVisible:el.parentElement.matches(':focus-visible'),mask:s.maskImage,paint:s.backgroundColor,filter:c.filter,rect:{x:r.x,y:r.y,width:r.width,height:r.height},slide:slide?.innerHTML.slice(0,600),nearestTheme:el.closest('[data-bs-theme]')?.getAttribute('data-bs-theme')};});
+     const original=await icon.getAttribute('style');const visible=await page.screenshot();await icon.evaluate(el=>el.style.visibility='hidden');const hidden=await page.screenshot();await icon.evaluate((el,style)=>{if(style===null)el.removeAttribute('style');else el.setAttribute('style',style);},original);
+     const pixels=await page.evaluate(async({a,b,r})=>{const decode=async s=>{const i=new Image();i.src='data:image/png;base64,'+s;await i.decode();const c=document.createElement('canvas');c.width=i.width;c.height=i.height;const ctx=c.getContext('2d');ctx.drawImage(i,0,0);return ctx;};const ca=await decode(a),cb=await decode(b),x=Math.floor(r.x),y=Math.floor(r.y),w=Math.floor(r.width),h=Math.floor(r.height),pa=ca.getImageData(x,y,w,h).data,pb=cb.getImageData(x,y,w,h).data;const lum=c=>c.map(v=>v/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((n,v,j)=>n+v*[.2126,.7152,.0722][j],0);let changed=0,strong=0,max=1,sample;for(let i=0;i<pa.length;i+=4){const p=[...pa.slice(i,i+3)],bg=[...pb.slice(i,i+3)];if(p.some((v,j)=>Math.abs(v-bg[j])>2)){changed++;const l=lum(p),k=lum(bg),ratio=(Math.max(l,k)+.05)/(Math.min(l,k)+.05);if(ratio>=3)strong++;if(ratio>max){max=ratio;sample={pixel:p,background:bg};}}}return{changedPixels:changed,strongPixels:strong,maximumContrast:max,sample,minimum:3};},{a:visible.toString('base64'),b:hidden.toString('base64'),r:actual.rect});
+     const name=[engine,scheme,theme,route.includes('/examples/')?'example':'component',index,state].join('-'),file=pictures+'/'+name+'.png';await fs.writeFile(path.join(root,file),visible);await fs.writeFile(path.join(root,pictures+'/'+name+'-underlying-host.png'),hidden);
+     const row={...info,index,state,type:'glyph',actual,pixels,screenshot:file,pass:pixels.strongPixels>=12&&Number(actual.opacity)===(state==='focused'?.9:.5)&&(state!=='focused'||actual.active&&actual.focusVisible)};report.checks.push(row);if(!row.pass)report.findings.push(row);
+     if(state==='focused'){
+      const r=actual.outerRect,o=parseFloat(actual.outline.offset),w=parseFloat(actual.outline.width),dir=actual.direction==='prev'?1:-1,edge=dir===1?r.x+r.width:r.x;
+      const ringPoint={x:Math.floor(edge+dir*(o+w/2)),y:Math.floor(r.y+r.height/2)},adjacentPoint={x:Math.floor(edge+dir*(o<0?o-w-2:o+w+2)),y:Math.floor(r.y+r.height/2)};
+      const ring=await page.evaluate(async({base64,ringPoint,adjacentPoint})=>{const i=new Image();i.src='data:image/png;base64,'+base64;await i.decode();const canvas=document.createElement('canvas');canvas.width=i.width;canvas.height=i.height;const ctx=canvas.getContext('2d');ctx.drawImage(i,0,0);const get=p=>[...ctx.getImageData(p.x,p.y,1,1).data].slice(0,3),pixel=get(ringPoint),background=get(adjacentPoint),lum=c=>c.map(v=>v/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((n,v,j)=>n+v*[.2126,.7152,.0722][j],0),a=lum(pixel),b=lum(background);return{pixel,background,contrast:(Math.max(a,b)+.05)/(Math.min(a,b)+.05),minimum:3,ringPoint,adjacentPoint};},{base64:visible.toString('base64'),ringPoint,adjacentPoint});
+      const focus={...info,index,state,type:'focus-ring',actual,ring,screenshot:file,pass:actual.active&&actual.focusVisible&&actual.outline.width==='2px'&&actual.outline.offset==='-4px'&&ring.contrast>=3};report.checks.push(focus);if(!focus.pass)report.findings.push(focus);
+     }
+    }
+   }
+   report.visits.push({...info,status:'complete'});
+  }catch(error){report.findings.push({...info,error:String(error)});}finally{await context.close();}
+ }
+ await browser.close();
+}
+const after={};for(const p of Object.keys(report.sourceHashes))after[p]=sha(await fs.readFile(path.join(root,p)));report.sourceHashesAfter=after;report.finished=new Date().toISOString();report.summary={visits:report.visits.length,checks:report.checks.length,glyphChecks:report.checks.filter(c=>c.type==='glyph').length,nativeOpacityPass:report.checks.filter(c=>c.type==='glyph').every(c=>Number(c.actual.opacity)===(c.state==='focused'?.9:.5)),focusRingChecks:report.checks.filter(c=>c.type==='focus-ring').length,minimumGlyphCoreContrast:Math.min(...report.checks.filter(c=>c.type==='glyph').map(c=>c.pixels.maximumContrast)),minimumFocusRingContrast:Math.min(...report.checks.filter(c=>c.type==='focus-ring').map(c=>c.ring.contrast)),passed:report.checks.filter(c=>c.pass).length,failed:report.findings.length,inputsFrozen:JSON.stringify(report.sourceHashes)===JSON.stringify(after)};await fs.writeFile(path.join(root,'qa/results/remediation/carousel-host-paint'+(candidate?'-candidate':'')+'.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report.summary));if(report.findings.length||!report.summary.inputsFrozen)process.exitCode=1;

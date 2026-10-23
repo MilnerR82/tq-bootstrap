@@ -1,0 +1,119 @@
+// TAFE Queensland colours and brand font family for Bootstrap 5.3.8.
+// Type sizes, weights, line heights, shape, spacing and behaviour stay native.
+// Harmony 1 foundation with user-selected TQ matches for semantic status roles.
+// Named hue families without a direct Harmony 1 match retain Bootstrap defaults.
+
+$tq-red: #e31b23 !default;
+$tq-red-light: #fc545c !default;
+$tq-red-bright: #fc1721 !default;
+$tq-pink: #f32a7c !default;
+$tq-ink: #373234 !default;
+// Retired dark-red swatch: keep the existing Sass name as a neutral alias.
+$tq-red-dark: $tq-ink !default;
+$tq-muted: #696567 !default;
+$tq-koala: #d7d2cb !default;
+$tq-divider: #e1ddd8 !default;
+$tq-warm: #f1efed !default;
+$tq-white: #fff !default;
+$tq-success: #198754 !default; // Original Bootstrap success green
+$tq-info: $tq-red !default; // Information accents; surfaces are white
+$tq-warning: #ef7622 !default; // Ochre Sunset, Harmony 3
+$variable-prefix: bs- !default;
+$prefix: $variable-prefix !default;
+// TQ Brand Guidelines v2, pages 42–43: preferred family and web-safe fallback.
+// Use installed fonts; no proprietary font files are redistributed.
+$font-family-sans-serif: "Helvetica Neue", Arial, sans-serif !default;
+$white: $tq-white !default;
+$gray-100: $tq-warm !default;
+$gray-200: $tq-divider !default;
+$gray-300: $tq-koala !default;
+$gray-600: $tq-muted !default;
+$gray-900: $tq-ink !default;
+$pink: $tq-pink !default;
+$red: $tq-red !default;
+$primary: $tq-red !default;
+$secondary: $tq-muted !default;
+$success: $tq-success !default;
+$info: $tq-info !default;
+$warning: $tq-warning !default;
+$info-bg-subtle: if($info == $tq-info, $tq-white, tint-color($info, 80%)) !default;
+$info-bg-subtle-dark: if($info == $tq-info, $tq-white, shade-color($info, 80%)) !default;
+$info-border-subtle: if($info == $tq-info, $tq-red, tint-color($info, 60%)) !default;
+$info-border-subtle-dark: if($info == $tq-info, $tq-red, shade-color($info, 40%)) !default;
+$light: $tq-warm !default;
+$dark: $tq-ink !default;
+// Bootstrap chooses white/black labels from each role's actual contrast.
+$body-color: $tq-ink !default;
+$body-bg: $tq-white !default;
+// Reading links must also contrast on the native warm-grey reading surfaces.
+// The primary action colour stays TQ Red; reading links use charcoal.
+$link-color: $tq-red-dark !default;
+$link-color-dark: tint-color($primary, 50%) !default;
+$body-secondary-color: $tq-muted !default;
+$body-secondary-bg: $tq-warm !default;
+$body-tertiary-color: $tq-muted !default;
+$body-tertiary-bg: $tq-warm !default;
+$body-emphasis-color: $tq-ink !default;
+$body-color-dark: $tq-white !default;
+$body-bg-dark: $tq-ink !default;
+$body-secondary-color-dark: $tq-white !default;
+$body-tertiary-color-dark: $tq-white !default;
+$body-emphasis-color-dark: $tq-white !default;
+// Native fixed gray footer ink is unreadable on dark reading surfaces.
+$blockquote-footer-color: var(--#{$prefix}secondary-color) !default;
+$border-color: $tq-divider !default;
+$border-color-dark: $tq-muted !default;
+$border-color-translucent: rgba($tq-ink, .2) !default;
+$border-color-translucent-dark: rgba($tq-white, .35) !default;
+// Opaque default focus paint contrasts on documented supported hosts. Explicit
+// author ring/input alpha values retain their original Sass interfaces.
+$focus-ring-opacity: 1 !default;
+$focus-ring-color: if($focus-ring-opacity == 1, var(--tq-focus-ring-colour, var(--#{$prefix}body-color)), rgba(var(--tq-focus-ring-rgb, var(--#{$prefix}body-color-rgb)), $focus-ring-opacity)) !default;
+$input-btn-focus-color-opacity: $focus-ring-opacity !default;
+$code-color: $tq-red-dark !default;
+$code-color-dark: $tq-white !default;
+$mark-color: $tq-ink !default;
+$mark-bg: $tq-warm !default;
+$mark-color-dark: $tq-ink !default;
+$mark-bg-dark: $tq-warm !default;
+// Bootstrap derives each role's text emphasis, subtle surfaces, borders and
+// light/dark colour variants from the semantic bases above.
+$dark-text-emphasis: $tq-ink !default;
+$input-border-color: var(--#{$prefix}secondary-color) !default;
+$form-check-input-border: var(--#{$prefix}border-width) solid var(--#{$prefix}secondary-color) !default;
+$btn-close-color: #000 !default;
+$form-switch-color: $tq-muted !default;
+$form-switch-color-dark: $tq-koala !default;
+$form-switch-focus-color: $tq-muted !default;
+$form-range-thumb-bg: var(--tq-range-thumb-bg, var(--tq-mode-range-thumb-bg, #{$primary})) !default;
+$form-range-thumb-active-bg: var(--tq-range-thumb-active-bg, var(--tq-mode-range-thumb-active-bg, #{$tq-red-dark})) !default;
+$form-range-track-bg: var(--tq-range-track-bg, var(--tq-mode-range-track-bg, #{$tq-koala})) !default;
+// Native .65 alpha falls below 4.5:1 with TQ charcoal on white.
+// Only label paint changes; Bootstrap retains its position and transform.
+$form-floating-label-opacity: .7 !default;
+$nav-link-color: var(--#{$prefix}body-color) !default;
+$nav-link-hover-color: var(--#{$prefix}body-color) !default;
+$nav-tabs-link-active-color: var(--#{$prefix}body-color) !default;
+$navbar-light-color: var(--#{$prefix}secondary-color) !default;
+$navbar-light-hover-color: var(--#{$prefix}body-color) !default;
+$navbar-light-active-color: var(--#{$prefix}body-color) !default;
+$navbar-light-icon-color: $tq-ink !default;
+$navbar-light-toggler-border-color: var(--#{$prefix}secondary-color) !default;
+$navbar-dark-color: $tq-white !default;
+$navbar-dark-hover-color: $tq-white !default;
+$navbar-dark-active-color: $tq-white !default;
+$navbar-dark-icon-color: $tq-white !default;
+$navbar-dark-toggler-border-color: $tq-koala !default;
+$dropdown-header-color: var(--#{$prefix}secondary-color) !default;
+$dropdown-dark-link-hover-bg: $tq-warm !default;
+$dropdown-dark-color: $tq-white !default;
+$dropdown-dark-link-hover-color: $tq-ink !default;
+$list-group-action-color: var(--#{$prefix}body-color) !default;
+// Keep header shading dark in both modes, including on semantic card fills.
+$card-cap-bg: rgba(#000, .03) !default;
+$toast-background-color: var(--#{$prefix}body-bg) !default;
+$toast-header-background-color: var(--#{$prefix}body-bg) !default;
+$progress-bg: $tq-warm !default;
+$carousel-caption-color-dark: $tq-ink !default;
+$carousel-dark-caption-color: $tq-ink !default;
+$carousel-dark-indicator-active-bg: #000 !default;

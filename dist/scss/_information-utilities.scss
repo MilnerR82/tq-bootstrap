@@ -1,0 +1,20 @@
+// Information uses a white surface and TQ red accents. Only paint changes.
+// The info role remains red for text, links and border utilities.
+@if $info == $tq-info {
+  .bg-info,
+  .text-bg-info {
+    background-color: rgba($tq-white, var(--#{$prefix}bg-opacity, 1)) !important;
+  }
+  .bg-info,
+  .bg-info-subtle,
+  .text-bg-info {
+    --#{$prefix}info-text-emphasis: #{$tq-ink};
+    --tq-focus-ring-colour: #{$tq-red-dark};
+    --tq-focus-ring-rgb: #{to-rgb($tq-red-dark)};
+    @each $role, $value in $theme-colors {
+      --tq-outline-#{$role}: #{$value};
+      --tq-outline-#{$role}-rgb: #{to-rgb($value)};
+    }
+  }
+  .text-bg-info { color: $tq-red-dark !important; }
+}

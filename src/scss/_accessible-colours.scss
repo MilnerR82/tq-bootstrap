@@ -1,0 +1,285 @@
+// Contextual reading/control paint only. Bootstrap's native dimensions,
+// typography, borders, shadows, transforms, utilities and APIs remain intact.
+
+// Outlined search actions need readable ink on both light and brand-filled
+// native navbars; their native role-specific hover/active fills are preserved.
+.navbar .btn-outline-primary,
+.navbar .btn-outline-success,
+.navbar .btn-outline-light {
+  --#{$prefix}btn-color: var(--#{$prefix}navbar-color);
+  --#{$prefix}btn-border-color: var(--#{$prefix}navbar-color);
+}
+
+// A fixed light-mode secondary colour cannot serve as reading text on the
+// explicitly dark native example surfaces. Limit the adaptation to that
+// concrete colour context, leaving the general text-secondary utility intact.
+.bg-dark.text-secondary,
+.bg-dark .text-secondary,
+.text-bg-dark .text-secondary {
+  color: #{$tq-white} !important;
+}
+
+// Mode defaults retain the semantic bases on light reading surfaces. Dark
+// reading surfaces use their native emphasis tints for readable outlined ink.
+:root,
+[data-bs-theme="light"] {
+  @each $role, $value in $theme-colors {
+    $ink: $value;
+    --tq-mode-outline-#{$role}: #{$ink};
+    --tq-mode-outline-#{$role}-rgb: #{to-rgb($ink)};
+  }
+  --tq-mode-outline-primary-neutral: #{$tq-red-dark};
+  --tq-mode-outline-primary-neutral-rgb: #{to-rgb($tq-red-dark)};
+  --tq-mode-close-focus-reading-rgb: var(--#{$prefix}body-color-rgb);
+  --tq-mode-close-focus-on-light-rgb: #{to-rgb($tq-ink)};
+  --tq-mode-close-focus-on-dark-rgb: 255, 255, 255;
+  --tq-mode-range-track-bg: #{$tq-koala};
+  --tq-mode-range-thumb-bg: #{$primary};
+  --tq-mode-range-thumb-active-bg: #{$tq-red-dark};
+  --tq-mode-active-bg: #{$component-active-bg};
+  --tq-mode-active-colour: #{$component-active-color};
+  --tq-mode-carousel-indicator-inactive-bg: #{$tq-warm};
+}
+@if $enable-dark-mode {
+  @include color-mode(dark, true) {
+  $dark-inks: (primary: $primary-text-emphasis-dark, secondary: $secondary-text-emphasis-dark, success: $success-text-emphasis-dark, info: $info-text-emphasis-dark, warning: $warning-text-emphasis-dark, danger: $danger-text-emphasis-dark, light: $light-text-emphasis-dark, dark: $dark-text-emphasis-dark);
+  @each $role, $value in $theme-colors {
+    $ink: if(map-has-key($dark-inks, $role), map-get($dark-inks, $role), tint-color($value, 40%));
+    --tq-mode-outline-#{$role}: #{$ink};
+    --tq-mode-outline-#{$role}-rgb: #{to-rgb($ink)};
+  }
+  --tq-mode-outline-primary-neutral: #{$primary-text-emphasis-dark};
+  --tq-mode-outline-primary-neutral-rgb: #{to-rgb($primary-text-emphasis-dark)};
+  --tq-mode-close-focus-reading-rgb: 0, 0, 0;
+  --tq-mode-close-focus-on-light-rgb: 255, 255, 255;
+  --tq-mode-close-focus-on-dark-rgb: 0, 0, 0;
+  --tq-mode-range-track-bg: #{$tq-warm};
+  --tq-mode-range-thumb-bg: #{$tq-red-bright};
+  --tq-mode-range-thumb-active-bg: #{$tq-red-bright};
+  --tq-mode-active-bg: #{$tq-red-light};
+  --tq-mode-active-colour: #{$black};
+  --tq-mode-carousel-indicator-inactive-bg: #{$black};
+}
+}
+@each $role, $value in $theme-colors {
+  .btn-outline-#{$role} {
+    --#{$prefix}btn-color: var(--tq-outline-#{$role}, var(--tq-mode-outline-#{$role}, #{$value}));
+    --#{$prefix}btn-border-color: var(--tq-outline-#{$role}, var(--tq-mode-outline-#{$role}, #{$value}));
+  }
+  .focus-ring-#{$role} {
+    --#{$prefix}focus-ring-color: rgba(var(--tq-outline-#{$role}-rgb, var(--tq-mode-outline-#{$role}-rgb, #{to-rgb($value)})), var(--#{$prefix}focus-ring-opacity)) !important;
+  }
+}
+.focus-ring {
+  --#{$prefix}focus-ring-color: rgba(var(--tq-focus-ring-rgb, var(--#{$prefix}body-color-rgb)), var(--#{$prefix}focus-ring-opacity));
+}
+
+// Use inherited host tokens rather than descendant overrides: a nested reading
+// panel resets its own context, regardless of its coloured ancestor's selector.
+.card,
+.modal-content,
+.offcanvas,
+.dropdown-menu,
+.list-group-item,
+.bg-body {
+  --tq-range-track-bg: var(--tq-mode-range-track-bg, #{$tq-koala});
+  --tq-range-thumb-bg: var(--tq-mode-range-thumb-bg, #{$primary});
+  --tq-range-thumb-active-bg: var(--tq-mode-range-thumb-active-bg, #{$tq-red-dark});
+  --tq-focus-ring-colour: var(--#{$prefix}body-color);
+  --tq-focus-ring-rgb: var(--#{$prefix}body-color-rgb);
+  --tq-close-focus-prefilter-rgb: var(--tq-mode-close-focus-reading-rgb, var(--#{$prefix}body-color-rgb));
+  @each $role, $value in $theme-colors {
+    --tq-outline-#{$role}: var(--tq-mode-outline-#{$role}, #{$value});
+    --tq-outline-#{$role}-rgb: var(--tq-mode-outline-#{$role}-rgb, #{to-rgb($value)});
+  }
+}
+.bg-body-secondary,
+.bg-body-tertiary {
+  --tq-range-track-bg: var(--tq-mode-range-track-bg, #{$tq-koala});
+  --tq-range-thumb-bg: var(--tq-mode-range-thumb-bg, #{$primary});
+  --tq-range-thumb-active-bg: var(--tq-mode-range-thumb-active-bg, #{$tq-red-dark});
+  --tq-focus-ring-colour: var(--#{$prefix}body-color);
+  --tq-focus-ring-rgb: var(--#{$prefix}body-color-rgb);
+  --tq-close-focus-prefilter-rgb: var(--tq-mode-close-focus-reading-rgb, var(--#{$prefix}body-color-rgb));
+  @each $role, $value in $theme-colors {
+    --tq-outline-#{$role}: var(--tq-mode-outline-#{$role}, #{$value});
+    --tq-outline-#{$role}-rgb: var(--tq-mode-outline-#{$role}-rgb, #{to-rgb($value)});
+  }
+  --tq-outline-primary: var(--tq-mode-outline-primary-neutral);
+  --tq-outline-primary-rgb: var(--tq-mode-outline-primary-neutral-rgb);
+}
+.bg-white {
+  --tq-range-track-bg: #{$tq-koala};
+  --tq-range-thumb-bg: #{$primary};
+  --tq-range-thumb-active-bg: #{$tq-red-dark};
+  --tq-focus-ring-colour: #{$tq-ink};
+  --tq-focus-ring-rgb: #{to-rgb($tq-ink)};
+  --tq-close-focus-prefilter-rgb: var(--tq-mode-close-focus-on-light-rgb, #{to-rgb($tq-ink)});
+  @each $role, $value in $theme-colors {
+    $ink: $value;
+    --tq-outline-#{$role}: #{$ink};
+    --tq-outline-#{$role}-rgb: #{to-rgb($ink)};
+  }
+}
+@each $host, $surface in $theme-colors {
+  .bg-#{$host},
+  .text-bg-#{$host} {
+    $ink: color-contrast($surface);
+    --tq-focus-ring-colour: #{$ink};
+    --tq-focus-ring-rgb: #{to-rgb($ink)};
+    --tq-close-focus-prefilter-rgb: var(--tq-mode-close-focus-on-#{if($ink == $color-contrast-light, "dark", "light")}-rgb, #{to-rgb($ink)});
+    @each $role, $value in $theme-colors {
+      --tq-outline-#{$role}: #{$ink};
+      --tq-outline-#{$role}-rgb: #{to-rgb($ink)};
+    }
+  }
+}
+// The dark neutral surface retains contrast-aware role outlines. Darker role inks
+// need a light tint even when the surrounding document uses the light mode.
+.bg-dark,
+.text-bg-dark {
+  @each $role, $value in $theme-colors {
+    $ink: if(contrast-ratio($dark, $value) >= 4.5, $value, tint-color($value, 60%));
+    --tq-outline-#{$role}: #{$ink};
+    --tq-outline-#{$role}-rgb: #{to-rgb($ink)};
+  }
+}
+.navbar {
+  --tq-focus-ring-colour: var(--#{$prefix}navbar-color);
+}
+
+// Bootstrap hard-codes translucent button focus paint. Retain the original
+// Sass width and zero blur/spread positions while using opaque context ink.
+.btn {
+  --#{$prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} var(--tq-focus-ring-colour, var(--#{$prefix}body-color));
+}
+// Keep native navbar search ink after the general outline role declarations.
+.navbar .btn-outline-primary,
+.navbar .btn-outline-success,
+.navbar .btn-outline-light {
+  --#{$prefix}btn-color: var(--#{$prefix}navbar-color);
+  --#{$prefix}btn-border-color: var(--#{$prefix}navbar-color);
+}
+
+// The native dark close-button filter also transforms its focus shadow. Feed
+// that existing filter the inverse context ink; preserve its icon and geometry.
+// A custom authored shadow is left untouched, including its original alpha.
+@if $btn-close-focus-shadow == (0 0 $focus-ring-blur $focus-ring-width $focus-ring-color) {
+  .btn-close {
+    --#{$prefix}btn-close-focus-shadow: 0 0 #{$focus-ring-blur} #{$focus-ring-width} rgba(var(--tq-close-focus-prefilter-rgb, var(--tq-mode-close-focus-reading-rgb, var(--#{$prefix}body-color-rgb))), #{$focus-ring-opacity});
+  }
+  .btn-close-white {
+    --#{$prefix}btn-close-focus-shadow: 0 0 #{$focus-ring-blur} #{$focus-ring-width} rgba(0, 0, 0, #{$focus-ring-opacity});
+  }
+}
+
+// Read-only plaintext inputs remain keyboard stops despite their native zero
+// outline. This explicit accessibility outline changes no layout dimensions.
+.form-control-plaintext:focus-visible {
+  outline: 2px solid var(--tq-focus-ring-colour, var(--#{$prefix}body-color));
+  outline-offset: 2px;
+}
+
+// Restore the nearest explicitly light navbar's original parent-owned SVG.
+// Native ancestor-dark icon declarations otherwise leak through a light navbar.
+.navbar[data-bs-theme="light"] .navbar-toggler-icon {
+  --#{$prefix}navbar-toggler-icon-bg: inherit;
+}
+
+// Retain native indicator opacity and dimensions. Separate the inactive paint
+// so both its presence and the selected state remain visible on supported slides.
+@if $carousel-indicator-active-bg == $white and $carousel-dark-indicator-active-bg == $black {
+  .carousel-indicators [data-bs-target]:not(.active) {
+    background-color: var(--tq-carousel-indicator-inactive-bg, var(--tq-mode-carousel-indicator-inactive-bg, #{$tq-warm}));
+  }
+  .carousel-dark {
+    --tq-carousel-indicator-inactive-bg: #{$black};
+  }
+}
+
+// These guards preserve explicitly authored Sass role/state overrides. Only
+// the native TQ defaults receive mode-aware selected-state colour additions.
+@if $primary == $tq-red and $component-active-bg == $primary and $component-active-color == $tq-white {
+  @if $nav-pills-link-active-bg == $component-active-bg and $nav-pills-link-active-color == $component-active-color {
+    .nav-pills {
+      --#{$prefix}nav-pills-link-active-bg: var(--tq-mode-active-bg, #{$nav-pills-link-active-bg});
+      --#{$prefix}nav-pills-link-active-color: var(--tq-mode-active-colour, #{$nav-pills-link-active-color});
+    }
+  }
+  @if $pagination-active-bg == $component-active-bg and $pagination-active-color == $component-active-color {
+    .pagination {
+      --#{$prefix}pagination-active-bg: var(--tq-mode-active-bg, #{$pagination-active-bg});
+      --#{$prefix}pagination-active-color: var(--tq-mode-active-colour, #{$pagination-active-color});
+      @if $pagination-active-border-color == $component-active-bg {
+        --#{$prefix}pagination-active-border-color: var(--tq-mode-active-bg, #{$pagination-active-border-color});
+      }
+    }
+  }
+  @if $list-group-active-bg == $component-active-bg and $list-group-active-color == $component-active-color {
+    .list-group {
+      --#{$prefix}list-group-active-bg: var(--tq-mode-active-bg, #{$list-group-active-bg});
+      --#{$prefix}list-group-active-color: var(--tq-mode-active-colour, #{$list-group-active-color});
+      @if $list-group-active-border-color == $component-active-bg {
+        --#{$prefix}list-group-active-border-color: var(--tq-mode-active-bg, #{$list-group-active-border-color});
+      }
+    }
+  }
+  @if $dropdown-link-active-bg == $component-active-bg and $dropdown-link-active-color == $component-active-color {
+    .dropdown-menu {
+      --#{$prefix}dropdown-link-active-bg: var(--tq-mode-active-bg, #{$dropdown-link-active-bg});
+      --#{$prefix}dropdown-link-active-color: var(--tq-mode-active-colour, #{$dropdown-link-active-color});
+    }
+    .dropdown-menu-dark {
+      --#{$prefix}dropdown-link-active-bg: #{$dropdown-dark-link-active-bg};
+      --#{$prefix}dropdown-link-active-color: #{$dropdown-dark-link-active-color};
+      @if $dropdown-dark-link-active-bg == $component-active-bg and $dropdown-dark-link-active-color == $component-active-color {
+        --#{$prefix}dropdown-link-active-bg: #{$tq-red-light};
+        --#{$prefix}dropdown-link-active-color: #{$black};
+      }
+    }
+  }
+}
+@if $nav-tabs-link-active-border-color == ($nav-tabs-border-color $nav-tabs-border-color $nav-tabs-link-active-bg) {
+  .nav-tabs {
+    --#{$prefix}nav-tabs-link-active-border-color: var(--#{$prefix}secondary-color) var(--#{$prefix}secondary-color) #{$nav-tabs-link-active-bg};
+  }
+}
+
+// Preserve existing active-border widths. On dark reading hosts a contrasting
+// border identifies pressed and checked native buttons whose shaded fill is
+// too close to the page. Explicit Sass role/state customisations stay native.
+@if $primary == $tq-red and $btn-active-bg-shade-amount == 20% and $btn-active-bg-tint-amount == 20% and $btn-active-border-shade-amount == 25% and $btn-active-border-tint-amount == 10% {
+  $tq-default-roles: (primary: $tq-red, secondary: $tq-muted, success: $tq-success, info: $tq-info, warning: $tq-warning, danger: $tq-red, light: $tq-warm, dark: $tq-ink);
+  :root,
+  [data-bs-theme="light"],
+  .bg-white {
+    @each $role, $value in $theme-colors {
+      @if map-get($tq-default-roles, $role) == $value {
+        $native-border: if($role == "light" or ($role != "dark" and color-contrast($value) == $color-contrast-light), shade-color($value, $btn-active-border-shade-amount), tint-color($value, $btn-active-border-tint-amount));
+        --tq-mode-active-button-border-#{$role}: #{$native-border};
+        --tq-mode-active-outline-border-#{$role}: #{$value};
+      }
+    }
+  }
+  @if $enable-dark-mode {
+    @include color-mode(dark, true) {
+      @each $role, $value in $theme-colors {
+        @if map-get($tq-default-roles, $role) == $value {
+          --tq-mode-active-button-border-#{$role}: #{color-contrast($value)};
+          --tq-mode-active-outline-border-#{$role}: #{color-contrast($value)};
+        }
+      }
+    }
+  }
+  @each $role, $value in $theme-colors {
+    @if map-get($tq-default-roles, $role) == $value {
+      $native-border: if($role == "light" or ($role != "dark" and color-contrast($value) == $color-contrast-light), shade-color($value, $btn-active-border-shade-amount), tint-color($value, $btn-active-border-tint-amount));
+      .btn-#{$role} {
+        --#{$prefix}btn-active-border-color: var(--tq-mode-active-button-border-#{$role}, #{$native-border});
+      }
+      .btn-outline-#{$role} {
+        --#{$prefix}btn-active-border-color: var(--tq-mode-active-outline-border-#{$role}, #{$value});
+      }
+    }
+  }
+}

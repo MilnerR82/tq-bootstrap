@@ -1,0 +1,29 @@
+<!doctype html><html lang="en" data-bs-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>helpers-color-background native comparison fixture</title><link id="framework" rel="stylesheet" href="/qa/reference-native/css/bootstrap.css"><link rel="stylesheet" href="/qa/reference-native/docs-themed.css"></head><body><main class="bd-content" style="margin:16px">   <h2 id="overview">Overview<a class="anchor-link" aria-label="Link to this section: Overview" href="#overview"> </a></h2>
+<p>Color and background helpers combine the power of our <a href="/docs/5.3/utilities/colors"><code>.text-*</code> utilities</a> and <a href="/docs/5.3/utilities/background"><code>.bg-*</code> utilities</a> in one class. Using our Sass <code>color-contrast()</code> function, we automatically determine a contrasting <code>color</code> for a particular <code>background-color</code>.</p>
+<div class="bd-callout bd-callout-warning"> <p><strong>Heads up!</strong> There’s currently no support for a CSS-native <code>color-contrast</code> function, so we use our own via Sass. This means that customizing our theme colors via CSS variables may cause color contrast issues with these utilities.</p> </div>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <div class="text-bg-primary p-3">Primary with contrasting color</div>
+<div class="text-bg-secondary p-3">Secondary with contrasting color</div>
+<div class="text-bg-success p-3">Success with contrasting color</div>
+<div class="text-bg-danger p-3">Danger with contrasting color</div>
+<div class="text-bg-warning p-3">Warning with contrasting color</div>
+<div class="text-bg-info p-3">Info with contrasting color</div>
+<div class="text-bg-light p-3">Light with contrasting color</div>
+<div class="text-bg-dark p-3">Dark with contrasting color</div> </div>  <div>   </div>  </div>
+<div class="bd-callout bd-callout-info"> <p><strong>Accessibility tip:</strong> Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies like screen readers. Please ensure the meaning is obvious from the content itself (e.g., the visible text with a <a href="/docs/5.3/getting-started/accessibility/#color-contrast"><em>sufficient</em> color contrast</a>) or is included through alternative means, such as additional text hidden with the <code>.visually-hidden</code> class.</p> </div>
+<h2 id="with-components">With components<a class="anchor-link" aria-label="Link to this section: With components" href="#with-components"> </a></h2>
+<p>Use them in place of combined <code>.text-*</code> and <code>.bg-*</code> classes, like on <a href="/docs/5.3/components/badge#background-colors">badges</a>:</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <span class="badge text-bg-primary">Primary</span>
+<span class="badge text-bg-info">Info</span> </div>  <div>   </div>  </div>
+<p>Or on <a href="/docs/5.3/components/card#background-and-color">cards</a>:</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+  </div>
+</div>
+<div class="card text-bg-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+  </div>
+</div> </div>  <div>   </div>  </div>  </main><script src="/dist/js/bootstrap.bundle.min.js"></script></body></html>

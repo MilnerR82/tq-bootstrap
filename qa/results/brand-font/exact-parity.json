@@ -1,0 +1,67 @@
+[
+  {
+    "name": "tq-bootstrap",
+    "pass": true,
+    "changes": [
+      {
+        "before": {
+          "context": ":root,\n[data-bs-theme=light]",
+          "property": "--bs-font-sans-serif",
+          "value": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "important": false
+        },
+        "after": {
+          "context": ":root,\n[data-bs-theme=light]",
+          "property": "--bs-font-sans-serif",
+          "value": "\"Helvetica Neue\", Arial, sans-serif",
+          "important": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "tq-bootstrap-reboot",
+    "pass": true,
+    "changes": [
+      {
+        "before": {
+          "context": ":root,\n[data-bs-theme=light]",
+          "property": "--bs-font-sans-serif",
+          "value": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "important": false
+        },
+        "after": {
+          "context": ":root,\n[data-bs-theme=light]",
+          "property": "--bs-font-sans-serif",
+          "value": "\"Helvetica Neue\", Arial, sans-serif",
+          "important": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "tq-bootstrap-grid",
+    "pass": true,
+    "changes": []
+  },
+  {
+    "name": "tq-bootstrap-utilities",
+    "pass": true,
+    "changes": [
+      {
+        "before": {
+          "context": ":root,\n[data-bs-theme=light]",
+          "property": "--bs-font-sans-serif",
+          "value": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "important": false
+        },
+        "after": {
+          "context": ":root,\n[data-bs-theme=light]",
+          "property": "--bs-font-sans-serif",
+          "value": "\"Helvetica Neue\", Arial, sans-serif",
+          "important": false
+        }
+      }
+    ]
+  }
+]

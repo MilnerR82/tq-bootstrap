@@ -1,0 +1,115 @@
+<!doctype html><html lang="en" data-bs-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>utilities-borders native comparison fixture</title><link id="framework" rel="stylesheet" href="/qa/reference-native/css/bootstrap.css"><link rel="stylesheet" href="/qa/reference-native/docs-themed.css"></head><body><main class="bd-content" style="margin:16px">   <h2 id="border">Border<a class="anchor-link" aria-label="Link to this section: Border" href="#border"> </a></h2>
+<p>Use border utilities to add or remove an element’s borders. Choose from all borders or one at a time.</p>
+<h3 id="additive">Additive<a class="anchor-link" aria-label="Link to this section: Additive" href="#additive"> </a></h3>
+<p>Add borders to custom elements:</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0 bd-example-border-utils"> <span class="border"></span>
+<span class="border-top"></span>
+<span class="border-end"></span>
+<span class="border-bottom"></span>
+<span class="border-start"></span> </div>  <div>   </div>  </div>
+<h3 id="subtractive">Subtractive<a class="anchor-link" aria-label="Link to this section: Subtractive" href="#subtractive"> </a></h3>
+<p>Or remove borders:</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0 bd-example-border-utils"> <span class="border border-0"></span>
+<span class="border border-top-0"></span>
+<span class="border border-end-0"></span>
+<span class="border border-bottom-0"></span>
+<span class="border border-start-0"></span> </div>  <div>   </div>  </div>
+<h2 id="color">Color<a class="anchor-link" aria-label="Link to this section: Color" href="#color"> </a></h2>
+<div class="bd-callout bd-callout-info"> <p>Border utilities like <code>.border-*</code> that generated from our original <code>$theme-colors</code> Sass map don’t yet respond to color modes, however, any <code>.border-*-subtle</code> utility will. This will be resolved in v6.</p> </div>
+<p>Change the border color using utilities built on our theme colors.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0 bd-example-border-utils"> <span class="border border-primary"></span>
+<span class="border border-primary-subtle"></span>
+<span class="border border-secondary"></span>
+<span class="border border-secondary-subtle"></span>
+<span class="border border-success"></span>
+<span class="border border-success-subtle"></span>
+<span class="border border-danger"></span>
+<span class="border border-danger-subtle"></span>
+<span class="border border-warning"></span>
+<span class="border border-warning-subtle"></span>
+<span class="border border-info"></span>
+<span class="border border-info-subtle"></span>
+<span class="border border-light"></span>
+<span class="border border-light-subtle"></span>
+<span class="border border-dark"></span>
+<span class="border border-dark-subtle"></span>
+<span class="border border-black"></span>
+<span class="border border-white"></span> </div>  <div>   </div>  </div>
+<p>Or modify the default <code>border-color</code> of a component:</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <div class="mb-4">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input type="email" class="form-control border-success" id="exampleFormControlInput1" placeholder="name@example.com">
+</div>
+
+<div class="h4 pb-2 mb-4 text-danger-emphasis border-bottom border-danger">
+  Dangerous heading
+</div>
+
+<div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
+  Changing border color and width
+</div> </div>  <div>   </div>  </div>
+<h2 id="opacity">Opacity<a class="anchor-link" aria-label="Link to this section: Opacity" href="#opacity"> </a></h2>
+<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">Added in v5.2.0</small>
+<p>Bootstrap <code>border-{color}</code> utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.</p>
+<h3 id="how-it-works">How it works<a class="anchor-link" aria-label="Link to this section: How it works" href="#how-it-works"> </a></h3>
+<p>Consider our default <code>.border-success</code> utility.</p>
+ <div class="bd-code-snippet">   </div>
+<p>We use an RGB version of our <code>--bs-success</code> (with the value of <code>0, 118, 108</code>) CSS variable and attached a second CSS variable, <code>--bs-border-opacity</code>, for the alpha transparency (with a default value <code>1</code> thanks to a local CSS variable). That means anytime you use <code>.border-success</code> now, your computed <code>border-color</code> value is <code>rgba(0, 118, 108, 1)</code>. The local CSS variable inside each <code>.border-*</code> class avoids inheritance issues so nested instances of the utilities don’t automatically have a modified alpha transparency.</p>
+<h3 id="example">Example<a class="anchor-link" aria-label="Link to this section: Example" href="#example"> </a></h3>
+<p>To change that opacity, override <code>--bs-border-opacity</code> via custom styles or inline styles.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <div class="border border-success p-2 mb-2">This is default success border</div>
+<div class="border border-success p-2" style="--bs-border-opacity: .5;">This is 50% opacity success border</div> </div>  <div>   </div>  </div>
+<p>Or, choose from any of the <code>.border-opacity</code> utilities:</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <div class="border border-success p-2 mb-2">This is default success border</div>
+<div class="border border-success p-2 mb-2 border-opacity-75">This is 75% opacity success border</div>
+<div class="border border-success p-2 mb-2 border-opacity-50">This is 50% opacity success border</div>
+<div class="border border-success p-2 mb-2 border-opacity-25">This is 25% opacity success border</div>
+<div class="border border-success p-2 border-opacity-10">This is 10% opacity success border</div> </div>  <div>   </div>  </div>
+<h2 id="width">Width<a class="anchor-link" aria-label="Link to this section: Width" href="#width"> </a></h2>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0 bd-example-border-utils"> <span class="border border-1"></span>
+<span class="border border-2"></span>
+<span class="border border-3"></span>
+<span class="border border-4"></span>
+<span class="border border-5"></span> </div>  <div>   </div>  </div>
+<h2 id="radius">Radius<a class="anchor-link" aria-label="Link to this section: Radius" href="#radius"> </a></h2>
+<p>Add classes to an element to easily round its corners.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0 bd-example-rounded-utils"> <svg aria-label="Example rounded image: 75x75" class="bd-placeholder-img rounded" height="75" preserveAspectRatio="xMidYMid slice" role="img" width="75" xmlns="http://www.w3.org/2000/svg"><title>Example rounded image</title><rect width="100%" height="100%" fill="#696567"></rect><text x="50%" y="50%" fill="#fff" dy=".3em">75x75</text></svg>
+<svg aria-label="Example top rounded image: 75x75" class="bd-placeholder-img rounded-top" height="75" preserveAspectRatio="xMidYMid slice" role="img" width="75" xmlns="http://www.w3.org/2000/svg"><title>Example top rounded image</title><rect width="100%" height="100%" fill="#696567"></rect><text x="50%" y="50%" fill="#fff" dy=".3em">75x75</text></svg>
+<svg aria-label="Example right rounded image: 75x75" class="bd-placeholder-img rounded-end" height="75" preserveAspectRatio="xMidYMid slice" role="img" width="75" xmlns="http://www.w3.org/2000/svg"><title>Example right rounded image</title><rect width="100%" height="100%" fill="#696567"></rect><text x="50%" y="50%" fill="#fff" dy=".3em">75x75</text></svg>
+<svg aria-label="Example bottom rounded image: 75x75" class="bd-placeholder-img rounded-bottom" height="75" preserveAspectRatio="xMidYMid slice" role="img" width="75" xmlns="http://www.w3.org/2000/svg"><title>Example bottom rounded image</title><rect width="100%" height="100%" fill="#696567"></rect><text x="50%" y="50%" fill="#fff" dy=".3em">75x75</text></svg>
+<svg aria-label="Example left rounded image: 75x75" class="bd-placeholder-img rounded-start" height="75" preserveAspectRatio="xMidYMid slice" role="img" width="75" xmlns="http://www.w3.org/2000/svg"><title>Example left rounded image</title><rect width="100%" height="100%" fill="#696567"></rect><text x="50%" y="50%" fill="#fff" dy=".3em">75x75</text></svg> </div>  <div>   </div>  </div>
+<h3 id="sizes">Sizes<a class="anchor-link" aria-label="Link to this section: Sizes" href="#sizes"> </a></h3>
+<p>Use the scaling classes for larger or smaller rounded corners. Sizes range from <code>0</code> to <code>5</code> including <code>circle</code> and <code>pill</code>, and can be configured by modifying the utilities API.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0 bd-example-rounded-utils"> <svg aria-label="Example non-rounded image: 75x75" class="bd-placeholder-img rounded-0" height="75" preserveAspectRatio="xMidYMid slice" role="img" width="75" xmlns="http://www.w3.org/2000/svg"><title>Example non-rounded image</title><rect width="100%" height="100%" fill="#696567"></rect><text x="50%" y="50%" fill="#fff" dy=".3em">75x75</text></svg>
+<svg aria-label="Example small rounded image: 75x75" class="bd-placeholder-img rounded-1" height="75" preserveAspectRatio="xMidYMid slice" role="img" width="75" xmlns="http://www.w3.org/2000/svg"><title>Example small rounded image</title><rect width="100%" height="100%" fill="#696567"></rect><text x="50%" y="50%" fill="#fff" dy=".3em">75x75</text></svg>
+<svg aria-label="Example default rounded image: 75x75" class="bd-placeholder-img rounded-2" height="75" preserveAspectRatio="xMidYMid slice" role="img" width="75" xmlns="http://www.w3.org/2000/svg"><title>Example default rounded image</title><rect width="100%" height="100%" fill="#696567"></rect><text x="50%" y="50%" fill="#fff" dy=".3em">75x75</text></svg>
+<svg aria-label="Example large rounded image: 75x75" class="bd-placeholder-img rounded-3" height="75" preserveAspectRatio="xMidYMid slice" role="img" width="75" xmlns="http://www.w3.org/2000/svg"><title>Example large rounded image</title><rect width="100%" height="100%" fill="#696567"></rect><text x="50%" y="50%" fill="#fff" dy=".3em">75x75</text></svg>
+<svg aria-label="Example larger rounded image: 75x75" class="bd-placeholder-img rounded-4" height="75" preserveAspectRatio="xMidYMid slice" role="img" width="75" xmlns="http://www.w3.org/2000/svg"><title>Example larger rounded image</title><rect width="100%" height="100%" fill="#696567"></rect><text x="50%" y="50%" fill="#fff" dy=".3em">75x75</text></svg>
+<svg aria-label="Example extra large rounded image: 75x75" class="bd-placeholder-img rounded-5" height="75" preserveAspectRatio="xMidYMid slice" role="img" width="75" xmlns="http://www.w3.org/2000/svg"><title>Example extra large rounded image</title><rect width="100%" height="100%" fill="#696567"></rect><text x="50%" y="50%" fill="#fff" dy=".3em">75x75</text></svg>
+<svg aria-label="Completely round image: 75x75" class="bd-placeholder-img rounded-circle" height="75" preserveAspectRatio="xMidYMid slice" role="img" width="75" xmlns="http://www.w3.org/2000/svg"><title>Completely round image</title><rect width="100%" height="100%" fill="#696567"></rect><text x="50%" y="50%" fill="#fff" dy=".3em">75x75</text></svg>
+<svg aria-label="Rounded pill image: 150x75" class="bd-placeholder-img rounded-pill" height="75" preserveAspectRatio="xMidYMid slice" role="img" width="150" xmlns="http://www.w3.org/2000/svg"><title>Rounded pill image</title><rect width="100%" height="100%" fill="#696567"></rect><text x="50%" y="50%" fill="#fff" dy=".3em">150x75</text></svg> </div>  <div>   </div>  </div>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0 bd-example-rounded-utils"> <svg aria-label="Example small rounded image: 75x75" class="bd-placeholder-img rounded-bottom-1" height="75" preserveAspectRatio="xMidYMid slice" role="img" width="75" xmlns="http://www.w3.org/2000/svg"><title>Example small rounded image</title><rect width="100%" height="100%" fill="#696567"></rect><text x="50%" y="50%" fill="#fff" dy=".3em">75x75</text></svg>
+<svg aria-label="Example default left rounded image: 75x75" class="bd-placeholder-img rounded-start-2" height="75" preserveAspectRatio="xMidYMid slice" role="img" width="75" xmlns="http://www.w3.org/2000/svg"><title>Example default left rounded image</title><rect width="100%" height="100%" fill="#696567"></rect><text x="50%" y="50%" fill="#fff" dy=".3em">75x75</text></svg>
+<svg aria-label="Example right completely round image: 75x75" class="bd-placeholder-img rounded-end-circle" height="75" preserveAspectRatio="xMidYMid slice" role="img" width="75" xmlns="http://www.w3.org/2000/svg"><title>Example right completely round image</title><rect width="100%" height="100%" fill="#696567"></rect><text x="50%" y="50%" fill="#fff" dy=".3em">75x75</text></svg>
+<svg aria-label="Example left rounded pill image: 75x75" class="bd-placeholder-img rounded-start-pill" height="75" preserveAspectRatio="xMidYMid slice" role="img" width="75" xmlns="http://www.w3.org/2000/svg"><title>Example left rounded pill image</title><rect width="100%" height="100%" fill="#696567"></rect><text x="50%" y="50%" fill="#fff" dy=".3em">75x75</text></svg>
+<svg aria-label="Example extra large bottom rounded image: 75x75" class="bd-placeholder-img rounded-5 rounded-top-0" height="75" preserveAspectRatio="xMidYMid slice" role="img" width="75" xmlns="http://www.w3.org/2000/svg"><title>Example extra large bottom rounded image</title><rect width="100%" height="100%" fill="#696567"></rect><text x="50%" y="50%" fill="#fff" dy=".3em">75x75</text></svg> </div>  <div>   </div>  </div>
+<h2 id="css">CSS<a class="anchor-link" aria-label="Link to this section: CSS" href="#css"> </a></h2>
+<h3 id="variables">Variables<a class="anchor-link" aria-label="Link to this section: Variables" href="#variables"> </a></h3>
+<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">Added in v5.2.0</small>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>
+<h3 id="sass-variables">Sass variables<a class="anchor-link" aria-label="Link to this section: Sass variables" href="#sass-variables"> </a></h3>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>
+<p>Variables for setting <code>border-color</code> in <code>.border-*-subtle</code> utilities in light and dark mode:</p>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>
+<h3 id="sass-maps">Sass maps<a class="anchor-link" aria-label="Link to this section: Sass maps" href="#sass-maps"> </a></h3>
+<p>Color mode adaptive border colors are also available as a Sass map:</p>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>
+<h3 id="sass-mixins">Sass mixins<a class="anchor-link" aria-label="Link to this section: Sass mixins" href="#sass-mixins"> </a></h3>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>
+<h3 id="sass-utilities-api">Sass utilities API<a class="anchor-link" aria-label="Link to this section: Sass utilities API" href="#sass-utilities-api"> </a></h3>
+<p>Border utilities are declared in our utilities API in <code>scss/_utilities.scss</code>. <a href="/docs/5.3/utilities/api#using-the-api">Learn how to use the utilities API.</a></p>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>  </main><script src="/dist/js/bootstrap.bundle.min.js"></script></body></html>

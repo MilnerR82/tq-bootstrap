@@ -1,0 +1,74 @@
+/* Lesson-only layout. Framework components retain their native shapes. */
+:root { --lesson-panel: #f8f7f6; --lesson-accent-ink: var(--bs-primary); }
+[data-bs-theme="dark"] { --lesson-panel: #302c2e; --lesson-accent-ink: #fff; }
+[data-bs-theme="dark"] .btn-outline-secondary {
+  --bs-btn-color: #fff;
+  --bs-btn-border-color: #fff;
+  --bs-btn-hover-color: #373234;
+  --bs-btn-hover-bg: #fff;
+  --bs-btn-hover-border-color: #fff;
+  --bs-btn-active-color: #373234;
+  --bs-btn-active-bg: #fff;
+  --bs-btn-active-border-color: #fff;
+}
+html { scroll-behavior: smooth; }
+body { color: var(--bs-body-color); }
+.container-xxl { max-width: 1320px; }
+.skip-link { position: absolute; top: .5rem; left: .5rem; padding: 1rem; background: var(--bs-body-bg); z-index: 20; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid var(--bs-body-color); outline-offset: 4px; }
+.btn-check:focus-visible + .btn { outline: 3px solid var(--bs-body-color); outline-offset: 4px; }
+.brand { display: inline-flex; gap: .75rem; align-items: center; color: var(--bs-body-color); }
+.brand-mark { background: var(--bs-primary); color: #fff; padding: .4rem .5rem; font-weight: 800; letter-spacing: -.06em; }
+.hero { padding-top: 4.5rem; padding-bottom: 5rem; }
+.hero h1 { font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 750; line-height: 1.03; letter-spacing: -.045em; }
+.accent-text { color: var(--lesson-accent-ink); }
+.eyebrow { font-size: .75rem; letter-spacing: .13em; font-weight: 700; text-transform: uppercase; }
+.hero-intro { max-width: 38rem; }
+.hero-art { position: relative; padding: 2rem 1rem; border-block: 1px solid var(--bs-border-color); }
+.art-label, .art-caption { display: block; font-size: .75rem; letter-spacing: .06em; }
+.hero-letters { display: block; font-family: Georgia, serif; font-size: clamp(5rem, 11vw, 10rem); line-height: 1.1; letter-spacing: -.08em; margin-top: 1.5rem; }
+.art-baseline { border-bottom: 2px solid var(--bs-primary); }
+.art-caption { text-align: right; margin-top: 2rem; }
+.lesson-nav { position: sticky; top: 1.5rem; }
+.path-list a { display: flex; align-items: flex-start; gap: .85rem; padding: 1rem 0; text-decoration: none; color: var(--bs-body-color); border-bottom: 1px solid var(--bs-border-color); font-weight: 600; }
+.path-list a:hover { text-decoration: underline; }
+.path-list small { display: block; margin-top: .25rem; font-weight: 400; color: var(--bs-secondary-color); }
+.step-number { font-size: .8rem; margin-top: .2rem; color: var(--lesson-accent-ink); font-variant-numeric: tabular-nums; }
+.intro-note { padding: 1.5rem; border-left: 4px solid var(--bs-primary); background: var(--lesson-panel); }
+.lesson-section { padding-bottom: 4rem; scroll-margin-top: 1.5rem; }
+.section-heading { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
+.section-index { font-size: 2.5rem; color: var(--lesson-accent-ink); font-weight: 300; line-height: 1; }
+.section-heading h2 { margin: 0; font-size: clamp(1.55rem, 3vw, 2rem); letter-spacing: -.025em; }
+.experiment { box-shadow: none; }
+fieldset { min-width: 0; }
+.specimen-surface, .reading-surface, .notice-surface, .takeaway { background: var(--lesson-panel); }
+.specimen-surface { font-family: Arial, Helvetica, sans-serif; overflow-wrap: anywhere; }
+.specimen-letter { font-size: 5rem; line-height: 1.1; margin-bottom: 1rem; }
+.specimen-sentence { font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.3; }
+.specimen-alphabet { font-size: 1rem; line-height: 1.8; }
+.tip { padding: 1rem 0 1rem 1rem; border-left: 3px solid var(--bs-primary); }
+.next-link { display: inline-block; padding: .75rem 0; margin-top: 1rem; font-weight: 600; }
+.notice-surface p, .notice-surface h3 { overflow-wrap: anywhere; }
+.hierarchy-flat > * { font-size: 1rem; font-weight: 400; line-height: 1.6; margin-bottom: 1rem; }
+.hierarchy-loud > * { font-size: 1.65rem; font-weight: 700; line-height: 1.4; text-transform: uppercase; margin-bottom: 1rem; }
+.hierarchy-clear .notice-kicker { font-size: .8rem; letter-spacing: .07em; text-transform: uppercase; font-weight: 600; }
+.hierarchy-clear .notice-title { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -.035em; }
+.hierarchy-clear .notice-subtitle { font-size: 1.25rem; margin-bottom: 1.5rem; }
+.hierarchy-clear .notice-body { font-size: 1rem; line-height: 1.6; max-width: 50ch; }
+.hierarchy-clear .notice-detail { font-size: 1rem; font-weight: 600; border-top: 1px solid var(--bs-border-color); padding-top: 1rem; }
+.task-prompt { border-top: 1px solid var(--bs-border-color); padding-top: 1.25rem; }
+.feedback:empty { display: none; }
+.feedback:not(:empty) { padding: 1rem; border-left: 4px solid var(--bs-primary); background: var(--lesson-panel); }
+.feedback.is-correct { border-color: var(--bs-success); }
+.form-range { min-height: 2.75rem; }
+.form-label output { font-weight: 600; font-variant-numeric: tabular-nums; }
+#reading-preview { font-size: 1rem; line-height: 1.2; max-width: 80ch; border-left: 2px solid var(--bs-primary); padding-left: 1rem; overflow-wrap: anywhere; }
+.quiz-option { display: flex; align-items: flex-start; gap: .8rem; padding: 1rem; border: 1px solid var(--bs-border-color); border-radius: var(--bs-border-radius); cursor: pointer; margin-bottom: .75rem; }
+.quiz-option:has(input:checked) { border-color: var(--bs-primary); box-shadow: inset 3px 0 var(--bs-primary); }
+.quiz-option:has(input:focus-visible) { outline: 3px solid var(--bs-body-color); outline-offset: 3px; }
+.quiz-option .form-check-input { flex-shrink: 0; }
+.takeaway h2 { letter-spacing: -.025em; }
+@media (max-width: 991.98px) { .hero { padding-top: 3rem; padding-bottom: 3rem; } .lesson-nav { position: static; } .path-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; } }
+@media (max-width: 420px) { .path-list { grid-template-columns: 1fr; } .hero h1 { font-size: 2.8rem; } .section-heading { gap: .7rem; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (forced-colors: active) { .quiz-option:has(input:checked) { border: 3px solid Highlight; } .brand-mark { border: 1px solid CanvasText; } }

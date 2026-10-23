@@ -1,0 +1,47 @@
+// Preserve all native component geometry and APIs; substitute paint only.
+@if $info == $tq-info {
+  .alert-info,
+  .list-group-item-info {
+    --#{$prefix}list-group-action-color: #{$tq-ink};
+    --#{$prefix}info-text-emphasis: #{$tq-ink};
+    --tq-focus-ring-colour: #{$tq-red-dark};
+    --tq-focus-ring-rgb: #{to-rgb($tq-red-dark)};
+  }
+  .alert-info {
+    --#{$prefix}alert-link-color: #{$tq-red-dark};
+    --#{$prefix}code-color: #{$tq-red-dark};
+  }
+  .list-group-item-info {
+    --#{$prefix}list-group-action-hover-color: #{$tq-red-dark};
+    --#{$prefix}list-group-action-hover-bg: #{$tq-warm};
+    --#{$prefix}list-group-action-active-color: #{$tq-red-dark};
+    --#{$prefix}list-group-action-active-bg: #{$tq-divider};
+    --#{$prefix}list-group-active-color: #{$tq-white};
+    --#{$prefix}list-group-active-bg: #{$tq-red};
+    --#{$prefix}list-group-active-border-color: #{$tq-red};
+  }
+  .btn-info {
+    --#{$prefix}btn-color: #{$tq-red-dark};
+    --#{$prefix}btn-bg: #{$tq-white};
+    --#{$prefix}btn-border-color: #{$tq-red};
+    --#{$prefix}btn-hover-color: #{$tq-red-dark};
+    --#{$prefix}btn-hover-bg: #{$tq-warm};
+    --#{$prefix}btn-hover-border-color: #{$tq-red-dark};
+    --#{$prefix}btn-active-color: #{$tq-red-dark};
+    --#{$prefix}btn-active-bg: #{$tq-divider};
+    --#{$prefix}btn-active-border-color: #{$tq-red-dark};
+    --#{$prefix}btn-disabled-color: #{$tq-red-dark};
+    --#{$prefix}btn-disabled-bg: #{$tq-white};
+    --#{$prefix}btn-disabled-border-color: #{$tq-red};
+  }
+  @include table-variant("info", $tq-white);
+  .table-info { --#{$prefix}table-border-color: #{$tq-red}; }
+  .card.text-bg-info,
+  .card.bg-info { --#{$prefix}card-border-color: #{$tq-red}; }
+  // A progress bar is the accent itself, so retain visible red progress paint.
+  .progress-bar.bg-info,
+  .progress-bar.text-bg-info {
+    background-color: rgba($tq-red, var(--#{$prefix}bg-opacity, 1)) !important;
+    color: $tq-white !important;
+  }
+}

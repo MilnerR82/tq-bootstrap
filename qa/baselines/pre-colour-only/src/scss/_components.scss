@@ -1,0 +1,260 @@
+.btn {
+  min-block-size: 2.75rem;
+  min-inline-size: 2.75rem;
+  white-space: normal;
+}
+.btn-sm, .btn-group-sm > .btn { min-block-size: 2rem; min-inline-size: 2rem; }
+.btn-primary, .btn-outline-primary { --bs-btn-border-radius: 50rem; }
+.btn-primary {
+  --bs-btn-hover-bg: #{$tq-red-dark};
+  --bs-btn-hover-border-color: #{$tq-red-dark};
+  --bs-btn-active-bg: #{$tq-red-dark};
+  --bs-btn-active-border-color: #{$tq-red-dark};
+}
+
+@each $name, $value in $theme-colors {
+  .btn-#{$name} {
+    --bs-btn-focus-shadow-rgb: #{to-rgb($tq-ink)};
+    --bs-btn-disabled-color: #{color-contrast($value)};
+  }
+  .btn-outline-#{$name} {
+    --bs-btn-color: var(--bs-body-color);
+    --bs-btn-border-color: var(--tq-control-border);
+    --bs-btn-hover-color: #{$tq-white};
+    --bs-btn-hover-bg: #{$tq-ink};
+    --bs-btn-hover-border-color: var(--tq-control-border);
+    --bs-btn-active-color: #{$tq-white};
+    --bs-btn-active-bg: #{$tq-ink};
+    --bs-btn-active-border-color: var(--tq-control-border);
+    --bs-btn-disabled-color: var(--bs-secondary-color);
+    --bs-btn-disabled-border-color: var(--tq-control-border);
+  }
+}
+.btn-outline-primary {
+  --bs-btn-border-color: #{$tq-red};
+  --bs-btn-hover-bg: #{$tq-red};
+  --bs-btn-hover-border-color: #{$tq-red};
+  --bs-btn-active-bg: #{$tq-red-dark};
+}
+.btn-secondary, .btn-light, .btn-warning {
+  --bs-btn-border-color: #{$tq-muted};
+  --bs-btn-hover-bg: #{$tq-ink};
+  --bs-btn-hover-color: #{$tq-white};
+  --bs-btn-hover-border-color: #{$tq-ink};
+  --bs-btn-active-bg: #{$tq-ink};
+  --bs-btn-active-color: #{$tq-white};
+  --bs-btn-active-border-color: #{$tq-ink};
+}
+.btn-success, .btn-dark, .btn-info {
+  --bs-btn-hover-bg: #{$tq-warm};
+  --bs-btn-hover-color: #{$tq-ink};
+  --bs-btn-hover-border-color: #{$tq-muted};
+  --bs-btn-active-bg: #{$tq-warm};
+  --bs-btn-active-color: #{$tq-ink};
+  --bs-btn-active-border-color: #{$tq-muted};
+}
+.btn-danger {
+  --bs-btn-hover-bg: #{$tq-ink};
+  --bs-btn-hover-border-color: #{$tq-ink};
+  --bs-btn-active-bg: #{$tq-ink};
+  --bs-btn-active-border-color: #{$tq-ink};
+}
+.btn-link { text-underline-offset: .18em; }
+.btn-close { flex-shrink: 0; background-size: 1.125rem; }
+.dropdown-toggle-split { min-inline-size: 2.75rem; }
+
+.form-label, .col-form-label { color: var(--bs-body-color); }
+.form-control, .form-select { min-block-size: 2.75rem; }
+.form-control-sm, .form-select-sm { min-block-size: 2rem; }
+textarea.form-control { min-block-size: 7rem; }
+.form-check { min-block-size: 2rem; }
+.form-check-input { margin-block-start: 0; }
+.form-check-label { min-block-size: 1.5rem; padding-inline-start: .125rem; }
+.form-switch { padding-inline-start: 3.5em; }
+.form-switch .form-check-input { margin-inline-start: -3.5em; }
+.form-range { min-block-size: 2.75rem; }
+.input-group-text { border-color: var(--tq-control-border); }
+.form-floating > label { color: var(--bs-body-color); }
+.valid-feedback, .invalid-feedback { font-weight: 500; }
+.invalid-feedback { border-inline-start: .1875rem solid var(--bs-form-invalid-border-color); padding-inline-start: .5rem; }
+.valid-tooltip, .invalid-tooltip { color: #{$tq-white}; background: #{$tq-ink}; }
+
+.card { box-shadow: var(--bs-box-shadow-sm); }
+.card-title { line-height: 1.25; }
+.blockquote-footer { color: var(--bs-secondary-color); }
+.card-text, .list-group-item, .alert, .toast-body, .modal-body, .offcanvas-body, .popover-body { overflow-wrap: anywhere; }
+
+.accordion-button { min-block-size: 3.5rem; font-weight: 500; line-height: 1.5; gap: 1rem; }
+.accordion-button::after { flex-shrink: 0; }
+.accordion-item { border-inline-start: .25rem solid #{$tq-red}; }
+.accordion-flush .accordion-item { border-inline-start-width: .25rem; }
+.accordion-body { border-block-start: 1px solid var(--bs-border-color); }
+
+.nav-link, .dropdown-item, .list-group-item-action, .page-link, .navbar-toggler {
+  min-block-size: 2.75rem;
+}
+.nav-link { text-underline-offset: .3em; max-inline-size: 100%; min-inline-size: 0; overflow-wrap: anywhere; }
+.nav-item { max-inline-size: 100%; min-inline-size: 0; }
+.nav-link:hover, .navbar-nav .nav-link:hover { text-decoration: underline; }
+.nav-tabs .nav-link.active, .nav-underline .nav-link.active {
+  font-weight: 700;
+  border-block-end: .1875rem solid currentColor;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  outline: 1px solid var(--tq-control-border);
+  outline-offset: -1px;
+}
+.navbar-toggler { min-inline-size: 2.75rem; }
+// Bootstrap's navbar color variables otherwise retain their light defaults
+// when a color mode is applied to an ancestor rather than the navbar itself.
+.navbar {
+  --bs-navbar-color: var(--bs-secondary-color);
+  --bs-navbar-hover-color: var(--bs-body-color);
+  --bs-navbar-active-color: var(--bs-emphasis-color);
+  --bs-navbar-brand-color: var(--bs-emphasis-color);
+  --bs-navbar-brand-hover-color: var(--bs-emphasis-color);
+  --bs-navbar-toggler-border-color: var(--tq-control-border);
+}
+.navbar-dark {
+  --bs-navbar-color: #{$tq-white};
+  --bs-navbar-hover-color: #{$tq-white};
+  --bs-navbar-active-color: #{$tq-white};
+  --bs-navbar-brand-color: #{$tq-white};
+  --bs-navbar-brand-hover-color: #{$tq-white};
+  --bs-navbar-toggler-border-color: #{$tq-koala};
+}
+.page-link { min-inline-size: 2.75rem; text-align: center; }
+.pagination-sm .page-link { min-block-size: 2rem; min-inline-size: 2rem; }
+.pagination { flex-wrap: wrap; row-gap: .375rem; }
+.breadcrumb { row-gap: .375rem; }
+.breadcrumb-item + .breadcrumb-item::before { color: var(--bs-secondary-color); }
+.dropdown-menu { box-shadow: var(--bs-box-shadow); }
+.dropdown-item { white-space: normal; overflow-wrap: anywhere; }
+.dropdown-item.active, .dropdown-item:active { font-weight: 500; }
+.list-group-item.active { font-weight: 500; }
+@each $name in map-keys($theme-colors) {
+  .list-group-item-#{$name} {
+    --bs-list-group-action-hover-color: var(--tq-hover-color);
+    --bs-list-group-action-hover-bg: var(--tq-hover-bg);
+    --bs-list-group-action-active-color: var(--tq-hover-color);
+    --bs-list-group-action-active-bg: var(--tq-hover-bg);
+  }
+}
+.alert { border-inline-start-width: .25rem; }
+.alert-link { text-decoration: underline; }
+.badge { line-height: 1.35; white-space: normal; }
+.progress { border: 1px solid var(--tq-control-border); }
+.progress-bar { min-block-size: 1.375rem; }
+.progress-bar-striped {
+  background-image: linear-gradient(45deg, rgba($tq-ink, .15) 25%, transparent 25%, transparent 50%, rgba($tq-ink, .15) 50%, rgba($tq-ink, .15) 75%, transparent 75%, transparent);
+}
+.progress-bar:is(.bg-secondary, .bg-warning, .bg-light) { color: #{$tq-ink}; }
+.popover, .tooltip { overflow-wrap: anywhere; }
+.popover { box-shadow: var(--bs-box-shadow); }
+.modal-header, .offcanvas-header { gap: 1rem; align-items: start; }
+.modal-title, .offcanvas-title { margin-block: .25rem 0; }
+.modal-content { box-shadow: var(--bs-box-shadow-lg); }
+.toast { max-inline-size: calc(100vw - 2rem); }
+.toast-header { gap: .5rem; }
+.toast-header .btn-close { margin-inline-end: -.5rem; }
+.toast-body { line-height: 1.5; }
+
+// Opaque media-control backgrounds avoid contrast depending on photographs.
+.carousel-control-prev, .carousel-control-next { min-inline-size: 2.75rem; }
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  box-sizing: content-box;
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  padding: .75rem;
+  background-color: #{$tq-ink};
+  background-size: 1.25rem;
+  border: 1px solid #{$tq-white};
+  border-radius: 50%;
+  filter: none !important;
+}
+.carousel-indicators [data-bs-target],
+.carousel-dark .carousel-indicators [data-bs-target] {
+  position: relative;
+  box-sizing: border-box;
+  inline-size: 2.75rem;
+  min-inline-size: 2.75rem;
+  block-size: 2.75rem;
+  margin-inline: .125rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  opacity: 1;
+}
+.carousel-indicators [data-bs-target]::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline: 0;
+  margin-inline: auto;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  inline-size: .625rem;
+  block-size: .5rem;
+  border: 1px solid #{$tq-white};
+  border-radius: 50rem;
+  background: #{$tq-ink};
+  box-shadow: 0 0 0 1px #{$tq-ink};
+}
+.carousel-indicators [data-bs-target].active::before {
+  inline-size: 1.5rem;
+  background: #{$tq-red};
+}
+.carousel-caption { color: #{$tq-white}; background: #{$tq-ink}; padding: 1rem; border-radius: .5rem; }
+.carousel-caption :is(h1,h2,h3,h4,h5,h6,p) { color: inherit; }
+.carousel:has(.carousel-indicators) .carousel-caption { inset-block-end: 4.5rem; }
+
+// Static contextual tables retain accessible contrast in either color mode.
+@each $name in ("primary", "secondary", "success", "info", "warning", "danger") {
+  .table-#{$name} {
+    --bs-table-color: var(--bs-body-color);
+    --bs-table-bg: var(--bs-secondary-bg);
+    --bs-table-border-color: var(--tq-control-border);
+    --bs-table-striped-color: var(--bs-body-color);
+    --bs-table-striped-bg: rgba(var(--bs-emphasis-color-rgb), .04);
+    --bs-table-active-color: var(--tq-hover-color);
+    --bs-table-active-bg: var(--tq-hover-bg);
+    --bs-table-hover-color: var(--tq-hover-color);
+    --bs-table-hover-bg: var(--tq-hover-bg);
+  }
+}
+.table-light {
+  --bs-table-color: #{$tq-ink};
+  --bs-table-bg: #{$tq-warm};
+  --bs-table-border-color: #{$tq-muted};
+  --bs-table-striped-color: #{$tq-ink};
+  --bs-table-striped-bg: #{rgba($tq-ink, .04)};
+  --bs-table-active-color: #{$tq-ink};
+  --bs-table-active-bg: #{$tq-divider};
+  --bs-table-hover-color: #{$tq-ink};
+  --bs-table-hover-bg: #{$tq-divider};
+}
+.table-dark {
+  --bs-table-color: #{$tq-white};
+  --bs-table-bg: #{$tq-ink};
+  --bs-table-border-color: #{$tq-koala};
+  --bs-table-striped-color: #{$tq-white};
+  --bs-table-striped-bg: #{rgba($tq-white, .04)};
+  --bs-table-active-color: #{$tq-ink};
+  --bs-table-active-bg: #{$tq-warm};
+  --bs-table-hover-color: #{$tq-ink};
+  --bs-table-hover-bg: #{$tq-warm};
+}
+
+[data-bs-theme="dark"] {
+  .btn-primary, .btn-secondary, .btn-success, .btn-info,
+  .btn-warning, .btn-danger, .btn-light, .btn-dark, .btn-outline-primary {
+    --bs-btn-border-color: #{$tq-koala};
+    --bs-btn-hover-border-color: #{$tq-koala};
+    --bs-btn-active-border-color: #{$tq-koala};
+  }
+  .accordion-item { border-inline-start-color: #{$tq-koala}; }
+  .form-switch .form-check-input:focus:not(:checked) {
+    --bs-form-switch-bg: #{escape-svg($form-switch-bg-image-dark)};
+  }
+}

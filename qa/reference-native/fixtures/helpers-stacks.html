@@ -1,0 +1,48 @@
+<!doctype html><html lang="en" data-bs-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>helpers-stacks native comparison fixture</title><link id="framework" rel="stylesheet" href="/qa/reference-native/css/bootstrap.css"><link rel="stylesheet" href="/qa/reference-native/docs-themed.css"></head><body><main class="bd-content" style="margin:16px">   <p>Stacks offer a shortcut for applying a number of flexbox properties to quickly and easily create layouts in Bootstrap. All credit for the concept and implementation goes to the open source <a href="https://almonk.github.io/pylon/">Pylon project</a>.</p>
+<div class="bd-callout bd-callout-warning"> <p><strong>Heads up!</strong> Support for gap utilities with flexbox isn’t available in Safari prior to 14.5, so consider verifying your intended browser support. Grid layout should have no issues. <a href="https://caniuse.com/flexbox-gap">Read more</a>.</p> </div>
+<h2 id="vertical">Vertical<a class="anchor-link" aria-label="Link to this section: Vertical" href="#vertical"> </a></h2>
+<p>Use <code>.vstack</code> to create vertical layouts. Stacked items are full-width by default. Use <code>.gap-*</code> utilities to add space between items.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0 bd-example-flex"> <div class="vstack gap-3">
+  <div class="p-2">First item</div>
+  <div class="p-2">Second item</div>
+  <div class="p-2">Third item</div>
+</div> </div>  <div>   </div>  </div>
+<h2 id="horizontal">Horizontal<a class="anchor-link" aria-label="Link to this section: Horizontal" href="#horizontal"> </a></h2>
+<p>Use <code>.hstack</code> for horizontal layouts. Stacked items are vertically centered by default and only take up their necessary width. Use <code>.gap-*</code> utilities to add space between items.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0 bd-example-flex"> <div class="hstack gap-3">
+  <div class="p-2">First item</div>
+  <div class="p-2">Second item</div>
+  <div class="p-2">Third item</div>
+</div> </div>  <div>   </div>  </div>
+<p>Using horizontal margin utilities like <code>.ms-auto</code> as spacers:</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0 bd-example-flex"> <div class="hstack gap-3">
+  <div class="p-2">First item</div>
+  <div class="p-2 ms-auto">Second item</div>
+  <div class="p-2">Third item</div>
+</div> </div>  <div>   </div>  </div>
+<p>And with <a href="/docs/5.3/helpers/vertical-rule">vertical rules</a>:</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0 bd-example-flex"> <div class="hstack gap-3">
+  <div class="p-2">First item</div>
+  <div class="p-2 ms-auto">Second item</div>
+  <div class="vr"></div>
+  <div class="p-2">Third item</div>
+</div> </div>  <div>   </div>  </div>
+<h2 id="examples">Examples<a class="anchor-link" aria-label="Link to this section: Examples" href="#examples"> </a></h2>
+<p>Use <code>.vstack</code> to stack buttons and other elements:</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <div class="bg-white p-2" data-bs-theme="light">
+<div class="vstack gap-2 col-md-5 mx-auto">
+  <button type="button" class="btn btn-secondary">Save changes</button>
+  <button type="button" class="btn btn-outline-secondary">Cancel</button>
+</div>
+</div> </div>  <div>   </div>  </div>
+<p>Create an inline form with <code>.hstack</code>:</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <div class="bg-white p-2" data-bs-theme="light">
+<div class="hstack gap-3">
+  <input class="form-control me-auto" type="text" placeholder="Add your item here..." aria-label="Add your item here...">
+  <button type="button" class="btn btn-secondary">Submit</button>
+  <div class="vr"></div>
+  <button type="button" class="btn btn-outline-danger">Reset</button>
+</div>
+</div> </div>  <div>   </div>  </div>
+<h2 id="css">CSS<a class="anchor-link" aria-label="Link to this section: CSS" href="#css"> </a></h2>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>  </main><script src="/dist/js/bootstrap.bundle.min.js"></script></body></html>

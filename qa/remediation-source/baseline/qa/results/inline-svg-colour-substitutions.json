@@ -1,0 +1,19 @@
+{
+  "scope": "Final encoded inline SVG live example audit",
+  "paletteAuthority": "src/scss/_tokens.scss",
+  "files": [
+    {
+      "path": "site/src/content/docs/components/breadcrumb.mdx",
+      "upstreamSha256": "2f4217c5ffa3a0050508dd5f650611fb15797a4d743ae6b133c3bf022084855f",
+      "currentSha256": "f28cec9f95cd8f1a9b31d2302f2eb4a5e358dd5e645d2f49eeac973f54fa2086",
+      "substitutions": [
+        {
+          "from": "%236c757d",
+          "to": "%23fc1721",
+          "count": 1,
+          "reason": "Replace the native custom-divider SVG grey with TQ bright red, a small accent exceeding 3:1 on both white and charcoal. Preserve every SVG path, size and copyable-markup character."
+        }
+      ]
+    }
+  ]
+}

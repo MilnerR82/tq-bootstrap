@@ -1,0 +1,74 @@
+<!doctype html><html lang="en" data-bs-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>components-placeholders native comparison fixture</title><link id="framework" rel="stylesheet" href="/qa/reference-native/css/bootstrap.css"><link rel="stylesheet" href="/qa/reference-native/docs-themed.css"></head><body><main class="bd-content" style="margin:16px">   <h2 id="about">About<a class="anchor-link" aria-label="Link to this section: About" href="#about"> </a></h2>
+<p>Placeholders can be used to enhance the experience of your application. They’re built only with HTML and CSS, meaning you don’t need any JavaScript to create them. You will, however, need some custom JavaScript to toggle their visibility. Their appearance, color, and sizing can be easily customized with our utility classes.</p>
+<h2 id="example">Example<a class="anchor-link" aria-label="Link to this section: Example" href="#example"> </a></h2>
+<p>In the example below, we take a typical card component and recreate it with placeholders applied to create a “loading card”. Size and proportions are the same between the two.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0 bd-example-placeholder-cards d-flex justify-content-around"> <div class="card">
+  <svg aria-label="Placeholder" class="bd-placeholder-img card-img-top" height="180" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><rect width="100%" height="100%" fill="#696567"></rect></svg>
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" aria-hidden="true">
+  <svg aria-label="Placeholder" class="bd-placeholder-img card-img-top" height="180" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><rect width="100%" height="100%" fill="#696567"></rect></svg>
+  <div class="card-body">
+    <div class="h5 card-title placeholder-glow">
+      <span class="placeholder col-6"></span>
+    </div>
+    <p class="card-text placeholder-glow">
+      <span class="placeholder col-7"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-6"></span>
+      <span class="placeholder col-8"></span>
+    </p>
+    <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+  </div>
+</div> </div>  </div>
+ <div class="bd-code-snippet">   </div>
+<h2 id="how-it-works">How it works<a class="anchor-link" aria-label="Link to this section: How it works" href="#how-it-works"> </a></h2>
+<p>Create placeholders with the <code>.placeholder</code> class and a grid column class (e.g., <code>.col-6</code>) to set the <code>width</code>. They can replace the text inside an element or be added as a modifier class to an existing component.</p>
+<p>We apply additional styling to <code>.btn</code>s via <code>::before</code> to ensure the <code>height</code> is respected. You may extend this pattern for other situations as needed, or add a <code>&amp;nbsp;</code> within the element to reflect the height when actual text is rendered in its place.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <p aria-hidden="true">
+  <span class="placeholder col-6"></span>
+</p>
+
+<a class="btn btn-primary disabled placeholder col-4" aria-disabled="true"></a> </div>  <div>   </div>  </div>
+<div class="bd-callout bd-callout-info"> <p>The use of <code>aria-hidden="true"</code> only indicates that the element should be hidden to screen readers. The <em>loading</em> behavior of the placeholder depends on how authors will actually use the placeholder styles, how they plan to update things, etc. Some JavaScript code may be needed to <em>swap</em> the state of the placeholder and inform AT users of the update.</p> </div>
+<h3 id="width">Width<a class="anchor-link" aria-label="Link to this section: Width" href="#width"> </a></h3>
+<p>You can change the <code>width</code> through grid column classes, width utilities, or inline styles.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <span class="placeholder col-6"></span>
+<span class="placeholder w-75"></span>
+<span class="placeholder" style="width: 25%;"></span> </div>  <div>   </div>  </div>
+<h3 id="color">Color<a class="anchor-link" aria-label="Link to this section: Color" href="#color"> </a></h3>
+<p>By default, the <code>placeholder</code> uses <code>currentColor</code>. This can be overridden with a custom color or utility class.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <span class="placeholder col-12"></span>
+
+<span class="placeholder col-12 bg-primary"></span>
+<span class="placeholder col-12 bg-secondary"></span>
+<span class="placeholder col-12 bg-success"></span>
+<span class="placeholder col-12 bg-danger"></span>
+<span class="placeholder col-12 bg-warning"></span>
+<span class="placeholder col-12 bg-info"></span>
+<span class="placeholder col-12 bg-light"></span>
+<span class="placeholder col-12 bg-dark"></span> </div>  <div>   </div>  </div>
+<h3 id="sizing">Sizing<a class="anchor-link" aria-label="Link to this section: Sizing" href="#sizing"> </a></h3>
+<p>The size of <code>.placeholder</code>s are based on the typographic style of the parent element. Customize them with sizing modifiers: <code>.placeholder-lg</code>, <code>.placeholder-sm</code>, or <code>.placeholder-xs</code>.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <span class="placeholder col-12 placeholder-lg"></span>
+<span class="placeholder col-12"></span>
+<span class="placeholder col-12 placeholder-sm"></span>
+<span class="placeholder col-12 placeholder-xs"></span> </div>  <div>   </div>  </div>
+<h3 id="animation">Animation<a class="anchor-link" aria-label="Link to this section: Animation" href="#animation"> </a></h3>
+<p>Animate placeholders with <code>.placeholder-glow</code> or <code>.placeholder-wave</code> to better convey the perception of something being <em>actively</em> loaded.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <p class="placeholder-glow">
+  <span class="placeholder col-12"></span>
+</p>
+
+<p class="placeholder-wave">
+  <span class="placeholder col-12"></span>
+</p> </div>  <div>   </div>  </div>
+<h2 id="css">CSS<a class="anchor-link" aria-label="Link to this section: CSS" href="#css"> </a></h2>
+<h3 id="sass-variables">Sass variables<a class="anchor-link" aria-label="Link to this section: Sass variables" href="#sass-variables"> </a></h3>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>  </main><script src="/dist/js/bootstrap.bundle.min.js"></script></body></html>

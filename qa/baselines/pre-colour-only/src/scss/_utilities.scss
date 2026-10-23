@@ -1,0 +1,25 @@
+// Semantic foreground utilities are reading colors, while bg-* retains the
+// contextual fill. Explicit text-light/text-dark inversion helpers remain intact.
+@each $name in ("primary", "secondary", "success", "info", "warning", "danger") {
+  .text-#{$name} {
+    color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity, 1)) !important;
+  }
+  .link-#{$name} {
+    color: rgba(var(--bs-body-color-rgb), var(--bs-link-opacity, 1)) !important;
+    text-decoration-color: rgba(var(--bs-body-color-rgb), var(--bs-link-underline-opacity, 1)) !important;
+    &:hover, &:focus {
+      color: rgba(var(--bs-body-color-rgb), var(--bs-link-opacity, 1)) !important;
+      text-decoration-color: rgba(var(--bs-body-color-rgb), var(--bs-link-underline-opacity, 1)) !important;
+      text-decoration-thickness: .125em;
+    }
+  }
+  .border-#{$name} { border-color: rgba(var(--tq-control-border-rgb), var(--bs-border-opacity, 1)) !important; }
+}
+
+// These pair helpers are safe independently of surrounding color mode.
+@each $name, $value in $theme-colors {
+  .text-bg-#{$name} {
+    color: #{color-contrast($value)} !important;
+    background-color: #{$value} !important;
+  }
+}

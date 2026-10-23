@@ -1,0 +1,125 @@
+{
+  "scope": "Brand font family with existing type scale retained. Targeted checks, not full WCAG conformance.",
+  "zipCount": 3,
+  "verifiedZipEntries": 1507,
+  "packageErrors": [],
+  "packagedFontChecks": [
+    {
+      "file": "tq-bootstrap-dist/css/bootstrap.css",
+      "pass": true
+    },
+    {
+      "file": "tq-bootstrap-source/src/scss/_tokens.scss",
+      "pass": true
+    },
+    {
+      "file": "tq-bootstrap-examples/docs/5.3/dist/css/bootstrap.css",
+      "pass": true
+    }
+  ],
+  "static": {
+    "checks": 158,
+    "failed": 0
+  },
+  "browser": {
+    "pages": 36,
+    "violations": 0,
+    "checks": 46,
+    "failures": []
+  },
+  "example-previews": {
+    "pages": 40,
+    "images": 80,
+    "expectedImages": 80,
+    "dimensions": [
+      {
+        "width": 480,
+        "height": 300
+      },
+      {
+        "width": 960,
+        "height": 600
+      }
+    ],
+    "observedSourceFiles": 256,
+    "captureInputFiles": 175,
+    "publicationOutputs": 81,
+    "dependencies": 8,
+    "findings": 0,
+    "assetsFrozen": true
+  },
+  "exactParity": [
+    {
+      "name": "tq-bootstrap",
+      "pass": true,
+      "changes": [
+        {
+          "before": {
+            "context": ":root,\n[data-bs-theme=light]",
+            "property": "--bs-font-sans-serif",
+            "value": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+            "important": false
+          },
+          "after": {
+            "context": ":root,\n[data-bs-theme=light]",
+            "property": "--bs-font-sans-serif",
+            "value": "\"Helvetica Neue\", Arial, sans-serif",
+            "important": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "tq-bootstrap-reboot",
+      "pass": true,
+      "changes": [
+        {
+          "before": {
+            "context": ":root,\n[data-bs-theme=light]",
+            "property": "--bs-font-sans-serif",
+            "value": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+            "important": false
+          },
+          "after": {
+            "context": ":root,\n[data-bs-theme=light]",
+            "property": "--bs-font-sans-serif",
+            "value": "\"Helvetica Neue\", Arial, sans-serif",
+            "important": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "tq-bootstrap-grid",
+      "pass": true,
+      "changes": []
+    },
+    {
+      "name": "tq-bootstrap-utilities",
+      "pass": true,
+      "changes": [
+        {
+          "before": {
+            "context": ":root,\n[data-bs-theme=light]",
+            "property": "--bs-font-sans-serif",
+            "value": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+            "important": false
+          },
+          "after": {
+            "context": ":root,\n[data-bs-theme=light]",
+            "property": "--bs-font-sans-serif",
+            "value": "\"Helvetica Neue\", Arial, sans-serif",
+            "important": false
+          }
+        }
+      ]
+    }
+  ],
+  "metricsSamples": 8,
+  "lesson": {
+    "workflowBrowsers": 3,
+    "scans": 8,
+    "violations": 0,
+    "errors": []
+  }
+}

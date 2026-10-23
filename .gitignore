@@ -1,0 +1,35 @@
+node_modules/
+test-results/
+.cache/
+*.log
+# Current self-contained downloads are versioned; historical bundles stay local.
+/release/*
+!/release/tq-bootstrap-1.0.0-dist.zip
+!/release/tq-bootstrap-1.0.0-source.zip
+!/release/tq-bootstrap-1.0.0-examples.zip
+!/release/downloads.json
+
+# Rebuildable duplicate output and tool state.
+.astro/
+/docs-source/site/dist/
+/docs-source/site/public/
+/upstream/archives/
+
+# Brand reference PDF is local research material, not framework distribution.
+/docs/references/*.pdf
+
+# Keep audit narratives and latest typography evidence, not historical captures.
+/qa/results/**
+!/qa/results/**/
+!/qa/results/**/*.md
+!/qa/results/brand-font/*.json
+!/qa/results/brand-font/lesson/*.json
+
+# Local credentials and editor/system files.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+Thumbs.db

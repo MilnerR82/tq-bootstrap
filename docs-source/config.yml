@@ -1,0 +1,45 @@
+title: TQ Bootstrap
+baseURL: http://127.0.0.1:5198
+docsDir: site
+subtitle: Bootstrap 5.3.8 with TAFE Queensland colours.
+description: TQ Bootstrap is an independent Bootstrap 5.3.8 theme with TAFE Queensland colours, original Bootstrap components and documentation, and separately documented accessibility enhancements.
+authors: Mark Otto, Jacob Thornton, and Bootstrap contributors
+current_version: 5.3.8
+current_ruby_version: 5.3.8
+docs_version: '5.3'
+rfs_version: v10.0.0
+github_org: https://github.com/twbs
+repo: https://github.com/twbs/bootstrap
+x: getbootstrap
+opencollective: https://opencollective.com/bootstrap
+blog: https://blog.getbootstrap.com/
+icons: https://icons.getbootstrap.com/
+swag: https://cottonbureau.com/people/bootstrap
+analytics:
+  fathom_site: ITUSEYJG
+algolia:
+  app_id: AK7KMZKZHQ
+  api_key: 3151f502c7b9e9dafd5e6372b691a24e
+  index_name: bootstrap
+download:
+  source: /release/tq-bootstrap-1.0.0-source.zip
+  dist: /release/tq-bootstrap-1.0.0-dist.zip
+  dist_examples: /release/tq-bootstrap-1.0.0-examples.zip
+cdn:
+  css: /docs/5.3/dist/css/bootstrap.min.css
+  css_hash: sha384-ZBO9ij5HnUroDoc4lFQ+EqRzXiQ9M+h5ZF8DWnZP66fjyou6EmGrrWYdNrJ+b/x2
+  css_rtl: /docs/5.3/dist/css/bootstrap.rtl.min.css
+  css_rtl_hash: sha384-yZIe2nkinKwNhGyihmIgD3ek4tHDMiLFSB2Qu7ETK4OUGmp4HCqqjFSaHL545EfK
+  js: /docs/5.3/dist/js/bootstrap.min.js
+  js_hash: sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y
+  js_bundle: /docs/5.3/dist/js/bootstrap.bundle.min.js
+  js_bundle_hash: sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI
+  popper: https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js
+  popper_hash: sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r
+  popper_esm: https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js
+anchors:
+  min: 2
+  max: 5
+toc:
+  min: 2
+  max: 6

@@ -1,0 +1,48 @@
+<!doctype html><html lang="en" data-bs-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>forms-select native comparison fixture</title><link id="framework" rel="stylesheet" href="/qa/reference-native/css/bootstrap.css"><link rel="stylesheet" href="/qa/reference-native/docs-themed.css"></head><body><main class="bd-content" style="margin:16px">   <h2 id="default">Default<a class="anchor-link" aria-label="Link to this section: Default" href="#default"> </a></h2>
+<p>Custom <code>&lt;select&gt;</code> menus need only a custom class, <code>.form-select</code> to trigger the custom styles. Custom styles are limited to the <code>&lt;select&gt;</code>’s initial appearance and cannot modify the <code>&lt;option&gt;</code>s due to browser limitations.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <select class="form-select" aria-label="Default select example">
+  <option selected="">Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select> </div>  <div>   </div>  </div>
+<h2 id="sizing">Sizing<a class="anchor-link" aria-label="Link to this section: Sizing" href="#sizing"> </a></h2>
+<p>You may also choose from small and large custom selects to match our similarly sized text inputs.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+  <option selected="">Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+
+<select class="form-select form-select-sm" aria-label="Small select example">
+  <option selected="">Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select> </div>  <div>   </div>  </div>
+<p>The <code>multiple</code> attribute is also supported:</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <select class="form-select" multiple="" aria-label="Multiple select example">
+  <option selected="">Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select> </div>  <div>   </div>  </div>
+<p>As is the <code>size</code> attribute:</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <select class="form-select" size="3" aria-label="Size 3 select example">
+  <option selected="">Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select> </div>  <div>   </div>  </div>
+<h2 id="disabled">Disabled<a class="anchor-link" aria-label="Link to this section: Disabled" href="#disabled"> </a></h2>
+<p>Add the <code>disabled</code> boolean attribute on a select to give it a grayed out appearance and remove pointer events.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <select class="form-select" aria-label="Disabled select example" disabled="">
+  <option selected="">Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select> </div>  <div>   </div>  </div>
+<h2 id="css">CSS<a class="anchor-link" aria-label="Link to this section: CSS" href="#css"> </a></h2>
+<h3 id="sass-variables">Sass variables<a class="anchor-link" aria-label="Link to this section: Sass variables" href="#sass-variables"> </a></h3>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>  </main><script src="/dist/js/bootstrap.bundle.min.js"></script></body></html>

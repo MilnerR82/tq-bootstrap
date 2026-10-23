@@ -1,0 +1,10 @@
+// Light neutral foregrounds are white; the light background stays Koala Grey L2.
+// Preserve explicit author-selected text/link opacity and native geometry.
+.text-light {
+  color: rgba($tq-white, var(--#{$prefix}text-opacity, 1)) !important;
+}
+.link-light,
+.link-light:hover,
+.link-light:focus {
+  color: rgba($tq-white, var(--#{$prefix}link-opacity, 1)) !important;
+}

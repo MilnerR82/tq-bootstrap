@@ -1,0 +1,10 @@
+// Keep Bootstrap's original white checked glyph on the matching semantic paint.
+// Only paint changes; native selectors, glyphs, dimensions and behaviour remain.
+.was-validated .form-check-input:valid:checked,
+.form-check-input.is-valid:checked {
+  background-color: var(--#{$prefix}success);
+}
+.was-validated .form-check-input:invalid:checked,
+.form-check-input.is-invalid:checked {
+  background-color: var(--#{$prefix}danger);
+}

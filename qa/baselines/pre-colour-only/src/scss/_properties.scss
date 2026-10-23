@@ -1,0 +1,43 @@
+:root,
+[data-bs-theme="light"] {
+  --tq-brand-red: #{$tq-red};
+  --tq-brand-pink: #{$tq-pink};
+  --tq-brand-ink: #{$tq-ink};
+  --tq-brand-warm: #{$tq-warm};
+  --tq-gradient: linear-gradient(135deg, #{$tq-pink}, #{$tq-red});
+  --tq-control-border: #{$tq-muted};
+  --tq-control-border-rgb: #{to-rgb($tq-muted)};
+  --tq-hover-bg: #{$tq-warm};
+  --tq-hover-color: #{$tq-ink};
+  --tq-selection-bg: #{$tq-ink};
+  --tq-selection-color: #{$tq-white};
+  --tq-space-1: .25rem;
+  --tq-space-2: .5rem;
+  --tq-space-3: .75rem;
+  --tq-space-4: 1rem;
+  --tq-space-5: 1.5rem;
+  --tq-space-6: 2rem;
+  --tq-space-7: 3rem;
+  --tq-space-8: 4rem;
+  --tq-space-9: 6rem;
+}
+
+[data-bs-theme="dark"] {
+  --tq-control-border: #{$tq-koala};
+  --tq-control-border-rgb: #{to-rgb($tq-koala)};
+  --tq-hover-bg: #{$tq-warm};
+  --tq-hover-color: #{$tq-ink};
+  --tq-selection-bg: #{$tq-white};
+  --tq-selection-color: #{$tq-ink};
+}
+
+// User's approved extension palette. Available for documented contrast needs;
+// none of these secondary hues are applied by the default component theme.
+:root {
+  --tq-extension-jacaranda: #6c0162;
+  --tq-extension-sunkissed: #ff4904;
+  --tq-extension-reef: #00a89b;
+  --tq-extension-reef-dark: #00766c;
+  --tq-extension-indigo: #091135;
+  --tq-extension-indigo-light: #2f4370;
+}

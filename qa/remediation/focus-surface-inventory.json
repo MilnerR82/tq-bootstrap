@@ -1,0 +1,59 @@
+{
+  "bootstrapVersion": "5.3.8",
+  "scope": "Pinned Bootstrap core Sass focus suppression, essential CSS glyphs and value/selection paint; separate from authored-content and actual assistive-technology verification.",
+  "keyboardFocusFamilies": [
+    { "selector": ".btn", "source": "_buttons.scss" },
+    { "selector": ".btn-check:focus-visible + .btn", "source": "_buttons.scss", "note": "Paint the visible label, rather than the visually clipped native input." },
+    { "selector": ".btn-close", "source": "_close.scss", "note": "Inspect post-filter normal focus pixels and the forced-colour X separately." },
+    { "selector": ".navbar-toggler", "source": "_navbar.scss" },
+    { "selector": ".nav-link", "source": "_nav.scss" },
+    { "selector": ".accordion-button", "source": "_accordion.scss" },
+    { "selector": ".page-link", "source": "_pagination.scss", "note": "The native outline Sass default is zero." },
+    { "selector": ".form-control", "source": "forms/_form-control.scss", "note": "Includes ordinary text, textarea and file inputs using this class." },
+    { "selector": ".form-control-plaintext", "source": "forms/_form-control.scss", "note": "Readonly does not remove the native control from the Tab sequence; native Bootstrap supplies no focus indicator in either mode." },
+    { "selector": ".form-select", "source": "forms/_form-select.scss" },
+    { "selector": ".form-check-input[type=checkbox]", "source": "forms/_form-check.scss", "note": "Includes form switches." },
+    { "selector": ".form-check-input[type=radio]", "source": "forms/_form-check.scss" },
+    { "selector": ".form-range", "source": "forms/_form-range.scss", "note": "Normal focus is painted on the native thumb; forced mode uses an outer system-colour outline." },
+    { "selector": ".focus-ring", "source": "helpers/_focus-ring.scss", "note": "Covers the generic helper and all eight role utilities, including the utilities-only distribution." },
+    { "selector": ".carousel-control-prev", "source": "_carousel.scss", "note": "Normal mode retains the native opacity focus feedback. Forced mode needs an outline and unfiltered system-colour glyph." },
+    { "selector": ".carousel-control-next", "source": "_carousel.scss", "note": "Normal mode retains the native opacity focus feedback. Forced mode needs an outline and unfiltered system-colour glyph." }
+  ],
+  "retainedUserAgentFocus": ["ordinary links", "dropdown items", "focusable PRE and overflow regions", "list-group actions", "navbar brand links", "carousel indicator buttons"],
+  "otherOutlineSuppression": [
+    { "selector": "button:focus:not(:focus-visible)", "source": "_reboot.scss", "disposition": "Explicitly excludes keyboard focus-visible; no override needed." },
+    { "selector": ".modal, .modal-content, .offcanvas", "sources": ["_modal.scss", "_offcanvas.scss"], "disposition": "Programmatic dialog/container focus, rather than additional sequential controls. Preserve native overlay focus management and test keyboard focus on their actual controls; actual screen-reader workflows remain a separate pending environment check." }
+  ],
+  "essentialForcedGlyphs": [
+    ".btn-close X including legacy white variant",
+    ".navbar-toggler-icon menu lines",
+    ".accordion-button::after collapsed/expanded arrow",
+    ".form-select native arrow",
+    ".carousel-control-prev-icon and .carousel-control-next-icon",
+    ".form-check-input checkbox/radio/switch state",
+    ".form-range track and thumb"
+  ],
+  "essentialForcedStates": [
+    ".btn-check:checked + .btn",
+    ".btn.active",
+    ".nav-pills .nav-link.active and .show > .nav-link",
+    ".nav-tabs .nav-link.active and .nav-item.show .nav-link",
+    ".list-group-item.active",
+    ".dropdown-item.active",
+    ".page-item.active .page-link and .page-link.active",
+    ".progress-bar value fill",
+    ".spinner-grow visible animation phase",
+    ".carousel-indicators selected and unselected markers"
+  ],
+  "otherPaintDispositions": [
+    "Dropdown/breadcrumb CSS-border or text arrows inherit system foreground paint.",
+    "Native nav-tab active borders collapse to a two-pixel antialias difference in forced colours; the explicit system selection paint covers tabs as well as pills.",
+    "Border spinner retains system foreground border paint.",
+    "Validation SVG checks/crosses supplement persistent associated text feedback; they are not the sole error/status cue."
+  ],
+  "evidence": [
+    "qa/remediation/forced-focus-state.mjs",
+    "qa/results/remediation/forced-focus-state.json",
+    "qa/results/remediation/accessibility-production.json"
+  ]
+}

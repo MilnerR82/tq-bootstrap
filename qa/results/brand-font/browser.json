@@ -1,0 +1,689 @@
+{
+  "scope": "Notification contrast and neutral white foregrounds; targeted Chromium light/dark checks, not complete WCAG conformance.",
+  "pages": [
+    {
+      "theme": "light",
+      "route": "components/badge",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "route": "utilities/position",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "route": "utilities/colors",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "route": "helpers/colored-links",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "route": "content/typography",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "route": "customize/components",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "route": "components/navbar",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "route": "components/dropdowns",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "route": "components/alerts",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "route": "components/buttons",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "route": "components/list-group",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "route": "forms/range",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "route": "examples/cover",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "route": "customize/color",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "route": "examples/sign-in",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "route": "getting-started/javascript",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "route": "components/badge",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "route": "utilities/position",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "route": "utilities/colors",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "route": "helpers/colored-links",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "route": "content/typography",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "route": "customize/components",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "route": "components/dropdowns",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "route": "components/navbar",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "route": "components/alerts",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "route": "forms/range",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "route": "components/buttons",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "route": "components/list-group",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "route": "customize/color",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "route": "examples/cover",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "route": "examples/sign-in",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "route": "components/badge",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "route": "getting-started/javascript",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "route": "utilities/position",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "route": "components/badge",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "route": "utilities/position",
+      "width": 390,
+      "violations": []
+    }
+  ],
+  "checks": [
+    {
+      "theme": "light",
+      "route": "components/badge",
+      "width": 1440,
+      "check": "expected neutral notification count",
+      "pass": true
+    },
+    {
+      "theme": "light",
+      "route": "components/badge",
+      "width": 1440,
+      "check": "notification separation and text contrast",
+      "text": "4",
+      "background": "rgb(241, 239, 237)",
+      "foreground": "rgb(55, 50, 52)",
+      "button": "rgb(227, 27, 35)",
+      "edgeContrast": 4.117096321989469,
+      "textContrast": 10.975209309220174,
+      "pass": true
+    },
+    {
+      "theme": "light",
+      "route": "components/badge",
+      "width": 1440,
+      "check": "notification separation and text contrast",
+      "text": "99+\n    unread messages",
+      "background": "rgb(241, 239, 237)",
+      "foreground": "rgb(55, 50, 52)",
+      "button": "rgb(227, 27, 35)",
+      "edgeContrast": 4.117096321989469,
+      "textContrast": 10.975209309220174,
+      "pass": true
+    },
+    {
+      "theme": "light",
+      "route": "components/badge",
+      "width": 1440,
+      "check": "notification separation and text contrast",
+      "text": "New alerts",
+      "background": "rgb(241, 239, 237)",
+      "foreground": "rgb(255, 255, 255)",
+      "button": "rgb(227, 27, 35)",
+      "edgeContrast": 4.117096321989469,
+      "textContrast": 1.1469367949072407,
+      "pass": true
+    },
+    {
+      "theme": "light",
+      "route": "utilities/position",
+      "width": 1440,
+      "check": "expected neutral notification count",
+      "pass": true
+    },
+    {
+      "theme": "light",
+      "route": "utilities/position",
+      "width": 1440,
+      "check": "notification separation and text contrast",
+      "text": "+99 unread messages",
+      "background": "rgb(241, 239, 237)",
+      "foreground": "rgb(55, 50, 52)",
+      "button": "rgb(227, 27, 35)",
+      "edgeContrast": 4.117096321989469,
+      "textContrast": 10.975209309220174,
+      "pass": true
+    },
+    {
+      "theme": "light",
+      "route": "utilities/position",
+      "width": 1440,
+      "check": "notification separation and text contrast",
+      "text": "unread messages",
+      "background": "rgb(241, 239, 237)",
+      "foreground": "rgb(255, 255, 255)",
+      "button": "rgb(227, 27, 35)",
+      "edgeContrast": 4.117096321989469,
+      "textContrast": 1.1469367949072407,
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "components/badge",
+      "width": 1440,
+      "check": "expected neutral notification count",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "components/badge",
+      "width": 1440,
+      "check": "notification separation and text contrast",
+      "text": "4",
+      "background": "rgb(241, 239, 237)",
+      "foreground": "rgb(55, 50, 52)",
+      "button": "rgb(227, 27, 35)",
+      "edgeContrast": 4.117096321989469,
+      "textContrast": 10.975209309220174,
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "components/badge",
+      "width": 1440,
+      "check": "notification separation and text contrast",
+      "text": "99+\n    unread messages",
+      "background": "rgb(241, 239, 237)",
+      "foreground": "rgb(55, 50, 52)",
+      "button": "rgb(227, 27, 35)",
+      "edgeContrast": 4.117096321989469,
+      "textContrast": 10.975209309220174,
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "components/badge",
+      "width": 1440,
+      "check": "notification separation and text contrast",
+      "text": "New alerts",
+      "background": "rgb(241, 239, 237)",
+      "foreground": "rgb(255, 255, 255)",
+      "button": "rgb(227, 27, 35)",
+      "edgeContrast": 4.117096321989469,
+      "textContrast": 1.1469367949072407,
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "components/badge",
+      "width": 1440,
+      "check": "dark body foreground is white",
+      "actual": "rgb(255, 255, 255)",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "utilities/position",
+      "width": 1440,
+      "check": "expected neutral notification count",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "utilities/position",
+      "width": 1440,
+      "check": "notification separation and text contrast",
+      "text": "+99 unread messages",
+      "background": "rgb(241, 239, 237)",
+      "foreground": "rgb(55, 50, 52)",
+      "button": "rgb(227, 27, 35)",
+      "edgeContrast": 4.117096321989469,
+      "textContrast": 10.975209309220174,
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "utilities/position",
+      "width": 1440,
+      "check": "notification separation and text contrast",
+      "text": "unread messages",
+      "background": "rgb(241, 239, 237)",
+      "foreground": "rgb(255, 255, 255)",
+      "button": "rgb(227, 27, 35)",
+      "edgeContrast": 4.117096321989469,
+      "textContrast": 1.1469367949072407,
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "utilities/position",
+      "width": 1440,
+      "check": "dark body foreground is white",
+      "actual": "rgb(255, 255, 255)",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "utilities/colors",
+      "width": 1440,
+      "check": "dark body foreground is white",
+      "actual": "rgb(255, 255, 255)",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "helpers/colored-links",
+      "width": 1440,
+      "check": "dark body foreground is white",
+      "actual": "rgb(255, 255, 255)",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "content/typography",
+      "width": 1440,
+      "check": "dark body foreground is white",
+      "actual": "rgb(255, 255, 255)",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "customize/components",
+      "width": 1440,
+      "check": "dark body foreground is white",
+      "actual": "rgb(255, 255, 255)",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "components/dropdowns",
+      "width": 1440,
+      "check": "dark body foreground is white",
+      "actual": "rgb(255, 255, 255)",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "components/navbar",
+      "width": 1440,
+      "check": "dark body foreground is white",
+      "actual": "rgb(255, 255, 255)",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "components/alerts",
+      "width": 1440,
+      "check": "dark body foreground is white",
+      "actual": "rgb(255, 255, 255)",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "forms/range",
+      "width": 1440,
+      "check": "dark body foreground is white",
+      "actual": "rgb(255, 255, 255)",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "components/list-group",
+      "width": 1440,
+      "check": "dark body foreground is white",
+      "actual": "rgb(255, 255, 255)",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "components/buttons",
+      "width": 1440,
+      "check": "dark body foreground is white",
+      "actual": "rgb(255, 255, 255)",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "customize/color",
+      "width": 1440,
+      "check": "dark body foreground is white",
+      "actual": "rgb(255, 255, 255)",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "examples/cover",
+      "width": 1440,
+      "check": "dark body foreground is white",
+      "actual": "rgb(255, 255, 255)",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "examples/sign-in",
+      "width": 1440,
+      "check": "dark body foreground is white",
+      "actual": "rgb(255, 255, 255)",
+      "pass": true
+    },
+    {
+      "theme": "light",
+      "route": "components/badge",
+      "width": 390,
+      "check": "expected neutral notification count",
+      "pass": true
+    },
+    {
+      "theme": "light",
+      "route": "components/badge",
+      "width": 390,
+      "check": "notification separation and text contrast",
+      "text": "4",
+      "background": "rgb(241, 239, 237)",
+      "foreground": "rgb(55, 50, 52)",
+      "button": "rgb(227, 27, 35)",
+      "edgeContrast": 4.117096321989469,
+      "textContrast": 10.975209309220174,
+      "pass": true
+    },
+    {
+      "theme": "light",
+      "route": "components/badge",
+      "width": 390,
+      "check": "notification separation and text contrast",
+      "text": "99+\n    unread messages",
+      "background": "rgb(241, 239, 237)",
+      "foreground": "rgb(55, 50, 52)",
+      "button": "rgb(227, 27, 35)",
+      "edgeContrast": 4.117096321989469,
+      "textContrast": 10.975209309220174,
+      "pass": true
+    },
+    {
+      "theme": "light",
+      "route": "components/badge",
+      "width": 390,
+      "check": "notification separation and text contrast",
+      "text": "New alerts",
+      "background": "rgb(241, 239, 237)",
+      "foreground": "rgb(255, 255, 255)",
+      "button": "rgb(227, 27, 35)",
+      "edgeContrast": 4.117096321989469,
+      "textContrast": 1.1469367949072407,
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "getting-started/javascript",
+      "width": 1440,
+      "check": "dark body foreground is white",
+      "actual": "rgb(255, 255, 255)",
+      "pass": true
+    },
+    {
+      "theme": "light",
+      "route": "utilities/position",
+      "width": 390,
+      "check": "expected neutral notification count",
+      "pass": true
+    },
+    {
+      "theme": "light",
+      "route": "utilities/position",
+      "width": 390,
+      "check": "notification separation and text contrast",
+      "text": "+99 unread messages",
+      "background": "rgb(241, 239, 237)",
+      "foreground": "rgb(55, 50, 52)",
+      "button": "rgb(227, 27, 35)",
+      "edgeContrast": 4.117096321989469,
+      "textContrast": 10.975209309220174,
+      "pass": true
+    },
+    {
+      "theme": "light",
+      "route": "utilities/position",
+      "width": 390,
+      "check": "notification separation and text contrast",
+      "text": "unread messages",
+      "background": "rgb(241, 239, 237)",
+      "foreground": "rgb(255, 255, 255)",
+      "button": "rgb(227, 27, 35)",
+      "edgeContrast": 4.117096321989469,
+      "textContrast": 1.1469367949072407,
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "components/badge",
+      "width": 390,
+      "check": "expected neutral notification count",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "components/badge",
+      "width": 390,
+      "check": "notification separation and text contrast",
+      "text": "4",
+      "background": "rgb(241, 239, 237)",
+      "foreground": "rgb(55, 50, 52)",
+      "button": "rgb(227, 27, 35)",
+      "edgeContrast": 4.117096321989469,
+      "textContrast": 10.975209309220174,
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "components/badge",
+      "width": 390,
+      "check": "notification separation and text contrast",
+      "text": "99+\n    unread messages",
+      "background": "rgb(241, 239, 237)",
+      "foreground": "rgb(55, 50, 52)",
+      "button": "rgb(227, 27, 35)",
+      "edgeContrast": 4.117096321989469,
+      "textContrast": 10.975209309220174,
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "components/badge",
+      "width": 390,
+      "check": "notification separation and text contrast",
+      "text": "New alerts",
+      "background": "rgb(241, 239, 237)",
+      "foreground": "rgb(255, 255, 255)",
+      "button": "rgb(227, 27, 35)",
+      "edgeContrast": 4.117096321989469,
+      "textContrast": 1.1469367949072407,
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "utilities/position",
+      "width": 390,
+      "check": "expected neutral notification count",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "utilities/position",
+      "width": 390,
+      "check": "notification separation and text contrast",
+      "text": "+99 unread messages",
+      "background": "rgb(241, 239, 237)",
+      "foreground": "rgb(55, 50, 52)",
+      "button": "rgb(227, 27, 35)",
+      "edgeContrast": 4.117096321989469,
+      "textContrast": 10.975209309220174,
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "utilities/position",
+      "width": 390,
+      "check": "notification separation and text contrast",
+      "text": "unread messages",
+      "background": "rgb(241, 239, 237)",
+      "foreground": "rgb(255, 255, 255)",
+      "button": "rgb(227, 27, 35)",
+      "edgeContrast": 4.117096321989469,
+      "textContrast": 1.1469367949072407,
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "components/badge",
+      "width": 390,
+      "check": "dark body foreground is white",
+      "actual": "rgb(255, 255, 255)",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "route": "utilities/position",
+      "width": 390,
+      "check": "dark body foreground is white",
+      "actual": "rgb(255, 255, 255)",
+      "pass": true
+    }
+  ],
+  "summary": {
+    "pages": 36,
+    "violations": 0,
+    "checks": 46,
+    "failures": []
+  }
+}

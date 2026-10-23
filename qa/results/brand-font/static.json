@@ -1,0 +1,821 @@
+{
+  "started": "2026-10-23T01:13:00.600Z",
+  "scope": "User-selected TQ semantic status palette, all CSS distributions and original JavaScript. Static Sass/CSS checks; not complete-page WCAG conformance.",
+  "checks": [
+    {
+      "name": "Root primary",
+      "pass": true,
+      "actual": "#e31b23",
+      "expected": "#e31b23"
+    },
+    {
+      "name": "Root secondary",
+      "pass": true,
+      "actual": "#696567",
+      "expected": "#696567"
+    },
+    {
+      "name": "Root success",
+      "pass": true,
+      "actual": "#198754",
+      "expected": "#198754"
+    },
+    {
+      "name": "Root info",
+      "pass": true,
+      "actual": "#e31b23",
+      "expected": "#e31b23"
+    },
+    {
+      "name": "Root warning",
+      "pass": true,
+      "actual": "#ef7622",
+      "expected": "#ef7622"
+    },
+    {
+      "name": "Root danger",
+      "pass": true,
+      "actual": "#e31b23",
+      "expected": "#e31b23"
+    },
+    {
+      "name": "Root light",
+      "pass": true,
+      "actual": "#f1efed",
+      "expected": "#f1efed"
+    },
+    {
+      "name": "Root dark",
+      "pass": true,
+      "actual": "#373234",
+      "expected": "#373234"
+    },
+    {
+      "name": "Root blue",
+      "pass": true,
+      "actual": "#0d6efd",
+      "expected": "#0d6efd"
+    },
+    {
+      "name": "Root indigo",
+      "pass": true,
+      "actual": "#6610f2",
+      "expected": "#6610f2"
+    },
+    {
+      "name": "Root purple",
+      "pass": true,
+      "actual": "#6f42c1",
+      "expected": "#6f42c1"
+    },
+    {
+      "name": "Root orange",
+      "pass": true,
+      "actual": "#fd7e14",
+      "expected": "#fd7e14"
+    },
+    {
+      "name": "Root yellow",
+      "pass": true,
+      "actual": "#ffc107",
+      "expected": "#ffc107"
+    },
+    {
+      "name": "Root green",
+      "pass": true,
+      "actual": "#198754",
+      "expected": "#198754"
+    },
+    {
+      "name": "Root teal",
+      "pass": true,
+      "actual": "#20c997",
+      "expected": "#20c997"
+    },
+    {
+      "name": "Root cyan",
+      "pass": true,
+      "actual": "#0dcaf0",
+      "expected": "#0dcaf0"
+    },
+    {
+      "name": "Root pink",
+      "pass": true,
+      "actual": "#f32a7c",
+      "expected": "#f32a7c"
+    },
+    {
+      "name": "Root red",
+      "pass": true,
+      "actual": "#e31b23",
+      "expected": "#e31b23"
+    },
+    {
+      "name": "Light neutral light",
+      "pass": true,
+      "actual": "#f1efed"
+    },
+    {
+      "name": "Light neutral secondary",
+      "pass": true,
+      "actual": "#f1efed"
+    },
+    {
+      "name": "Light neutral tertiary",
+      "pass": true,
+      "actual": "#f1efed"
+    },
+    {
+      "name": "Main pages white",
+      "pass": true,
+      "actual": "#fff"
+    },
+    {
+      "name": "Solid primary rest",
+      "pass": true,
+      "ratio": 4.72204925986699,
+      "foreground": "#fff",
+      "background": "#e31b23"
+    },
+    {
+      "name": "Solid primary hover-",
+      "pass": true,
+      "ratio": 6.164084766663203,
+      "foreground": "#fff",
+      "background": "rgb(192.95, 22.95, 29.75)"
+    },
+    {
+      "name": "Solid primary active-",
+      "pass": true,
+      "ratio": 6.757219724099381,
+      "foreground": "#fff",
+      "background": "rgb(181.6, 21.6, 28)"
+    },
+    {
+      "name": "Solid secondary rest",
+      "pass": true,
+      "ratio": 5.740876196035441,
+      "foreground": "#fff",
+      "background": "#696567"
+    },
+    {
+      "name": "Solid secondary hover-",
+      "pass": true,
+      "ratio": 7.258885640562264,
+      "foreground": "#fff",
+      "background": "rgb(89.25, 85.85, 87.55)"
+    },
+    {
+      "name": "Solid secondary active-",
+      "pass": true,
+      "ratio": 7.862047894418459,
+      "foreground": "#fff",
+      "background": "rgb(84, 80.8, 82.4)"
+    },
+    {
+      "name": "Solid success rest",
+      "pass": true,
+      "ratio": 4.530800584587276,
+      "foreground": "#fff",
+      "background": "#198754"
+    },
+    {
+      "name": "Solid success hover-",
+      "pass": true,
+      "ratio": 5.890012988344591,
+      "foreground": "#fff",
+      "background": "rgb(21.25, 114.75, 71.4)"
+    },
+    {
+      "name": "Solid success active-",
+      "pass": true,
+      "ratio": 6.449037582653886,
+      "foreground": "#fff",
+      "background": "rgb(20, 108, 67.2)"
+    },
+    {
+      "name": "Solid info rest",
+      "pass": true,
+      "ratio": 12.587871388553097,
+      "foreground": "#373234",
+      "background": "#fff"
+    },
+    {
+      "name": "Solid info hover-",
+      "pass": true,
+      "ratio": 10.975209309220174,
+      "foreground": "#373234",
+      "background": "#f1efed"
+    },
+    {
+      "name": "Solid info active-",
+      "pass": true,
+      "ratio": 9.312426008125529,
+      "foreground": "#373234",
+      "background": "#e1ddd8"
+    },
+    {
+      "name": "Solid warning rest",
+      "pass": true,
+      "ratio": 7.284616468976639,
+      "foreground": "#000",
+      "background": "#ef7622"
+    },
+    {
+      "name": "Solid warning hover-",
+      "pass": true,
+      "ratio": 8.502696057599492,
+      "foreground": "#000",
+      "background": "rgb(241.4, 138.55, 67.15)"
+    },
+    {
+      "name": "Solid warning active-",
+      "pass": true,
+      "ratio": 8.967770222863878,
+      "foreground": "#000",
+      "background": "rgb(242.2, 145.4, 78.2)"
+    },
+    {
+      "name": "Solid danger rest",
+      "pass": true,
+      "ratio": 4.72204925986699,
+      "foreground": "#fff",
+      "background": "#e31b23"
+    },
+    {
+      "name": "Solid danger hover-",
+      "pass": true,
+      "ratio": 6.164084766663203,
+      "foreground": "#fff",
+      "background": "rgb(192.95, 22.95, 29.75)"
+    },
+    {
+      "name": "Solid danger active-",
+      "pass": true,
+      "ratio": 6.757219724099381,
+      "foreground": "#fff",
+      "background": "rgb(181.6, 21.6, 28)"
+    },
+    {
+      "name": "Solid light rest",
+      "pass": true,
+      "ratio": 18.309640159114775,
+      "foreground": "#000",
+      "background": "#f1efed"
+    },
+    {
+      "name": "Solid light hover-",
+      "pass": true,
+      "ratio": 12.995765482472818,
+      "foreground": "#000",
+      "background": "rgb(204.85, 203.15, 201.45)"
+    },
+    {
+      "name": "Solid light active-",
+      "pass": true,
+      "ratio": 11.472064632412515,
+      "foreground": "#000",
+      "background": "rgb(192.8, 191.2, 189.6)"
+    },
+    {
+      "name": "Solid dark rest",
+      "pass": true,
+      "ratio": 12.587871388553097,
+      "foreground": "#fff",
+      "background": "#373234"
+    },
+    {
+      "name": "Solid dark hover-",
+      "pass": true,
+      "ratio": 7.83866676577964,
+      "foreground": "#fff",
+      "background": "rgb(85, 80.75, 82.45)"
+    },
+    {
+      "name": "Solid dark active-",
+      "pass": true,
+      "ratio": 6.688618043780125,
+      "foreground": "#fff",
+      "background": "rgb(95, 91, 92.6)"
+    },
+    {
+      "name": "Distribution bootstrap-grid.css",
+      "pass": true,
+      "bytes": 70323,
+      "sha256": "7ac6dd7ff2bac8a77e7e0c4d834653c623cb44f588fc639fee1e3876c81d7f77"
+    },
+    {
+      "name": "Distribution bootstrap-grid.min.css",
+      "pass": true,
+      "bytes": 51790,
+      "sha256": "99359ba5ad1f1a0508459823aaa5736096a4dfbe5d63a25eda04aeeb851df591"
+    },
+    {
+      "name": "Distribution bootstrap-grid.rtl.css",
+      "pass": true,
+      "bytes": 70398,
+      "sha256": "f27a13e8648400ce882d9861a99f3f8e4541d428eb681c2e482728df804e56b6"
+    },
+    {
+      "name": "Distribution bootstrap-grid.rtl.min.css",
+      "pass": true,
+      "bytes": 51865,
+      "sha256": "8d9cc4e58dc9c5bc028d57697136af91659a81fd305886e73e3db30237593e9b"
+    },
+    {
+      "name": "Distribution bootstrap-reboot.css",
+      "pass": true,
+      "bytes": 12469,
+      "sha256": "3416608557228446502da614704fff770e40d790014a46ba44d45d5ad0d8d751"
+    },
+    {
+      "name": "Distribution bootstrap-reboot.min.css",
+      "pass": true,
+      "bytes": 10529,
+      "sha256": "28e2b570437a4cf3169718f2c5da1744d9e567b085eafcfb314a460f2a997891"
+    },
+    {
+      "name": "Distribution bootstrap-reboot.rtl.css",
+      "pass": true,
+      "bytes": 12463,
+      "sha256": "dcf33c1f9b802b5674f8af88ea50a91b0fbe345c9a7ebac064384a1e7443ecf2"
+    },
+    {
+      "name": "Distribution bootstrap-reboot.rtl.min.css",
+      "pass": true,
+      "bytes": 10601,
+      "sha256": "461425fd86b2f22c5811a05f1026e93569ec7f769d3576c80147836c63cdafcc"
+    },
+    {
+      "name": "Distribution bootstrap-utilities.css",
+      "pass": true,
+      "bytes": 122094,
+      "sha256": "f261db468118432914d1c13278357df73684b136ddab790bdcddde18bf392124"
+    },
+    {
+      "name": "Distribution bootstrap-utilities.min.css",
+      "pass": true,
+      "bytes": 98041,
+      "sha256": "b5476a6a03f873649a1d21a923d00f942c334b9f913760928d2ab9d9e9b13ea6"
+    },
+    {
+      "name": "Distribution bootstrap-utilities.rtl.css",
+      "pass": true,
+      "bytes": 121963,
+      "sha256": "5978ed05c14108ec342a60ef89455a972bf9ee3c4a3f19e3eb77eca90ffc02e1"
+    },
+    {
+      "name": "Distribution bootstrap-utilities.rtl.min.css",
+      "pass": true,
+      "bytes": 97970,
+      "sha256": "1bd7ad8a382f1d0d69486e78dab5d77f43e92aad12efadcd0b2ed66e47002ced"
+    },
+    {
+      "name": "Distribution bootstrap.css",
+      "pass": true,
+      "bytes": 315059,
+      "sha256": "5a49b38c30aa4923ea04f5ad0a8f07c0f70995b47d92ad1ed85f64de7c7a3521"
+    },
+    {
+      "name": "Distribution bootstrap.min.css",
+      "pass": true,
+      "bytes": 262425,
+      "sha256": "5fd3ea4fa170430c3995bb1c51afcc9f62b442d05ddec0fec8e4788803e929d2"
+    },
+    {
+      "name": "Distribution bootstrap.rtl.css",
+      "pass": true,
+      "bytes": 313253,
+      "sha256": "7bb6417c54ba63b475465baaeff24750ded16ddcc27e81e1967b9cf62ae15fb2"
+    },
+    {
+      "name": "Distribution bootstrap.rtl.min.css",
+      "pass": true,
+      "bytes": 262533,
+      "sha256": "be9278394cb36ac0a98f6b1ffcf05c16c17cdb9599f9e26f7995e5737caf23ff"
+    },
+    {
+      "name": "Original JS bootstrap.bundle.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS bootstrap.bundle.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS bootstrap.bundle.min.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS bootstrap.bundle.min.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS bootstrap.esm.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS bootstrap.esm.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS bootstrap.esm.min.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS bootstrap.esm.min.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS bootstrap.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS bootstrap.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS bootstrap.min.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS bootstrap.min.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\alert.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\alert.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\base-component.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\base-component.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\button.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\button.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\carousel.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\carousel.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\collapse.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\collapse.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\dom\\data.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\dom\\data.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\dom\\event-handler.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\dom\\event-handler.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\dom\\manipulator.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\dom\\manipulator.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\dom\\selector-engine.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\dom\\selector-engine.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\dropdown.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\dropdown.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\modal.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\modal.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\offcanvas.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\offcanvas.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\popover.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\popover.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\scrollspy.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\scrollspy.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\tab.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\tab.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\toast.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\toast.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\tooltip.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\tooltip.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\util\\backdrop.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\util\\backdrop.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\util\\component-functions.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\util\\component-functions.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\util\\config.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\util\\config.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\util\\focustrap.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\util\\focustrap.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\util\\index.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\util\\index.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\util\\sanitizer.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\util\\sanitizer.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\util\\scrollbar.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\util\\scrollbar.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\util\\swipe.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\util\\swipe.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\util\\template-factory.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\dist\\util\\template-factory.js.map",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\index.esm.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\index.umd.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\alert.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\base-component.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\button.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\carousel.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\collapse.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\dom\\data.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\dom\\event-handler.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\dom\\manipulator.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\dom\\selector-engine.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\dropdown.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\modal.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\offcanvas.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\popover.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\scrollspy.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\tab.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\toast.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\tooltip.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\util\\backdrop.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\util\\component-functions.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\util\\config.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\util\\focustrap.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\util\\index.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\util\\sanitizer.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\util\\scrollbar.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\util\\swipe.js",
+      "pass": true
+    },
+    {
+      "name": "Original JS plugins\\src\\util\\template-factory.js",
+      "pass": true
+    },
+    {
+      "name": "Non-colour preservation tq-bootstrap",
+      "pass": true,
+      "declarations": 4286,
+      "differenceCount": 0
+    },
+    {
+      "name": "Non-colour preservation tq-bootstrap-grid",
+      "pass": true,
+      "declarations": 1458,
+      "differenceCount": 0
+    },
+    {
+      "name": "Non-colour preservation tq-bootstrap-reboot",
+      "pass": true,
+      "declarations": 150,
+      "differenceCount": 0
+    },
+    {
+      "name": "Non-colour preservation tq-bootstrap-utilities",
+      "pass": true,
+      "declarations": 1625,
+      "differenceCount": 0
+    }
+  ],
+  "geometry": [
+    {
+      "family": "tq-bootstrap",
+      "declarations": 4286,
+      "pass": true,
+      "differences": []
+    },
+    {
+      "family": "tq-bootstrap-grid",
+      "declarations": 1458,
+      "pass": true,
+      "differences": []
+    },
+    {
+      "family": "tq-bootstrap-reboot",
+      "declarations": 150,
+      "pass": true,
+      "differences": []
+    },
+    {
+      "family": "tq-bootstrap-utilities",
+      "declarations": 1625,
+      "pass": true,
+      "differences": []
+    }
+  ],
+  "finished": "2026-10-23T01:13:06.241Z",
+  "summary": {
+    "checks": 158,
+    "failed": 0
+  }
+}

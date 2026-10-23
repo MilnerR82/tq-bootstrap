@@ -1,0 +1,19 @@
+// Keep the native validation shadow geometry and alpha; resolve its paint
+// against the current reading colour instead of a fixed dark success colour.
+@import "bootstrap/scss/variables";
+
+@each $tq-validation-state in ("valid", "invalid") {
+  @if map-has-key($form-validation-states, $tq-validation-state) {
+    $tq-state-options: map-get($form-validation-states, $tq-validation-state);
+    $tq-state-shadow: map-get($tq-state-options, "focus-box-shadow");
+    // The native map has five space-separated shadow tokens. Leave an author's
+    // differently structured custom shadow intact.
+    @if type-of($tq-state-shadow) == "list" and list-separator($tq-state-shadow) == "space" and length($tq-state-shadow) == 5 {
+      $tq-state-paint: nth($tq-state-shadow, 5);
+      @if type-of($tq-state-paint) == "color" or str-index(inspect($tq-state-paint), "rgba(") == 1 {
+        $tq-state-shadow: set-nth($tq-state-shadow, 5, rgba(var(--#{$prefix}body-color-rgb), $input-btn-focus-color-opacity));
+        $form-validation-states: map-merge($form-validation-states, ($tq-validation-state: map-merge($tq-state-options, ("focus-box-shadow": $tq-state-shadow))));
+      }
+    }
+  }
+}

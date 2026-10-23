@@ -1,0 +1,26 @@
+<!doctype html><html lang="en" data-bs-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>helpers-vertical-rule native comparison fixture</title><link id="framework" rel="stylesheet" href="/qa/reference-native/css/bootstrap.css"><link rel="stylesheet" href="/qa/reference-native/docs-themed.css"></head><body><main class="bd-content" style="margin:16px">   <h2 id="how-it-works">How it works<a class="anchor-link" aria-label="Link to this section: How it works" href="#how-it-works"> </a></h2>
+<p>Vertical rules are inspired by the <code>&lt;hr&gt;</code> element, allowing you to create vertical dividers in common layouts. They’re styled just like <code>&lt;hr&gt;</code> elements:</p>
+<ul>
+<li>They’re <code>1px</code> wide</li>
+<li>They have <code>min-height</code> of <code>1em</code></li>
+<li>Their color is set via <code>currentColor</code> and <code>opacity</code></li>
+</ul>
+<p>Customize them with additional styles as needed.</p>
+<h2 id="example">Example<a class="anchor-link" aria-label="Link to this section: Example" href="#example"> </a></h2>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <div class="vr"></div> </div>  <div>   </div>  </div>
+<p>Vertical rules scale their height in flex layouts:</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <div class="d-flex" style="height: 200px;">
+  <div class="vr"></div>
+</div> </div>  <div>   </div>  </div>
+<h2 id="with-stacks">With stacks<a class="anchor-link" aria-label="Link to this section: With stacks" href="#with-stacks"> </a></h2>
+<p>They can also be used in <a href="/docs/5.3/helpers/stacks">stacks</a>:</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0 bd-example-flex"> <div class="hstack gap-3">
+  <div class="p-2">First item</div>
+  <div class="p-2 ms-auto">Second item</div>
+  <div class="vr"></div>
+  <div class="p-2">Third item</div>
+</div> </div>  <div>   </div>  </div>
+<h2 id="css">CSS<a class="anchor-link" aria-label="Link to this section: CSS" href="#css"> </a></h2>
+<h3 id="sass-variables">Sass variables<a class="anchor-link" aria-label="Link to this section: Sass variables" href="#sass-variables"> </a></h3>
+<p>Customize the vertical rule Sass variable to change its width.</p>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>  </main><script src="/dist/js/bootstrap.bundle.min.js"></script></body></html>

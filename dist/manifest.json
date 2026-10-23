@@ -1,0 +1,732 @@
+{
+  "packageVersion": "1.0.0",
+  "bootstrap": "5.3.8",
+  "bootstrapIcons": "1.13.2",
+  "files": [
+    {
+      "path": "dist/BOOTSTRAP-LICENSE.txt",
+      "bytes": 1093,
+      "sha256": "4620c84ad5ce8602ff65640ed6b7c8b78ebb9e036584f0ebc1ccc88206a4bb51"
+    },
+    {
+      "path": "dist/css/bootstrap-grid.css",
+      "bytes": 70323,
+      "sha256": "7ac6dd7ff2bac8a77e7e0c4d834653c623cb44f588fc639fee1e3876c81d7f77"
+    },
+    {
+      "path": "dist/css/bootstrap-grid.css.map",
+      "bytes": 203459,
+      "sha256": "98ec59a11b4d0e0d454c287211512a2a8f97fce0138cf4ba277e9b281c96386c"
+    },
+    {
+      "path": "dist/css/bootstrap-grid.min.css",
+      "bytes": 51790,
+      "sha256": "99359ba5ad1f1a0508459823aaa5736096a4dfbe5d63a25eda04aeeb851df591"
+    },
+    {
+      "path": "dist/css/bootstrap-grid.min.css.map",
+      "bytes": 41454,
+      "sha256": "78d2081e355a364388fb510c5f824f518feef797ef97f1b4601c1b444f8ee8ac"
+    },
+    {
+      "path": "dist/css/bootstrap-grid.rtl.css",
+      "bytes": 70398,
+      "sha256": "f27a13e8648400ce882d9861a99f3f8e4541d428eb681c2e482728df804e56b6"
+    },
+    {
+      "path": "dist/css/bootstrap-grid.rtl.css.map",
+      "bytes": 203463,
+      "sha256": "43c120962535a94f5f8168261d2bb0b02b1be6541c2a5692c954857192f8b9c8"
+    },
+    {
+      "path": "dist/css/bootstrap-grid.rtl.min.css",
+      "bytes": 51865,
+      "sha256": "8d9cc4e58dc9c5bc028d57697136af91659a81fd305886e73e3db30237593e9b"
+    },
+    {
+      "path": "dist/css/bootstrap-grid.rtl.min.css.map",
+      "bytes": 41454,
+      "sha256": "9815603cc10a17209be7962d5d233edbd1ac4891cfc47d5fe19b3cf003754699"
+    },
+    {
+      "path": "dist/css/bootstrap-reboot.css",
+      "bytes": 12469,
+      "sha256": "3416608557228446502da614704fff770e40d790014a46ba44d45d5ad0d8d751"
+    },
+    {
+      "path": "dist/css/bootstrap-reboot.css.map",
+      "bytes": 130241,
+      "sha256": "d04ae3b01dbe6340c9520197f9b79b7421adb3e40f1393c889a5a4dc15bf41e5"
+    },
+    {
+      "path": "dist/css/bootstrap-reboot.min.css",
+      "bytes": 10529,
+      "sha256": "28e2b570437a4cf3169718f2c5da1744d9e567b085eafcfb314a460f2a997891"
+    },
+    {
+      "path": "dist/css/bootstrap-reboot.min.css.map",
+      "bytes": 52134,
+      "sha256": "0a905e48e344ade866b5477363e847151a70a271f19610b024577e696db88dcc"
+    },
+    {
+      "path": "dist/css/bootstrap-reboot.rtl.css",
+      "bytes": 12463,
+      "sha256": "dcf33c1f9b802b5674f8af88ea50a91b0fbe345c9a7ebac064384a1e7443ecf2"
+    },
+    {
+      "path": "dist/css/bootstrap-reboot.rtl.css.map",
+      "bytes": 130256,
+      "sha256": "cd483af5951ce264c52b9211c9e90c3ef38918955f943b16717bcb391f336fec"
+    },
+    {
+      "path": "dist/css/bootstrap-reboot.rtl.min.css",
+      "bytes": 10601,
+      "sha256": "461425fd86b2f22c5811a05f1026e93569ec7f769d3576c80147836c63cdafcc"
+    },
+    {
+      "path": "dist/css/bootstrap-reboot.rtl.min.css.map",
+      "bytes": 65037,
+      "sha256": "0be03b28a622ebcca8987a85bc03ac6da6019bd6657c9a2274a36aa0edbd720a"
+    },
+    {
+      "path": "dist/css/bootstrap-utilities.css",
+      "bytes": 122094,
+      "sha256": "f261db468118432914d1c13278357df73684b136ddab790bdcddde18bf392124"
+    },
+    {
+      "path": "dist/css/bootstrap-utilities.css.map",
+      "bytes": 292504,
+      "sha256": "4edb4bc09dc106e6f6a427c94b73e782f13c26ea492240aad4548a74a8ddf8b6"
+    },
+    {
+      "path": "dist/css/bootstrap-utilities.min.css",
+      "bytes": 98041,
+      "sha256": "b5476a6a03f873649a1d21a923d00f942c334b9f913760928d2ab9d9e9b13ea6"
+    },
+    {
+      "path": "dist/css/bootstrap-utilities.min.css.map",
+      "bytes": 209373,
+      "sha256": "94727ecc0f10258879e5eff04ad81ecbcbc7b3712031e37de21f88ed92e97e73"
+    },
+    {
+      "path": "dist/css/bootstrap-utilities.rtl.css",
+      "bytes": 121963,
+      "sha256": "5978ed05c14108ec342a60ef89455a972bf9ee3c4a3f19e3eb77eca90ffc02e1"
+    },
+    {
+      "path": "dist/css/bootstrap-utilities.rtl.css.map",
+      "bytes": 292445,
+      "sha256": "dfa74d6b2b676e7a3580477e6f00ace6a0f319f62a371de4d83070c840af3211"
+    },
+    {
+      "path": "dist/css/bootstrap-utilities.rtl.min.css",
+      "bytes": 97970,
+      "sha256": "1bd7ad8a382f1d0d69486e78dab5d77f43e92aad12efadcd0b2ed66e47002ced"
+    },
+    {
+      "path": "dist/css/bootstrap-utilities.rtl.min.css.map",
+      "bytes": 209203,
+      "sha256": "879bbab21b07f92e8e8ae9ae57c60c17872fc5b5e4f21fff6fe4e5633f1b221c"
+    },
+    {
+      "path": "dist/css/bootstrap.css",
+      "bytes": 315059,
+      "sha256": "5a49b38c30aa4923ea04f5ad0a8f07c0f70995b47d92ad1ed85f64de7c7a3521"
+    },
+    {
+      "path": "dist/css/bootstrap.css.map",
+      "bytes": 756477,
+      "sha256": "48c197b13ce7e0f9f885cded04edfbc6a23c8298661b597fc1017fb5354417cc"
+    },
+    {
+      "path": "dist/css/bootstrap.min.css",
+      "bytes": 262425,
+      "sha256": "5fd3ea4fa170430c3995bb1c51afcc9f62b442d05ddec0fec8e4788803e929d2"
+    },
+    {
+      "path": "dist/css/bootstrap.min.css.map",
+      "bytes": 663856,
+      "sha256": "2b6c584733ad96ba484d6c8bdc2ac63106c6a7b94f77cb4e82a182b680ae8338"
+    },
+    {
+      "path": "dist/css/bootstrap.rtl.css",
+      "bytes": 313253,
+      "sha256": "7bb6417c54ba63b475465baaeff24750ded16ddcc27e81e1967b9cf62ae15fb2"
+    },
+    {
+      "path": "dist/css/bootstrap.rtl.css.map",
+      "bytes": 756333,
+      "sha256": "40a8260cbc376f8ec8fb4e97538cb102c46cfb56508b361db4d6613205e99e22"
+    },
+    {
+      "path": "dist/css/bootstrap.rtl.min.css",
+      "bytes": 262533,
+      "sha256": "be9278394cb36ac0a98f6b1ffcf05c16c17cdb9599f9e26f7995e5737caf23ff"
+    },
+    {
+      "path": "dist/css/bootstrap.rtl.min.css.map",
+      "bytes": 662012,
+      "sha256": "6005e4afdfb5ceec8f47df3de937a2e0a0f7de0290d726dbd084ff413ddbc2fd"
+    },
+    {
+      "path": "dist/js/bootstrap.bundle.js",
+      "bytes": 207836,
+      "sha256": "69566344cf5722be51acbc90fdb26c24eb01cc1c153f738b16b2fa87ccd3b510"
+    },
+    {
+      "path": "dist/js/bootstrap.bundle.js.map",
+      "bytes": 431870,
+      "sha256": "869fb5690e065dd94e705c68cb8abd5a95a7e3740afb24d9c10d1163294df668"
+    },
+    {
+      "path": "dist/js/bootstrap.bundle.min.js",
+      "bytes": 80496,
+      "sha256": "e4fd49181388c48ec5040bd3fe66f57c29c8e67fcd8502b3354b96ec7ab47cc7"
+    },
+    {
+      "path": "dist/js/bootstrap.bundle.min.js.map",
+      "bytes": 332111,
+      "sha256": "c61123e58cc0a4b65d737ba070c485911b3dbec6d7b802bdf6628395abd9c08b"
+    },
+    {
+      "path": "dist/js/bootstrap.esm.js",
+      "bytes": 135902,
+      "sha256": "3c36e18ebe2539579edf7e440f3e02bcc46c2ad9efbc55b219b732af355d0aab"
+    },
+    {
+      "path": "dist/js/bootstrap.esm.js.map",
+      "bytes": 297005,
+      "sha256": "99ff5be31d2a82ba30febceed68845e4d203e3d411b6770f987f17c34a7d1f77"
+    },
+    {
+      "path": "dist/js/bootstrap.esm.min.js",
+      "bytes": 73811,
+      "sha256": "f9280841ae00ff8c36baa9e829833dd9fc893c70d67b63c552f601a88fdfbc81"
+    },
+    {
+      "path": "dist/js/bootstrap.esm.min.js.map",
+      "bytes": 222322,
+      "sha256": "459f672fa6b544adfe9301b2efbd22c447bc4a94c87340e66143ce23ec26eb03"
+    },
+    {
+      "path": "dist/js/bootstrap.js",
+      "bytes": 145474,
+      "sha256": "1b6e856e8a636bcdde4588e63a1061ced96edbb468127b25243629634d402079"
+    },
+    {
+      "path": "dist/js/bootstrap.js.map",
+      "bytes": 298167,
+      "sha256": "de4fec95e11a40f82fd65cc2420547b81ae5264147413d060a92a67142ff5b8c"
+    },
+    {
+      "path": "dist/js/bootstrap.min.js",
+      "bytes": 60539,
+      "sha256": "7b0f14895d69247fd88e93840489cfd47c55bd3fd27eb0a6c12a14cc5f492207"
+    },
+    {
+      "path": "dist/js/bootstrap.min.js.map",
+      "bytes": 220618,
+      "sha256": "52b03d8d959ca53d69c1f34c13e6242080c9accbbe0237c829349f777383c0cb"
+    },
+    {
+      "path": "dist/js/plugins/dist/alert.js",
+      "bytes": 2835,
+      "sha256": "e15c6fdbccc07dbd671f253472f90e27448f34776e7c2b4576f720c5a672dafe"
+    },
+    {
+      "path": "dist/js/plugins/dist/alert.js.map",
+      "bytes": 4126,
+      "sha256": "69863c98079e5fb46a63e4ea72f0eb108501b0555c0202ee1ee0e5f87311aed1"
+    },
+    {
+      "path": "dist/js/plugins/dist/base-component.js",
+      "bytes": 2841,
+      "sha256": "af8f7324ab0f20a0f25825f18baa83eabab613c6c023316a22af2e0101553c04"
+    },
+    {
+      "path": "dist/js/plugins/dist/base-component.js.map",
+      "bytes": 4475,
+      "sha256": "7b6e97d2f3da59f27657df4cc0ed8839d2e656037b9643e16a71b23febf12b28"
+    },
+    {
+      "path": "dist/js/plugins/dist/button.js",
+      "bytes": 2463,
+      "sha256": "082403e386bf81b51bb1cd2659f53436f790fc3d389b408ce60fe99ecdb6a1b9"
+    },
+    {
+      "path": "dist/js/plugins/dist/button.js.map",
+      "bytes": 3359,
+      "sha256": "54718465284d97943ca4a293bce83b5c1e250cae9e9027e537b767a2b339b0e9"
+    },
+    {
+      "path": "dist/js/plugins/dist/carousel.js",
+      "bytes": 13420,
+      "sha256": "f02075154e395076e1e4ce694d9fe733c189aba6c3af7bdee21426a0b7f95f4b"
+    },
+    {
+      "path": "dist/js/plugins/dist/carousel.js.map",
+      "bytes": 26315,
+      "sha256": "11a0fa5aa40f0f044d4894152ead1247a61f7f73b7a7da04d84b73c50dd2eb8e"
+    },
+    {
+      "path": "dist/js/plugins/dist/collapse.js",
+      "bytes": 8838,
+      "sha256": "a5fa837e10d687ef6fa298a6556fbdd3883be5abba8cb87742b21aac472bcb37"
+    },
+    {
+      "path": "dist/js/plugins/dist/collapse.js.map",
+      "bytes": 17246,
+      "sha256": "2c29f1716c1234e50c53bf769e646acdb5695b03e4f169630266d7977f9f9688"
+    },
+    {
+      "path": "dist/js/plugins/dist/dom/data.js",
+      "bytes": 2115,
+      "sha256": "1d5f67d55ee90897f8fb1d59b1c2450216d6ec7a254f64746375b5e832fcd5e7"
+    },
+    {
+      "path": "dist/js/plugins/dist/dom/data.js.map",
+      "bytes": 2958,
+      "sha256": "ba154776ccecf8300a003a30b2971bb221a6d1dd1f86300c48c3cf493fbc0ff1"
+    },
+    {
+      "path": "dist/js/plugins/dist/dom/event-handler.js",
+      "bytes": 9438,
+      "sha256": "b91977fc53923f624452226558235b7afeb50e4ee985cb7fb0537c67ac2b77cb"
+    },
+    {
+      "path": "dist/js/plugins/dist/dom/event-handler.js.map",
+      "bytes": 18670,
+      "sha256": "e53ce2065150aa97d4a5fc9740312b2aa4594ff38569cb70e8258347d5c670a0"
+    },
+    {
+      "path": "dist/js/plugins/dist/dom/manipulator.js",
+      "bytes": 2399,
+      "sha256": "902ea762b4c6373bb730ea0d2e2858f3cd2150605b20e7c7b5dd8fb06bdf8140"
+    },
+    {
+      "path": "dist/js/plugins/dist/dom/manipulator.js.map",
+      "bytes": 4138,
+      "sha256": "b11fb89cd75ce05bda506e042269c1fba109496dc6d6e9dd4dea3876ec32171c"
+    },
+    {
+      "path": "dist/js/plugins/dist/dom/selector-engine.js",
+      "bytes": 4220,
+      "sha256": "98b1ca52cff54f5c12ea98fb31db6e2b9f7e9a6e5cb86e997e0bc35ee62fc15c"
+    },
+    {
+      "path": "dist/js/plugins/dist/dom/selector-engine.js.map",
+      "bytes": 7543,
+      "sha256": "03bad3b2db05865b09c526bec9722cccb002c2ae2fc2ea321d2b551b1633d333"
+    },
+    {
+      "path": "dist/js/plugins/dist/dropdown.js",
+      "bytes": 15374,
+      "sha256": "2f82876351b73fe6dcd3bfcc6f8be70b6664dd3c78ff14dabdcca3c4629af598"
+    },
+    {
+      "path": "dist/js/plugins/dist/dropdown.js.map",
+      "bytes": 28237,
+      "sha256": "b84960a1fcf272abd899189ca853811a215270f8a4a0261d045ef5f316253a2b"
+    },
+    {
+      "path": "dist/js/plugins/dist/modal.js",
+      "bytes": 11198,
+      "sha256": "6e6be3866a98b71120b7a237c9f816e0b77b04b31340a44d51d049ba5d6c4cd9"
+    },
+    {
+      "path": "dist/js/plugins/dist/modal.js.map",
+      "bytes": 21531,
+      "sha256": "67b43006422251fba6f898d2bcee929468345c3512236e23fd8fd25e86070586"
+    },
+    {
+      "path": "dist/js/plugins/dist/offcanvas.js",
+      "bytes": 8264,
+      "sha256": "445aebcf70d1d19e4a6410e2b59abc10b0342e9b2494734b64507735e9bf612d"
+    },
+    {
+      "path": "dist/js/plugins/dist/offcanvas.js.map",
+      "bytes": 15417,
+      "sha256": "6be89d450c53c9f274f212f8efb981dc0ab98d9823cb5f2306c391b01dfad496"
+    },
+    {
+      "path": "dist/js/plugins/dist/popover.js",
+      "bytes": 2669,
+      "sha256": "7c4466b0fde364afcea521998c9b758eb3e855b931afcb399d1a1d314f952fb8"
+    },
+    {
+      "path": "dist/js/plugins/dist/popover.js.map",
+      "bytes": 3948,
+      "sha256": "d96bdabbdc139ef000530ca9ab22094903565a1a1826357f4952414ecddd3056"
+    },
+    {
+      "path": "dist/js/plugins/dist/scrollspy.js",
+      "bytes": 9818,
+      "sha256": "65d2a3acee426f53c8d49d5ef8d2031be10e81f3da16880546872f2daef94295"
+    },
+    {
+      "path": "dist/js/plugins/dist/scrollspy.js.map",
+      "bytes": 18371,
+      "sha256": "29bf74dd594deb073ca013bab8f49bd08c1d49979b1d298bfa204b2a66283732"
+    },
+    {
+      "path": "dist/js/plugins/dist/tab.js",
+      "bytes": 10426,
+      "sha256": "80f6511d4ad0b88cff4f6b7bc6785641d874d395f96df157cfc1f0e21c3d7d89"
+    },
+    {
+      "path": "dist/js/plugins/dist/tab.js.map",
+      "bytes": 19900,
+      "sha256": "b075aeb6e9f32b710d63464ff9cf98341ff708c15af10b855f20bd96a24136f8"
+    },
+    {
+      "path": "dist/js/plugins/dist/toast.js",
+      "bytes": 6198,
+      "sha256": "8b0a29d072b0e4f1de9d1bf6f683e4df4d9d655c8aac932e8724335e6a7bbb61"
+    },
+    {
+      "path": "dist/js/plugins/dist/toast.js.map",
+      "bytes": 11442,
+      "sha256": "1cb945d167f6b7a481322818987e29f8f62a0597894c371fe5d53735463f5dca"
+    },
+    {
+      "path": "dist/js/plugins/dist/tooltip.js",
+      "bytes": 18484,
+      "sha256": "d26eb578120bd902a0c9a80006bf2efb07071c355d98b67ba5ff3749f2747854"
+    },
+    {
+      "path": "dist/js/plugins/dist/tooltip.js.map",
+      "bytes": 36132,
+      "sha256": "8346d20a260b80940212dc71c37f092ed28047876417ef7619424128625ffaf1"
+    },
+    {
+      "path": "dist/js/plugins/dist/util/backdrop.js",
+      "bytes": 4117,
+      "sha256": "f3c5d6df7c1568f6d4c5a5c9d8521c907bf2c926264866ee1bcd7f760e23b16b"
+    },
+    {
+      "path": "dist/js/plugins/dist/util/backdrop.js.map",
+      "bytes": 6882,
+      "sha256": "3cf9b555820614ba0ee969ad350cd8c9acbb18c353c01d92beb01aeb29a6940e"
+    },
+    {
+      "path": "dist/js/plugins/dist/util/component-functions.js",
+      "bytes": 2050,
+      "sha256": "e3c752cf7593429ad0b26f2ba89875e64beb128f564de06687dbbe99979de5a5"
+    },
+    {
+      "path": "dist/js/plugins/dist/util/component-functions.js.map",
+      "bytes": 2340,
+      "sha256": "70c615be738b1bcd5ec1237ddf255c12f087199cb023961168184c3ad7bb5016"
+    },
+    {
+      "path": "dist/js/plugins/dist/util/config.js",
+      "bytes": 2566,
+      "sha256": "5243c8dbf0121670223440fdd2833aa80ba3a7f3129d2c90c5c1b3ef77056bf5"
+    },
+    {
+      "path": "dist/js/plugins/dist/util/config.js.map",
+      "bytes": 3885,
+      "sha256": "9b303170ea0d4770525573489e8d1520b279e36761d33656e5153ba5925dd08b"
+    },
+    {
+      "path": "dist/js/plugins/dist/util/focustrap.js",
+      "bytes": 3464,
+      "sha256": "28592966e3b2a6af0d8624f46878bda1b75f34a220b7f6254567c4bb76fb2a68"
+    },
+    {
+      "path": "dist/js/plugins/dist/util/focustrap.js.map",
+      "bytes": 5630,
+      "sha256": "14ef07d67c975cccb218b8e9086a81202a6e20b654da29cf4b17258c18af4a7d"
+    },
+    {
+      "path": "dist/js/plugins/dist/util/index.js",
+      "bytes": 9321,
+      "sha256": "6a896aab103b4c14484418bb4af5d4996a5ce53a674c74c9b2ec3d400b360df9"
+    },
+    {
+      "path": "dist/js/plugins/dist/util/index.js.map",
+      "bytes": 16441,
+      "sha256": "15170baeaf020b50a676ab4643bc00a2d8702fcc4f360905be25813238e1c80f"
+    },
+    {
+      "path": "dist/js/plugins/dist/util/sanitizer.js",
+      "bytes": 3871,
+      "sha256": "8f6d5282e35f463a2a0e1e2c0cc406b163ef46366054c1cf9ae497fcfe6d71de"
+    },
+    {
+      "path": "dist/js/plugins/dist/util/sanitizer.js.map",
+      "bytes": 6890,
+      "sha256": "bf25af359ab762aa07f5db331cd939c2cedcf6bade321a6bfd4b3a661b6e7dfd"
+    },
+    {
+      "path": "dist/js/plugins/dist/util/scrollbar.js",
+      "bytes": 4698,
+      "sha256": "136489f47a226cd7adf80cbacf702d8c822cb217ecfdaa3c8b5d6c0c715fb3f9"
+    },
+    {
+      "path": "dist/js/plugins/dist/util/scrollbar.js.map",
+      "bytes": 7767,
+      "sha256": "7db2eff30c80cbf04259be8178fc5d2ddd8b76015564a95be031f695952dae68"
+    },
+    {
+      "path": "dist/js/plugins/dist/util/swipe.js",
+      "bytes": 4360,
+      "sha256": "245409b7a4a0f87b3c21295f40c6a084b350235a29f358c4188202edbfe2659d"
+    },
+    {
+      "path": "dist/js/plugins/dist/util/swipe.js.map",
+      "bytes": 7989,
+      "sha256": "313253852fe1e6e2ea2475a2da34404d76b4c4dd52c6310fdedcea636ee3e743"
+    },
+    {
+      "path": "dist/js/plugins/dist/util/template-factory.js",
+      "bytes": 4695,
+      "sha256": "492d860c3d7be5a36377d685a76bf51b4f3be0f15486a2ce64026d3ccd34fb4a"
+    },
+    {
+      "path": "dist/js/plugins/dist/util/template-factory.js.map",
+      "bytes": 8321,
+      "sha256": "1313d7338e73037da7581ccda883c00ffbffa90be3ac6a66f66c4d07dacdb8a9"
+    },
+    {
+      "path": "dist/js/plugins/index.esm.js",
+      "bytes": 907,
+      "sha256": "79cee7d4ef359321e1f2833e49cd1912718c342428c41b47f23a481be0fbd602"
+    },
+    {
+      "path": "dist/js/plugins/index.umd.js",
+      "bytes": 874,
+      "sha256": "726bf3fd46a5fb2e9dae28ffbbec6340fa96097702bd1303f5c34ffe3ca515c1"
+    },
+    {
+      "path": "dist/js/plugins/src/alert.js",
+      "bytes": 1903,
+      "sha256": "de1978dd45ea1f164dbf758b969311f75fd467d9a529e2be7cd68831127537e9"
+    },
+    {
+      "path": "dist/js/plugins/src/base-component.js",
+      "bytes": 1945,
+      "sha256": "d1c1348eda16b6c002aa62f049cd1f5368443891103f37449b7f6aefb3764eb4"
+    },
+    {
+      "path": "dist/js/plugins/src/button.js",
+      "bytes": 1625,
+      "sha256": "b89b058e9fd58e8cd145f1a93ff2f1c0983adf69dfa984f20aa924239988b1a6"
+    },
+    {
+      "path": "dist/js/plugins/src/carousel.js",
+      "bytes": 11817,
+      "sha256": "759801a072adc9494f336265fb43d77c970a60180cd8a1efaf95d9048e6b8cc5"
+    },
+    {
+      "path": "dist/js/plugins/src/collapse.js",
+      "bytes": 7594,
+      "sha256": "04280836a0be758700c82ea395185b77556a84e015dfe3cdd8be0117cbf57175"
+    },
+    {
+      "path": "dist/js/plugins/src/dom/data.js",
+      "bytes": 1395,
+      "sha256": "1d2d73972b8d96fd7f9b0d5d64afc95f42565fb5a60fd9f52c82d472b93c1d84"
+    },
+    {
+      "path": "dist/js/plugins/src/dom/event-handler.js",
+      "bytes": 8351,
+      "sha256": "29fcadf4d708c0084ad8f7998f07da147a579fea5cc22cbe6c5d08190e12bf1f"
+    },
+    {
+      "path": "dist/js/plugins/src/dom/manipulator.js",
+      "bytes": 1642,
+      "sha256": "6fff4f4786e1a6ab0ad787a90f9a31fb77c7cdba81b593ad8a8e8b8fe6196776"
+    },
+    {
+      "path": "dist/js/plugins/src/dom/selector-engine.js",
+      "bytes": 3436,
+      "sha256": "16ad6251c0b27b356830710990ee58670f0a04a5c0984de29df30bd54cab7c83"
+    },
+    {
+      "path": "dist/js/plugins/src/dropdown.js",
+      "bytes": 13225,
+      "sha256": "ef9acee4bba12b3f77ea2ff2d3113274812ceab2844c42ddfc43c09c982529ea"
+    },
+    {
+      "path": "dist/js/plugins/src/modal.js",
+      "bytes": 9583,
+      "sha256": "ca4c0a0d97a308723fc857285866b91996729a86a18170e8ad9a4a626cc1adc8"
+    },
+    {
+      "path": "dist/js/plugins/src/offcanvas.js",
+      "bytes": 6806,
+      "sha256": "1f05fc2efa3626e44909ece9899da41619cf0656f8505c814d7f143d7fdd00b3"
+    },
+    {
+      "path": "dist/js/plugins/src/popover.js",
+      "bytes": 1870,
+      "sha256": "93819133bf99b307631def89d3f34915a7f7641e8e793f03faba9652a39375b2"
+    },
+    {
+      "path": "dist/js/plugins/src/scrollspy.js",
+      "bytes": 8474,
+      "sha256": "6282cab86ddc83a1eff51e85f4673d96817e25cdc9d0f506473ee450f448efb5"
+    },
+    {
+      "path": "dist/js/plugins/src/tab.js",
+      "bytes": 9068,
+      "sha256": "1dd5af135f04ba10c23a2f3a2253022ccbe4da96bd345581f9c9c00ba7537ea9"
+    },
+    {
+      "path": "dist/js/plugins/src/toast.js",
+      "bytes": 5038,
+      "sha256": "9a78469806887046f378fd5972cb06241e9479ddcd42966847d44851f79c8885"
+    },
+    {
+      "path": "dist/js/plugins/src/tooltip.js",
+      "bytes": 16120,
+      "sha256": "b331a3d3be32919d0c397f21ebfb280fcc975ede1529666f193f18c0c1371d2f"
+    },
+    {
+      "path": "dist/js/plugins/src/util/backdrop.js",
+      "bytes": 3127,
+      "sha256": "7363cfa9b2051607aca9dca736659975c39beba57996f59781dc2f41fc022b05"
+    },
+    {
+      "path": "dist/js/plugins/src/util/component-functions.js",
+      "bytes": 1114,
+      "sha256": "107263fae9b46ae9721cba53010876fe7fb09de539e57e6ddb38d74eb748b000"
+    },
+    {
+      "path": "dist/js/plugins/src/util/config.js",
+      "bytes": 1784,
+      "sha256": "87bec85583630ba468dfd807f0ccb4d031133230146ce7c61cec721c7543a90a"
+    },
+    {
+      "path": "dist/js/plugins/src/util/focustrap.js",
+      "bytes": 2518,
+      "sha256": "e75e544033632d58d091cbda118c7d62a9464c5985d160f5540675d066cb0d9f"
+    },
+    {
+      "path": "dist/js/plugins/src/util/index.js",
+      "bytes": 7645,
+      "sha256": "74cc46e7670a97417ec9bcebb651940d1eedf1d5f30d6d27a7164b777ed3ab31"
+    },
+    {
+      "path": "dist/js/plugins/src/util/sanitizer.js",
+      "bytes": 2914,
+      "sha256": "19901772696241bf663355d61fef2007e0467dc3820c9a80750d119b38127b23"
+    },
+    {
+      "path": "dist/js/plugins/src/util/scrollbar.js",
+      "bytes": 3754,
+      "sha256": "27208754a29c44e7bdea17929ecfb721d947eaa8a69b404bb1627a4428b4a2db"
+    },
+    {
+      "path": "dist/js/plugins/src/util/swipe.js",
+      "bytes": 3409,
+      "sha256": "9533517e89d5a1b8721fe3911da25543b28e7786be589187fa635f7bf104d558"
+    },
+    {
+      "path": "dist/js/plugins/src/util/template-factory.js",
+      "bytes": 3623,
+      "sha256": "33f9afc836c30162a8d071dfc032b164463b9d7cc357afaef79d6173384bf1e7"
+    },
+    {
+      "path": "dist/POPPER-LICENSE.txt",
+      "bytes": 1082,
+      "sha256": "bf67e2c9b7974543bb18ced3a0b37f53729aaff953b442dd89a3adaf90fd93e8"
+    },
+    {
+      "path": "dist/scss/tq-bootstrap-grid.scss",
+      "bytes": 175,
+      "sha256": "9a23183d7da9feff755a6cc6586df9392dfb4b857ef5207d941ebba39c6f0194"
+    },
+    {
+      "path": "dist/scss/tq-bootstrap-reboot.scss",
+      "bytes": 179,
+      "sha256": "30b0e7a7eeb84c683ce23c152aa0de2933c4aab45b31c365faa14d7a62ad6025"
+    },
+    {
+      "path": "dist/scss/tq-bootstrap-utilities.scss",
+      "bytes": 271,
+      "sha256": "883440f276a845be5441578b990a513a60c7ea5f9bfa665d91f633cc9c779941"
+    },
+    {
+      "path": "dist/scss/tq-bootstrap.scss",
+      "bytes": 384,
+      "sha256": "3cb1bf2fad6551ce8b8dcfd4811646ed6fc55fe382b641c017ab99a8ac62c2e6"
+    },
+    {
+      "path": "dist/scss/_accessible-colours.scss",
+      "bytes": 14218,
+      "sha256": "c372f1ced6feb85868de2cebce1044ce7ce513fd8b9bec88582cdfd1dc36d4be"
+    },
+    {
+      "path": "dist/scss/_accessible-utility-colours.scss",
+      "bytes": 4481,
+      "sha256": "4bc7fc8db42f90bc039c7c68959675966c769509a11afd7e8d59343a127cd869"
+    },
+    {
+      "path": "dist/scss/_forced-colours.scss",
+      "bytes": 5858,
+      "sha256": "221a8bfec4324a8367ec74758dd7a556e178c0f6dbadb558d6fe3a9e8f0bb84c"
+    },
+    {
+      "path": "dist/scss/_information-components.scss",
+      "bytes": 1952,
+      "sha256": "d91187089efb672747d3d58fef92fcb9512cecf32629c8b5e193f07a4e91dfba"
+    },
+    {
+      "path": "dist/scss/_information-utilities.scss",
+      "bytes": 674,
+      "sha256": "d4af9c860ea760a8b83b5435298afe1e686abfd04059215432a5336d4d81480b"
+    },
+    {
+      "path": "dist/scss/_light-text.scss",
+      "bytes": 370,
+      "sha256": "541a678d01d3cb37529bb36d0dc5280868cda749cd8124176a3905b6f2bcb11f"
+    },
+    {
+      "path": "dist/scss/_tokens.scss",
+      "bytes": 6218,
+      "sha256": "642696444459b13e19e784420117a631728fe178d21c03c345aa30267db57db1"
+    },
+    {
+      "path": "dist/scss/_validation-colours.scss",
+      "bytes": 432,
+      "sha256": "ebdcb2ec84ad71bb5c38f3018e5639dfb7db5f782f41335c909c369573610885"
+    },
+    {
+      "path": "dist/scss/_validation-focus-colours.scss",
+      "bytes": 1294,
+      "sha256": "fd1a08adcd669f4673c8e2dff743b5cc485a9c80400c79fab24bf84237e1b7b9"
+    },
+    {
+      "path": "dist/tq/tq-accessibility.esm.js",
+      "bytes": 35792,
+      "sha256": "0d5b332ed397c7589a41152fa1156a3f6d32193333e7964f5f725d2fc8309fec"
+    },
+    {
+      "path": "dist/tq/tq-accessibility.esm.js.map",
+      "bytes": 59380,
+      "sha256": "aeb661c055d63db7e24df322b4487ee5d4e2b55a0a47df878f49c0c4e4e468ef"
+    },
+    {
+      "path": "dist/tq/tq-accessibility.js",
+      "bytes": 38326,
+      "sha256": "c8f3dea472f49756836490a20dd745cd1f003585abc5029da3f12764e125048a"
+    },
+    {
+      "path": "dist/tq/tq-accessibility.js.map",
+      "bytes": 59547,
+      "sha256": "25340a44730554a636d5a79903d55e11fdbdff16fdfe2729839c5d74bdcecbd5"
+    },
+    {
+      "path": "dist/tq/tq-accessibility.min.js",
+      "bytes": 20455,
+      "sha256": "f9dbe1c02b0a727ee2c6640677db25c639cffb787b536f7847cb7514fdb4311a"
+    },
+    {
+      "path": "dist/tq/tq-accessibility.min.js.map",
+      "bytes": 61040,
+      "sha256": "18c48c59d4975768bb915d3a0ccf874f84222024bc91415e9deb460748df7ad6"
+    }
+  ]
+}

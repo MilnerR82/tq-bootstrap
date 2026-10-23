@@ -1,0 +1,25 @@
+{
+  "zipSHA256": "8aac11c1842da42bffefc3a19116fd29be02760c9722061dc07ada2441c9be8a",
+  "entries": [
+    {
+      "entry": "tq-bootstrap/qa/results/colour-only-docs-source.json",
+      "file": "qa/remediation-source/baseline/qa/results/colour-only-docs-source.json",
+      "sha256": "00e0c1d2bdcdb24c1ce14d0b066ada877d5258a3897a7a9d895375ca1810ab76"
+    },
+    {
+      "entry": "tq-bootstrap/qa/results/example-colour-substitutions.json",
+      "file": "qa/remediation-source/baseline/qa/results/example-colour-substitutions.json",
+      "sha256": "9e9081cdb7966e86010a67787e9a594dae6150350d164f430ee56b432738daea"
+    },
+    {
+      "entry": "tq-bootstrap/qa/results/docs-colour-substitutions.json",
+      "file": "qa/remediation-source/baseline/qa/results/docs-colour-substitutions.json",
+      "sha256": "d1aeb18c4670fef8c03ca69b7f499db951ebb25e130c893659ebd65666f9f8a4"
+    },
+    {
+      "entry": "tq-bootstrap/qa/results/inline-svg-colour-substitutions.json",
+      "file": "qa/remediation-source/baseline/qa/results/inline-svg-colour-substitutions.json",
+      "sha256": "f25cf15c7e77a151091660e183fc2b6c566bc1469e3ef735039c85c2b7fe6030"
+    }
+  ]
+}

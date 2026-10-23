@@ -1,0 +1,22 @@
+<!doctype html><html lang="en" data-bs-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>components-close-button native comparison fixture</title><link id="framework" rel="stylesheet" href="/qa/reference-native/css/bootstrap.css"><link rel="stylesheet" href="/qa/reference-native/docs-themed.css"></head><body><main class="bd-content" style="margin:16px">   <h2 id="example">Example<a class="anchor-link" aria-label="Link to this section: Example" href="#example"> </a></h2>
+<p>Provide an option to dismiss or close a component with <code>.btn-close</code>. Default styling is limited, but highly customizable. Modify the Sass variables to replace the default <code>background-image</code>. <strong>Be sure to include text for screen readers</strong>, as we’ve done with <code>aria-label</code>.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <button type="button" class="btn-close" aria-label="Close"></button> </div>  <div>   </div>  </div>
+<h2 id="disabled-state">Disabled state<a class="anchor-link" aria-label="Link to this section: Disabled state" href="#disabled-state"> </a></h2>
+<p>Disabled close buttons change their <code>opacity</code>. We’ve also applied <code>pointer-events: none</code> and <code>user-select: none</code> to preventing hover and active states from triggering.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <button type="button" class="btn-close" disabled="" aria-label="Close"></button> </div>  <div>   </div>  </div>
+<h2 id="dark-variant">Dark variant<a class="anchor-link" aria-label="Link to this section: Dark variant" href="#dark-variant"> </a></h2>
+<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-2">
+Deprecated in v5.3.0 </small>
+<div class="bd-callout bd-callout-warning"> <p><strong>Heads up!</strong> As of v5.3.0, the <code>.btn-close-white</code> class is deprecated. Instead, use <code>data-bs-theme="dark"</code> to change the color mode of the close button.</p> </div>
+<p>Add <code>data-bs-theme="dark"</code> to the <code>.btn-close</code>, or to its parent element, to invert the close button. This uses the <code>filter</code> property to invert the <code>background-image</code> without overriding its value.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0 bg-dark"> <div data-bs-theme="dark">
+  <button type="button" class="btn-close" aria-label="Close"></button>
+  <button type="button" class="btn-close" disabled="" aria-label="Close"></button>
+</div> </div>  <div>   </div>  </div>
+<h2 id="css">CSS<a class="anchor-link" aria-label="Link to this section: CSS" href="#css"> </a></h2>
+<h3 id="variables">Variables<a class="anchor-link" aria-label="Link to this section: Variables" href="#variables"> </a></h3>
+<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">Added in v5.3.0</small>
+<p>As part of Bootstrap’s evolving CSS variables approach, close button now uses local CSS variables on <code>.btn-close</code> for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.</p>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>
+<h3 id="sass-variables">Sass variables<a class="anchor-link" aria-label="Link to this section: Sass variables" href="#sass-variables"> </a></h3>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>  </main><script src="/dist/js/bootstrap.bundle.min.js"></script></body></html>

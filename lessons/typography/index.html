@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn typography by experimenting with fonts, hierarchy and spacing. An interactive beginner lesson built with TQ Bootstrap.">
+  <title>Typography playground · TQ Bootstrap</title>
+  <link rel="stylesheet" href="../../dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lesson.css">
+  <script src="../../dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="lesson.js" defer></script>
+</head>
+<body>
+<a class="visually-hidden-focusable skip-link" href="#main">Skip to lesson</a>
+<header class="border-bottom">
+  <div class="container-xxl py-3 d-flex justify-content-between align-items-center gap-3 flex-wrap">
+    <a class="brand text-decoration-none" href="../../"><span class="brand-mark" aria-hidden="true">TQ</span> <strong>TQ Bootstrap</strong></a>
+    <div class="d-flex align-items-center gap-3"><span class="small d-none d-sm-inline">Learning studio</span><button id="theme-toggle" class="btn btn-outline-secondary btn-sm" type="button" aria-pressed="false">Dark mode</button></div>
+  </div>
+</header>
+<main id="main" class="container-xxl" tabindex="-1">
+  <section class="hero row align-items-center g-4" aria-labelledby="lesson-title">
+    <div class="col-lg-8">
+      <p class="eyebrow mb-3">Design essentials <span aria-hidden="true">/</span> Lesson 01</p>
+      <h1 id="lesson-title">Make every<br><span class="accent-text">word count.</span></h1>
+      <p class="lead mt-4 mb-3 hero-intro">A hands-on introduction to typography.<br class="d-none d-sm-inline"> Same words. Better choices. Clearer communication.</p>
+      <div class="d-flex gap-3 align-items-center flex-wrap mb-4"><span class="badge text-bg-light text-dark">Beginner friendly</span><span class="small">About 15–20 minutes · 4 activities</span></div>
+      <a class="btn btn-primary btn-lg" href="#families">Start experimenting <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="col-lg-4 d-none d-lg-block" aria-hidden="true"><div class="hero-art"><span class="art-label">The shape of a message</span><span class="hero-letters">Aa<span class="accent-text">.</span></span><div class="art-baseline"></div><span class="art-caption">Form + space + purpose</span></div></div>
+  </section>
+  <noscript><div class="alert alert-warning">JavaScript is turned off. You can read the explanations and glossary, but the live experiments and checks need JavaScript.</div></noscript>
+  <div class="row gx-xl-4 pb-5">
+    <aside class="col-lg-3 mb-5">
+      <nav class="lesson-nav" aria-label="Lesson activities">
+        <p class="eyebrow">Your learning path</p>
+        <ol class="list-unstyled path-list">
+          <li><a href="#families"><span class="step-number">01</span><span>Meet the families<small id="step-family">Explore</small></span></a></li>
+          <li><a href="#hierarchy"><span class="step-number">02</span><span>Create a hierarchy<small id="step-hierarchy">Try it</small></span></a></li>
+          <li><a href="#spacing"><span class="step-number">03</span><span>Give text room<small id="step-spacing">Experiment</small></span></a></li>
+          <li><a href="#knowledge"><span class="step-number">04</span><span>Put it into practice<small id="step-quiz">Check your knowledge</small></span></a></li>
+        </ol>
+        <div class="mt-4"><div class="d-flex justify-content-between small mb-2"><span>Lesson progress</span><span id="progress-label">0 of 4</span></div><div class="progress" role="progressbar" aria-label="Completed activities" aria-valuenow="0" aria-valuemin="0" aria-valuemax="4"><div id="progress-fill" class="progress-bar" style="width:0%"></div></div></div>
+        <p class="small text-body-secondary mt-3">Go at your own pace. Progress lasts until you reload this page.</p>
+        <a class="small" href="#glossary">Need a definition? ↓</a>
+      </nav>
+    </aside>
+    <div class="col-lg-9 lesson-content">
+      <div class="intro-note mb-5"><p class="mb-0"><strong>Typography is how you arrange and style written language.</strong> Font choice, size, weight and space help people find the important parts and follow your message. You don’t need to draw letters or know any code to begin.</p></div>
+
+      <section id="families" class="lesson-section" aria-labelledby="family-title">
+        <div class="section-heading"><span class="section-index">01</span><div><p class="eyebrow mb-1">Look closely</p><h2 id="family-title">Meet the font families</h2></div></div>
+        <p>Letters have different personalities. Switch between these three families and look at the ends of the strokes and the space each character takes.</p>
+        <div class="card experiment">
+          <div class="card-header bg-transparent p-3 p-md-4">
+            <fieldset><legend class="fs-6 fw-semibold mb-3">Choose a family</legend><div class="family-options d-flex flex-wrap gap-2">
+              <input class="btn-check" type="radio" name="family" id="family-sans" value="sans" checked><label class="btn btn-outline-secondary" for="family-sans">Sans serif</label>
+              <input class="btn-check" type="radio" name="family" id="family-serif" value="serif"><label class="btn btn-outline-secondary" for="family-serif">Serif</label>
+              <input class="btn-check" type="radio" name="family" id="family-mono" value="mono"><label class="btn btn-outline-secondary" for="family-mono">Monospace</label>
+            </div></fieldset>
+          </div>
+          <div class="card-body p-3 p-md-4">
+            <div class="specimen-surface p-3 p-md-4 mb-4" id="family-preview"><div class="specimen-letter" aria-hidden="true">Ag</div><p id="family-sentence" class="specimen-sentence">Small details. Big difference.</p><p class="mb-0 specimen-alphabet" aria-label="Sample characters">abcdefghijklmnopqrstuvwxyz<br>0123456789 &amp; ! ?</p></div>
+            <div class="row g-4"><div class="col-md-7"><h3 id="family-name" class="h5">Sans serif · Arial</h3><p id="family-description" class="mb-0">No small finishing strokes at the ends of letters. Notice the clean ends of the A and g. This is a common choice for interfaces and everyday reading.</p></div><div class="col-md-5"><label for="sample-text" class="form-label">Try your own words</label><input id="sample-text" class="form-control" maxlength="100" value="Small details. Big difference." aria-describedby="sample-hint"><div class="form-text" id="sample-hint">Up to 100 characters. Your text stays on this page.</div></div></div>
+          </div>
+          <div class="card-footer bg-transparent p-3 p-md-4"><p id="family-feedback" class="mb-0" role="status">Explore all three families to complete this activity. 1 of 3 viewed.</p></div>
+        </div>
+        <p class="small text-body-secondary mt-3">These samples use installed fonts: Arial, Georgia and Courier New, with generic fallbacks. Their appearance may vary by device. No family is automatically the most readable for every person or purpose.</p>
+        <a class="next-link" href="#hierarchy">Next: guide the reader’s eye <span aria-hidden="true">→</span></a>
+      </section>
+
+      <section id="hierarchy" class="lesson-section" aria-labelledby="hierarchy-title">
+        <div class="section-heading"><span class="section-index">02</span><div><p class="eyebrow mb-1">Create an order</p><h2 id="hierarchy-title">What do you notice first?</h2></div></div>
+        <p><strong>Hierarchy</strong> makes the order of importance visible. A title introduces the topic, a subheading groups ideas, and body text explains the detail. Size, weight and space can do the work together.</p>
+        <div class="card experiment"><div class="card-body p-3 p-md-4">
+          <fieldset><legend class="fs-6 fw-semibold">Try three treatments for the same event notice</legend><div class="d-flex flex-wrap gap-2 mb-4">
+            <input class="btn-check" type="radio" name="hierarchy" id="hierarchy-flat" value="flat" checked><label class="btn btn-outline-secondary" for="hierarchy-flat">All equal</label>
+            <input class="btn-check" type="radio" name="hierarchy" id="hierarchy-loud" value="loud"><label class="btn btn-outline-secondary" for="hierarchy-loud">Everything shouts</label>
+            <input class="btn-check" type="radio" name="hierarchy" id="hierarchy-clear" value="clear"><label class="btn btn-outline-secondary" for="hierarchy-clear">Clear levels</label>
+          </div></fieldset>
+          <div class="notice-surface p-4 p-md-5 hierarchy-flat" id="hierarchy-preview" aria-label="Event notice preview">
+            <p class="notice-kicker">A free creative workshop</p><h3 class="notice-title">Make something great.</h3><p class="notice-subtitle">Ideas start with a little curiosity.</p><p class="notice-body">Join a friendly, hands-on session and turn a simple idea into something you can share. Bring your questions. We’ll bring the materials.</p><p class="notice-detail mb-0">Saturday · 10 am–12 pm · Studio 2</p>
+          </div>
+          <p class="small mt-3" id="hierarchy-description">Everything has similar size and weight. The reader has to work harder to find the title.</p>
+          <div class="task-prompt mt-4"><strong>Your task:</strong> choose the treatment that makes the event title the main entry point while keeping the details readable.</div>
+          <button class="btn btn-primary mt-3" id="check-hierarchy" type="button">Check my choice</button>
+          <div id="hierarchy-feedback" class="feedback mt-3" role="status"></div>
+        </div></div>
+        <div class="tip mt-3"><strong>Behind the appearance:</strong> on a web page, real heading levels also communicate structure to assistive technology. Making text big or bold alone does not make it a heading.</div>
+        <a class="next-link" href="#spacing">Next: make room for reading <span aria-hidden="true">→</span></a>
+      </section>
+
+      <section id="spacing" class="lesson-section" aria-labelledby="spacing-title">
+        <div class="section-heading"><span class="section-index">03</span><div><p class="eyebrow mb-1">The reading lab</p><h2 id="spacing-title">Give your words some room</h2></div></div>
+        <p>A font is only the start. Adjust the sample below and notice how the reading rhythm changes. The coloured guide shows the available line width.</p>
+        <div class="card experiment"><div class="card-body p-3 p-md-4">
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4"><h3 class="h5 mb-0">Your typesetting desk</h3><button class="btn btn-outline-secondary btn-sm" id="reset-lab" type="button">Reset controls</button></div>
+          <div class="row g-4 mb-4">
+            <div class="col-sm-6"><label class="form-label d-flex justify-content-between" for="font-size">Text size <output id="size-value" for="font-size">16 px</output></label><input class="form-range" type="range" id="font-size" min="16" max="28" step="1" value="16" aria-describedby="size-help"><p id="size-help" class="form-text mb-0">A larger size can make detail easier to see.</p></div>
+            <div class="col-sm-6"><label class="form-label d-flex justify-content-between" for="line-height">Line spacing <output id="line-value" for="line-height">1.2×</output></label><input class="form-range" type="range" id="line-height" min="1.2" max="2" step="0.1" value="1.2" aria-describedby="line-help"><p id="line-help" class="form-text mb-0">Line height relative to the text size.</p></div>
+            <div class="col-sm-6"><label class="form-label d-flex justify-content-between" for="line-width">Maximum line width <output id="width-value" for="line-width">80 ch</output></label><input class="form-range" type="range" id="line-width" min="30" max="80" step="5" value="80" aria-describedby="width-help"><p id="width-help" class="form-text mb-0">1 ch is the width of the font’s “0”, not an exact character count. The preview also fits your screen.</p></div>
+            <div class="col-sm-6"><label class="form-label" for="alignment">Text alignment</label><select class="form-select" id="alignment"><option value="left">Left aligned</option><option value="center">Centred</option><option value="justify">Justified</option></select><p class="form-text mb-0">Compare the word spacing and the start of each line.</p></div>
+          </div>
+          <div class="reading-surface p-3 p-md-4"><div id="reading-preview"><h3 class="h5 mb-3">A little space goes a long way</h3><p class="mb-3">Good typography helps a reader concentrate on the message. When lines sit too close together, it can be harder to follow one line and find the next. Space gives each line a little breathing room.</p><p class="mb-0">Long lines ask your eyes to travel further. Very short lines interrupt the flow. Try a few settings, compare the results, and choose a balance that works for your audience. There is no single setting that suits everyone.</p></div></div>
+          <div class="task-prompt mt-4"><strong>Try this starting point:</strong> text size of at least 18 px, line spacing of at least 1.5×, a maximum width between 45 and 65 ch, and left alignment.</div>
+          <p class="small text-body-secondary mt-2">These are practice targets for this exercise, not universal rules or an accessibility pass/fail test.</p>
+          <button class="btn btn-primary" id="check-spacing" type="button">Check my settings</button>
+          <div id="spacing-feedback" class="feedback mt-3" role="status"></div>
+        </div></div>
+        <a class="next-link" href="#knowledge">Next: put it into practice <span aria-hidden="true">→</span></a>
+      </section>
+
+      <section id="knowledge" class="lesson-section" aria-labelledby="knowledge-title">
+        <div class="section-heading"><span class="section-index">04</span><div><p class="eyebrow mb-1">Bring it together</p><h2 id="knowledge-title">You’re the designer</h2></div></div>
+        <p>Four everyday decisions. Pick an answer, check the reasoning, and try again if you need to. There’s no timer.</p>
+        <div class="card experiment"><div class="card-body p-3 p-md-4">
+          <p class="small text-body-secondary" id="quiz-count">Question 1 of 4</p>
+          <form id="quiz-form"><fieldset><legend class="h4"><span id="quiz-question" tabindex="-1">Which description matches a serif typeface?</span></legend><div id="quiz-options" class="quiz-options mt-4"></div></fieldset><button type="submit" class="btn btn-primary mt-4" id="quiz-check">Check answer</button></form>
+          <div id="quiz-feedback" class="feedback mt-3" role="status"></div>
+          <button id="quiz-next" class="btn btn-outline-secondary mt-3" type="button" hidden>Next question →</button>
+          <div id="quiz-finished" hidden><h3 class="h4">Four thoughtful choices. Nicely done.</h3><p>You’ve practised recognising type, organising information and making room for reading.</p><button class="btn btn-outline-secondary" id="quiz-restart" type="button">Practise again</button></div>
+        </div></div>
+      </section>
+
+      <section id="glossary" class="lesson-section" aria-labelledby="glossary-title">
+        <p class="eyebrow">Keep these close</p><h2 id="glossary-title">A tiny type dictionary</h2><p>Open a term for a quick reminder.</p>
+        <div class="accordion" id="type-dictionary">
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#term-family" aria-expanded="false" aria-controls="term-family">Typeface, font and family</button></h3><div id="term-family" class="accordion-collapse collapse" data-bs-parent="#type-dictionary"><div class="accordion-body">A <strong>typeface</strong> is a letter design, such as Georgia. A <strong>font</strong> is a particular implementation or style, such as Georgia Bold. A <strong>family</strong> groups related styles. In everyday use, people often use “font” for all of these.</div></div></div>
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#term-weight" aria-expanded="false" aria-controls="term-weight">Weight and emphasis</button></h3><div id="term-weight" class="accordion-collapse collapse" data-bs-parent="#type-dictionary"><div class="accordion-body"><strong>Weight</strong> is how thick the strokes look: regular, medium or bold, for example. Use emphasis selectively. If every word competes for attention, the important words can be harder to spot.</div></div></div>
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#term-space" aria-expanded="false" aria-controls="term-space">Leading, tracking and kerning</button></h3><div id="term-space" class="accordion-collapse collapse" data-bs-parent="#type-dictionary"><div class="accordion-body"><strong>Leading</strong> describes spacing between lines; on the web, line-height controls the line box. <strong>Tracking</strong> adjusts spacing across a run of letters. <strong>Kerning</strong> adjusts the space between particular pairs of letters, such as A and V.</div></div></div>
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#term-structure" aria-expanded="false" aria-controls="term-structure">Hierarchy and white space</button></h3><div id="term-structure" class="accordion-collapse collapse" data-bs-parent="#type-dictionary"><div class="accordion-body"><strong>Hierarchy</strong> shows the order of importance. <strong>White space</strong> is the empty space around and between content, whatever colour the background happens to be. Both can help readers group ideas and find their way.</div></div></div>
+        </div>
+      </section>
+      <section class="takeaway p-4 p-md-5" aria-labelledby="takeaway-title"><p class="eyebrow">Your takeaway</p><h2 id="takeaway-title">Clarity comes before decoration.</h2><p class="mb-4">Choose a suitable typeface. Make the order clear. Give the text room to breathe. Then check it with the people who will read it.</p><p id="completion-message" class="fw-semibold mb-4" role="status">Complete the four activities to finish your learning path.</p><div class="d-flex gap-3 flex-wrap"><a href="#families" class="btn btn-outline-secondary">Keep experimenting ↑</a><a href="../../docs/5.3/content/typography/" class="btn btn-primary">Explore framework typography</a></div></section>
+      <footer class="pt-4 small text-body-secondary"><p>Built with TQ Bootstrap · Learning examples, not official TAFE Queensland course material.</p><p>Further reading: <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals">MDN: fundamental text and font styling</a>. All lesson activities run locally; this optional reference needs an internet connection.</p></footer>
+    </div>
+  </div>
+  <div class="visually-hidden" id="progress-announcement" role="status"></div>
+</main>
+</body>
+</html>

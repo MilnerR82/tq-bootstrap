@@ -1,0 +1,11 @@
+/*!
+ * TQ Bootstrap — custom TAFE Queensland adaptation of Bootstrap.
+ * Bootstrap copyright and MIT license are retained in the distributed package.
+ */
+@import "bootstrap/scss/functions";
+@import "tokens";
+@import "bootstrap/scss/bootstrap";
+@import "properties";
+@import "components";
+@import "utilities";
+@import "accessibility";

@@ -1,0 +1,18 @@
+// Keep native validation shadow geometry. The TQ default uses opaque contextual
+// ink; explicit author opacity and custom validation-map shadows stay intact.
+@import "bootstrap/scss/variables";
+
+@each $tq-validation-state in ("valid", "invalid") {
+  @if map-has-key($form-validation-states, $tq-validation-state) {
+    $tq-state-options: map-get($form-validation-states, $tq-validation-state);
+    $tq-state-shadow: map-get($tq-state-options, "focus-box-shadow");
+    $tq-state-role: if($tq-validation-state == "valid", "success", "danger");
+    $tq-native-state-shadow: 0 0 $input-btn-focus-blur $input-focus-width rgba(var(--#{$prefix}#{$tq-state-role}-rgb), $input-btn-focus-color-opacity);
+    // Replace only the exact original map value, never a custom author's paint.
+    @if $tq-state-shadow == $tq-native-state-shadow {
+      $tq-state-paint: if($input-btn-focus-color-opacity == 1, var(--tq-focus-ring-colour, var(--#{$prefix}body-color)), rgba(var(--tq-focus-ring-rgb, var(--#{$prefix}body-color-rgb)), $input-btn-focus-color-opacity));
+      $tq-state-shadow: set-nth($tq-state-shadow, 5, $tq-state-paint);
+      $form-validation-states: map-merge($form-validation-states, ($tq-validation-state: map-merge($tq-state-options, ("focus-box-shadow": $tq-state-shadow))));
+    }
+  }
+}

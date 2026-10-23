@@ -1,0 +1,29 @@
+{
+  "checkedDate": "2026-10-20",
+  "stableReleaseSource": "https://getbootstrap.com/docs/versions/",
+  "records": [
+    {
+      "name": "bootstrap",
+      "version": "5.3.8",
+      "url": "https://registry.npmjs.org/bootstrap/-/bootstrap-5.3.8.tgz",
+      "integrity": "sha512-HP1SZDqaLDPwsNiqRqi5NcP0SSXciX2s9E+RyqJIIqGo+vJeN5AJVM98CXmW/Wux0nQ5L7jeWUdplCEf0Ee+tg==",
+      "sha256": "8b02d4a7482e0f0a2b1da58f1c9c86830e96cc2f77f094f89e4681b19886bc38",
+      "licence": "MIT"
+    },
+    {
+      "name": "bootstrap-icons",
+      "version": "1.13.2",
+      "url": "https://registry.npmjs.org/bootstrap-icons/-/bootstrap-icons-1.13.2.tgz",
+      "integrity": "sha512-fAU1Ly3dH7hwRg+CB8EZ0Vl0fF80zgXHeUVJyfUOKzoURr+TbwISbCW5tKUoQLERaWYG2emTCybcPbD96hdD1A==",
+      "sha256": "7b5960145e1ab14a49a117f96a9e5a54a94fdf07f21e302d9e4f88d73dd19f9c",
+      "licence": "MIT"
+    },
+    {
+      "name": "Bootstrap complete tagged source and documentation",
+      "version": "5.3.8",
+      "url": "https://codeload.github.com/twbs/bootstrap/tar.gz/refs/tags/v5.3.8",
+      "sha256": "e48d2bb45df830b6f70e2fb5a592f07f8f892dcbd3eb33245a48593cc59aa6dd",
+      "licence": "MIT code; CC BY 3.0 documentation"
+    }
+  ]
+}

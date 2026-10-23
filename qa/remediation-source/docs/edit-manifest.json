@@ -1,0 +1,1555 @@
+{
+  "date": "2026-10-22",
+  "scope": "Explicitly authorized accessibility and TQ installation documentation remediation; Bootstrap interfaces and upstream source preserved.",
+  "files": [
+    {
+      "file": "docs-source/site/src/assets/examples/dashboard/index.astro",
+      "beforeSHA256": "0d8af774396796494da0e606151d594ec14c4226e48df381ebadac0acc0278db",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/assets/examples/dashboard/index.astro",
+      "edits": [
+        {
+          "before": "<canvas class=\"my-4 w-100\" id=\"myChart\" width=\"900\" height=\"380\"></canvas>",
+          "after": "<canvas class=\"my-4 w-100\" id=\"myChart\" width=\"900\" height=\"380\" role=\"img\" aria-label=\"Daily example values, Sunday to Saturday\" aria-describedby=\"chartDescription\">Daily example values are available in the chart data table below.</canvas>\n      <p id=\"chartDescription\" class=\"visually-hidden\">Line chart with seven daily example values, ranging from 12,034 to 24,092. These are illustrative values without a specified unit. The expandable chart data table contains every plotted value.</p>\n      <details class=\"mb-4\">\n        <summary>View chart data</summary>\n        <div class=\"table-responsive\">\n          <table class=\"table table-sm\">\n            <caption>Daily example values plotted above</caption>\n            <thead><tr><th scope=\"col\">Day</th><th scope=\"col\">Value</th></tr></thead>\n            <tbody>\n              <tr><th scope=\"row\">Sunday</th><td>15,339</td></tr>\n              <tr><th scope=\"row\">Monday</th><td>21,345</td></tr>\n              <tr><th scope=\"row\">Tuesday</th><td>18,483</td></tr>\n              <tr><th scope=\"row\">Wednesday</th><td>24,003</td></tr>\n              <tr><th scope=\"row\">Thursday</th><td>23,489</td></tr>\n              <tr><th scope=\"row\">Friday</th><td>24,092</td></tr>\n              <tr><th scope=\"row\">Saturday</th><td>12,034</td></tr>\n            </tbody>\n          </table>\n        </div>\n      </details>",
+          "count": 1,
+          "reason": "A11Y-05: named chart, equivalent actual data and visible keyboard-operable disclosure; original canvas geometry and chart dataset/API unchanged."
+        }
+      ],
+      "afterSHA256": "9adaca6bbc741e3c57ae0624afe6ad788629393aed30120d77feaff1f9b20620",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/assets/examples/dashboard-rtl/index.astro",
+      "beforeSHA256": "dc7a5f0510afe734ccbe4dad51eeb1177c5f7aa6e0dccd8547fae1cdb9874bf7",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/assets/examples/dashboard-rtl/index.astro",
+      "edits": [
+        {
+          "before": "<canvas class=\"my-4 w-100\" id=\"myChart\" width=\"900\" height=\"380\"></canvas>",
+          "after": "<canvas class=\"my-4 w-100\" id=\"myChart\" width=\"900\" height=\"380\" role=\"img\" aria-label=\"قيم يومية توضيحية من الأحد إلى السبت\" aria-describedby=\"chartDescription\">تتوفر القيم اليومية في جدول بيانات الرسم أدناه.</canvas>\n      <p id=\"chartDescription\" class=\"visually-hidden\">رسم خطي لسبع قيم يومية توضيحية تتراوح من 12,034 إلى 24,092. هذه قيم توضيحية بدون وحدة محددة. يحتوي جدول بيانات الرسم القابل للتوسيع على جميع القيم المعروضة.</p>\n      <details class=\"mb-4\">\n        <summary>عرض بيانات الرسم</summary>\n        <div class=\"table-responsive\">\n          <table class=\"table table-sm\">\n            <caption>القيم اليومية التوضيحية في الرسم أعلاه</caption>\n            <thead><tr><th scope=\"col\">اليوم</th><th scope=\"col\">القيمة</th></tr></thead>\n            <tbody>\n              <tr><th scope=\"row\">الأحد</th><td>15,339</td></tr>\n              <tr><th scope=\"row\">الإثنين</th><td>21,345</td></tr>\n              <tr><th scope=\"row\">الثلاثاء</th><td>18,483</td></tr>\n              <tr><th scope=\"row\">الأربعاء</th><td>24,003</td></tr>\n              <tr><th scope=\"row\">الخميس</th><td>23,489</td></tr>\n              <tr><th scope=\"row\">الجمعة</th><td>24,092</td></tr>\n              <tr><th scope=\"row\">السبت</th><td>12,034</td></tr>\n            </tbody>\n          </table>\n        </div>\n      </details>",
+          "count": 1,
+          "reason": "A11Y-05: Arabic equivalent of named chart/data disclosure; exact original seven values and day labels."
+        }
+      ],
+      "afterSHA256": "91bfbbdefeee1e8ee61d02ffd837d82b9d6483108c85a68ff8809d854b0567ad",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/layouts/ExamplesLayout.astro",
+      "beforeSHA256": "51394c716adb3c460da49f15efad32e50e68a3869a6430cc33d1fcec0e747ac6",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/layouts/ExamplesLayout.astro",
+      "edits": [
+        {
+          "before": "const htmlProps: HTMLAttributes<'html'> = direction === 'rtl' ? { lang: 'ar', dir: 'rtl' } : { lang: 'en' }",
+          "after": "const htmlProps: HTMLAttributes<'html'> = direction === 'rtl' ? { lang: 'ar', dir: 'rtl' } : { lang: 'en' }\n\n// These examples include navbar openers at the viewport edge; reserve a separate row for the theme control.\nconst separateThemeControl = /\\/examples\\/(?:navbar-bottom|navbars)\\/?$/.test(Astro.url.pathname)",
+          "count": 1,
+          "reason": "A11Y-04: scope control separation to the two affected native navbar examples."
+        },
+        {
+          "before": "<div class=\"dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle\">",
+          "after": "<div class:list={['dropdown bd-mode-toggle', separateThemeControl ? 'd-flex justify-content-end p-3' : 'position-fixed bottom-0 end-0 mb-3 me-3']}>",
+          "count": 1,
+          "reason": "A11Y-04: native utility-only, normal-flow theme row avoids all navbar target overlap; all other example geometry untouched."
+        }
+      ],
+      "afterSHA256": "17608ee16c5b942b569fee92118b1dcd023ab755a27ad1af80f6df3e2c8a2c3a",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/components/shortcodes/Code.astro",
+      "beforeSHA256": "dda1cbffc6876dca8d6e0a62a7be0c901f1a2575de94a7a2dd0393f8f8f598bc",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/components/shortcodes/Code.astro",
+      "edits": [
+        {
+          "before": "  const btnTitle = 'Copy to clipboard'",
+          "after": "  // Only genuine scrolling regions need an additional Tab stop. Reassess after viewport, font or text resizing.\n  const codeRegions = document.querySelectorAll<HTMLElement>('.highlight[data-tq-code-label] > pre')\n  const updateCodeRegion = (pre: HTMLElement) => {\n    const scrolls = pre.scrollWidth > pre.clientWidth + 1 || pre.scrollHeight > pre.clientHeight + 1\n    if (scrolls) {\n      pre.tabIndex = 0\n      pre.setAttribute('role', 'region')\n      pre.setAttribute('aria-label', pre.parentElement?.dataset.tqCodeLabel || 'Code example; scroll horizontally to read all code')\n      pre.dataset.tqScrollableCode = 'true'\n    } else if (pre.dataset.tqScrollableCode) {\n      pre.removeAttribute('tabindex')\n      pre.removeAttribute('role')\n      pre.removeAttribute('aria-label')\n      delete pre.dataset.tqScrollableCode\n    }\n  }\n  const codeObserver = new ResizeObserver((entries) => {\n    for (const entry of entries) updateCodeRegion(entry.target as HTMLElement)\n  })\n  codeRegions.forEach((pre) => {\n    updateCodeRegion(pre)\n    codeObserver.observe(pre)\n    if (pre.firstElementChild) codeObserver.observe(pre.firstElementChild)\n  })\n  document.fonts.ready.then(() => codeRegions.forEach(updateCodeRegion))\n  window.addEventListener('resize', () => codeRegions.forEach(updateCodeRegion))\n\n  const btnTitle = 'Copy to clipboard'",
+          "count": 1,
+          "reason": "REVIEW-01: browser-independent keyboard scrolling of only actually overflowing code, preserving Prism contents and native scrolling."
+        },
+        {
+          "before": "for (const entry of entries) updateCodeRegion(entry.target as HTMLElement)",
+          "after": "for (const entry of entries) {\n      const target = entry.target as HTMLElement\n      updateCodeRegion(target.tagName === 'PRE' ? target : target.parentElement!)\n    }",
+          "count": 1,
+          "reason": "Restrict focusability to PRE while monitoring child metrics."
+        },
+        {
+          "before": "<div class=\"highlight\">",
+          "after": "<div class=\"highlight\" data-tq-code-label={filePath ? `Code from ${filePath}; scroll horizontally to read all code` : `${lang || 'Code'} example; scroll horizontally to read all code`}>",
+          "count": 1,
+          "reason": "REVIEW-01: label each actual scrolling code region without inserting text in copy/export targets."
+        },
+        {
+          "before": "bootstrap.Tooltip.getOrCreateInstance(btn, { title })",
+          "after": "window.TQAccessibility.createTooltip(btn, { title })",
+          "count": 1,
+          "reason": "A11Y-01: initialize documentation copy/edit controls through the independent hover/focus/Escape helper; preserve title and native instance feedback API."
+        },
+        {
+          "before": "  document.fonts.ready.then(() => codeRegions.forEach(updateCodeRegion))\n  window.addEventListener('resize', () => codeRegions.forEach(updateCodeRegion))",
+          "after": "  let codeUpdateFrame = 0\n  const scheduleCodeRegions = () => {\n    if (codeUpdateFrame) return\n    codeUpdateFrame = requestAnimationFrame(() => {\n      codeUpdateFrame = 0\n      codeRegions.forEach(updateCodeRegion)\n    })\n  }\n  // Inline CODE can change intrinsic width without resizing its PRE. User stylesheets\n  // must therefore trigger a new overflow measurement as well as ResizeObserver.\n  new MutationObserver(scheduleCodeRegions).observe(document.head, {\n    childList: true,\n    subtree: true,\n    characterData: true,\n    attributes: true,\n    attributeFilter: ['href', 'media', 'disabled', 'style']\n  })\n  const codeStyleObserver = new MutationObserver(scheduleCodeRegions)\n  for (const element of [document.documentElement, document.body]) {\n    codeStyleObserver.observe(element, { attributes: true, attributeFilter: ['style', 'class'] })\n  }\n  document.addEventListener('load', (event) => {\n    if (event.target instanceof HTMLLinkElement && event.target.rel === 'stylesheet') scheduleCodeRegions()\n  }, true)\n  // Also measure before native Tab navigation, covering CSSOM changes with no DOM mutation.\n  document.addEventListener('keydown', (event) => {\n    if (event.key === 'Tab') codeRegions.forEach(updateCodeRegion)\n  }, true)\n  document.fonts.ready.then(scheduleCodeRegions)\n  document.fonts.addEventListener('loadingdone', scheduleCodeRegions)\n  window.addEventListener('resize', scheduleCodeRegions)",
+          "count": 1,
+          "reason": "Fix measured all-engine user-text-spacing regression: observe stylesheet and root style changes, and reassess actual code overflow before native Tab navigation; preserve native code rendering and only actual scrolling regions receive extra focus stops."
+        },
+        {
+          "before": "  const clipboard = new ClipboardJS('.btn-clipboard', {",
+          "after": "  const clipboardStatus = document.querySelector<HTMLElement>('[data-tq-clipboard-status]') || document.createElement('p')\n  clipboardStatus.className = 'visually-hidden'\n  clipboardStatus.dataset.tqClipboardStatus = 'true'\n  clipboardStatus.setAttribute('role', 'status')\n  clipboardStatus.setAttribute('aria-live', 'polite')\n  clipboardStatus.setAttribute('aria-atomic', 'true')\n  if (!clipboardStatus.isConnected) document.body.append(clipboardStatus)\n  let clipboardAnnouncementFrame = 0\n  const announceClipboard = (message: string) => {\n    if (clipboardAnnouncementFrame) cancelAnimationFrame(clipboardAnnouncementFrame)\n    clipboardStatus.textContent = ''\n    clipboardAnnouncementFrame = requestAnimationFrame(() => {\n      clipboardAnnouncementFrame = 0\n      clipboardStatus.textContent = message\n    })\n  }\n\n  const clipboard = new ClipboardJS('.btn-clipboard', {",
+          "count": 1,
+          "reason": "Expose one native visually-hidden polite atomic status per document for copy outcomes; clear then update on the next animation frame so repeated identical results are announced."
+        },
+        {
+          "before": "  clipboard.on('success', (event) => {\n    const iconFirstChild",
+          "after": "  clipboard.on('success', (event) => {\n    announceClipboard('Code copied to clipboard.')\n    event.clearSelection()\n    const iconFirstChild",
+          "count": 1,
+          "reason": "Announce every successful native clipboard action before the existing repeated-icon guard, and restore focus before that guard. All three engines demonstrably lost focus to BODY on a repeated copy before this correction."
+        },
+        {
+          "before": "\n    event.clearSelection()\n\n    if (originalXhref)",
+          "after": "\n    if (originalXhref)",
+          "count": 1,
+          "reason": "Move existing selection clear/focus restoration earlier rather than invoking it twice."
+        },
+        {
+          "before": "    const fallbackMsg = `Press ${modifierKey}C to copy`\n    const tooltipBtn",
+          "after": "    const fallbackMsg = `Press ${modifierKey}C to copy`\n    announceClipboard(`Copy was not completed. ${fallbackMsg}.`)\n    const tooltipBtn",
+          "count": 1,
+          "reason": "Announce fallback instructions for the existing ClipboardJS error branch without replacing the actual copy operation or native tooltip feedback."
+        }
+      ],
+      "afterSHA256": "2abe27f78b5e6acd6cb757144525f3abb3e674594cb724d3e0e980f004743147",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/components/home/MastHead.astro",
+      "beforeSHA256": "fb6889152cbdb8521f7bb7eb34497b7fbd1e8f83631ade21d44170637aa9801c",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/components/home/MastHead.astro",
+      "edits": [
+        {
+          "before": "import Code from '@components/shortcodes/Code.astro'\n",
+          "after": "",
+          "count": 1,
+          "reason": "DOC-01: remove unused stock package-command component after replacing misleading install path."
+        },
+        {
+          "before": "<div class=\"d-inline-block v-align-middle fs-5\">\n          <Code code={`npm i bootstrap@${getConfig().current_version}`} lang=\"sh\" />\n        </div>",
+          "after": "<a href={getConfig().download.dist} class=\"btn btn-lg bd-btn-lg btn-bd-primary d-flex align-items-center justify-content-center fw-semibold\">Download TQ Bootstrap</a>",
+          "count": 1,
+          "reason": "DOC-01: homepage primary download installs the actual local TQ distribution."
+        },
+        {
+          "before": "<p class=\"text-body-secondary mb-0\">",
+          "after": "<p class=\"text-body-secondary mb-3\">Use the local TQ CSS for TAFE Queensland colours. The public <code>bootstrap</code> package and upstream hosted starters use stock Bootstrap colours.</p>\n      <p class=\"text-body-secondary mb-0\">",
+          "count": 1,
+          "reason": "DOC-01: clearly separate TQ distribution from public upstream packages."
+        }
+      ],
+      "afterSHA256": "ed57990eb4f6bbcafef58bd3af2e283665c48f259d93c5cefbcbb8f36904b6d0",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/components/home/GetStarted.astro",
+      "beforeSHA256": "c5584a665956a7de75da70551a9cc110ef58305d8fa7792b28f55d7d6ccff44a",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/components/home/GetStarted.astro",
+      "edits": [
+        {
+          "before": "Jump right into building with Bootstrap—use the CDN, install it via package manager, or download the source code.",
+          "after": "Build with TQ Bootstrap using the local compiled download, or customise the supplied source code. Public Bootstrap packages and hosted starters use the upstream colours.",
+          "count": 1,
+          "reason": "DOC-01: remove false equivalence between themed local CSS and stock packages."
+        },
+        {
+          "before": "<h3 class=\"fw-semibold\">Install via package manager</h3>",
+          "after": "<h3 class=\"fw-semibold\">Download TQ Bootstrap</h3>",
+          "count": 1,
+          "reason": "DOC-01: truthful themed installation path."
+        },
+        {
+          "before": "Install Bootstrap’s source Sass and JavaScript files via npm, RubyGems, Composer, or Meteor. Package-managed\n      installs don’t include documentation or our full build scripts. You can also <a\n        href=\"https://github.com/twbs/examples/\">use any demo from our Examples repo</a\n      > to quickly jumpstart Bootstrap projects.",
+          "after": "Download the <a href={getConfig().download.dist}>TQ compiled files</a> and copy <code>dist/css</code> and <code>dist/js</code> into your project. Include one TQ Bootstrap stylesheet. The JavaScript bundle retains Bootstrap’s original APIs. The <a href={getConfig().download.source}>source download</a> includes the TQ Sass inputs and build instructions.",
+          "count": 1,
+          "reason": "DOC-01: concrete local TQ integration; no unpublished package command."
+        },
+        {
+          "before": "<Code code={`npm install bootstrap@${getConfig().current_version}`} lang=\"sh\" />\n    <Code code={`gem install bootstrap -v ${getConfig().current_ruby_version}`} lang=\"sh\" />",
+          "after": "<Code code={'<link href=\"dist/css/bootstrap.min.css\" rel=\"stylesheet\">'} lang=\"html\" />\n    <Code code={'<script src=\"dist/js/bootstrap.bundle.min.js\"></script>'} lang=\"html\" />",
+          "count": 1,
+          "reason": "DOC-01: use files inside actual themed distribution."
+        },
+        {
+          "before": "<h3 class=\"fw-semibold\">Include via CDN</h3>",
+          "after": "<h3 class=\"fw-semibold\">Use the local documentation paths</h3>",
+          "count": 1,
+          "reason": "DOC-01: config examples resolve local URLs, not a public TQ CDN."
+        },
+        {
+          "before": "When you only need to include Bootstrap’s compiled CSS or JS, you can use <a\n        href=\"https://www.jsdelivr.com/package/npm/bootstrap\">jsDelivr</a\n      >. See it in action with our simple <a href={getVersionedDocsPath('getting-started/introduction/#quick-start')}\n        >quick start</a\n      >, or <a href={getVersionedDocsPath('examples')}>browse the examples</a> to jumpstart your next project. You can also\n      choose to include Popper and our JS <a href={getVersionedDocsPath('getting-started/introduction/#separate')}\n        >separately</a\n      >.",
+          "after": "The snippets below use the TQ files served with these docs. Copy the assets to your own site and update the paths for deployment. See the <a href={getVersionedDocsPath('getting-started/introduction/#quick-start')}>quick start</a> or <a href={getVersionedDocsPath('examples')}>local examples</a>. Public <a href=\"https://www.jsdelivr.com/package/npm/bootstrap\">Bootstrap CDN files</a> have stock colours; they do not contain this TQ theme.",
+          "count": 1,
+          "reason": "DOC-01: local-preview asset path vs public CDN distinction."
+        },
+        {
+          "before": "Get a jump on including Bootstrap's source files in a new project with our official guides.",
+          "after": "These upstream bundler guides and their hosted starter projects use stock Bootstrap. Keep the original JavaScript imports and replace their default stylesheet with the local TQ CSS, or use the supplied TQ Sass build inputs.",
+          "count": 1,
+          "reason": "DOC-01: explain upstream guide boundary at actual entry point."
+        }
+      ],
+      "afterSHA256": "43ee10d8cfe56c7450239324d9a9f1516999dcd4cc503cb3cba3e093d09a0c3e",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/getting-started/download.mdx",
+      "beforeSHA256": "2e9cb2081c628787c36bc2fffafeb5f7c13978edb14459d2190aaee0561b9fac",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/getting-started/download.mdx",
+      "edits": [
+        {
+          "before": "## Compiled CSS and JS",
+          "after": "<Callout>\n**This site supplies TQ Bootstrap.** The compiled, source and examples download buttons below contain the local TAFE Queensland theme. There is no published TQ npm, yarn, RubyGems or CDN package. Public Bootstrap packages and hosted upstream starters use stock colours. Use the local TQ CSS instead of their default Bootstrap CSS.\n</Callout>\n\n## Compiled CSS and JS",
+          "count": 1,
+          "reason": "DOC-01: explicit installation distinction before any download or stock command."
+        },
+        {
+          "before": "Download ready-to-use compiled code for **Bootstrap v[[config:current_version]]**",
+          "after": "Download ready-to-use compiled code for **TQ Bootstrap, based on Bootstrap v[[config:current_version]]**",
+          "count": 1,
+          "reason": "DOC-01: identify themed local distribution."
+        },
+        {
+          "before": "## CDN via jsDelivr",
+          "after": "## Local TQ assets and upstream CDNs",
+          "count": 1,
+          "reason": "DOC-01: preserve stable content location while clarifying local config."
+        },
+        {
+          "before": "Skip the download with [jsDelivr](https://www.jsdelivr.com/) to deliver cached version of Bootstrap’s compiled CSS and JS to your project.",
+          "after": "The following snippets reference the local TQ CSS and original Bootstrap JavaScript served with this documentation. For your own website, copy the files from the compiled download and set the paths relative to your page, for example `dist/css/bootstrap.min.css` and `dist/js/bootstrap.bundle.min.js`. The public [jsDelivr Bootstrap package](https://www.jsdelivr.com/package/npm/bootstrap) supplies upstream colours, not TQ colours.",
+          "count": 1,
+          "reason": "DOC-01: explain actual configured local snippets and deployment paths."
+        },
+        {
+          "before": "### Alternative CDNs",
+          "after": "### Upstream CDN references",
+          "count": 1,
+          "reason": "DOC-01: stock reference heading."
+        },
+        {
+          "before": "We recommend [jsDelivr](https://www.jsdelivr.com/) and use it ourselves in our documentation. However, in some cases—like in some specific countries or environments—you may need to use other CDN providers like [cdnjs](https://cdnjs.com/) or [unpkg](https://unpkg.com/).",
+          "after": "The original Bootstrap project is also distributed through [jsDelivr](https://www.jsdelivr.com/), [cdnjs](https://cdnjs.com/) and [unpkg](https://unpkg.com/). These services do not host this independently packaged TQ theme. The following upstream references are retained for Bootstrap JavaScript and package integration.",
+          "count": 1,
+          "reason": "DOC-01: avoid implying third-party services host TQ theme."
+        },
+        {
+          "before": "Pull in Bootstrap’s **source files** into nearly any project with some of the most popular package managers.",
+          "after": "The commands below install **upstream Bootstrap**, with stock colours. To use TQ colours, include `dist/css/bootstrap.min.css` from the TQ compiled download instead of the package’s default CSS; do not load both stylesheets. For a customised Sass build, start from the supplied TQ source archive and its build instructions.\n\nPull in upstream Bootstrap’s **source files** into nearly any project with some of the most popular package managers.",
+          "count": 1,
+          "reason": "DOC-01: label all retained package-manager commands without fake publication."
+        },
+        {
+          "before": "description: Download Bootstrap to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.",
+          "after": "description: Download the local TQ Bootstrap compiled CSS and JavaScript, source code and examples; distinguish them from upstream package-manager references.",
+          "count": 1,
+          "reason": "DOC-01: search/metadata description must identify actual TQ download path."
+        },
+        {
+          "before": "## Local TQ assets and upstream CDNs",
+          "after": "## CDN via jsDelivr",
+          "count": 1,
+          "reason": "Preserve native incoming #cdn-via-jsdelivr fragment while retaining the new explicit local-TQ-versus-stock-CDN explanation."
+        },
+        {
+          "before": "### Upstream CDN references",
+          "after": "### Alternative CDNs",
+          "count": 1,
+          "reason": "Preserve native heading/fragment structure; surrounding prose still clearly identifies upstream stock services."
+        }
+      ],
+      "afterSHA256": "465dc5fc4357dbd12bbcef9d8700e4a52d564257fd3d2fa6e1976c01eab0d2b3",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/layouts/partials/ExamplesMain.astro",
+      "beforeSHA256": "5b8a3595f6654d0c4de85df9425b4a5ff38a88c51b47edff515d3c9567bbae98",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/layouts/partials/ExamplesMain.astro",
+      "edits": [
+        {
+          "before": "<p>{description}</p>",
+          "after": "<p>{description}</p>\n        {external && <p><strong>Upstream starter projects:</strong> these external repositories and hosted editors use stock Bootstrap colours. They are not TQ-themed exports. To apply this theme, replace their default stylesheet with the TQ CSS from the local download. The local examples above and individual documentation snippet exports include TQ colours.</p>}",
+          "count": 1,
+          "reason": "DOC-01: visible exact gallery-category boundary."
+        },
+        {
+          "before": "<span id={`edit-${index}`}>Edit in StackBlitz</span>",
+          "after": "<span id={`edit-${index}`}>Edit upstream starter in StackBlitz</span>",
+          "count": 1,
+          "reason": "DOC-01: explicit external action label."
+        }
+      ],
+      "afterSHA256": "29ab6c1bb5fc216a0e5ba9e0e648d3bd070f9f9532ec536357e3bc05c609bc62",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/getting-started/webpack.mdx",
+      "beforeSHA256": "5591fe72b0a7982b69bc186c2b90f60c4fb58607f19baf84b3c711d5f262c260",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/getting-started/webpack.mdx",
+      "edits": [
+        {
+          "before": "## What is Webpack?",
+          "after": "<Callout>\n**Upstream integration reference:** commands, external repositories and hosted starter links on this page use stock Bootstrap. For TQ colours, replace the default stylesheet with the compiled TQ CSS from the [local download]([[docsref:/getting-started/download/]]), or build from the supplied TQ source archive. Keep Bootstrap’s original JavaScript APIs.\n</Callout>\n\n## What is Webpack?",
+          "count": 1,
+          "reason": "DOC-01: clarify upstream hosted starters at each direct entry route."
+        }
+      ],
+      "afterSHA256": "c468b8104188eb7500067040e2341d0a51c70e8677db813391c68b8befa22e37",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/getting-started/vite.mdx",
+      "beforeSHA256": "756c3117b83a189d56c52f256f23e12b9870114c2bb640d78624b5a08f13e69f",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/getting-started/vite.mdx",
+      "edits": [
+        {
+          "before": "## What is Vite?",
+          "after": "<Callout>\n**Upstream integration reference:** commands, external repositories and hosted starter links on this page use stock Bootstrap. For TQ colours, replace the default stylesheet with the compiled TQ CSS from the [local download]([[docsref:/getting-started/download/]]), or build from the supplied TQ source archive. Keep Bootstrap’s original JavaScript APIs.\n</Callout>\n\n## What is Vite?",
+          "count": 1,
+          "reason": "DOC-01: clarify upstream hosted starters at each direct entry route."
+        }
+      ],
+      "afterSHA256": "3d43f6b45be0832e98b0976aeba7f95e0319bd20662c64859e53a0acccd4f364",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/getting-started/parcel.mdx",
+      "beforeSHA256": "b734b69ade8674c88afd5d1136845ce0555b4ea64c70c6a06f7b92ffaf6a3127",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/getting-started/parcel.mdx",
+      "edits": [
+        {
+          "before": "## What is Parcel?",
+          "after": "<Callout>\n**Upstream integration reference:** commands, external repositories and hosted starter links on this page use stock Bootstrap. For TQ colours, replace the default stylesheet with the compiled TQ CSS from the [local download]([[docsref:/getting-started/download/]]), or build from the supplied TQ source archive. Keep Bootstrap’s original JavaScript APIs.\n</Callout>\n\n## What is Parcel?",
+          "count": 1,
+          "reason": "DOC-01: clarify upstream hosted starters at each direct entry route."
+        }
+      ],
+      "afterSHA256": "442e29efab1e5ecedc11cdc78e84a2434f5ac7ee5acb64a9f867a8d84a2164bd",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/getting-started/javascript.mdx",
+      "beforeSHA256": "7051bdd690e1fcae2eec94db52573ed8ed8a60594ada50178d285423be660323",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/getting-started/javascript.mdx",
+      "edits": [
+        {
+          "before": "## Individual or compiled",
+          "after": "<Callout>\n**Upstream integration reference:** commands, external repositories and hosted starter links on this page use stock Bootstrap. For TQ colours, replace the default stylesheet with the compiled TQ CSS from the [local download]([[docsref:/getting-started/download/]]), or build from the supplied TQ source archive. Keep Bootstrap’s original JavaScript APIs.\n</Callout>\n\n## Individual or compiled",
+          "count": 1,
+          "reason": "DOC-01: clarify upstream hosted starters at each direct entry route."
+        }
+      ],
+      "afterSHA256": "71c61d64d3344db3ea8a0fd26a1ccc46917a84f2b3e5b52b75d6cf8c2c9ab461",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/customize/color-modes.mdx",
+      "beforeSHA256": "104d1700a76b1f3047ab37dcfa0b9c11ab83ee0f06ac5db43e2c3bd521917516",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/customize/color-modes.mdx",
+      "edits": [
+        {
+          "before": "## Dark mode",
+          "after": "<Callout>\n**Upstream integration reference:** commands, external repositories and hosted starter links on this page use stock Bootstrap. For TQ colours, replace the default stylesheet with the compiled TQ CSS from the [local download]([[docsref:/getting-started/download/]]), or build from the supplied TQ source archive. Keep Bootstrap’s original JavaScript APIs.\n</Callout>\n\n## Dark mode",
+          "count": 1,
+          "reason": "DOC-01: clarify upstream hosted starters at each direct entry route."
+        }
+      ],
+      "afterSHA256": "8a092d83eb6af2ba1fc404d0ca879c83acea4c98d60949d0242e44ec30fd6803",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/content/callouts/info-npm-starter.md",
+      "beforeSHA256": "de2725bb615de01b64f98f066a8b2bb8748cacb2031e8b69b104763849996a91",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/callouts/info-npm-starter.md",
+      "edits": [
+        {
+          "before": "**Get started with Bootstrap via npm with our starter project!**",
+          "after": "**Upstream npm starter — stock Bootstrap colours.** For TQ colours use the local TQ download instead of the default package stylesheet. To explore the original upstream tooling,",
+          "count": 1,
+          "reason": "DOC-01: shared starter callout clearly identifies stock package."
+        },
+        {
+          "before": "To explore the original upstream tooling, Head to",
+          "after": "To explore the original upstream tooling, head to",
+          "count": 1,
+          "reason": "DOC-01: grammatical correction in shared upstream starter disclosure."
+        }
+      ],
+      "afterSHA256": "5b2b8a0ba92c6341de236068e21f295dbb9aeaffa983903ac33bb27cb4060705",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/components/buttons.mdx",
+      "beforeSHA256": "7cc97b7d12374626132afae8e4d378cb8828af5411ee75927cd303824e1d394f",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/components/buttons.mdx",
+      "edits": [
+        {
+          "before": "`<button type=\"button\" class=\"btn btn-outline-${themeColor.name}\">${themeColor.title}</button>`",
+          "after": "`<span class=\"d-inline-block p-2 ${['info', 'warning', 'light'].includes(themeColor.name) ? 'bg-dark' : 'bg-white'}\"><button type=\"button\" class=\"btn btn-outline-${themeColor.name}\">${themeColor.title}</button></span>`",
+          "count": 1,
+          "reason": "Ordinary outline controls: appropriate native dark/light contrast surfaces without changing button APIs or paint."
+        }
+      ],
+      "afterSHA256": "0a9ddaca1053bf81be1b418888134f49a71e659e0bc65c8b0ba3a0193e9b0b68",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/assets/examples/cheatsheet/index.astro",
+      "beforeSHA256": "b0148c2e0b86768375a13f3c108c97b07aa82cfff3929206b5f45987dbeb78e7",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/assets/examples/cheatsheet/index.astro",
+      "edits": [
+        {
+          "before": "<button type=\"button\" class=\"btn btn-outline-${themeColor.name}\">${themeColor.title}</button>",
+          "after": "<span class=\"d-inline-block p-2 ${['info', 'warning', 'light'].includes(themeColor.name) ? 'bg-dark' : 'bg-white'}\"><button type=\"button\" class=\"btn btn-outline-${themeColor.name}\">${themeColor.title}</button></span>",
+          "count": 1,
+          "reason": "Ordinary outline controls: actual copy-compatible native contrasting surfaces."
+        },
+        {
+          "before": "class=\"scrollspy-example position-relative mt-2 overflow-auto\" tabindex=\"0\"",
+          "after": "class=\"scrollspy-example position-relative mt-2 overflow-auto\" tabindex=\"0\" role=\"region\" aria-label=\"Scrollable section navigation example\"",
+          "count": 1,
+          "reason": "Name the existing native keyboard-focusable Scrollspy region without changing scrolling or observer behaviour."
+        },
+        {
+          "before": "spinner-border text-${themeColor.name}",
+          "after": "spinner-border text-${themeColor.name}-emphasis",
+          "count": 1,
+          "reason": "Use Bootstrap mode-aware emphasis colour utility for the essential spinner indicator on the native reading surface; preserve dimensions and animation."
+        },
+        {
+          "before": "spinner-grow text-${themeColor.name}",
+          "after": "spinner-grow text-${themeColor.name}-emphasis",
+          "count": 1,
+          "reason": "Use Bootstrap mode-aware emphasis colour utility for the essential spinner indicator on the native reading surface; preserve dimensions and animation."
+        },
+        {
+          "before": "<div class=\"progress mb-3\" role=\"progressbar\" aria-label=\"Info example with label\" aria-valuenow=\"50\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n          <div class=\"progress-bar text-bg-info w-50\">",
+          "after": "<div class=\"progress bg-dark mb-3\" role=\"progressbar\" aria-label=\"Info example with label\" aria-valuenow=\"50\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n          <div class=\"progress-bar text-bg-info w-50\">",
+          "count": 1,
+          "reason": "Give the existing progress track a contrasting native dark background for its unchanged bright fill; preserve all widths, labels and progress semantics."
+        },
+        {
+          "before": "<div class=\"progress mb-3\" role=\"progressbar\" aria-label=\"Warning example with label\" aria-valuenow=\"75\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n          <div class=\"progress-bar text-bg-warning w-75\">",
+          "after": "<div class=\"progress bg-dark mb-3\" role=\"progressbar\" aria-label=\"Warning example with label\" aria-valuenow=\"75\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n          <div class=\"progress-bar text-bg-warning w-75\">",
+          "count": 1,
+          "reason": "Give the existing progress track a contrasting native dark background for its unchanged bright fill; preserve all widths, labels and progress semantics."
+        },
+        {
+          "before": "<div class=\"progress-stacked\">\n          <div class=\"progress\" role=\"progressbar\" aria-label=\"Segment one - default example\" style=\"width: 15%\" aria-valuenow=\"15\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n            <div class=\"progress-bar\"></div>\n          </div>\n          <div class=\"progress\" role=\"progressbar\" aria-label=\"Segment two - animated striped success example\" style=\"width: 40%\" aria-valuenow=\"40\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n            <div class=\"progress-bar progress-bar-striped progress-bar-animated bg-success\"></div>\n          </div>\n        </div>\n        `}",
+          "after": "<div class=\"progress-stacked\">\n          <div class=\"progress\" role=\"progressbar\" aria-label=\"Segment one - default example\" style=\"width: 15%\" aria-valuenow=\"15\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n            <div class=\"progress-bar\"></div>\n          </div>\n          <div class=\"progress\" role=\"progressbar\" aria-label=\"Segment two - animated striped success example\" style=\"width: 40%\" aria-valuenow=\"40\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n            <div class=\"progress-bar progress-bar-striped progress-bar-animated bg-success\"></div>\n          </div>\n        </div>\n        <p>Segment one - default example: 15%. Segment two - animated striped success example: 40%.</p>\n        `}",
+          "count": 1,
+          "reason": "Add an exact visible segment-name/percentage equivalent outside the native stacked track; preserve all bar widths/heights/ARIA, avoid clipped internal labels at enlarged text, and make values understandable without colour."
+        }
+      ],
+      "afterSHA256": "8dcc0465dd2cc9ad5669f6f820e20438e90a5a8e664742a8da157352a1e5417b",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/assets/examples/cheatsheet-rtl/index.astro",
+      "beforeSHA256": "a494c81d08b411a99c50932a5de0cdfeb0f2b30c379ba4bdd58ad3455f63b8e7",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/assets/examples/cheatsheet-rtl/index.astro",
+      "edits": [
+        {
+          "before": "<button type=\"button\" class=\"btn btn-outline-${themeColor.name}\">${themeColor.title}</button>",
+          "after": "<span class=\"d-inline-block p-2 ${['info', 'warning', 'light'].includes(themeColor.name) ? 'bg-dark' : 'bg-white'}\"><button type=\"button\" class=\"btn btn-outline-${themeColor.name}\">${themeColor.title}</button></span>",
+          "count": 1,
+          "reason": "Ordinary outline controls: actual copy-compatible native contrasting surfaces."
+        },
+        {
+          "before": "class=\"scrollspy-example position-relative mt-2 overflow-auto\"",
+          "after": "class=\"scrollspy-example position-relative mt-2 overflow-auto\" tabindex=\"0\" role=\"region\" aria-label=\"مثال قابل للتمرير للتنقل بين الأقسام\"",
+          "count": 1,
+          "reason": "RTL Scrollspy: add named keyboard access to the actual scrolling container; native API and geometry preserved."
+        },
+        {
+          "before": "spinner-border text-${themeColor.name}",
+          "after": "spinner-border text-${themeColor.name}-emphasis",
+          "count": 1,
+          "reason": "Use Bootstrap mode-aware emphasis colour utility for the essential spinner indicator on the native reading surface; preserve dimensions and animation."
+        },
+        {
+          "before": "spinner-grow text-${themeColor.name}",
+          "after": "spinner-grow text-${themeColor.name}-emphasis",
+          "count": 1,
+          "reason": "Use Bootstrap mode-aware emphasis colour utility for the essential spinner indicator on the native reading surface; preserve dimensions and animation."
+        },
+        {
+          "before": "<div class=\"progress mb-3\" role=\"progressbar\" aria-label=\"مثال توضيح مع عنوان\" aria-valuenow=\"50\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n          <div class=\"progress-bar text-bg-info w-50\">",
+          "after": "<div class=\"progress bg-dark mb-3\" role=\"progressbar\" aria-label=\"مثال توضيح مع عنوان\" aria-valuenow=\"50\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n          <div class=\"progress-bar text-bg-info w-50\">",
+          "count": 1,
+          "reason": "Give the existing progress track a contrasting native dark background for its unchanged bright fill; preserve all widths, labels and progress semantics."
+        },
+        {
+          "before": "<div class=\"progress mb-3\" role=\"progressbar\" aria-label=\"مثال تنبيه مع عنوان\" aria-valuenow=\"75\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n          <div class=\"progress-bar text-bg-warning w-75\">",
+          "after": "<div class=\"progress bg-dark mb-3\" role=\"progressbar\" aria-label=\"مثال تنبيه مع عنوان\" aria-valuenow=\"75\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n          <div class=\"progress-bar text-bg-warning w-75\">",
+          "count": 1,
+          "reason": "Give the existing progress track a contrasting native dark background for its unchanged bright fill; preserve all widths, labels and progress semantics."
+        },
+        {
+          "before": "<div class=\"progress-stacked\">\n          <div class=\"progress\" role=\"progressbar\" aria-label=\"القسم الأول - مثال افتراضي\" style=\"width: 15%\" aria-valuenow=\"15\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n            <div class=\"progress-bar\"></div>\n          </div>\n          <div class=\"progress\" role=\"progressbar\" aria-label=\"القسم الثاني - مثال ناجح مقلّم متحرك\" style=\"width: 40%\" aria-valuenow=\"40\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n            <div class=\"progress-bar progress-bar-striped progress-bar-animated bg-success\"></div>\n          </div>\n        </div>\n        `}",
+          "after": "<div class=\"progress-stacked\">\n          <div class=\"progress\" role=\"progressbar\" aria-label=\"القسم الأول - مثال افتراضي\" style=\"width: 15%\" aria-valuenow=\"15\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n            <div class=\"progress-bar\"></div>\n          </div>\n          <div class=\"progress\" role=\"progressbar\" aria-label=\"القسم الثاني - مثال ناجح مقلّم متحرك\" style=\"width: 40%\" aria-valuenow=\"40\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n            <div class=\"progress-bar progress-bar-striped progress-bar-animated bg-success\"></div>\n          </div>\n        </div>\n        <p>القسم الأول - مثال افتراضي: <bdi>15%</bdi>. القسم الثاني - مثال ناجح مقلّم متحرك: <bdi>40%</bdi>.</p>\n        `}",
+          "count": 1,
+          "reason": "Add an exact visible segment-name/percentage equivalent outside the native stacked track; preserve all bar widths/heights/ARIA, avoid clipped internal labels at enlarged text, and make values understandable without colour."
+        }
+      ],
+      "afterSHA256": "886aa0f6d193fa255d0c5209eb8dd9ac8d3c37a6ca89cbf169944e8205332cd4",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/helpers/colored-links.mdx",
+      "beforeSHA256": "1d65185fc8d9a6217a96fa7757b0f690f79a24531b6c2919ea848b4066c3f50b",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/helpers/colored-links.mdx",
+      "edits": [
+        {
+          "before": "`<p><a href=\"#\" class=\"link-${themeColor.name}",
+          "after": "`<p class=\"${['info', 'warning', 'light'].includes(themeColor.name) ? 'bg-dark p-2' : 'bg-white p-2'}\"><a href=\"#\" class=\"link-${themeColor.name}",
+          "count": 2,
+          "reason": "Ordinary coloured links: contrasting native utility surfaces; preserve link classes and hover/focus."
+        }
+      ],
+      "afterSHA256": "ebdb08090bb164665826c7460177428ca91a3429d0a6ca752311df78ebe5bfba",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/utilities/link.mdx",
+      "beforeSHA256": "9ff533f2c64eb140f0ebac955a8b7a9e9cfb9059ca8dfc52818149b6d24fc418",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/utilities/link.mdx",
+      "edits": [
+        {
+          "before": "`<p><a href=\"#\" class=\"link-${themeColor.name}",
+          "after": "`<p class=\"${['info', 'warning', 'light'].includes(themeColor.name) ? 'bg-dark p-2' : 'bg-white p-2'}\"><a href=\"#\" class=\"link-${themeColor.name}",
+          "count": 1,
+          "reason": "Ordinary coloured links: contrasting native utility surfaces; preserve link classes and hover/focus."
+        },
+        {
+          "before": "<Example code={`<p><a class=\"link-opacity-10\"",
+          "after": "<Callout type=\"warning\">\n**Transparency demonstration:** the samples below deliberately show low-contrast text at the stated opacity. They are diagnostic examples, not recommended reading-text combinations. The readable labels and code identify each exact value. Keep essential content at a tested contrast ratio.\n</Callout>\n\n<p>Example values: link opacity 10%, 25%, 50%, 75% and 100%.</p>\n\n<Example code={`<p><a class=\"link-opacity-10\"",
+          "count": 1,
+          "reason": "Explicit diagnostic fixture labels while preserving focusable links and true alpha."
+        },
+        {
+          "before": "<Example code={`<p><a class=\"link-opacity-10-hover\"",
+          "after": "<Callout type=\"warning\">\n**Transparency demonstration:** the samples below deliberately show low-contrast text at the stated opacity. They are diagnostic examples, not recommended reading-text combinations. The readable labels and code identify each exact value. Keep essential content at a tested contrast ratio.\n</Callout>\n\n<p>Hover example values: link opacity 10%, 25%, 50%, 75% and 100%.</p>\n\n<Example code={`<p><a class=\"link-opacity-10-hover\"",
+          "count": 1,
+          "reason": "Explicit diagnostic hover state labels without changing utility behaviour."
+        },
+        {
+          "before": "**Transparency demonstration:** the samples below deliberately show low-contrast text at the stated opacity. They are diagnostic examples, not recommended reading-text combinations. The readable labels and code identify each exact value. Keep essential content at a tested contrast ratio.",
+          "after": "**Transparency demonstration:** empty decorative colour blocks show the actual utility opacity. Their readable labels stay fully opaque. The live example, copyable markup and editor export use the same classes and values. Do not reduce essential reading text below its required contrast.",
+          "count": 2,
+          "reason": "Explicit accessible opacity fixtures: keep actual utility values while labels remain readable, without excluding real content from automated checks."
+        },
+        {
+          "before": "<p><a class=\"link-opacity-10\" href=\"#\">Link opacity 10</a></p>",
+          "after": "<p><a class=\"link-opacity-10 d-inline-flex align-items-center gap-2\" href=\"#\"><span class=\"d-inline-block p-3\" style=\"background-color: currentColor;\" aria-hidden=\"true\"></span><span class=\"text-body text-decoration-underline\">Link opacity 10</span></a></p>",
+          "count": 1,
+          "reason": "Approved fixture markup change: exact real link-opacity/hover utility changes decorative colour block only; active link label remains readable and persistently underlined. Live/copy/export stay identical."
+        },
+        {
+          "before": "<p><a class=\"link-opacity-10-hover\" href=\"#\">Link hover opacity 10</a></p>",
+          "after": "<p><a class=\"link-opacity-10-hover d-inline-flex align-items-center gap-2\" href=\"#\"><span class=\"d-inline-block p-3\" style=\"background-color: currentColor;\" aria-hidden=\"true\"></span><span class=\"text-body text-decoration-underline\">Link hover opacity 10</span></a></p>",
+          "count": 1,
+          "reason": "Approved fixture markup change: exact real link-opacity/hover utility changes decorative colour block only; active link label remains readable and persistently underlined. Live/copy/export stay identical."
+        },
+        {
+          "before": "<p><a class=\"link-opacity-25\" href=\"#\">Link opacity 25</a></p>",
+          "after": "<p><a class=\"link-opacity-25 d-inline-flex align-items-center gap-2\" href=\"#\"><span class=\"d-inline-block p-3\" style=\"background-color: currentColor;\" aria-hidden=\"true\"></span><span class=\"text-body text-decoration-underline\">Link opacity 25</span></a></p>",
+          "count": 1,
+          "reason": "Approved fixture markup change: exact real link-opacity/hover utility changes decorative colour block only; active link label remains readable and persistently underlined. Live/copy/export stay identical."
+        },
+        {
+          "before": "<p><a class=\"link-opacity-25-hover\" href=\"#\">Link hover opacity 25</a></p>",
+          "after": "<p><a class=\"link-opacity-25-hover d-inline-flex align-items-center gap-2\" href=\"#\"><span class=\"d-inline-block p-3\" style=\"background-color: currentColor;\" aria-hidden=\"true\"></span><span class=\"text-body text-decoration-underline\">Link hover opacity 25</span></a></p>",
+          "count": 1,
+          "reason": "Approved fixture markup change: exact real link-opacity/hover utility changes decorative colour block only; active link label remains readable and persistently underlined. Live/copy/export stay identical."
+        },
+        {
+          "before": "<p><a class=\"link-opacity-50\" href=\"#\">Link opacity 50</a></p>",
+          "after": "<p><a class=\"link-opacity-50 d-inline-flex align-items-center gap-2\" href=\"#\"><span class=\"d-inline-block p-3\" style=\"background-color: currentColor;\" aria-hidden=\"true\"></span><span class=\"text-body text-decoration-underline\">Link opacity 50</span></a></p>",
+          "count": 1,
+          "reason": "Approved fixture markup change: exact real link-opacity/hover utility changes decorative colour block only; active link label remains readable and persistently underlined. Live/copy/export stay identical."
+        },
+        {
+          "before": "<p><a class=\"link-opacity-50-hover\" href=\"#\">Link hover opacity 50</a></p>",
+          "after": "<p><a class=\"link-opacity-50-hover d-inline-flex align-items-center gap-2\" href=\"#\"><span class=\"d-inline-block p-3\" style=\"background-color: currentColor;\" aria-hidden=\"true\"></span><span class=\"text-body text-decoration-underline\">Link hover opacity 50</span></a></p>",
+          "count": 1,
+          "reason": "Approved fixture markup change: exact real link-opacity/hover utility changes decorative colour block only; active link label remains readable and persistently underlined. Live/copy/export stay identical."
+        },
+        {
+          "before": "<p><a class=\"link-opacity-75\" href=\"#\">Link opacity 75</a></p>",
+          "after": "<p><a class=\"link-opacity-75 d-inline-flex align-items-center gap-2\" href=\"#\"><span class=\"d-inline-block p-3\" style=\"background-color: currentColor;\" aria-hidden=\"true\"></span><span class=\"text-body text-decoration-underline\">Link opacity 75</span></a></p>",
+          "count": 1,
+          "reason": "Approved fixture markup change: exact real link-opacity/hover utility changes decorative colour block only; active link label remains readable and persistently underlined. Live/copy/export stay identical."
+        },
+        {
+          "before": "<p><a class=\"link-opacity-75-hover\" href=\"#\">Link hover opacity 75</a></p>",
+          "after": "<p><a class=\"link-opacity-75-hover d-inline-flex align-items-center gap-2\" href=\"#\"><span class=\"d-inline-block p-3\" style=\"background-color: currentColor;\" aria-hidden=\"true\"></span><span class=\"text-body text-decoration-underline\">Link hover opacity 75</span></a></p>",
+          "count": 1,
+          "reason": "Approved fixture markup change: exact real link-opacity/hover utility changes decorative colour block only; active link label remains readable and persistently underlined. Live/copy/export stay identical."
+        },
+        {
+          "before": "<p><a class=\"link-opacity-100\" href=\"#\">Link opacity 100</a></p>",
+          "after": "<p><a class=\"link-opacity-100 d-inline-flex align-items-center gap-2\" href=\"#\"><span class=\"d-inline-block p-3\" style=\"background-color: currentColor;\" aria-hidden=\"true\"></span><span class=\"text-body text-decoration-underline\">Link opacity 100</span></a></p>",
+          "count": 1,
+          "reason": "Approved fixture markup change: exact real link-opacity/hover utility changes decorative colour block only; active link label remains readable and persistently underlined. Live/copy/export stay identical."
+        },
+        {
+          "before": "<p><a class=\"link-opacity-100-hover\" href=\"#\">Link hover opacity 100</a></p>",
+          "after": "<p><a class=\"link-opacity-100-hover d-inline-flex align-items-center gap-2\" href=\"#\"><span class=\"d-inline-block p-3\" style=\"background-color: currentColor;\" aria-hidden=\"true\"></span><span class=\"text-body text-decoration-underline\">Link hover opacity 100</span></a></p>",
+          "count": 1,
+          "reason": "Approved fixture markup change: exact real link-opacity/hover utility changes decorative colour block only; active link label remains readable and persistently underlined. Live/copy/export stay identical."
+        }
+      ],
+      "afterSHA256": "eef8b343dca878d563b438fb65ec48d43e0c48047be959ef2019d0ea94367e49",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/assets/examples/list-groups/index.astro",
+      "beforeSHA256": "2e10827fe04e4fd593c2872001fd2c2e620ab2e7afa18e11e46786e9f7656ac7",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/assets/examples/list-groups/index.astro",
+      "edits": [
+        {
+          "before": "<small class=\"opacity-50 text-nowrap\">",
+          "after": "<small class=\"text-nowrap\">",
+          "count": 3,
+          "reason": "Ordinary list metadata: remove failing opacity without changing global opacity utility."
+        },
+        {
+          "before": "<span class=\"d-block small opacity-50\">",
+          "after": "<span class=\"d-block small\">",
+          "count": 4,
+          "reason": "Ordinary selectable support text: preserve full inherited contextual contrast, including disabled example text."
+        }
+      ],
+      "afterSHA256": "a1149f089ab7b6f669afc75f33636c478c42c756bcb8afce452c0ac2f7292a57",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/assets/examples/list-groups/list-groups.css",
+      "beforeSHA256": "068eaf5a7d08fbfb989c61105f95e0e909d5ecc51bd490be2a4d7c7e927f8a86",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/assets/examples/list-groups/list-groups.css",
+      "edits": [
+        {
+          "before": ".form-check-input:checked + .form-checked-content {\n  opacity: .5;\n}",
+          "after": ".form-check-input:checked + .form-checked-content strong {\n  text-decoration: line-through;\n}",
+          "count": 1,
+          "reason": "Completed items: readable support text and persistent non-colour completion distinction instead of unreadable .5 opacity."
+        }
+      ],
+      "afterSHA256": "8f2f613d0db1df76785229af1366c4e02435041089e0eb918ef47fd3a52a69e2",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/assets/examples/grid/index.astro",
+      "beforeSHA256": "688e886c4e784dfc97d03b43d92afe416494801104dccf7bfc7711bc2e4b882a",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/assets/examples/grid/index.astro",
+      "edits": [
+        {
+          "before": "<p class=\"text-warning\">",
+          "after": "<p class=\"text-warning-emphasis\">",
+          "count": 1,
+          "reason": "Ordinary grid guidance uses mode-aware warning emphasis ink."
+        }
+      ],
+      "afterSHA256": "31c031805fdc7925578c1e2ad960667f1fb7924839a9b0b88561cd6327f4857a",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/helpers/stretched-link.mdx",
+      "beforeSHA256": "59860fd847b1d0a2a72d275d793849098fc16b08f84820dcd09dab712f1c906f",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/helpers/stretched-link.mdx",
+      "edits": [
+        {
+          "before": "class=\"text-warning stretched-link\"",
+          "after": "class=\"text-warning-emphasis stretched-link\"",
+          "count": 1,
+          "reason": "Ordinary stretched-link explanation keeps readable emphasis colour and original stretched behaviour."
+        },
+        {
+          "before": "class=\"stretched-link text-danger\"",
+          "after": "class=\"stretched-link text-danger-emphasis\"",
+          "count": 1,
+          "reason": "Ordinary failed-stretch explanation uses readable mode-aware danger emphasis while retaining its deliberate positioning demonstration."
+        }
+      ],
+      "afterSHA256": "12fcfa93355f1d295c4f7033a156b57a2a06ebf18f97933d9dd087588038a9e9",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/content/reboot.mdx",
+      "beforeSHA256": "f788fda97079d8260864c58899108f88a412e148130d48b4fcc168deabb5ffa0",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/content/reboot.mdx",
+      "edits": [
+        {
+          "before": "<Example code={`<a href=\"#\" style=\"--bs-link-opacity: .5\">This is an example link</a>`} />",
+          "after": "<Callout type=\"warning\">\n**Transparency demonstration:** the samples below deliberately show low-contrast text at the stated opacity. They are diagnostic examples, not recommended reading-text combinations. The readable labels and code identify each exact value. Keep essential content at a tested contrast ratio.\n</Callout>\n\n<p>Example value: link opacity 50%.</p>\n\n<Example code={`<a href=\"#\" style=\"--bs-link-opacity: .5\">This is an example link</a>`} />",
+          "count": 1,
+          "reason": "Diagnostic opacity illustration clearly identified, with normal-contrast equivalent label; exact API/alpha retained."
+        },
+        {
+          "before": "<p>Example value: link opacity 50%.</p>",
+          "after": "<p>Inactive diagnostic link at 50% opacity. This sample is disabled and is not a navigation target; the code shows the exact alpha value.</p>",
+          "count": 1,
+          "reason": "Explicitly identify the low-contrast alpha demonstration as an inactive diagnostic control."
+        },
+        {
+          "before": "<a href=\"#\" style=\"--bs-link-opacity: .5\">This is an example link</a>",
+          "after": "<a href=\"#\" class=\"pe-none\" style=\"--bs-link-opacity: .5\" aria-disabled=\"true\" tabindex=\"-1\">This is an example link</a>",
+          "count": 1,
+          "reason": "Keep the exact50%link alpha while preventing normal pointer/keyboard navigation and exposing its inactive state."
+        }
+      ],
+      "afterSHA256": "71232665575dcf7d999351988b1a9bf00fa4275b2eaa98f9dcba9d879ad3afee",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/utilities/colors.mdx",
+      "beforeSHA256": "35d740c4b901b34110446fc234462eb1b48de5716326ffb0bda877c5634837e1",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/utilities/colors.mdx",
+      "edits": [
+        {
+          "before": "<Example code={[",
+          "after": "<Callout type=\"warning\">\n**Transparency demonstration:** the samples below deliberately show low-contrast text at the stated opacity. They are diagnostic examples, not recommended reading-text combinations. The readable labels and code identify each exact value. Keep essential content at a tested contrast ratio.\n</Callout>\n\n<p>Deprecated alpha examples: black text at 50% on white, and white text at 50% on dark.</p>\n\n<Example code={[",
+          "count": 1,
+          "reason": "Label diagnostic legacy-alpha text without falsifying opacity."
+        },
+        {
+          "before": "<Example code={`<div class=\"text-primary\">This is default primary text</div>\n<div class=\"text-primary\" style=\"--bs-text-opacity: .5;\">",
+          "after": "<p>Example values: primary text at 100% and 50% opacity.</p>\n\n<Callout type=\"warning\">\n**Transparency demonstration:** the samples below deliberately show low-contrast text at the stated opacity. They are diagnostic examples, not recommended reading-text combinations. The readable labels and code identify each exact value. Keep essential content at a tested contrast ratio.\n</Callout>\n\n<Example code={`<div class=\"text-primary\">This is default primary text</div>\n<div class=\"text-primary\" style=\"--bs-text-opacity: .5;\">",
+          "count": 1,
+          "reason": "Visible equivalent labels for diagnostic text alpha."
+        },
+        {
+          "before": "<Example code={`<div class=\"text-primary\">This is default primary text</div>\n<div class=\"text-primary text-opacity-75\">",
+          "after": "<p>Example values: primary text at 100%, 75%, 50% and 25% opacity.</p>\n\n<Callout type=\"warning\">\n**Transparency demonstration:** the samples below deliberately show low-contrast text at the stated opacity. They are diagnostic examples, not recommended reading-text combinations. The readable labels and code identify each exact value. Keep essential content at a tested contrast ratio.\n</Callout>\n\n<Example code={`<div class=\"text-primary\">This is default primary text</div>\n<div class=\"text-primary text-opacity-75\">",
+          "count": 1,
+          "reason": "Visible equivalent labels for diagnostic opacity utility variants."
+        },
+        {
+          "before": "themeColor.contrast_color ? ` bg-${themeColor.contrast_color}` : ``",
+          "after": "themeColor.contrast_color ? ` bg-${themeColor.contrast_color}` : ` bg-white`",
+          "count": 1,
+          "reason": "Ordinary raw semantic text utilities: fixed white fallback for primary/secondary/success/danger preserves readable contrast in dark mode; explicit bright/dark-role surfaces and actual utilityAPI unchanged."
+        },
+        {
+          "before": "**Transparency demonstration:** the samples below deliberately show low-contrast text at the stated opacity. They are diagnostic examples, not recommended reading-text combinations. The readable labels and code identify each exact value. Keep essential content at a tested contrast ratio.",
+          "after": "**Transparency demonstration:** empty decorative colour blocks show the actual utility opacity. Their readable labels stay fully opaque. The live example, copyable markup and editor export use the same classes and values. Do not reduce essential reading text below its required contrast.",
+          "count": 3,
+          "reason": "Explicit accessible opacity fixtures: keep actual utility values while labels remain readable, without excluding real content from automated checks."
+        },
+        {
+          "before": "<p class=\"text-black-50 bg-white\">.text-black-50</p>",
+          "after": "<div class=\"bg-white p-2 d-flex align-items-center gap-2\"><span class=\"text-black-50 d-inline-block p-3\" style=\"background-color: currentColor;\" aria-hidden=\"true\"></span><span class=\"text-black\">.text-black-50 (50% opacity)</span></div>",
+          "count": 1,
+          "reason": "Approved fixture geometry change: legacy alpha applies only to an empty decorative colour block; matching readable label uses opaque native ink."
+        },
+        {
+          "before": "<p class=\"text-white-50 bg-dark\">.text-white-50</p>",
+          "after": "<div class=\"bg-dark p-2 d-flex align-items-center gap-2\"><span class=\"text-white-50 d-inline-block p-3\" style=\"background-color: currentColor;\" aria-hidden=\"true\"></span><span class=\"text-white\">.text-white-50 (50% opacity)</span></div>",
+          "count": 1,
+          "reason": "Approved fixture geometry change: preserve real50%white alpha on a decorative block with opaque white label on dark."
+        },
+        {
+          "before": "<div class=\"text-primary\">This is default primary text</div>",
+          "after": "<div class=\"d-flex align-items-center gap-2\"><span class=\"text-primary d-inline-block p-3\" style=\"background-color: currentColor;\" aria-hidden=\"true\"></span><span>Primary colour, 100% opacity</span></div>",
+          "count": 2,
+          "reason": "Approved fixture geometry change: actual text-primary colour is a decorative block; label stays opaque."
+        },
+        {
+          "before": "<div class=\"text-primary\" style=\"--bs-text-opacity: .5;\">This is 50% opacity primary text</div>",
+          "after": "<div class=\"d-flex align-items-center gap-2\"><span class=\"text-primary d-inline-block p-3\" style=\"background-color: currentColor; --bs-text-opacity: .5;\" aria-hidden=\"true\"></span><span>Primary colour, 50% opacity</span></div>",
+          "count": 1,
+          "reason": "Preserve exact custom .5 text-opacity variable as decorative currentColor paint, with readable external label."
+        },
+        {
+          "before": "<div class=\"text-primary text-opacity-75\">This is 75% opacity primary text</div>",
+          "after": "<div class=\"d-flex align-items-center gap-2\"><span class=\"text-primary text-opacity-75 d-inline-block p-3\" style=\"background-color: currentColor;\" aria-hidden=\"true\"></span><span>Primary colour, 75% opacity</span></div>",
+          "count": 1,
+          "reason": "Preserve exact text-opacity utility API/value; opaque label outside the decorative currentColor sample."
+        },
+        {
+          "before": "<div class=\"text-primary text-opacity-50\">This is 50% opacity primary text</div>",
+          "after": "<div class=\"d-flex align-items-center gap-2\"><span class=\"text-primary text-opacity-50 d-inline-block p-3\" style=\"background-color: currentColor;\" aria-hidden=\"true\"></span><span>Primary colour, 50% opacity</span></div>",
+          "count": 1,
+          "reason": "Preserve exact text-opacity utility API/value; opaque label outside the decorative currentColor sample."
+        },
+        {
+          "before": "<div class=\"text-primary text-opacity-25\">This is 25% opacity primary text</div>",
+          "after": "<div class=\"d-flex align-items-center gap-2\"><span class=\"text-primary text-opacity-25 d-inline-block p-3\" style=\"background-color: currentColor;\" aria-hidden=\"true\"></span><span>Primary colour, 25% opacity</span></div>",
+          "count": 1,
+          "reason": "Preserve exact text-opacity utility API/value; opaque label outside the decorative currentColor sample."
+        },
+        {
+          "before": "13, 110, 253",
+          "after": "227, 27, 35",
+          "count": 2,
+          "reason": "Correct API explanation to actual TQ primary RGB (TQRed) emitted by the compiled variables; text-opacity calculations and interfaces stay unchanged."
+        }
+      ],
+      "afterSHA256": "579fdc2828417bc5e34a861922d31eccf0cc7b6fa56908222c8a521775e60d9d",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/utilities/background.mdx",
+      "beforeSHA256": "9adb42f3ba3f35e283a021db234501c091fb9573783c06f1d13c8e8143b6f36f",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/utilities/background.mdx",
+      "edits": [
+        {
+          "before": "class=\"bg-success p-2 text-white bg-opacity-75\"",
+          "after": "class=\"bg-success p-2 text-dark bg-opacity-75\"",
+          "count": 1,
+          "reason": "Ordinary 75%-success background sample uses contrasting Indigo text; opacity stays .75."
+        },
+        {
+          "before": "<Example code={`<div class=\"bg-success p-2 text-white\">",
+          "after": "<Example class=\"bg-white text-dark\" code={`<div class=\"bg-success p-2 text-white\">",
+          "count": 2,
+          "reason": "Opacity backgrounds: explicit white parent keeps text-dark readable at every sampled alpha in both global modes; preserve genuine .1/.25/.5/.75 source alphas."
+        },
+        {
+          "before": "<Example class=\"bg-white text-dark\" code={`<div class=\"bg-success p-2 text-white\">This is default success background</div>\n<div class=\"bg-success p-2\" style=\"--bs-bg-opacity: .5;\">This is 50% opacity success background</div>`} />",
+          "after": "<Example code={`<div class=\"bg-white text-dark p-2\" data-bs-theme=\"light\">\n<div class=\"bg-success p-2 text-white\">This is default success background</div>\n<div class=\"bg-success p-2\" style=\"--bs-bg-opacity: .5;\">This is 50% opacity success background</div>\n</div>`} />",
+          "count": 1,
+          "reason": "Carry required contrasting white context inside the actual background-opacity fixture code so live preview, plain copy and SDK project all preserve the same readable surface and true numeric alpha."
+        },
+        {
+          "before": "<Example class=\"bg-white text-dark\" code={`<div class=\"bg-success p-2 text-white\">This is default success background</div>\n<div class=\"bg-success p-2 text-dark bg-opacity-75\">This is 75% opacity success background</div>\n<div class=\"bg-success p-2 text-dark bg-opacity-50\">This is 50% opacity success background</div>\n<div class=\"bg-success p-2 text-dark bg-opacity-25\">This is 25% opacity success background</div>\n<div class=\"bg-success p-2 text-dark bg-opacity-10\">This is 10% opacity success background</div>`} />",
+          "after": "<Example code={`<div class=\"bg-white text-dark p-2\" data-bs-theme=\"light\">\n<div class=\"bg-success p-2 text-white\">This is default success background</div>\n<div class=\"bg-success p-2 text-dark bg-opacity-75\">This is 75% opacity success background</div>\n<div class=\"bg-success p-2 text-dark bg-opacity-50\">This is 50% opacity success background</div>\n<div class=\"bg-success p-2 text-dark bg-opacity-25\">This is 25% opacity success background</div>\n<div class=\"bg-success p-2 text-dark bg-opacity-10\">This is 10% opacity success background</div>\n</div>`} />",
+          "count": 1,
+          "reason": "Carry required contrasting white context inside the actual background-opacity fixture code so live preview, plain copy and SDK project all preserve the same readable surface and true numeric alpha."
+        },
+        {
+          "before": "25, 135, 84",
+          "after": "0, 118, 108",
+          "count": 2,
+          "reason": "Correct API explanation to actual TQ success RGB (BarrierReefTealD2) emitted by the compiled variables; numerical alpha behaviour stays unchanged."
+        },
+        {
+          "before": "your computed `color` value",
+          "after": "your computed `background-color` value",
+          "count": 1,
+          "reason": "Name the actual property generated by the documented background utility."
+        }
+      ],
+      "afterSHA256": "f682af277e4a61beb6bee078ce228d2773df88911960b1a056923545f2f84bed",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/utilities/opacity.mdx",
+      "beforeSHA256": "259e9693e4477d50a18fceb32bc775fef4182fba2e88ff3e0e3f31b652169767",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/utilities/opacity.mdx",
+      "edits": [
+        {
+          "before": "<div class=\"bd-example d-sm-flex\">",
+          "after": "<Callout type=\"warning\">\n**Transparency demonstration:** the samples below deliberately show low-contrast text at the stated opacity. They are diagnostic examples, not recommended reading-text combinations. The readable labels and code identify each exact value. Keep essential content at a tested contrast ratio.\n</Callout>\n\n<p>Example values, from left to right: 100%, 75%, 50%, 25% and 0% opacity. The last sample is fully transparent.</p>\n\n<div class=\"bd-example d-sm-flex\">",
+          "count": 1,
+          "reason": "Readable equivalent numeric labels outside diagnostic element opacity."
+        },
+        {
+          "before": "bg-primary text-light fw-bold rounded",
+          "after": "bg-primary text-white fw-bold rounded",
+          "count": 5,
+          "reason": "Use correct primary foreground in diagnostic blocks; preserve actual alpha values."
+        },
+        {
+          "before": "**Transparency demonstration:** the samples below deliberately show low-contrast text at the stated opacity. They are diagnostic examples, not recommended reading-text combinations. The readable labels and code identify each exact value. Keep essential content at a tested contrast ratio.",
+          "after": "**Transparency demonstration:** empty decorative colour blocks show the actual utility opacity. Their readable labels stay fully opaque. The live example, copyable markup and editor export use the same classes and values. Do not reduce essential reading text below its required contrast.",
+          "count": 1,
+          "reason": "Explicit accessible opacity fixtures: keep actual utility values while labels remain readable, without excluding real content from automated checks."
+        },
+        {
+          "before": "<div class=\"opacity-100 p-3 m-2 bg-primary text-white fw-bold rounded\">100%</div>",
+          "after": "<div class=\"m-2 text-center\"><div class=\"opacity-100 p-3 bg-primary rounded\" aria-hidden=\"true\">&nbsp;</div><span>100%</span></div>",
+          "count": 1,
+          "reason": "Approved fixture geometry change: actual element opacity remains exact on decorative background, with readable numeric label outside the faded subtree."
+        },
+        {
+          "before": "<div class=\"opacity-75 p-3 m-2 bg-primary text-white fw-bold rounded\">75%</div>",
+          "after": "<div class=\"m-2 text-center\"><div class=\"opacity-75 p-3 bg-primary rounded\" aria-hidden=\"true\">&nbsp;</div><span>75%</span></div>",
+          "count": 1,
+          "reason": "Approved fixture geometry change: actual element opacity remains exact on decorative background, with readable numeric label outside the faded subtree."
+        },
+        {
+          "before": "<div class=\"opacity-50 p-3 m-2 bg-primary text-white fw-bold rounded\">50%</div>",
+          "after": "<div class=\"m-2 text-center\"><div class=\"opacity-50 p-3 bg-primary rounded\" aria-hidden=\"true\">&nbsp;</div><span>50%</span></div>",
+          "count": 1,
+          "reason": "Approved fixture geometry change: actual element opacity remains exact on decorative background, with readable numeric label outside the faded subtree."
+        },
+        {
+          "before": "<div class=\"opacity-25 p-3 m-2 bg-primary text-white fw-bold rounded\">25%</div>",
+          "after": "<div class=\"m-2 text-center\"><div class=\"opacity-25 p-3 bg-primary rounded\" aria-hidden=\"true\">&nbsp;</div><span>25%</span></div>",
+          "count": 1,
+          "reason": "Approved fixture geometry change: actual element opacity remains exact on decorative background, with readable numeric label outside the faded subtree."
+        },
+        {
+          "before": "<div class=\"opacity-0 p-3 m-2 bg-primary text-white fw-bold rounded\">0%</div>",
+          "after": "<div class=\"m-2 text-center\"><div class=\"opacity-0 p-3 bg-primary rounded\" aria-hidden=\"true\">&nbsp;</div><span>0%</span></div>",
+          "count": 1,
+          "reason": "Approved fixture geometry change: actual element opacity remains exact on decorative background, with readable numeric label outside the faded subtree."
+        }
+      ],
+      "afterSHA256": "138d95818715338cc219b53dfb0a5edc3ce28f8cbd3a1fe976981de4dddbb3ab",
+      "lineEndings": "LF"
+    },
+    {
+      "file": "docs-source/README-TQ.md",
+      "beforeSHA256": "19f6f0c94d92d623cd02028bf2fb6f9c3740f133ee89d27038c2d1818084f381",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/README-TQ.md",
+      "edits": [
+        {
+          "before": "Only colours are themed. The original shapes, corners, spacing, font families, type scale, layout, animations, icon geometry, examples, content, controls and JavaScript are restored.",
+          "after": "The design theme changes colours while preserving Bootstrap’s shapes, corners, spacing, font families, type scale, layout, animation definitions, icon geometry and public component APIs. The separately documented accessibility remediation below deliberately changes specific example markup/behaviour and documentation reading contexts after the missed-work audit; it does not alter the upstream source or original Bootstrap JavaScript artifacts.",
+          "count": 1,
+          "reason": "Disclose explicitly authorized remediation exceptions without retaining false colour-only/no-runtime claim."
+        },
+        {
+          "before": "Native layout, content and interaction/data logic remain unchanged.",
+          "after": "Native component geometry and chart data remain unchanged, except for the explicitly scoped accessibility and installation-documentation corrections below.",
+          "count": 1,
+          "reason": "Accurate scope of new chart alternatives, control separation and readable demonstration contexts."
+        },
+        {
+          "before": "Native external examples, hosted search, StackBlitz, imagery and outbound links otherwise retain their original Bootstrap behavior. They may need a network connection. Earlier custom search, markup, accessibility scripts and generated `tabindex` additions are removed. This is not a claim of universal WCAG conformance.",
+          "after": "## Accessibility and installation corrections\n\nThe missed-work audit authorized a small, separate accessibility layer. Original Bootstrap CSS interfaces and JavaScript bundles remain available. The documentation and local examples load the separate TQ layer after Bootstrap and before initializing enhanced components. It manages tooltip hover/focus/Escape, paused carousel startup and explicit Play/Pause, and persistent form errors with field associations and an error summary. See [integration instructions](../docs/INTEGRATION.md) for loading order, module APIs, disposal and author responsibilities.\n\nBoth dashboard examples provide a named chart, description and keyboard-operable native data disclosure containing the exact seven plotted values. The theme control occupies its own normal-flow row only on the bottom-navbar and navbar comparison examples, resolving the measured control collision. Scrollable code blocks receive named keyboard regions only while their actual content overflows; the observer reassesses viewport/font/text-size changes. Ordinary bright links/outline controls use explicit native contrasting surfaces, and list metadata retains readable opacity. Numeric-opacity teaching fixtures preserve their true utility values and have visible diagnostic explanations and equivalent readable labels; they are not certified reading-text combinations.\n\nThe homepage and download documentation point to the actual local TQ downloads and CSS integration. Public package-manager commands and external hosted starters are explicitly labelled as upstream Bootstrap, with stock colours. No TQ package has been published to npm or an external starter service. Native hosted search, external imagery, outbound links and hosted starters may need a network connection. This is not a claim of universal WCAG conformance.",
+          "count": 1,
+          "reason": "Record complete intentional non-colour exceptions and stock-vs-TQ installation boundary."
+        },
+        {
+          "before": "Bootstrap source is MIT licensed;",
+          "after": "## Deployment origin\n\nThe default preview origin is `http://127.0.0.1:5198`. Before publishing, set `baseURL` in `docs-source/config.yml` to your own HTTPS origin and rebuild; inspect generated canonical URLs and local asset/download paths on that host. The build does not ship the upstream `getbootstrap.com` CNAME. If your host requires a CNAME, create it only with the domain you own and have configured for that deployment. Do not publish the local preview canonical origin as your public site identity.\n\nBootstrap source is MIT licensed;",
+          "count": 1,
+          "reason": "DOC-02: explicit owned-origin/CNAME deployment handover."
+        },
+        {
+          "before": "Numeric-opacity teaching fixtures preserve their true utility values and have visible diagnostic explanations and equivalent readable labels; they are not certified reading-text combinations.",
+          "after": "Numeric-opacity samples preserve their true utility values on empty decorative colour blocks while fully opaque labels remain readable. The Reboot 50% link demonstration is explicitly inactive. Live previews, copied markup and editor exports use the same accessible fixture markup.",
+          "count": 1,
+          "reason": "Update maintainer guidance to the approved decorative opacity fixtures; do not retain a false claim that active faded text is conforming."
+        },
+        {
+          "before": "paused carousel startup and explicit Play/Pause,",
+          "after": "paused carousel startup and explicit Play/Pause (plus native Previous/Next buttons for slides-only examples that otherwise have no navigation),",
+          "count": 1,
+          "reason": "Document the accessible fallback controls required to reach every slide by keyboard and non-drag pointer while rotation is paused or reduced motion is enabled."
+        }
+      ],
+      "lineEndings": "LF",
+      "afterSHA256": "d8b7da38fb14a12a351867eb6a95bf78b784d0c0b9d310babbcfaf9129cd1697"
+    },
+    {
+      "file": "docs/INTEGRATION.md",
+      "beforeSHA256": "1e1e4fd76d1822509f588ada4cbacc34dc22c4c130dc18bb77a896d23ac36c38",
+      "beforeFile": "qa/remediation-source/docs/before/docs/INTEGRATION.md",
+      "edits": [
+        {
+          "before": "Typography, dimensions, spacing, corners, shadows, layout, markup and JavaScript behaviour remain Bootstrap's originals.",
+          "after": "Typography, component dimensions, spacing, corners, shadows and public APIs retain Bootstrap’s defaults. The documented accessibility layer and scoped example/documentation corrections address the missed-work audit; their changes are separate from the colour theme and original upstream JavaScript.",
+          "count": 1,
+          "reason": "Accurate integration scope after authorized accessibility remediation."
+        },
+        {
+          "before": "No custom TQ JavaScript runtime is required or supplied.",
+          "after": "The original Bootstrap distributions remain intact. A separate optional enhancement runtime is supplied for the accessibility defaults used by the local docs/examples. Load it after Bootstrap and before any tooltip/carousel/custom-validation initializer:\n\n```html\n<link rel=\"stylesheet\" href=\"dist/css/bootstrap.min.css\">\n<script src=\"dist/js/bootstrap.bundle.min.js\"></script>\n<script src=\"dist/tq/tq-accessibility.min.js\"></script>\n<script>TQAccessibility.init();</script>\n```\n\nInitialise enhanced tooltips with `TQAccessibility.createTooltip(element, nativeOptions)` instead of first creating a separate native tooltip instance. Use tooltips only for short non-interactive text; put actionable help in a named dialog. Enhanced carousels start paused, supply Play/Pause controls and respect reduced motion and focus. Enhanced `form.needs-validation` workflows provide persistent feedback associations and an error summary; remove any duplicate upstream demonstration submit handler. Keep actual labels, constraints and useful error text in the markup.\n\nThe ESM build is `dist/tq/tq-accessibility.esm.js`, exporting `init`, `createTooltip`, `enhanceCarousel`, `enhanceValidation` and `dispose`. Pass the imported Bootstrap namespace through the `bootstrap` option when not using the global bundle. The layer preserves native component instances, methods, events and data attributes. Use the layer’s disposal function when removing an enhanced region; then dispose any other native instances you created. Retest your own initialization and dynamic-content workflow.",
+          "count": 1,
+          "reason": "Document actual separate enhancement paths, load order, lifecycle and component scope."
+        },
+        {
+          "before": "They do not add framework components or change component APIs.",
+          "after": "They do not add replacement framework components or change Bootstrap’s public APIs. The optional TQ enhancement script and accessible example markup provide the explicitly documented remediation behaviours.",
+          "count": 1,
+          "reason": "Distinguish separate accessibility helper from replacement Bootstrap component APIs."
+        },
+        {
+          "before": "## Icons",
+          "after": "## TQ downloads and upstream packages\n\nUse the local compiled download for TQ colours. Copy its `dist` directory to your own site and include exactly one TQ Bootstrap CSS file. The source download contains the TQ Sass inputs and reproducible build instructions. Public `npm install bootstrap`, yarn, RubyGems, Composer and CDN packages install stock Bootstrap; they do not contain this independently packaged theme. Keep their original JavaScript imports if needed, and replace their default stylesheet with the local TQ CSS. Do not load both copies of the CSS.\n\nExternal repositories and hosted starter projects linked by the retained bundler/framework guides use stock colours. They are labelled as upstream references. Individual documentation snippet exports and the 40 local examples are distinct and include the TQ theme. No hosted TQ npm package or externally published TQ starter is implied.\n\n## Documentation deployment\n\nThe preview default is `http://127.0.0.1:5198`. Set `baseURL` in `docs-source/config.yml` to the HTTPS origin you own before rebuilding for publication. Check canonical links, the local assets and all three downloads at that destination. The build omits the upstream custom-domain CNAME; only add a CNAME for your own configured domain if your host requires it. Preview paths must not become the identity of a public deployment.\n\n## Icons",
+          "count": 1,
+          "reason": "DOC-01 and DOC-02: concrete TQ deployment instructions and public service boundary."
+        }
+      ],
+      "lineEndings": "LF",
+      "afterSHA256": "4a92bb94d36eb49d3a5107a3ecef4fa4cb3a0ff5e2c417b469ac59a986ff9f83"
+    },
+    {
+      "file": "docs-source/site/src/assets/examples/checkout/index.astro",
+      "beforeSHA256": "98121f89e716996cda1f7c1189909f705a7566bf824499328ad60ad9144a662f",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/assets/examples/checkout/index.astro",
+      "edits": [
+        {
+          "before": "class=\"text-primary\"",
+          "after": "class=\"text-primary-emphasis\"",
+          "count": 1,
+          "reason": "Ordinary checkout heading uses mode-aware primary emphasis to retain large-text contrast in dark mode."
+        },
+        {
+          "before": "class=\"text-success\"",
+          "after": "class=\"text-success-emphasis\"",
+          "count": 2,
+          "reason": "Ordinary checkout promo text uses mode-aware success emphasis; raw semantic utilityAPI and geometry unchanged."
+        }
+      ],
+      "lineEndings": "LF",
+      "afterSHA256": "57581105105348fa92f8f81659baafba8a104a226706a7f30556dcb5ae7ba881"
+    },
+    {
+      "file": "docs-source/site/src/assets/examples/checkout-rtl/index.astro",
+      "beforeSHA256": "687911e883991d989605cd2a70dd522ab58afaf26162837b1ce54d459d01d303",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/assets/examples/checkout-rtl/index.astro",
+      "edits": [
+        {
+          "before": "class=\"text-success\"",
+          "after": "class=\"text-success-emphasis\"",
+          "count": 2,
+          "reason": "Ordinary checkout promo text uses mode-aware success emphasis; raw semantic utilityAPI and geometry unchanged."
+        }
+      ],
+      "lineEndings": "LF",
+      "afterSHA256": "a43faaa2fe78ad6bf51ad3d99ff0adf3378aea2b807290911c04ff6b4a2ca7af"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/components/dropdowns.mdx",
+      "beforeSHA256": "bddfcc511eb4d9e587e3756e1e25ae3263232cfb70858eb53e05c090f9cb9ede",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/components/dropdowns.mdx",
+      "edits": [
+        {
+          "before": "btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split\"",
+          "after": "btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split px-3\"",
+          "count": 2,
+          "reason": "Explicit target-size remediation: native px-3 padding on the small split toggle in live demo and matching copyable code; no global button geometry change."
+        },
+        {
+          "before": "class=\"btn btn-secondary dropdown-toggle dropdown-toggle-split\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n      <span class=\"visually-hidden\">Toggle Dropstart",
+          "after": "class=\"btn btn-secondary dropdown-toggle dropdown-toggle-split px-3\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n      <span class=\"visually-hidden\">Toggle Dropstart",
+          "count": 1,
+          "reason": "Explicit target-size remediation: native px-3 padding only on split-dropstart toggle in live demo and matching copyable code; preserve component APIs."
+        },
+        {
+          "before": "class=\"btn btn-secondary dropdown-toggle dropdown-toggle-split\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n    <span class=\"visually-hidden\">Toggle Dropstart",
+          "after": "class=\"btn btn-secondary dropdown-toggle dropdown-toggle-split px-3\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n    <span class=\"visually-hidden\">Toggle Dropstart",
+          "count": 1,
+          "reason": "Keep standalone copyable split-dropstart markup consistent with the accessible live example."
+        },
+        {
+          "before": "## Directions",
+          "after": "<Callout>\n**Split-button target sizes:** the small split and split-dropstart examples use the native px-3 spacing utility so each toggle has enough exposed target area. When adapting compact controls, check the actual pointer target and nearby controls; do not assume the arrow icon size provides an adequate target. Bootstrap’s global button dimensions remain unchanged.\n</Callout>\n\n## Directions",
+          "count": 1,
+          "reason": "Explain the scoped native-utility target-size correction and author responsibility without changing framework defaults."
+        }
+      ],
+      "lineEndings": "LF",
+      "afterSHA256": "67ed018756148afd66d49e3099c0ba6ded807937f24570e986add906f24c7aa5"
+    },
+    {
+      "file": "docs-source/site/src/assets/examples/masonry/index.astro",
+      "beforeSHA256": "b739b7268e69cbc86870c64862ef1c9ee42d8702aca0baacc3cc71e768db29db",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/assets/examples/masonry/index.astro",
+      "edits": [
+        {
+          "before": "<pre><code>",
+          "after": "<pre tabindex=\"0\" role=\"region\" aria-label=\"Masonry script include; horizontally scrollable code example\"><code>",
+          "count": 1,
+          "reason": "Masonry standalone: make the intentionally long CDN snippet independently keyboard-scrollable and named."
+        }
+      ],
+      "lineEndings": "LF",
+      "afterSHA256": "d6661b04ba7f5ae0097b51c61353c8ffeedc9338e30ac992dab43899ae2d1a37"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/about/brand.mdx",
+      "beforeSHA256": "adee9464e87006fbc1ec6d0f472bb7e63d90f92400f5bd2b5343f3a921de80b0",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/about/brand.mdx",
+      "edits": [
+        {
+          "before": "<div class=\"h3\">Bootstrap</div>",
+          "after": "<div class=\"h3 bg-white\">Bootstrap</div>",
+          "count": 1,
+          "reason": "Preserve Bootstrap wordmark paint; give its original text a neutral white reading surface in both modes, without altering official logo artwork."
+        },
+        {
+          "before": "class=\"text-success\">Correct",
+          "after": "class=\"text-success-emphasis\">Correct",
+          "count": 1,
+          "reason": "Ordinary semantic brand guidance uses mode-aware success emphasis for dark and light reading contexts."
+        },
+        {
+          "before": "class=\"text-danger\">Incorrect",
+          "after": "class=\"text-danger-emphasis\">Incorrect",
+          "count": 1,
+          "reason": "Ordinary semantic brand guidance uses mode-aware danger emphasis; meaning stays explicit in text."
+        }
+      ],
+      "lineEndings": "LF",
+      "afterSHA256": "f6cc701f746d76e059ce40618b9c10ec12ddfca524c94fdd63511db9e43b2971"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/components/card.mdx",
+      "beforeSHA256": "06f588844ca729b604f25196ca3bb2f97005d17bcbd7085c9dde3df2c9e2c8c2",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/components/card.mdx",
+      "edits": [
+        {
+          "before": "<div class=\"card-body${themeColor.contrast_color ? '' : ` text-${themeColor.name}`}\"",
+          "after": "<div class=\"card-body${themeColor.contrast_color ? '' : ` text-${themeColor.name}-emphasis`}\"",
+          "count": 1,
+          "reason": "Ordinary border-card text uses mode-aware semantic emphasis while retaining original border colour and component geometry."
+        },
+        {
+          "before": "<div class=\"card-body text-success\">",
+          "after": "<div class=\"card-body text-success-emphasis\">",
+          "count": 1,
+          "reason": "Ordinary success-card reading text uses appropriate emphasis ink in both modes."
+        },
+        {
+          "before": "Note that you can put `.text-{color}` classes on the parent `.card` or a subset of the card’s contents as shown below.",
+          "after": "Use `.text-{color}-emphasis` for mode-aware reading text on the parent `.card` or a subset of its contents, as shown below. The raw `.text-{color}` colours stay constant and require an explicitly contrasting background.",
+          "count": 1,
+          "reason": "Explain supported native utility choice rather than implying raw semantic colours adapt automatically."
+        }
+      ],
+      "lineEndings": "LF",
+      "afterSHA256": "b54b53a41ffebef2686b86101e593fd107652ee23ec8e3843c00184a20b1ff42"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/components/button-group.mdx",
+      "beforeSHA256": "b3c05c6606aa3e9e3f6d739f6be153c1bd07428e867dca8749ae5a47ec68855a",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/components/button-group.mdx",
+      "edits": [
+        {
+          "before": "<Example code={`<div class=\"btn-group\" role=\"group\" aria-label=\"Basic outlined example\">\n    <button type=\"button\" class=\"btn btn-outline-primary\">Left</button>\n    <button type=\"button\" class=\"btn btn-outline-primary\">Middle</button>\n    <button type=\"button\" class=\"btn btn-outline-primary\">Right</button>\n  </div>`} />",
+          "after": "<Example code={`<div class=\"bg-white p-2\">\n<div class=\"btn-group\" role=\"group\" aria-label=\"Basic outlined example\">\n    <button type=\"button\" class=\"btn btn-outline-primary\">Left</button>\n    <button type=\"button\" class=\"btn btn-outline-primary\">Middle</button>\n    <button type=\"button\" class=\"btn btn-outline-primary\">Right</button>\n  </div>\n</div>`} />",
+          "count": 1,
+          "reason": "Explicit native white context for raw semantic outline groups, including unchecked/rest states in dark mode. Component geometry/APIs remain unchanged; live/copy/export carry the same context."
+        },
+        {
+          "before": "<Example code={`<div class=\"btn-group\" role=\"group\" aria-label=\"Basic checkbox toggle button group\">\n    <input type=\"checkbox\" class=\"btn-check\" id=\"btncheck1\" autocomplete=\"off\">\n    <label class=\"btn btn-outline-primary\" for=\"btncheck1\">Checkbox 1</label>\n\n    <input type=\"checkbox\" class=\"btn-check\" id=\"btncheck2\" autocomplete=\"off\">\n    <label class=\"btn btn-outline-primary\" for=\"btncheck2\">Checkbox 2</label>\n\n    <input type=\"checkbox\" class=\"btn-check\" id=\"btncheck3\" autocomplete=\"off\">\n    <label class=\"btn btn-outline-primary\" for=\"btncheck3\">Checkbox 3</label>\n  </div>`} />",
+          "after": "<Example code={`<div class=\"bg-white p-2\">\n<div class=\"btn-group\" role=\"group\" aria-label=\"Basic checkbox toggle button group\">\n    <input type=\"checkbox\" class=\"btn-check\" id=\"btncheck1\" autocomplete=\"off\">\n    <label class=\"btn btn-outline-primary\" for=\"btncheck1\">Checkbox 1</label>\n\n    <input type=\"checkbox\" class=\"btn-check\" id=\"btncheck2\" autocomplete=\"off\">\n    <label class=\"btn btn-outline-primary\" for=\"btncheck2\">Checkbox 2</label>\n\n    <input type=\"checkbox\" class=\"btn-check\" id=\"btncheck3\" autocomplete=\"off\">\n    <label class=\"btn btn-outline-primary\" for=\"btncheck3\">Checkbox 3</label>\n  </div>\n</div>`} />",
+          "count": 1,
+          "reason": "Explicit native white context for raw semantic outline groups, including unchecked/rest states in dark mode. Component geometry/APIs remain unchanged; live/copy/export carry the same context."
+        },
+        {
+          "before": "<Example code={`<div class=\"btn-group\" role=\"group\" aria-label=\"Basic radio toggle button group\">\n    <input type=\"radio\" class=\"btn-check\" name=\"btnradio\" id=\"btnradio1\" autocomplete=\"off\" checked>\n    <label class=\"btn btn-outline-primary\" for=\"btnradio1\">Radio 1</label>\n\n    <input type=\"radio\" class=\"btn-check\" name=\"btnradio\" id=\"btnradio2\" autocomplete=\"off\">\n    <label class=\"btn btn-outline-primary\" for=\"btnradio2\">Radio 2</label>\n\n    <input type=\"radio\" class=\"btn-check\" name=\"btnradio\" id=\"btnradio3\" autocomplete=\"off\">\n    <label class=\"btn btn-outline-primary\" for=\"btnradio3\">Radio 3</label>\n  </div>`} />",
+          "after": "<Example code={`<div class=\"bg-white p-2\">\n<div class=\"btn-group\" role=\"group\" aria-label=\"Basic radio toggle button group\">\n    <input type=\"radio\" class=\"btn-check\" name=\"btnradio\" id=\"btnradio1\" autocomplete=\"off\" checked>\n    <label class=\"btn btn-outline-primary\" for=\"btnradio1\">Radio 1</label>\n\n    <input type=\"radio\" class=\"btn-check\" name=\"btnradio\" id=\"btnradio2\" autocomplete=\"off\">\n    <label class=\"btn btn-outline-primary\" for=\"btnradio2\">Radio 2</label>\n\n    <input type=\"radio\" class=\"btn-check\" name=\"btnradio\" id=\"btnradio3\" autocomplete=\"off\">\n    <label class=\"btn btn-outline-primary\" for=\"btnradio3\">Radio 3</label>\n  </div>\n</div>`} />",
+          "count": 1,
+          "reason": "Explicit native white context for raw semantic outline groups, including unchecked/rest states in dark mode. Component geometry/APIs remain unchanged; live/copy/export carry the same context."
+        },
+        {
+          "before": "<Example code={`<div class=\"btn-toolbar mb-3\" role=\"toolbar\" aria-label=\"Toolbar with button groups\">\n    <div class=\"btn-group me-2\" role=\"group\" aria-label=\"First group\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">1</button>\n      <button type=\"button\" class=\"btn btn-outline-secondary\">2</button>\n      <button type=\"button\" class=\"btn btn-outline-secondary\">3</button>\n      <button type=\"button\" class=\"btn btn-outline-secondary\">4</button>\n    </div>\n    <div class=\"input-group\">\n      <div class=\"input-group-text\" id=\"btnGroupAddon\">@</div>\n      <input type=\"text\" class=\"form-control\" placeholder=\"Input group example\" aria-label=\"Input group example\" aria-describedby=\"btnGroupAddon\">\n    </div>\n  </div>\n\n  <div class=\"btn-toolbar justify-content-between\" role=\"toolbar\" aria-label=\"Toolbar with button groups\">\n    <div class=\"btn-group\" role=\"group\" aria-label=\"First group\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">1</button>\n      <button type=\"button\" class=\"btn btn-outline-secondary\">2</button>\n      <button type=\"button\" class=\"btn btn-outline-secondary\">3</button>\n      <button type=\"button\" class=\"btn btn-outline-secondary\">4</button>\n    </div>\n    <div class=\"input-group\">\n      <div class=\"input-group-text\" id=\"btnGroupAddon2\">@</div>\n      <input type=\"text\" class=\"form-control\" placeholder=\"Input group example\" aria-label=\"Input group example\" aria-describedby=\"btnGroupAddon2\">\n    </div>\n  </div>`} />",
+          "after": "<Example code={`<div class=\"bg-white p-2\">\n<div class=\"btn-toolbar mb-3\" role=\"toolbar\" aria-label=\"Toolbar with button groups\">\n    <div class=\"btn-group me-2\" role=\"group\" aria-label=\"First group\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">1</button>\n      <button type=\"button\" class=\"btn btn-outline-secondary\">2</button>\n      <button type=\"button\" class=\"btn btn-outline-secondary\">3</button>\n      <button type=\"button\" class=\"btn btn-outline-secondary\">4</button>\n    </div>\n    <div class=\"input-group\">\n      <div class=\"input-group-text\" id=\"btnGroupAddon\">@</div>\n      <input type=\"text\" class=\"form-control\" placeholder=\"Input group example\" aria-label=\"Input group example\" aria-describedby=\"btnGroupAddon\">\n    </div>\n  </div>\n\n  <div class=\"btn-toolbar justify-content-between\" role=\"toolbar\" aria-label=\"Toolbar with button groups\">\n    <div class=\"btn-group\" role=\"group\" aria-label=\"First group\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">1</button>\n      <button type=\"button\" class=\"btn btn-outline-secondary\">2</button>\n      <button type=\"button\" class=\"btn btn-outline-secondary\">3</button>\n      <button type=\"button\" class=\"btn btn-outline-secondary\">4</button>\n    </div>\n    <div class=\"input-group\">\n      <div class=\"input-group-text\" id=\"btnGroupAddon2\">@</div>\n      <input type=\"text\" class=\"form-control\" placeholder=\"Input group example\" aria-label=\"Input group example\" aria-describedby=\"btnGroupAddon2\">\n    </div>\n  </div>\n</div>`} />",
+          "count": 1,
+          "reason": "Explicit native white context for raw semantic outline groups, including unchecked/rest states in dark mode. Component geometry/APIs remain unchanged; live/copy/export carry the same context."
+        },
+        {
+          "before": "<Example code={`<div class=\"btn-group btn-group-lg\" role=\"group\" aria-label=\"Large button group\">\n    <button type=\"button\" class=\"btn btn-outline-primary\">Left</button>\n    <button type=\"button\" class=\"btn btn-outline-primary\">Middle</button>\n    <button type=\"button\" class=\"btn btn-outline-primary\">Right</button>\n  </div>\n  <br>\n  <div class=\"btn-group\" role=\"group\" aria-label=\"Default button group\">\n    <button type=\"button\" class=\"btn btn-outline-primary\">Left</button>\n    <button type=\"button\" class=\"btn btn-outline-primary\">Middle</button>\n    <button type=\"button\" class=\"btn btn-outline-primary\">Right</button>\n  </div>\n  <br>\n  <div class=\"btn-group btn-group-sm\" role=\"group\" aria-label=\"Small button group\">\n    <button type=\"button\" class=\"btn btn-outline-primary\">Left</button>\n    <button type=\"button\" class=\"btn btn-outline-primary\">Middle</button>\n    <button type=\"button\" class=\"btn btn-outline-primary\">Right</button>\n  </div>`} />",
+          "after": "<Example code={`<div class=\"bg-white p-2\">\n<div class=\"btn-group btn-group-lg\" role=\"group\" aria-label=\"Large button group\">\n    <button type=\"button\" class=\"btn btn-outline-primary\">Left</button>\n    <button type=\"button\" class=\"btn btn-outline-primary\">Middle</button>\n    <button type=\"button\" class=\"btn btn-outline-primary\">Right</button>\n  </div>\n  <br>\n  <div class=\"btn-group\" role=\"group\" aria-label=\"Default button group\">\n    <button type=\"button\" class=\"btn btn-outline-primary\">Left</button>\n    <button type=\"button\" class=\"btn btn-outline-primary\">Middle</button>\n    <button type=\"button\" class=\"btn btn-outline-primary\">Right</button>\n  </div>\n  <br>\n  <div class=\"btn-group btn-group-sm\" role=\"group\" aria-label=\"Small button group\">\n    <button type=\"button\" class=\"btn btn-outline-primary\">Left</button>\n    <button type=\"button\" class=\"btn btn-outline-primary\">Middle</button>\n    <button type=\"button\" class=\"btn btn-outline-primary\">Right</button>\n  </div>\n</div>`} />",
+          "count": 1,
+          "reason": "Explicit native white context for raw semantic outline groups, including unchecked/rest states in dark mode. Component geometry/APIs remain unchanged; live/copy/export carry the same context."
+        },
+        {
+          "before": "<Example code={`<div class=\"btn-group-vertical\" role=\"group\" aria-label=\"Vertical radio toggle button group\">\n    <input type=\"radio\" class=\"btn-check\" name=\"vbtn-radio\" id=\"vbtn-radio1\" autocomplete=\"off\" checked>\n    <label class=\"btn btn-outline-danger\" for=\"vbtn-radio1\">Radio 1</label>\n    <input type=\"radio\" class=\"btn-check\" name=\"vbtn-radio\" id=\"vbtn-radio2\" autocomplete=\"off\">\n    <label class=\"btn btn-outline-danger\" for=\"vbtn-radio2\">Radio 2</label>\n    <input type=\"radio\" class=\"btn-check\" name=\"vbtn-radio\" id=\"vbtn-radio3\" autocomplete=\"off\">\n    <label class=\"btn btn-outline-danger\" for=\"vbtn-radio3\">Radio 3</label>\n  </div>`} />",
+          "after": "<Example code={`<div class=\"bg-white p-2\">\n<div class=\"btn-group-vertical\" role=\"group\" aria-label=\"Vertical radio toggle button group\">\n    <input type=\"radio\" class=\"btn-check\" name=\"vbtn-radio\" id=\"vbtn-radio1\" autocomplete=\"off\" checked>\n    <label class=\"btn btn-outline-danger\" for=\"vbtn-radio1\">Radio 1</label>\n    <input type=\"radio\" class=\"btn-check\" name=\"vbtn-radio\" id=\"vbtn-radio2\" autocomplete=\"off\">\n    <label class=\"btn btn-outline-danger\" for=\"vbtn-radio2\">Radio 2</label>\n    <input type=\"radio\" class=\"btn-check\" name=\"vbtn-radio\" id=\"vbtn-radio3\" autocomplete=\"off\">\n    <label class=\"btn btn-outline-danger\" for=\"vbtn-radio3\">Radio 3</label>\n  </div>\n</div>`} />",
+          "count": 1,
+          "reason": "Explicit native white context for raw semantic outline groups, including unchecked/rest states in dark mode. Component geometry/APIs remain unchanged; live/copy/export carry the same context."
+        },
+        {
+          "before": "## Outlined styles",
+          "after": "## Outlined styles\n\nThe raw primary, secondary and danger outline colours shown here require a light surface. These examples include an explicit native `bg-white` wrapper so unchecked controls remain readable in both page modes.",
+          "count": 1,
+          "reason": "Explain fixed contrast surfaces for raw outline controls without changing their global utility/component defaults."
+        },
+        {
+          "before": "<div class=\"bg-white p-2\">",
+          "after": "<div class=\"bg-white p-2\" data-bs-theme=\"light\">",
+          "count": 6,
+          "reason": "Make the already explicit white outline-group panels a coherent local light context, retaining native component geometry."
+        }
+      ],
+      "lineEndings": "LF",
+      "afterSHA256": "d893e4517807ffb3e74f7b2654bfc6f49345b46821ff78e8d1378456b166c010"
+    },
+    {
+      "file": "docs-source/site/src/layouts/DocsLayout.astro",
+      "beforeSHA256": "6fbf90029b224437bb73e473ed0c12da8d8722153be43037c7e96f8f3f8f7e9a",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/layouts/DocsLayout.astro",
+      "edits": [
+        {
+          "before": "<span class=\"text-secondary\">{section.description}</span>",
+          "after": "<span class=\"text-body-secondary\">{section.description}</span>",
+          "count": 1,
+          "reason": "Ordinary overview descriptions use mode-aware body metadata colour, resolving both canonical and alias forms/customize pages without changing text, layout or links."
+        }
+      ],
+      "lineEndings": "LF",
+      "afterSHA256": "c9f68157dc3eb2abb36e48c87bd6ede8dc7f3eda3c42587a15fef36fe5f9a339"
+    },
+    {
+      "file": "docs-source/site/src/pages/docs/versions.astro",
+      "beforeSHA256": "aa75828aefedcd1ed4a50398c533791afe442d254f71f0ee373c0094d83cc1a9",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/pages/docs/versions.astro",
+      "edits": [
+        {
+          "before": "text-primary",
+          "after": "text-primary-emphasis",
+          "count": 1,
+          "reason": "Historical version-reference reading links use mode-aware primary emphasis; preserve every native reference and the separately restrictedv5.3header menu."
+        }
+      ],
+      "lineEndings": "LF",
+      "afterSHA256": "764d803212fcee2d7985b0cd60f2e23db00bfa01689396474b2c9db2c5c5d076"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/forms/input-group.mdx",
+      "beforeSHA256": "b6da56e330a47a1b30256a0f9edf897a5c00f10baf16e383f711fc94c3a72ab6",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/forms/input-group.mdx",
+      "edits": [
+        {
+          "before": "<Example code={`<div class=\"input-group mb-3\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\" id=\"button-addon1\">Button</button>\n    <input type=\"text\" class=\"form-control\" placeholder=\"\" aria-label=\"Example text with button addon\" aria-describedby=\"button-addon1\">\n  </div>\n\n  <div class=\"input-group mb-3\">\n    <input type=\"text\" class=\"form-control\" placeholder=\"Recipient’s username\" aria-label=\"Recipient’s username\" aria-describedby=\"button-addon2\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\" id=\"button-addon2\">Button</button>\n  </div>\n\n  <div class=\"input-group mb-3\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\">Button</button>\n    <button class=\"btn btn-outline-secondary\" type=\"button\">Button</button>\n    <input type=\"text\" class=\"form-control\" placeholder=\"\" aria-label=\"Example text with two button addons\">\n  </div>\n\n  <div class=\"input-group\">\n    <input type=\"text\" class=\"form-control\" placeholder=\"Recipient’s username\" aria-label=\"Recipient’s username with two button addons\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\">Button</button>\n    <button class=\"btn btn-outline-secondary\" type=\"button\">Button</button>\n  </div>`} />",
+          "after": "<Example code={`<div class=\"bg-white p-2\" data-bs-theme=\"light\">\n<div class=\"input-group mb-3\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\" id=\"button-addon1\">Button</button>\n    <input type=\"text\" class=\"form-control\" placeholder=\"\" aria-label=\"Example text with button addon\" aria-describedby=\"button-addon1\">\n  </div>\n\n  <div class=\"input-group mb-3\">\n    <input type=\"text\" class=\"form-control\" placeholder=\"Recipient’s username\" aria-label=\"Recipient’s username\" aria-describedby=\"button-addon2\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\" id=\"button-addon2\">Button</button>\n  </div>\n\n  <div class=\"input-group mb-3\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\">Button</button>\n    <button class=\"btn btn-outline-secondary\" type=\"button\">Button</button>\n    <input type=\"text\" class=\"form-control\" placeholder=\"\" aria-label=\"Example text with two button addons\">\n  </div>\n\n  <div class=\"input-group\">\n    <input type=\"text\" class=\"form-control\" placeholder=\"Recipient’s username\" aria-label=\"Recipient’s username with two button addons\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\">Button</button>\n    <button class=\"btn btn-outline-secondary\" type=\"button\">Button</button>\n  </div>\n</div>`} />",
+          "count": 1,
+          "reason": "Raw semantic outline/link example requires a fixed light local context. Native white panel and local light mode travel with live markup, copy and editor export; all component APIs/geometry remain native."
+        },
+        {
+          "before": "<Example code={`<div class=\"input-group mb-3\">\n    <button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">Dropdown</button>\n    <ul class=\"dropdown-menu\">\n      <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\n      <li><hr class=\"dropdown-divider\"></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Separated link</a></li>\n    </ul>\n    <input type=\"text\" class=\"form-control\" aria-label=\"Text input with dropdown button\">\n  </div>\n\n  <div class=\"input-group mb-3\">\n    <input type=\"text\" class=\"form-control\" aria-label=\"Text input with dropdown button\">\n    <button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">Dropdown</button>\n    <ul class=\"dropdown-menu dropdown-menu-end\">\n      <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\n      <li><hr class=\"dropdown-divider\"></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Separated link</a></li>\n    </ul>\n  </div>\n\n  <div class=\"input-group\">\n    <button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">Dropdown</button>\n    <ul class=\"dropdown-menu\">\n      <li><a class=\"dropdown-item\" href=\"#\">Action before</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Another action before</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\n      <li><hr class=\"dropdown-divider\"></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Separated link</a></li>\n    </ul>\n    <input type=\"text\" class=\"form-control\" aria-label=\"Text input with 2 dropdown buttons\">\n    <button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">Dropdown</button>\n    <ul class=\"dropdown-menu dropdown-menu-end\">\n      <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\n      <li><hr class=\"dropdown-divider\"></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Separated link</a></li>\n    </ul>\n  </div>`} />",
+          "after": "<Example code={`<div class=\"bg-white p-2\" data-bs-theme=\"light\">\n<div class=\"input-group mb-3\">\n    <button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">Dropdown</button>\n    <ul class=\"dropdown-menu\">\n      <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\n      <li><hr class=\"dropdown-divider\"></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Separated link</a></li>\n    </ul>\n    <input type=\"text\" class=\"form-control\" aria-label=\"Text input with dropdown button\">\n  </div>\n\n  <div class=\"input-group mb-3\">\n    <input type=\"text\" class=\"form-control\" aria-label=\"Text input with dropdown button\">\n    <button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">Dropdown</button>\n    <ul class=\"dropdown-menu dropdown-menu-end\">\n      <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\n      <li><hr class=\"dropdown-divider\"></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Separated link</a></li>\n    </ul>\n  </div>\n\n  <div class=\"input-group\">\n    <button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">Dropdown</button>\n    <ul class=\"dropdown-menu\">\n      <li><a class=\"dropdown-item\" href=\"#\">Action before</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Another action before</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\n      <li><hr class=\"dropdown-divider\"></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Separated link</a></li>\n    </ul>\n    <input type=\"text\" class=\"form-control\" aria-label=\"Text input with 2 dropdown buttons\">\n    <button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">Dropdown</button>\n    <ul class=\"dropdown-menu dropdown-menu-end\">\n      <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\n      <li><hr class=\"dropdown-divider\"></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Separated link</a></li>\n    </ul>\n  </div>\n</div>`} />",
+          "count": 1,
+          "reason": "Raw semantic outline/link example requires a fixed light local context. Native white panel and local light mode travel with live markup, copy and editor export; all component APIs/geometry remain native."
+        },
+        {
+          "before": "<Example code={`<div class=\"input-group mb-3\">\n    <button type=\"button\" class=\"btn btn-outline-secondary\">Action</button>\n    <button type=\"button\" class=\"btn btn-outline-secondary dropdown-toggle dropdown-toggle-split\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n      <span class=\"visually-hidden\">Toggle Dropdown</span>\n    </button>\n    <ul class=\"dropdown-menu\">\n      <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\n      <li><hr class=\"dropdown-divider\"></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Separated link</a></li>\n    </ul>\n    <input type=\"text\" class=\"form-control\" aria-label=\"Text input with segmented dropdown button\">\n  </div>\n\n  <div class=\"input-group\">\n    <input type=\"text\" class=\"form-control\" aria-label=\"Text input with segmented dropdown button\">\n    <button type=\"button\" class=\"btn btn-outline-secondary\">Action</button>\n    <button type=\"button\" class=\"btn btn-outline-secondary dropdown-toggle dropdown-toggle-split\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n      <span class=\"visually-hidden\">Toggle Dropdown</span>\n    </button>\n    <ul class=\"dropdown-menu dropdown-menu-end\">\n      <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\n      <li><hr class=\"dropdown-divider\"></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Separated link</a></li>\n    </ul>\n  </div>`} />",
+          "after": "<Example code={`<div class=\"bg-white p-2\" data-bs-theme=\"light\">\n<div class=\"input-group mb-3\">\n    <button type=\"button\" class=\"btn btn-outline-secondary\">Action</button>\n    <button type=\"button\" class=\"btn btn-outline-secondary dropdown-toggle dropdown-toggle-split\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n      <span class=\"visually-hidden\">Toggle Dropdown</span>\n    </button>\n    <ul class=\"dropdown-menu\">\n      <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\n      <li><hr class=\"dropdown-divider\"></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Separated link</a></li>\n    </ul>\n    <input type=\"text\" class=\"form-control\" aria-label=\"Text input with segmented dropdown button\">\n  </div>\n\n  <div class=\"input-group\">\n    <input type=\"text\" class=\"form-control\" aria-label=\"Text input with segmented dropdown button\">\n    <button type=\"button\" class=\"btn btn-outline-secondary\">Action</button>\n    <button type=\"button\" class=\"btn btn-outline-secondary dropdown-toggle dropdown-toggle-split\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n      <span class=\"visually-hidden\">Toggle Dropdown</span>\n    </button>\n    <ul class=\"dropdown-menu dropdown-menu-end\">\n      <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\n      <li><hr class=\"dropdown-divider\"></li>\n      <li><a class=\"dropdown-item\" href=\"#\">Separated link</a></li>\n    </ul>\n  </div>\n</div>`} />",
+          "count": 1,
+          "reason": "Raw semantic outline/link example requires a fixed light local context. Native white panel and local light mode travel with live markup, copy and editor export; all component APIs/geometry remain native."
+        },
+        {
+          "before": "<Example code={`<div class=\"input-group mb-3\">\n    <label class=\"input-group-text\" for=\"inputGroupSelect01\">Options</label>\n    <select class=\"form-select\" id=\"inputGroupSelect01\">\n      <option selected>Choose...</option>\n      <option value=\"1\">One</option>\n      <option value=\"2\">Two</option>\n      <option value=\"3\">Three</option>\n    </select>\n  </div>\n\n  <div class=\"input-group mb-3\">\n    <select class=\"form-select\" id=\"inputGroupSelect02\">\n      <option selected>Choose...</option>\n      <option value=\"1\">One</option>\n      <option value=\"2\">Two</option>\n      <option value=\"3\">Three</option>\n    </select>\n    <label class=\"input-group-text\" for=\"inputGroupSelect02\">Options</label>\n  </div>\n\n  <div class=\"input-group mb-3\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\">Button</button>\n    <select class=\"form-select\" id=\"inputGroupSelect03\" aria-label=\"Example select with button addon\">\n      <option selected>Choose...</option>\n      <option value=\"1\">One</option>\n      <option value=\"2\">Two</option>\n      <option value=\"3\">Three</option>\n    </select>\n  </div>\n\n  <div class=\"input-group\">\n    <select class=\"form-select\" id=\"inputGroupSelect04\" aria-label=\"Example select with button addon\">\n      <option selected>Choose...</option>\n      <option value=\"1\">One</option>\n      <option value=\"2\">Two</option>\n      <option value=\"3\">Three</option>\n    </select>\n    <button class=\"btn btn-outline-secondary\" type=\"button\">Button</button>\n  </div>`} />",
+          "after": "<Example code={`<div class=\"bg-white p-2\" data-bs-theme=\"light\">\n<div class=\"input-group mb-3\">\n    <label class=\"input-group-text\" for=\"inputGroupSelect01\">Options</label>\n    <select class=\"form-select\" id=\"inputGroupSelect01\">\n      <option selected>Choose...</option>\n      <option value=\"1\">One</option>\n      <option value=\"2\">Two</option>\n      <option value=\"3\">Three</option>\n    </select>\n  </div>\n\n  <div class=\"input-group mb-3\">\n    <select class=\"form-select\" id=\"inputGroupSelect02\">\n      <option selected>Choose...</option>\n      <option value=\"1\">One</option>\n      <option value=\"2\">Two</option>\n      <option value=\"3\">Three</option>\n    </select>\n    <label class=\"input-group-text\" for=\"inputGroupSelect02\">Options</label>\n  </div>\n\n  <div class=\"input-group mb-3\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\">Button</button>\n    <select class=\"form-select\" id=\"inputGroupSelect03\" aria-label=\"Example select with button addon\">\n      <option selected>Choose...</option>\n      <option value=\"1\">One</option>\n      <option value=\"2\">Two</option>\n      <option value=\"3\">Three</option>\n    </select>\n  </div>\n\n  <div class=\"input-group\">\n    <select class=\"form-select\" id=\"inputGroupSelect04\" aria-label=\"Example select with button addon\">\n      <option selected>Choose...</option>\n      <option value=\"1\">One</option>\n      <option value=\"2\">Two</option>\n      <option value=\"3\">Three</option>\n    </select>\n    <button class=\"btn btn-outline-secondary\" type=\"button\">Button</button>\n  </div>\n</div>`} />",
+          "count": 1,
+          "reason": "Raw semantic outline/link example requires a fixed light local context. Native white panel and local light mode travel with live markup, copy and editor export; all component APIs/geometry remain native."
+        },
+        {
+          "before": "<Example code={`<div class=\"input-group mb-3\">\n    <label class=\"input-group-text\" for=\"inputGroupFile01\">Upload</label>\n    <input type=\"file\" class=\"form-control\" id=\"inputGroupFile01\">\n  </div>\n\n  <div class=\"input-group mb-3\">\n    <input type=\"file\" class=\"form-control\" id=\"inputGroupFile02\">\n    <label class=\"input-group-text\" for=\"inputGroupFile02\">Upload</label>\n  </div>\n\n  <div class=\"input-group mb-3\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\" id=\"inputGroupFileAddon03\">Button</button>\n    <input type=\"file\" class=\"form-control\" id=\"inputGroupFile03\" aria-describedby=\"inputGroupFileAddon03\" aria-label=\"Upload\">\n  </div>\n\n  <div class=\"input-group\">\n    <input type=\"file\" class=\"form-control\" id=\"inputGroupFile04\" aria-describedby=\"inputGroupFileAddon04\" aria-label=\"Upload\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\" id=\"inputGroupFileAddon04\">Button</button>\n  </div>`} />",
+          "after": "<Example code={`<div class=\"bg-white p-2\" data-bs-theme=\"light\">\n<div class=\"input-group mb-3\">\n    <label class=\"input-group-text\" for=\"inputGroupFile01\">Upload</label>\n    <input type=\"file\" class=\"form-control\" id=\"inputGroupFile01\">\n  </div>\n\n  <div class=\"input-group mb-3\">\n    <input type=\"file\" class=\"form-control\" id=\"inputGroupFile02\">\n    <label class=\"input-group-text\" for=\"inputGroupFile02\">Upload</label>\n  </div>\n\n  <div class=\"input-group mb-3\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\" id=\"inputGroupFileAddon03\">Button</button>\n    <input type=\"file\" class=\"form-control\" id=\"inputGroupFile03\" aria-describedby=\"inputGroupFileAddon03\" aria-label=\"Upload\">\n  </div>\n\n  <div class=\"input-group\">\n    <input type=\"file\" class=\"form-control\" id=\"inputGroupFile04\" aria-describedby=\"inputGroupFileAddon04\" aria-label=\"Upload\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\" id=\"inputGroupFileAddon04\">Button</button>\n  </div>\n</div>`} />",
+          "count": 1,
+          "reason": "Raw semantic outline/link example requires a fixed light local context. Native white panel and local light mode travel with live markup, copy and editor export; all component APIs/geometry remain native."
+        }
+      ],
+      "lineEndings": "LF",
+      "afterSHA256": "084f5002c852806d3a8bcc77194554439fabb72096f24e6a0ce14c1d0b0200ae"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/forms/checks-radios.mdx",
+      "beforeSHA256": "75baa32a15b78696859f6970651218e1c13d36e4a9cbe532084e873d8ed7bb8e",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/forms/checks-radios.mdx",
+      "edits": [
+        {
+          "before": "<Example code={`<input type=\"checkbox\" class=\"btn-check\" id=\"btn-check-outlined\" autocomplete=\"off\">\n<label class=\"btn btn-outline-primary\" for=\"btn-check-outlined\">Single toggle</label><br>\n\n<input type=\"checkbox\" class=\"btn-check\" id=\"btn-check-2-outlined\" checked autocomplete=\"off\">\n<label class=\"btn btn-outline-secondary\" for=\"btn-check-2-outlined\">Checked</label><br>\n\n<input type=\"radio\" class=\"btn-check\" name=\"options-outlined\" id=\"success-outlined\" autocomplete=\"off\" checked>\n<label class=\"btn btn-outline-success\" for=\"success-outlined\">Checked success radio</label>\n\n<input type=\"radio\" class=\"btn-check\" name=\"options-outlined\" id=\"danger-outlined\" autocomplete=\"off\">\n<label class=\"btn btn-outline-danger\" for=\"danger-outlined\">Danger radio</label>`} />",
+          "after": "<Example code={`<div class=\"bg-white p-2\" data-bs-theme=\"light\">\n<input type=\"checkbox\" class=\"btn-check\" id=\"btn-check-outlined\" autocomplete=\"off\">\n<label class=\"btn btn-outline-primary\" for=\"btn-check-outlined\">Single toggle</label><br>\n\n<input type=\"checkbox\" class=\"btn-check\" id=\"btn-check-2-outlined\" checked autocomplete=\"off\">\n<label class=\"btn btn-outline-secondary\" for=\"btn-check-2-outlined\">Checked</label><br>\n\n<input type=\"radio\" class=\"btn-check\" name=\"options-outlined\" id=\"success-outlined\" autocomplete=\"off\" checked>\n<label class=\"btn btn-outline-success\" for=\"success-outlined\">Checked success radio</label>\n\n<input type=\"radio\" class=\"btn-check\" name=\"options-outlined\" id=\"danger-outlined\" autocomplete=\"off\">\n<label class=\"btn btn-outline-danger\" for=\"danger-outlined\">Danger radio</label>\n</div>`} />",
+          "count": 1,
+          "reason": "Raw semantic outline/link example requires a fixed light local context. Native white panel and local light mode travel with live markup, copy and editor export; all component APIs/geometry remain native."
+        }
+      ],
+      "lineEndings": "LF",
+      "afterSHA256": "9ace154b0e9e368a28d279cd39bea9964b278a5d899eb1bc9eec10699671eefc"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/helpers/stacks.mdx",
+      "beforeSHA256": "32469eeab1a7ba6d14b771187a862251cae84c14bb9c0f00e90e443b70cdf97e",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/helpers/stacks.mdx",
+      "edits": [
+        {
+          "before": "<Example code={`<div class=\"vstack gap-2 col-md-5 mx-auto\">\n    <button type=\"button\" class=\"btn btn-secondary\">Save changes</button>\n    <button type=\"button\" class=\"btn btn-outline-secondary\">Cancel</button>\n  </div>`} />",
+          "after": "<Example code={`<div class=\"bg-white p-2\" data-bs-theme=\"light\">\n<div class=\"vstack gap-2 col-md-5 mx-auto\">\n    <button type=\"button\" class=\"btn btn-secondary\">Save changes</button>\n    <button type=\"button\" class=\"btn btn-outline-secondary\">Cancel</button>\n  </div>\n</div>`} />",
+          "count": 1,
+          "reason": "Raw semantic outline/link example requires a fixed light local context. Native white panel and local light mode travel with live markup, copy and editor export; all component APIs/geometry remain native."
+        },
+        {
+          "before": "<Example code={`<div class=\"hstack gap-3\">\n    <input class=\"form-control me-auto\" type=\"text\" placeholder=\"Add your item here...\" aria-label=\"Add your item here...\">\n    <button type=\"button\" class=\"btn btn-secondary\">Submit</button>\n    <div class=\"vr\"></div>\n    <button type=\"button\" class=\"btn btn-outline-danger\">Reset</button>\n  </div>`} />",
+          "after": "<Example code={`<div class=\"bg-white p-2\" data-bs-theme=\"light\">\n<div class=\"hstack gap-3\">\n    <input class=\"form-control me-auto\" type=\"text\" placeholder=\"Add your item here...\" aria-label=\"Add your item here...\">\n    <button type=\"button\" class=\"btn btn-secondary\">Submit</button>\n    <div class=\"vr\"></div>\n    <button type=\"button\" class=\"btn btn-outline-danger\">Reset</button>\n  </div>\n</div>`} />",
+          "count": 1,
+          "reason": "Raw semantic outline/link example requires a fixed light local context. Native white panel and local light mode travel with live markup, copy and editor export; all component APIs/geometry remain native."
+        }
+      ],
+      "lineEndings": "LF",
+      "afterSHA256": "661ecbdab1e82feddde1a0e6d6dfd848f91721abce4b2bb28749b82eea43e9bb"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/helpers/icon-link.mdx",
+      "beforeSHA256": "90962c9583b9cdd91b58b084b3c1960fd241b73d8570e207312c08c412b6f1da",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/helpers/icon-link.mdx",
+      "edits": [
+        {
+          "before": "<Example code={`<a class=\"icon-link icon-link-hover link-success link-underline-success link-underline-opacity-25\" href=\"#\">\n    Icon link\n    <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"bi\" viewBox=\"0 0 16 16\" aria-hidden=\"true\">\n      <path d=\"M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z\"/>\n    </svg>\n  </a>`} />",
+          "after": "<Example code={`<div class=\"bg-white p-2\" data-bs-theme=\"light\">\n<a class=\"icon-link icon-link-hover link-success link-underline-success link-underline-opacity-25\" href=\"#\">\n    Icon link\n    <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"bi\" viewBox=\"0 0 16 16\" aria-hidden=\"true\">\n      <path d=\"M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z\"/>\n    </svg>\n  </a>\n</div>`} />",
+          "count": 1,
+          "reason": "Raw semantic outline/link example requires a fixed light local context. Native white panel and local light mode travel with live markup, copy and editor export; all component APIs/geometry remain native."
+        },
+        {
+          "before": "<Example code={`<a class=\"icon-link icon-link-hover\" style=\"--bs-link-hover-color-rgb: 25, 135, 84;\" href=\"#\">\n    Icon link\n    <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"bi\" viewBox=\"0 0 16 16\" aria-hidden=\"true\">\n      <path d=\"M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z\"/>\n    </svg>\n  </a>`} />",
+          "after": "<Example code={`<div class=\"bg-white p-2\" data-bs-theme=\"light\">\n<a class=\"icon-link icon-link-hover\" style=\"--bs-link-hover-color-rgb: 0, 118, 108;\" href=\"#\">\n    Icon link\n    <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"bi\" viewBox=\"0 0 16 16\" aria-hidden=\"true\">\n      <path d=\"M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z\"/>\n    </svg>\n  </a>\n</div>`} />",
+          "count": 1,
+          "reason": "Use TQ success RGB in the custom-hover demonstration, with the same explicit local white/light context in preview, copied code and exported project; native hover variable/API and link geometry remain intact."
+        }
+      ],
+      "lineEndings": "LF",
+      "afterSHA256": "087fa4e344978172e661a414d2b95b903faa1dbdbbbde5826c674f7f2ef46ac5"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/utilities/borders.mdx",
+      "beforeSHA256": "1eccdd7c71d60576033494f0d4761e2ed476796feec066437a7085e226eeaa9a",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/utilities/borders.mdx",
+      "edits": [
+        {
+          "before": "class=\"h4 pb-2 mb-4 text-danger border-bottom border-danger\"",
+          "after": "class=\"h4 pb-2 mb-4 text-danger-emphasis border-bottom border-danger\"",
+          "count": 1,
+          "reason": "Ordinary dangerous heading uses mode-aware text emphasis; raw danger border utility and all geometry remain unchanged."
+        },
+        {
+          "before": "25, 135, 84",
+          "after": "0, 118, 108",
+          "count": 2,
+          "reason": "Correct API explanation to actual TQ success RGB (BarrierReefTealD2) emitted by the compiled variables; numerical alpha behaviour stays unchanged."
+        },
+        {
+          "before": "your computed `color` value",
+          "after": "your computed `border-color` value",
+          "count": 1,
+          "reason": "Name the actual property generated by the documented border utility."
+        }
+      ],
+      "lineEndings": "LF",
+      "afterSHA256": "5e6f2114f8b1d40da8677762829342fdcb6985a61834e5581ed27f825c322c9a"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/utilities/overflow.mdx",
+      "beforeSHA256": "077a21caa0d6101a1ed21612cf179d87d5eda4925c8233933487de055d12bc17",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/utilities/overflow.mdx",
+      "edits": [
+        {
+          "before": "<div class=\"overflow-auto ",
+          "after": "<div tabindex=\"0\" role=\"region\" aria-label=\"overflow-auto scrolling example\" class=\"overflow-auto ",
+          "count": 1,
+          "reason": "Expose actual intended overflow region to keyboard in every engine with a meaningful accessible name; preserve utility, dimensions and content."
+        },
+        {
+          "before": "<div class=\"overflow-scroll ",
+          "after": "<div tabindex=\"0\" role=\"region\" aria-label=\"overflow-scroll scrolling example\" class=\"overflow-scroll ",
+          "count": 1,
+          "reason": "Expose actual intended overflow region to keyboard in every engine with a meaningful accessible name; preserve utility, dimensions and content."
+        },
+        {
+          "before": "<div class=\"overflow-x-auto ",
+          "after": "<div tabindex=\"0\" role=\"region\" aria-label=\"overflow-x-auto scrolling example\" class=\"overflow-x-auto ",
+          "count": 1,
+          "reason": "Expose actual intended overflow region to keyboard in every engine with a meaningful accessible name; preserve utility, dimensions and content."
+        },
+        {
+          "before": "<div class=\"overflow-x-scroll ",
+          "after": "<div tabindex=\"0\" role=\"region\" aria-label=\"overflow-x-scroll scrolling example\" class=\"overflow-x-scroll ",
+          "count": 1,
+          "reason": "Expose actual intended overflow region to keyboard in every engine with a meaningful accessible name; preserve utility, dimensions and content."
+        },
+        {
+          "before": "<div class=\"overflow-y-auto ",
+          "after": "<div tabindex=\"0\" role=\"region\" aria-label=\"overflow-y-auto scrolling example\" class=\"overflow-y-auto ",
+          "count": 1,
+          "reason": "Expose actual intended overflow region to keyboard in every engine with a meaningful accessible name; preserve utility, dimensions and content."
+        },
+        {
+          "before": "<div class=\"overflow-y-scroll ",
+          "after": "<div tabindex=\"0\" role=\"region\" aria-label=\"overflow-y-scroll scrolling example\" class=\"overflow-y-scroll ",
+          "count": 1,
+          "reason": "Expose actual intended overflow region to keyboard in every engine with a meaningful accessible name; preserve utility, dimensions and content."
+        },
+        {
+          "before": "<div class=\"overflow-auto\">...</div>",
+          "after": "<div class=\"overflow-auto\" tabindex=\"0\" role=\"region\" aria-label=\"overflow-auto scrolling example\">...</div>",
+          "count": 1,
+          "reason": "Keep copyable overflow reference aligned with the accessible live region."
+        },
+        {
+          "before": "<div class=\"overflow-scroll\">...</div>",
+          "after": "<div class=\"overflow-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"overflow-scroll scrolling example\">...</div>",
+          "count": 1,
+          "reason": "Keep copyable overflow reference aligned with the accessible live region."
+        },
+        {
+          "before": "<div class=\"overflow-x-auto\">...</div>",
+          "after": "<div class=\"overflow-x-auto\" tabindex=\"0\" role=\"region\" aria-label=\"overflow-x-auto scrolling example\">...</div>",
+          "count": 1,
+          "reason": "Keep copyable overflow reference aligned with the accessible live region."
+        },
+        {
+          "before": "<div class=\"overflow-x-scroll\">...</div>",
+          "after": "<div class=\"overflow-x-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"overflow-x-scroll scrolling example\">...</div>",
+          "count": 1,
+          "reason": "Keep copyable overflow reference aligned with the accessible live region."
+        },
+        {
+          "before": "<div class=\"overflow-y-auto\">...</div>",
+          "after": "<div class=\"overflow-y-auto\" tabindex=\"0\" role=\"region\" aria-label=\"overflow-y-auto scrolling example\">...</div>",
+          "count": 1,
+          "reason": "Keep copyable overflow reference aligned with the accessible live region."
+        },
+        {
+          "before": "<div class=\"overflow-y-scroll\">...</div>",
+          "after": "<div class=\"overflow-y-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"overflow-y-scroll scrolling example\">...</div>",
+          "count": 1,
+          "reason": "Keep copyable overflow reference aligned with the accessible live region."
+        }
+      ],
+      "lineEndings": "LF",
+      "afterSHA256": "2aca8aca5a27f60f7e10e4bf9488062bc1a6f4823789043def9faecf3f06a0a7"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/helpers/focus-ring.mdx",
+      "beforeSHA256": "f2d260d9198ea379431aac6fbe12279b04bfdee0b563464c43e78e0929243f15",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/helpers/focus-ring.mdx",
+      "edits": [
+        {
+          "before": "<Example code={getData('theme-colors').map((themeColor) => `<p><a href=\"#\" class=\"d-inline-flex focus-ring focus-ring-${themeColor.name} py-1 px-2 text-decoration-none border rounded-2\">${themeColor.title} focus</a></p>`)} />",
+          "after": "<Example code={getData('theme-colors').map((themeColor) => `<p class=\"p-2${['info', 'light'].includes(themeColor.name) ? ' bg-dark text-light' : ''}\"><a href=\"#\" class=\"d-inline-flex focus-ring focus-ring-${themeColor.name}${['info', 'light'].includes(themeColor.name) ? ' text-light' : ''} py-1 px-2 text-decoration-none border rounded-2\">${themeColor.title} focus</a></p>`)} />",
+          "count": 1,
+          "reason": "Give bright info and light focus-ring utilities an explicit dark native context with readable link text; preserve their true ring colour, native link geometry and utility API."
+        },
+        {
+          "before": "Note that the light and dark variants may not be visible on all background colors given current color mode support.",
+          "after": "The information and light examples use explicit dark surfaces so their focus indicators remain visible. Check indicator contrast against the actual adjacent surface when choosing a utility.",
+          "count": 1,
+          "reason": "Explain supported focus-ring contexts without implying arbitrary utility and surface combinations conform."
+        },
+        {
+          "before": "<Example code={`<a href=\"#\" class=\"d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2\" style=\"--bs-focus-ring-color: rgba(var(--bs-success-rgb), .25)\">\n    Green focus ring\n  </a>`} />",
+          "after": "The 25% success-colour shadow below is a decorative demonstration. Keep a separate, sufficiently contrasting keyboard focus indicator on interactive controls.\n\n<Example code={`<div class=\"bg-white text-dark p-3\" data-bs-theme=\"light\">\n  <span aria-hidden=\"true\" class=\"d-inline-flex focus-ring py-1 px-2 border rounded-2\" style=\"--bs-focus-ring-color: rgba(var(--bs-success-rgb), .25); box-shadow: 0 0 0 var(--bs-focus-ring-width) var(--bs-focus-ring-color);\">&nbsp;</span>\n  <span class=\"ms-3\">25% success-colour decorative shadow</span>\n</div>`} />",
+          "count": 1,
+          "reason": "Preserve the actual25% custom focus-shadow variable on an empty decorative noninteractive specimen with a fully readable external label and matching copy/SDK markup. A low-contrast custom shadow is no longer the sole focus indication of an active link."
+        }
+      ],
+      "lineEndings": "LF",
+      "afterSHA256": "ea0375485ef36cd9ebd5708d09688257f06d0dd038f7139405c90149c5b83e3b"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/components/spinners.mdx",
+      "beforeSHA256": "f6fda2850fd57bfc988a3e022243fd280a49852b8af30d0c6bd6307dc84aa3cc",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/components/spinners.mdx",
+      "edits": [
+        {
+          "before": "spinner-border text-${themeColor.name}",
+          "after": "spinner-border text-${themeColor.name}-emphasis",
+          "count": 1,
+          "reason": "Use Bootstrap mode-aware emphasis colour utility for the essential spinner indicator on the native reading surface; preserve dimensions and animation."
+        },
+        {
+          "before": "spinner-grow text-${themeColor.name}",
+          "after": "spinner-grow text-${themeColor.name}-emphasis",
+          "count": 1,
+          "reason": "Use Bootstrap mode-aware emphasis colour utility for the essential spinner indicator on the native reading surface; preserve dimensions and animation."
+        },
+        {
+          "before": "You can use any of our text color utilities on the standard spinner.",
+          "after": "These examples use `.text-{color}-emphasis` utilities to keep the indicators visible on light and dark reading surfaces. Check non-text contrast when choosing another text utility or background.",
+          "count": 1,
+          "reason": "Document the actual accessible mode-aware colour variants without changing spinner APIs."
+        },
+        {
+          "before": "Here it is in blue, along with the supported variants.",
+          "after": "The examples below use the mode-aware emphasis variants on the page’s reading surface.",
+          "count": 1,
+          "reason": "Remove obsolete blue-palette guidance and describe the actual copied spinner utilities."
+        }
+      ],
+      "lineEndings": "LF",
+      "afterSHA256": "c699f6ddb8ff19ccba4421543b48a332b3fde6db4febc38a09e31211d7dc17a3"
+    },
+    {
+      "file": "docs-source/site/src/content/docs/components/progress.mdx",
+      "beforeSHA256": "8b11d5dc1d6cd061045696d350ced89f04b5b4201dc9ec941ebfdbab49e381ca",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/content/docs/components/progress.mdx",
+      "edits": [
+        {
+          "before": "<div class=\"progress\" role=\"progressbar\" aria-label=\"Info example\" aria-valuenow=\"50\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n    <div class=\"progress-bar bg-info\" style=\"width: 50%\">",
+          "after": "<div class=\"progress bg-dark\" role=\"progressbar\" aria-label=\"Info example\" aria-valuenow=\"50\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n    <div class=\"progress-bar bg-info\" style=\"width: 50%\">",
+          "count": 1,
+          "reason": "Give the existing progress track a contrasting native dark background for its unchanged bright fill; preserve all widths, labels and progress semantics."
+        },
+        {
+          "before": "<div class=\"progress\" role=\"progressbar\" aria-label=\"Warning example\" aria-valuenow=\"75\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n    <div class=\"progress-bar bg-warning\" style=\"width: 75%\">",
+          "after": "<div class=\"progress bg-dark\" role=\"progressbar\" aria-label=\"Warning example\" aria-valuenow=\"75\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n    <div class=\"progress-bar bg-warning\" style=\"width: 75%\">",
+          "count": 1,
+          "reason": "Give the existing progress track a contrasting native dark background for its unchanged bright fill; preserve all widths, labels and progress semantics."
+        },
+        {
+          "before": "<div class=\"progress\" role=\"progressbar\" aria-label=\"Info example\" aria-valuenow=\"50\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n    <div class=\"progress-bar text-bg-info\" style=\"width: 50%\">",
+          "after": "<div class=\"progress bg-dark\" role=\"progressbar\" aria-label=\"Info example\" aria-valuenow=\"50\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n    <div class=\"progress-bar text-bg-info\" style=\"width: 50%\">",
+          "count": 1,
+          "reason": "Give the existing progress track a contrasting native dark background for its unchanged bright fill; preserve all widths, labels and progress semantics."
+        },
+        {
+          "before": "<div class=\"progress\" role=\"progressbar\" aria-label=\"Warning example\" aria-valuenow=\"75\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n    <div class=\"progress-bar text-bg-warning\" style=\"width: 75%\">",
+          "after": "<div class=\"progress bg-dark\" role=\"progressbar\" aria-label=\"Warning example\" aria-valuenow=\"75\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n    <div class=\"progress-bar text-bg-warning\" style=\"width: 75%\">",
+          "count": 1,
+          "reason": "Give the existing progress track a contrasting native dark background for its unchanged bright fill; preserve all widths, labels and progress semantics."
+        },
+        {
+          "before": "<div class=\"progress\" role=\"progressbar\" aria-label=\"Segment three\" aria-valuenow=\"20\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 20%\">\n      <div class=\"progress-bar bg-info\">",
+          "after": "<div class=\"progress bg-dark\" role=\"progressbar\" aria-label=\"Segment three\" aria-valuenow=\"20\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 20%\">\n      <div class=\"progress-bar bg-info\">",
+          "count": 1,
+          "reason": "Give the existing progress track a contrasting native dark background for its unchanged bright fill; preserve all widths, labels and progress semantics."
+        },
+        {
+          "before": "<div class=\"progress\" role=\"progressbar\" aria-label=\"Info striped example\" aria-valuenow=\"50\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n    <div class=\"progress-bar progress-bar-striped bg-info\" style=\"width: 50%\">",
+          "after": "<div class=\"progress bg-dark\" role=\"progressbar\" aria-label=\"Info striped example\" aria-valuenow=\"50\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n    <div class=\"progress-bar progress-bar-striped bg-info\" style=\"width: 50%\">",
+          "count": 1,
+          "reason": "Give the existing progress track a contrasting native dark background for its unchanged bright fill; preserve all widths, labels and progress semantics."
+        },
+        {
+          "before": "<div class=\"progress\" role=\"progressbar\" aria-label=\"Warning striped example\" aria-valuenow=\"75\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n    <div class=\"progress-bar progress-bar-striped bg-warning\" style=\"width: 75%\">",
+          "after": "<div class=\"progress bg-dark\" role=\"progressbar\" aria-label=\"Warning striped example\" aria-valuenow=\"75\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n    <div class=\"progress-bar progress-bar-striped bg-warning\" style=\"width: 75%\">",
+          "count": 1,
+          "reason": "Give the existing progress track a contrasting native dark background for its unchanged bright fill; preserve all widths, labels and progress semantics."
+        },
+        {
+          "before": "<div class=\"progress-stacked\">",
+          "after": "<div class=\"progress-stacked bg-dark\">",
+          "count": 1,
+          "reason": "Keep the stacked final info segment distinguishable from the actual unused track, using the existing container background without geometry changes."
+        },
+        {
+          "before": "Use background utility classes to change the appearance of individual progress bars.",
+          "after": "Use background utility classes to change the appearance of individual progress bars. Bright info, warning and light fills need a contrasting track; the examples use `.bg-dark` on their existing `.progress` container. Keep labels readable against the fill.",
+          "count": 1,
+          "reason": "Explain the supported bright-fill/track context shown in copied native progress examples."
+        },
+        {
+          "before": "<div class=\"progress-stacked bg-dark\">\n    <div class=\"progress\" role=\"progressbar\" aria-label=\"Segment one\" aria-valuenow=\"15\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 15%\">\n      <div class=\"progress-bar\"></div>\n    </div>\n    <div class=\"progress\" role=\"progressbar\" aria-label=\"Segment two\" aria-valuenow=\"30\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 30%\">\n      <div class=\"progress-bar bg-success\"></div>\n    </div>\n    <div class=\"progress bg-dark\" role=\"progressbar\" aria-label=\"Segment three\" aria-valuenow=\"20\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 20%\">\n      <div class=\"progress-bar bg-info\"></div>\n    </div>\n  </div>`}",
+          "after": "<div class=\"progress-stacked bg-dark\">\n    <div class=\"progress\" role=\"progressbar\" aria-label=\"Segment one\" aria-valuenow=\"15\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 15%\">\n      <div class=\"progress-bar\"></div>\n    </div>\n    <div class=\"progress\" role=\"progressbar\" aria-label=\"Segment two\" aria-valuenow=\"30\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 30%\">\n      <div class=\"progress-bar bg-success\"></div>\n    </div>\n    <div class=\"progress bg-dark\" role=\"progressbar\" aria-label=\"Segment three\" aria-valuenow=\"20\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 20%\">\n      <div class=\"progress-bar bg-info\"></div>\n    </div>\n  </div>\n  <p>Segment one: 15%. Segment two: 30%. Segment three: 20%.</p>`}",
+          "count": 1,
+          "reason": "Add an exact visible segment-name/percentage equivalent outside the native stacked track; preserve all bar widths/heights/ARIA, avoid clipped internal labels at enlarged text, and make values understandable without colour."
+        },
+        {
+          "before": "rather than the `.progress-bar`s.",
+          "after": "rather than the `.progress-bar`s. The visible text below names every segment and its percentage, so the amounts remain understandable without distinguishing adjacent colours. Keep this equivalent outside the track to avoid clipping labels when text is enlarged.",
+          "count": 1,
+          "reason": "Explain the explicit accessible content correction in the copyable stacked example without implying every adjacent fill contrast passes."
+        }
+      ],
+      "lineEndings": "LF",
+      "afterSHA256": "eafcf11f67dfec4a95dcee7e0fdf4ce0d4f85ffcc8751f61c12d8f73779ae7df"
+    },
+    {
+      "file": "docs-source/site/src/scss/_content.scss",
+      "beforeSHA256": "bc2f65c98d5bd920ce7f7b2c1378453735612f9eb631cc9e6e3da48bff916996",
+      "beforeFile": "qa/remediation-source/docs/before/docs-source/site/src/scss/_content.scss",
+      "edits": [
+        {
+          "before": "--bs-btn-focus-box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .2);",
+          "after": "--bs-btn-focus-box-shadow: 0 0 0 .25rem #fff;",
+          "count": 1,
+          "reason": "Measured native blue-mode focus ring: replace insufficient .2 white ink with opaque white; preserve original ring lengths and keep printed ScssDocs recipe identical to live demonstration."
+        }
+      ],
+      "lineEndings": "LF",
+      "afterSHA256": "44eb18e8d4387a6d53835ff321bae9badcf9efd6a2f19eac69bac58ab3453ba5"
+    }
+  ],
+  "cacheManifestSHA256": "226b30399bfb84a3f19030fb81d47a0a644db78b63d000fe7e3be2f30e12167b"
+}

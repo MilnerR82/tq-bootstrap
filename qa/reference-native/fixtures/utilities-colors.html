@@ -1,0 +1,83 @@
+<!doctype html><html lang="en" data-bs-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>utilities-colors native comparison fixture</title><link id="framework" rel="stylesheet" href="/qa/reference-native/css/bootstrap.css"><link rel="stylesheet" href="/qa/reference-native/docs-themed.css"></head><body><main class="bd-content" style="margin:16px">   <div class="bd-callout bd-callout-info"> <p><strong>Accessibility tip:</strong> Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies like screen readers. Please ensure the meaning is obvious from the content itself (e.g., the visible text with a <a href="/docs/5.3/getting-started/accessibility/#color-contrast"><em>sufficient</em> color contrast</a>) or is included through alternative means, such as additional text hidden with the <code>.visually-hidden</code> class.</p> </div>
+<h2 id="colors">Colors<a class="anchor-link" aria-label="Link to this section: Colors" href="#colors"> </a></h2>
+<p>Colorize text with color utilities. If you want to colorize links, you can use the <a href="/docs/5.3/helpers/colored-links"><code>.link-*</code> helper classes</a> which have <code>:hover</code> and <code>:focus</code> states.</p>
+<div class="bd-callout bd-callout-info"> <p>Color utilities like <code>.text-*</code> that generated from our original <code>$theme-colors</code> Sass map don’t yet respond to color modes, however, any <code>.text-*-emphasis</code> utility will. This will be resolved in v6.</p> </div>
+<div class="bd-callout bd-callout-warning"> <p><strong>Transparency demonstration:</strong> empty decorative colour blocks show the actual utility opacity. Their readable labels stay fully opaque. The live example, copyable markup and editor export use the same classes and values. Do not reduce essential reading text below its required contrast.</p> </div>
+<p>Deprecated alpha examples: black text at 50% on white, and white text at 50% on dark.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <p class="text-primary bg-white">.text-primary</p>
+<p class="text-primary-emphasis">.text-primary-emphasis</p>
+<p class="text-secondary bg-white">.text-secondary</p>
+<p class="text-secondary-emphasis">.text-secondary-emphasis</p>
+<p class="text-success bg-white">.text-success</p>
+<p class="text-success-emphasis">.text-success-emphasis</p>
+<p class="text-danger bg-white">.text-danger</p>
+<p class="text-danger-emphasis">.text-danger-emphasis</p>
+<p class="text-warning bg-dark">.text-warning</p>
+<p class="text-warning-emphasis">.text-warning-emphasis</p>
+<p class="text-info bg-dark">.text-info</p>
+<p class="text-info-emphasis">.text-info-emphasis</p>
+<p class="text-light bg-dark">.text-light</p>
+<p class="text-light-emphasis">.text-light-emphasis</p>
+<p class="text-dark bg-white">.text-dark</p>
+<p class="text-dark-emphasis">.text-dark-emphasis</p>
+
+<p class="text-body">.text-body</p>
+<p class="text-body-emphasis">.text-body-emphasis</p>
+<p class="text-body-secondary">.text-body-secondary</p>
+<p class="text-body-tertiary">.text-body-tertiary</p>
+
+<p class="text-black bg-white">.text-black</p>
+<p class="text-white bg-dark">.text-white</p>
+<div class="bg-white p-2 d-flex align-items-center gap-2"><span class="text-black-50 d-inline-block p-3" style="background-color: currentColor;" aria-hidden="true"></span><span class="text-black">.text-black-50 (50% opacity)</span></div>
+<div class="bg-dark p-2 d-flex align-items-center gap-2"><span class="text-white-50 d-inline-block p-3" style="background-color: currentColor;" aria-hidden="true"></span><span class="text-white">.text-white-50 (50% opacity)</span></div> </div>  <div>   </div>  </div>
+<div class="bd-callout bd-callout-warning"> <p><strong>Deprecation:</strong> With the addition of <code>.text-opacity-*</code> utilities and CSS variables for text utilities, <code>.text-black-50</code> and <code>.text-white-50</code> are deprecated as of v5.1.0. They’ll be removed in v6.0.0.</p> </div>
+<div class="bd-callout bd-callout-warning"> <p><strong>Deprecation:</strong> With the addition of the expanded theme colors and variables, the <code>.text-muted</code> utility has been deprecated as of v5.3.0. Its default value has also been reassigned to the new <code>--bs-secondary-color</code> CSS variable to better support color modes. It will be removed in v6.0.0.</p> </div>
+<h2 id="opacity">Opacity<a class="anchor-link" aria-label="Link to this section: Opacity" href="#opacity"> </a></h2>
+<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">Added in v5.1.0</small>
+<p>As of v5.1.0, text color utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.</p>
+<h3 id="how-it-works">How it works<a class="anchor-link" aria-label="Link to this section: How it works" href="#how-it-works"> </a></h3>
+<p>Consider our default <code>.text-primary</code> utility.</p>
+ <div class="bd-code-snippet">   </div>
+<p>We use an RGB version of our <code>--bs-primary</code> (with the value of <code>227, 27, 35</code>) CSS variable and attached a second CSS variable, <code>--bs-text-opacity</code>, for the alpha transparency (with a default value <code>1</code> thanks to a local CSS variable). That means anytime you use <code>.text-primary</code> now, your computed <code>color</code> value is <code>rgba(227, 27, 35, 1)</code>. The local CSS variable inside each <code>.text-*</code> class avoids inheritance issues so nested instances of the utilities don’t automatically have a modified alpha transparency.</p>
+<h3 id="example">Example<a class="anchor-link" aria-label="Link to this section: Example" href="#example"> </a></h3>
+<p>To change that opacity, override <code>--bs-text-opacity</code> via custom styles or inline styles.</p>
+<p>Example values: primary text at 100% and 50% opacity.</p>
+<div class="bd-callout bd-callout-warning"> <p><strong>Transparency demonstration:</strong> empty decorative colour blocks show the actual utility opacity. Their readable labels stay fully opaque. The live example, copyable markup and editor export use the same classes and values. Do not reduce essential reading text below its required contrast.</p> </div>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <div class="d-flex align-items-center gap-2"><span class="text-primary d-inline-block p-3" style="background-color: currentColor;" aria-hidden="true"></span><span>Primary colour, 100% opacity</span></div>
+<div class="d-flex align-items-center gap-2"><span class="text-primary d-inline-block p-3" style="background-color: currentColor; --bs-text-opacity: .5;" aria-hidden="true"></span><span>Primary colour, 50% opacity</span></div> </div>  <div>   </div>  </div>
+<p>Or, choose from any of the <code>.text-opacity</code> utilities:</p>
+<p>Example values: primary text at 100%, 75%, 50% and 25% opacity.</p>
+<div class="bd-callout bd-callout-warning"> <p><strong>Transparency demonstration:</strong> empty decorative colour blocks show the actual utility opacity. Their readable labels stay fully opaque. The live example, copyable markup and editor export use the same classes and values. Do not reduce essential reading text below its required contrast.</p> </div>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <div class="d-flex align-items-center gap-2"><span class="text-primary d-inline-block p-3" style="background-color: currentColor;" aria-hidden="true"></span><span>Primary colour, 100% opacity</span></div>
+<div class="d-flex align-items-center gap-2"><span class="text-primary text-opacity-75 d-inline-block p-3" style="background-color: currentColor;" aria-hidden="true"></span><span>Primary colour, 75% opacity</span></div>
+<div class="d-flex align-items-center gap-2"><span class="text-primary text-opacity-50 d-inline-block p-3" style="background-color: currentColor;" aria-hidden="true"></span><span>Primary colour, 50% opacity</span></div>
+<div class="d-flex align-items-center gap-2"><span class="text-primary text-opacity-25 d-inline-block p-3" style="background-color: currentColor;" aria-hidden="true"></span><span>Primary colour, 25% opacity</span></div> </div>  <div>   </div>  </div>
+<h2 id="specificity">Specificity<a class="anchor-link" aria-label="Link to this section: Specificity" href="#specificity"> </a></h2>
+<p>Sometimes contextual classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element’s content in a <code>&lt;div&gt;</code> or more semantic element with the desired class.</p>
+<h2 id="css">CSS<a class="anchor-link" aria-label="Link to this section: CSS" href="#css"> </a></h2>
+<p>In addition to the following Sass functionality, consider reading about our included <a href="/docs/5.3/customize/css-variables">CSS custom properties</a> (aka CSS variables) for colors and more.</p>
+<h3 id="sass-variables">Sass variables<a class="anchor-link" aria-label="Link to this section: Sass variables" href="#sass-variables"> </a></h3>
+<p>Most <code>color</code> utilities are generated by our theme colors, reassigned from our generic color palette variables.</p>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>
+<p>Grayscale colors are also available, but only a subset are used to generate any utilities.</p>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>
+<p>Variables for setting colors in <code>.text-*-emphasis</code> utilities in light and dark mode:</p>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>
+<h3 id="sass-maps">Sass maps<a class="anchor-link" aria-label="Link to this section: Sass maps" href="#sass-maps"> </a></h3>
+<p>Theme colors are then put into a Sass map so we can loop over them to generate our utilities, component modifiers, and more.</p>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>
+<p>Grayscale colors are also available as a Sass map. <strong>This map is not used to generate any utilities.</strong></p>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>
+<p>RGB colors are generated from a separate Sass map:</p>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>
+<p>Color opacities build on that with their own map that’s consumed by the utilities API:</p>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>
+<p>Color mode adaptive text colors are also available as a Sass map:</p>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>
+<h3 id="sass-utilities-api">Sass utilities API<a class="anchor-link" aria-label="Link to this section: Sass utilities API" href="#sass-utilities-api"> </a></h3>
+<p>Color utilities are declared in our utilities API in <code>scss/_utilities.scss</code>. <a href="/docs/5.3/utilities/api#using-the-api">Learn how to use the utilities API.</a></p>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>  </main><script src="/dist/js/bootstrap.bundle.min.js"></script></body></html>

@@ -1,0 +1,446 @@
+{
+  "generatedAt": "2026-10-22T02:24:43.314Z",
+  "scope": "Exact colour-only substitutions in native Bootstrap documentation rendered UI outside assets/examples. Ordered replay from pinned upstream must reproduce each current source byte-for-byte.",
+  "files": [
+    {
+      "path": "site/src/layouts/ExamplesLayout.astro",
+      "upstreamSha256": "fcf9edcb8b4dfaaea1f33d5f52c8f1c1d6c84649dd82f80d55062eecb69e6384",
+      "currentSha256": "51394c716adb3c460da49f15efad32e50e68a3869a6430cc33d1fcec0e747ac6",
+      "substitutions": [
+        {
+          "from": "rgba(0, 0, 0, 0.1)",
+          "to": "rgba(55, 50, 52, 0.1)",
+          "reason": "Use TQ charcoal for the original divider surface and shadow paint; retain opacity and shadow geometry.",
+          "count": 2
+        },
+        {
+          "from": "rgba(0, 0, 0, 0.15)",
+          "to": "rgba(55, 50, 52, 0.15)",
+          "reason": "Use TQ charcoal for the original divider border and shadow paint; retain opacity and shadow geometry.",
+          "count": 2
+        },
+        {
+          "from": "--bd-violet-bg: #712cf9;",
+          "to": "--bd-violet-bg: #e31b23;",
+          "reason": "Theme the native example colour-mode toggle with TQ red.",
+          "count": 1
+        },
+        {
+          "from": "--bd-violet-rgb: 112.520718, 44.062154, 249.437846;",
+          "to": "--bd-violet-rgb: 227, 27, 35;",
+          "reason": "Use matching TQ red RGB channels for the native focus shadow.",
+          "count": 1
+        },
+        {
+          "from": "#6528e0",
+          "to": "#8a0008",
+          "reason": "Replace the native purple hover paint with TQ dark red.",
+          "count": 2
+        },
+        {
+          "from": "#5a23c8",
+          "to": "#8a0008",
+          "reason": "Replace the native purple pressed paint with TQ dark red.",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "path": "site/src/libs/placeholder.ts",
+      "upstreamSha256": "7c00dd7353d36a66175ccc3170b8fd9ff05071fa8a118f7f1cfdaee695081986",
+      "currentSha256": "f9c074c43a2e9c78b6d5da2d2cf826c2e434f0762c0040c0bcb745f945b60a36",
+      "substitutions": [
+        {
+          "from": "background: getData('grays')[5].hex,",
+          "to": "background: '#696567',",
+          "reason": "Use the TQ muted neutral as the paint default for generated placeholders; keep all option, SVG and data-URI rendering logic.",
+          "kind": "paint-expression",
+          "property": "background",
+          "count": 1
+        },
+        {
+          "from": "color: getData('grays')[2].hex,",
+          "to": "color: '#fff',",
+          "reason": "Use white text on the TQ muted placeholder default; keep all option, SVG and data-URI rendering logic.",
+          "kind": "paint-expression",
+          "property": "color",
+          "count": 1
+        },
+        {
+          "from": "#868e96",
+          "to": "#696567",
+          "count": 1,
+          "reason": "Keep the original JSDoc default colour literal aligned with the themed placeholder surface."
+        },
+        {
+          "from": "#dee2e6",
+          "to": "#fff",
+          "count": 1,
+          "reason": "Keep the original JSDoc default colour literal aligned with the themed placeholder text."
+        }
+      ]
+    },
+    {
+      "path": "site/src/content/docs/components/carousel.mdx",
+      "upstreamSha256": "a7b125a7824c5875a6eff7a71449edffefe0933fb7097d5e3ce088ab506f2448",
+      "currentSha256": "a606a6f1172c4fe121e087e217f9bd30077d41ad0b3be1473976d4d6c65e67d5",
+      "substitutions": [
+        {
+          "from": "color=\"#555\" background=\"#777\"",
+          "to": "color=\"var(--bs-body-bg)\" background=\"var(--bs-body-color)\"",
+          "reason": "Use contrasting mode-aware TQ body paint so native captions and half-opacity white/ink controls remain legible without changing their opacity, geometry or behavior.",
+          "count": 9,
+          "kind": "paint-alias"
+        },
+        {
+          "from": "color=\"#444\" background=\"#666\"",
+          "to": "color=\"var(--bs-body-bg)\" background=\"var(--bs-body-color)\"",
+          "reason": "Use existing mode-aware Bootstrap paint variables so ordinary carousel labels, native captions and surfaces retain contrasting TQ paint in light and dark modes.",
+          "count": 9,
+          "kind": "paint-alias"
+        },
+        {
+          "from": "color=\"#333\" background=\"#555\"",
+          "to": "color=\"var(--bs-body-bg)\" background=\"var(--bs-emphasis-color)\"",
+          "reason": "Use existing mode-aware Bootstrap paint variables so ordinary carousel labels, native captions and surfaces retain contrasting TQ paint in light and dark modes.",
+          "count": 9,
+          "kind": "paint-alias"
+        },
+        {
+          "from": "color=\"#aaa\" background=\"#f5f5f5\"",
+          "to": "color=\"#373234\" background=\"#f1efed\"",
+          "reason": "Theme the first rendered dark carousel placeholder with TQ charcoal and warm neutral.",
+          "count": 1
+        },
+        {
+          "from": "color=\"#bbb\" background=\"#eee\"",
+          "to": "color=\"#373234\" background=\"#e1ddd8\"",
+          "reason": "Theme the second rendered dark carousel placeholder with TQ charcoal and divider neutral.",
+          "count": 1
+        },
+        {
+          "from": "color=\"#999\" background=\"#e5e5e5\"",
+          "to": "color=\"#373234\" background=\"#d7d2cb\"",
+          "reason": "Theme the third rendered dark carousel placeholder with TQ charcoal and koala neutral.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "site/src/content/docs/components/toasts.mdx",
+      "upstreamSha256": "fcbb37f0a2f9c05f746bd22a5ffbb9a9ed27511e1739961ae204df81e638d402",
+      "currentSha256": "4f41e917daab9f204495d21f9b587a5bb5d4fb176ad41e199fccae8f3acf3963",
+      "substitutions": [
+        {
+          "from": "background=\"#007aff\"",
+          "to": "background=\"#e31b23\"",
+          "reason": "Theme the native toast placeholder mark with TQ red, including copyable rendered markup.",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "path": "site/src/content/docs/components/navbar.mdx",
+      "upstreamSha256": "452f50254e6f65dcfb8063b8a9f1514fc971f6976a517f6d963dfc7d666ab4bd",
+      "currentSha256": "15884383d0e30b14094c772f63429819b4a9c5b6c569d0aa2f35ac96a808f62b",
+      "substitutions": [
+        {
+          "from": "background-color: #e3f2fd;",
+          "to": "background-color: #f1efed;",
+          "reason": "Theme the live custom-colour navbar examples and their copyable markup with the TQ warm neutral.",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "path": "site/src/content/docs/components/tooltips.mdx",
+      "upstreamSha256": "2dc4763a1c648abb9a07638a69b1dcc46d872acf7be2b7f21a51d83eee03513c",
+      "currentSha256": "8b968ac06286c74597e23a8034ae13cde666b8340e4685a58a251e2c2e1ac565",
+      "substitutions": [
+        {
+          "from": "fill=\"#563d7c\"",
+          "to": "fill=\"#373234\"",
+          "reason": "Theme the native non-brand tooltip SVG demo background with TQ charcoal.",
+          "count": 1
+        },
+        {
+          "from": "fill=\"#007bff\"",
+          "to": "fill=\"#e31b23\"",
+          "reason": "Theme the native non-brand tooltip SVG demo circle with TQ red.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "site/src/content/docs/components/placeholders.mdx",
+      "upstreamSha256": "8ca15469136c04b0f58ba40ee3dbaf595ff98cdbd28765d7d5144e51361f3353",
+      "currentSha256": "11ad6d34db739ce439dbe8c8f13afd9f0d04457acb26ca59d460a9589a519161",
+      "substitutions": [
+        {
+          "from": "background=\"#20c997\"",
+          "to": "background=\"#696567\"",
+          "reason": "Theme the native live placeholder loading image with TQ muted neutral.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "site/src/content/docs/forms/form-control.mdx",
+      "upstreamSha256": "e008e9b4e1776b982e672dcfd841dd2dfc3cfb632504938ee7e13d4059ab250b",
+      "currentSha256": "2453bdd419bf4c8c0d65224a4b97109cec4d335084ba73e1bf6ffb890fc73f73",
+      "substitutions": [
+        {
+          "from": "value=\"#563d7c\"",
+          "to": "value=\"#e31b23\"",
+          "reason": "Start the native colour-picker example at TQ red; preserve its full native user interaction and copyable markup.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "site/src/content/docs/utilities/flex.mdx",
+      "upstreamSha256": "435e02772c3a42546537ad86af7ae4bc84541f4eb68a749708bbe0726a3fbb07",
+      "currentSha256": "cd74019515d289fe85bfa53ff52905ed4b3778ed8af6941d670c20d837f1c1ba",
+      "substitutions": [
+        {
+          "from": "color=\"#999\" background=\"#e5e5e5\"",
+          "to": "color=\"#373234\" background=\"#e1ddd8\"",
+          "reason": "Theme live media-object placeholders with TQ charcoal and divider neutral.",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "path": "site/data/colors.yml",
+      "upstreamSha256": "6ca98146f67f7aa0c2314ee918b598cbd0a0d9983df192c0cedb6d9cd4508792",
+      "currentSha256": "2488dd03abfb4a491c603a679dd412a6ac1c62e80150444401de4e7b641455bf",
+      "substitutions": [
+        {
+          "from": "#0d6efd",
+          "to": "#2f4370",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#6610f2",
+          "to": "#091135",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#6f42c1",
+          "to": "#6c0162",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#d63384",
+          "to": "#f32a7c",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#dc3545",
+          "to": "#e31b23",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#fd7e14",
+          "to": "#ff4904",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#ffc107",
+          "to": "#ff4904",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#198754",
+          "to": "#00766c",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#20c997",
+          "to": "#00a89b",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#0dcaf0",
+          "to": "#00a89b",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#6c757d",
+          "to": "#696567",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#343a40",
+          "to": "#373234",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        }
+      ]
+    },
+    {
+      "path": "site/data/grays.yml",
+      "upstreamSha256": "5a3aa4ed7fb9693c17e429eaae0340b45ddf9e1ced0d6afac852fbf21d1ffb80",
+      "currentSha256": "a466cdf4e6d5ec191c39fd079ed117daf2165a1af060c2095e1361e75ce25e05",
+      "substitutions": [
+        {
+          "from": "#f8f9fa",
+          "to": "#f1efed",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#e9ecef",
+          "to": "#e1ddd8",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#dee2e6",
+          "to": "#d7d2cb",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#ced4da",
+          "to": "#d7d2cb",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#adb5bd",
+          "to": "#696567",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#868e96",
+          "to": "#696567",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#495057",
+          "to": "#696567",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#343a40",
+          "to": "#373234",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#212529",
+          "to": "#373234",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        }
+      ]
+    },
+    {
+      "path": "site/data/theme-colors.yml",
+      "upstreamSha256": "68b9cd838340487ff948b63234cf16c767864f81a2e45f6ef609c4471b04c13e",
+      "currentSha256": "62221e93bc4d85738d5171241f6594d03730d2db75c113c119cd355d57ef9eda",
+      "substitutions": [
+        {
+          "from": "#0d6efd",
+          "to": "#e31b23",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#6c757d",
+          "to": "#696567",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#28a745",
+          "to": "#00766c",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#dc3545",
+          "to": "#8a0008",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#ffc107",
+          "to": "#ff4904",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#17a2b8",
+          "to": "#00a89b",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#f8f9fa",
+          "to": "#f1efed",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#343a40",
+          "to": "#091135",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        }
+      ]
+    },
+    {
+      "path": "site/src/content/docs/customize/color.mdx",
+      "upstreamSha256": "d620a412c2a4e085befd15de51f8c1f20648572cc446cdb8a1d546d1c79902f9",
+      "currentSha256": "b586fc0bf10b790bdbdbd236a9e96cde82d825935cbd10c2ac033f9735eb1c50",
+      "substitutions": [
+        {
+          "from": "#adb5bd",
+          "to": "#696567",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        },
+        {
+          "from": "#000",
+          "to": "#373234",
+          "count": 1,
+          "reason": "Live Bootstrap palette hex label matches the corresponding expanded TQ Sass/CSS token; preserve every name, class, layout and contrast_color flag"
+        }
+      ]
+    }
+  ],
+  "preservedExceptions": [
+    {
+      "scope": "Original Bootstrap logo assets, official brand artwork and raster images",
+      "reason": "Artwork and brand provenance are preserved. Their intrinsic colours are outside the theme paint layer."
+    },
+    {
+      "scope": "Fenced instructional CSS/Sass, Code-only snippets, native source-reference swatches and upstream explanatory prose",
+      "reason": "These document the original Bootstrap source or author-selected customization values. Live palette data and live hex labels are substituted separately to match the TQ tokens; native source code excerpts remain labelled reference material."
+    },
+    {
+      "scope": "Original _syntax.scss and _search.scss paint values",
+      "reason": "The final _tq-docs.scss stylesheet already overrides their active paint tokens in light and dark modes; original source and native geometry are retained."
+    },
+    {
+      "scope": "Third-party services and externally loaded content",
+      "reason": "The local theme cannot recolour content or applications served outside this package."
+    }
+  ]
+}

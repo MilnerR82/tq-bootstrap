@@ -1,0 +1,596 @@
+{
+  "scope": "site/src/assets/examples",
+  "paletteAuthority": "src/scss/_tokens.scss",
+  "constraint": "Paint substitutions and existing Bootstrap mode-aware paint aliases; native markup, classes, content, dimensions, fonts, transforms, motion and data are preserved. Explicit narrow exceptions are named chart paint-option/theme-redraw integrations, the Cover contrast-paint-alpha correction, a local colour-only footer contrast rule and supplied dark-navbar Search-button paint rules; all are recorded by exact original-source replay.",
+  "files": [
+    {
+      "path": "site/src/assets/examples/album/index.astro",
+      "upstreamSha256": "f0059fcbc81488f4a7798f64890073c8285235b8b7a2f35a0b396d4ca7a3fd9c",
+      "currentSha256": "970e9be3d514eea3d894e116479d90d34fff941fca2515d4165a5ba999b0bcbd",
+      "substitutions": [
+        {
+          "from": "#55595c",
+          "to": "#696567",
+          "count": 9,
+          "reason": "TQ muted neutral placeholder surface"
+        },
+        {
+          "from": "#eceeef",
+          "to": "#fff",
+          "count": 9,
+          "reason": "TQ white placeholder label"
+        }
+      ]
+    },
+    {
+      "path": "site/src/assets/examples/album-rtl/index.astro",
+      "upstreamSha256": "5b802e9e83f4f13362060d4aba6dfaf1473b96b0962ee2f968c33c81b15d3539",
+      "currentSha256": "ace77bc71576a899f1e9170d115c12ca7cbdc8a60ebc6a0aa9d4a2ce158c4a85",
+      "substitutions": [
+        {
+          "from": "#55595c",
+          "to": "#696567",
+          "count": 9,
+          "reason": "TQ muted neutral placeholder surface"
+        },
+        {
+          "from": "#eceeef",
+          "to": "#fff",
+          "count": 9,
+          "reason": "TQ white placeholder label"
+        }
+      ]
+    },
+    {
+      "path": "site/src/assets/examples/blog/index.astro",
+      "upstreamSha256": "89d4d1c8cb6f923ea1d5b32360d599c7be6aff71ea51244fc5e7961ea825598b",
+      "currentSha256": "7bc8133351e10219900ca39cf9cdf95fa4d0b54da6a10906936439f2e50588b2",
+      "substitutions": [
+        {
+          "from": "#55595c",
+          "to": "#696567",
+          "count": 2,
+          "reason": "TQ muted neutral thumbnail surface"
+        },
+        {
+          "from": "#eceeef",
+          "to": "#fff",
+          "count": 2,
+          "reason": "TQ white thumbnail label"
+        },
+        {
+          "from": "#777",
+          "to": "#696567",
+          "count": 6,
+          "reason": "TQ muted neutral decorative placeholder; hidden placeholder text unchanged"
+        }
+      ]
+    },
+    {
+      "path": "site/src/assets/examples/blog-rtl/index.astro",
+      "upstreamSha256": "edabf90f8ffbd99b44e6201b629c3ee7841817c3aae07846799233a37db8c476",
+      "currentSha256": "0141ae6e50d694206129a5f1a3fec4684f8f7d3e25fd40ca92aa8b3a33554acf",
+      "substitutions": [
+        {
+          "from": "#55595c",
+          "to": "#696567",
+          "count": 2,
+          "reason": "TQ muted neutral thumbnail surface"
+        },
+        {
+          "from": "#eceeef",
+          "to": "#fff",
+          "count": 2,
+          "reason": "TQ white thumbnail label"
+        },
+        {
+          "from": "#777",
+          "to": "#696567",
+          "count": 6,
+          "reason": "TQ muted neutral decorative placeholder; hidden placeholder text unchanged"
+        }
+      ]
+    },
+    {
+      "path": "site/src/assets/examples/blog/blog.css",
+      "upstreamSha256": "4bf74b1b201340933e64cbdf9938eb94fd3f90b81ff20a265a69af3875a53bdd",
+      "currentSha256": "15a09735de1a0ca97000003a409406ee7227cc1e3644a543926c9ca78690205a",
+      "substitutions": [
+        {
+          "from": "#727272",
+          "to": "var(--bs-secondary-color)",
+          "count": 1,
+          "reason": "Native Bootstrap secondary text paint keeps blog metadata readable in both TQ colour modes",
+          "kind": "paint-alias"
+        }
+      ]
+    },
+    {
+      "path": "site/src/assets/examples/blog/blog.rtl.css",
+      "upstreamSha256": "bbf3ffd363cf94d087eaedf2318044ef3bb05c8c85aedeba3930244a8ad9f30c",
+      "currentSha256": "dc12999d3edfec40eb4d3adeae72b8091124aecb2bfe4b396dce4a04e20a67f5",
+      "substitutions": [
+        {
+          "from": "#727272",
+          "to": "var(--bs-secondary-color)",
+          "count": 1,
+          "reason": "Native Bootstrap secondary text paint keeps blog metadata readable in both TQ colour modes",
+          "kind": "paint-alias"
+        }
+      ]
+    },
+    {
+      "path": "site/src/assets/examples/breadcrumbs/breadcrumbs.css",
+      "upstreamSha256": "0a838009665c0fc240e44fecf6b781aa14adfbac859111c9f421086b1aeb3b53",
+      "currentSha256": "626c7b1fe029354e9e1266908c7e507292decdd4e267496c90b2da8de26bdf52",
+      "substitutions": [
+        {
+          "from": "%236c757d",
+          "to": "%23696567",
+          "count": 1,
+          "reason": "TQ muted neutral divider SVG paint; encoded SVG geometry unchanged"
+        }
+      ]
+    },
+    {
+      "path": "site/src/assets/examples/dashboard/dashboard.js",
+      "upstreamSha256": "93f9fa60cc9a13e0f7d6005300f68b558f4203f61103cf1d02fcf9052648907d",
+      "currentSha256": "731976b45ab506ac82f44e5f8f86cdb6799c29d7f8e6e26deb0759c54f7759d4",
+      "substitutions": [
+        {
+          "from": "#007bff",
+          "to": "#fc1721",
+          "count": 2,
+          "reason": "TQ bright red dataset stroke and points remain distinct against both white and charcoal; chart data and logic unchanged"
+        },
+        {
+          "from": "  new Chart(ctx, {",
+          "to": "  const chart = new Chart(ctx, {",
+          "count": 1,
+          "kind": "chart-theme-paint-redraw",
+          "reason": "Retain the original native Chart instance solely for a palette repaint when the existing page colour-mode attribute changes"
+        },
+        {
+          "from": "    options: {\n      plugins: {\n        legend: {\n          display: false\n        },\n        tooltip: {\n          boxPadding: 3\n        }\n      }\n    }",
+          "to": "    options: {\n      color: () => getComputedStyle(ctx).color,\n      borderColor: () => `rgba(${getComputedStyle(ctx).getPropertyValue('--bs-body-color-rgb')}, 0.1)`,\n      scales: {\n        x: {\n          ticks: {\n            color: () => getComputedStyle(ctx).color\n          },\n          grid: {\n            color: () => `rgba(${getComputedStyle(ctx).getPropertyValue('--bs-body-color-rgb')}, 0.1)`\n          },\n          border: {\n            color: () => `rgba(${getComputedStyle(ctx).getPropertyValue('--bs-body-color-rgb')}, 0.1)`\n          }\n        },\n        y: {\n          ticks: {\n            color: () => getComputedStyle(ctx).color\n          },\n          grid: {\n            color: () => `rgba(${getComputedStyle(ctx).getPropertyValue('--bs-body-color-rgb')}, 0.1)`\n          },\n          border: {\n            color: () => `rgba(${getComputedStyle(ctx).getPropertyValue('--bs-body-color-rgb')}, 0.1)`\n          }\n        }\n      },\n      plugins: {\n        legend: {\n          display: false\n        },\n        tooltip: {\n          backgroundColor: 'rgba(55, 50, 52, 0.8)',\n          boxPadding: 3\n        }\n      }\n    }",
+          "count": 1,
+          "kind": "chart-paint-options",
+          "reason": "Explicit native x/y tick, grid and border paint inherits the TQ body colour in both modes; grid/border alpha remains 0.1 and tooltip charcoal alpha remains 0.8. All original data, font, axis geometry and other options retained"
+        },
+        {
+          "from": "  })\n})()",
+          "to": "  })\n\n  new MutationObserver(() => {\n    chart.update('none')\n    chart.draw()\n  }).observe(document.documentElement, {\n    attributes: true,\n    attributeFilter: ['data-bs-theme']\n  })\n})()",
+          "count": 1,
+          "kind": "chart-theme-paint-redraw",
+          "reason": "Repaint only when the original root data-bs-theme attribute changes: native update without animation resolves new palette options, then the public draw method paints them immediately even while a native tooltip animation is active. Original data, options, chart geometry and animation configuration remain unchanged; no framework JavaScript changes"
+        }
+      ]
+    },
+    {
+      "path": "site/src/assets/examples/dashboard-rtl/dashboard.js",
+      "upstreamSha256": "e47d9343a1b3022827ae28a19919855c0905d2e6b5af8e15ac524a6203676a0c",
+      "currentSha256": "dc715f5c9ddba5fb96e4d316d5dee63f93f62ea2064247be7e94376ded7adc75",
+      "substitutions": [
+        {
+          "from": "#007bff",
+          "to": "#fc1721",
+          "count": 2,
+          "reason": "TQ bright red dataset stroke and points remain distinct against both white and charcoal; chart data and logic unchanged"
+        },
+        {
+          "from": "  new Chart(ctx, {",
+          "to": "  const chart = new Chart(ctx, {",
+          "count": 1,
+          "kind": "chart-theme-paint-redraw",
+          "reason": "Retain the original native Chart instance solely for a palette repaint when the existing page colour-mode attribute changes"
+        },
+        {
+          "from": "    options: {\n      plugins: {\n        legend: {\n          display: false\n        },\n        tooltip: {\n          boxPadding: 3\n        }\n      }\n    }",
+          "to": "    options: {\n      color: () => getComputedStyle(ctx).color,\n      borderColor: () => `rgba(${getComputedStyle(ctx).getPropertyValue('--bs-body-color-rgb')}, 0.1)`,\n      scales: {\n        x: {\n          ticks: {\n            color: () => getComputedStyle(ctx).color\n          },\n          grid: {\n            color: () => `rgba(${getComputedStyle(ctx).getPropertyValue('--bs-body-color-rgb')}, 0.1)`\n          },\n          border: {\n            color: () => `rgba(${getComputedStyle(ctx).getPropertyValue('--bs-body-color-rgb')}, 0.1)`\n          }\n        },\n        y: {\n          ticks: {\n            color: () => getComputedStyle(ctx).color\n          },\n          grid: {\n            color: () => `rgba(${getComputedStyle(ctx).getPropertyValue('--bs-body-color-rgb')}, 0.1)`\n          },\n          border: {\n            color: () => `rgba(${getComputedStyle(ctx).getPropertyValue('--bs-body-color-rgb')}, 0.1)`\n          }\n        }\n      },\n      plugins: {\n        legend: {\n          display: false\n        },\n        tooltip: {\n          backgroundColor: 'rgba(55, 50, 52, 0.8)',\n          boxPadding: 3\n        }\n      }\n    }",
+          "count": 1,
+          "kind": "chart-paint-options",
+          "reason": "Explicit native x/y tick, grid and border paint inherits the TQ body colour in both modes; grid/border alpha remains 0.1 and tooltip charcoal alpha remains 0.8. All original data, font, axis geometry and other options retained"
+        },
+        {
+          "from": "  })\n})()",
+          "to": "  })\n\n  new MutationObserver(() => {\n    chart.update('none')\n    chart.draw()\n  }).observe(document.documentElement, {\n    attributes: true,\n    attributeFilter: ['data-bs-theme']\n  })\n})()",
+          "count": 1,
+          "kind": "chart-theme-paint-redraw",
+          "reason": "Repaint only when the original root data-bs-theme attribute changes: native update without animation resolves new palette options, then the public draw method paints them immediately even while a native tooltip animation is active. Original data, options, chart geometry and animation configuration remain unchanged; no framework JavaScript changes"
+        }
+      ]
+    },
+    {
+      "path": "site/src/assets/examples/dashboard/dashboard.css",
+      "upstreamSha256": "36c0b73e2cfabeaac6816001cdeb3f1b1c6af4351e3d5092b8d8240027a99b1d",
+      "currentSha256": "bfe4b918f38438f1772d79b479ca26c0e656821c206c7e526e5d9ae84f2fc989",
+      "substitutions": [
+        {
+          "from": "#2470dc",
+          "to": "var(--bs-link-hover-color)",
+          "count": 1,
+          "reason": "Native shaded/tinted Bootstrap link-hover paint retains readable active navigation text against warm selected surfaces in both TQ colour modes",
+          "kind": "paint-alias"
+        },
+        {
+          "from": "rgba(0, 0, 0,",
+          "to": "rgba(55, 50, 52,",
+          "count": 2,
+          "reason": "TQ charcoal replaces black while retaining the existing alpha and shadow geometry"
+        }
+      ]
+    },
+    {
+      "path": "site/src/assets/examples/dashboard/dashboard.rtl.css",
+      "upstreamSha256": "0c6407524470e6c1b3e37caa13d4cdd4f2e9617d851aae12a686d56a97dffebd",
+      "currentSha256": "7372f8c46a99448727156adcd9a26170318c068c1fbe9d4abc24a0d9054bbaf4",
+      "substitutions": [
+        {
+          "from": "#2470dc",
+          "to": "var(--bs-link-hover-color)",
+          "count": 1,
+          "reason": "Native shaded/tinted Bootstrap link-hover paint retains readable active navigation text against warm selected surfaces in both TQ colour modes",
+          "kind": "paint-alias"
+        },
+        {
+          "from": "rgba(0, 0, 0,",
+          "to": "rgba(55, 50, 52,",
+          "count": 2,
+          "reason": "TQ charcoal replaces black while retaining the existing alpha and shadow geometry"
+        }
+      ]
+    },
+    {
+      "path": "site/src/assets/examples/cover/cover.css",
+      "upstreamSha256": "b377b53d01bdc3c8c0824a71e143c553e484b1ea94f3447659093cdde0eee72d",
+      "currentSha256": "7f3894274fa7f867af6ee1e379c7998acfa4531e7e47e1533314ce1a44fb2c62",
+      "substitutions": [
+        {
+          "from": "#333",
+          "to": "#373234",
+          "count": 1,
+          "reason": "TQ charcoal text"
+        },
+        {
+          "from": "rgba(0, 0, 0,",
+          "to": "rgba(55, 50, 52,",
+          "count": 2,
+          "reason": "TQ charcoal replaces black while retaining the existing alpha and shadow geometry"
+        },
+        {
+          "from": "  color: rgba(255, 255, 255, .5);",
+          "to": "  color: rgba(255, 255, 255, .55);",
+          "count": 1,
+          "kind": "contrast-paint-alpha",
+          "reason": "Explicit contrast exception: the inactive Cover navigation text on TQ charcoal rises from 4.4242:1 at the native .5 paint alpha to 5.0079:1 at .55; the opacity property, geometry, typography and motion are unchanged"
+        },
+        {
+          "from": ".nav-masthead .active {\n  color: #fff;\n  border-bottom-color: #fff;\n}\n",
+          "to": ".nav-masthead .active {\n  color: #fff;\n  border-bottom-color: #fff;\n}\n\n.cover-container footer.text-white-50 {\n  color: rgba(255, 255, 255, .55) !important;\n}\n",
+          "count": 1,
+          "kind": "contrast-paint-rule",
+          "reason": "Explicit local paint-only footer exception raises native white-half text on the TQ charcoal surface from 4.4242:1 to 5.0079:1 while preserving the original footer classes, framework utility, typography and layout"
+        }
+      ]
+    },
+    {
+      "path": "site/src/assets/examples/features/features.css",
+      "upstreamSha256": "8bfd1570d1367de38d446ceaa115b75f537fe34cb793eb9188784cacf124a62e",
+      "currentSha256": "aa94bff13f27394f64f0bd6830c1314c95a9c07d71d1e3c4ff181dc953bb0133",
+      "substitutions": [
+        {
+          "from": "rgba(0, 0, 0,",
+          "to": "rgba(55, 50, 52,",
+          "count": 3,
+          "reason": "TQ charcoal replaces black while retaining the existing alpha and shadow geometry"
+        }
+      ]
+    },
+    {
+      "path": "site/src/assets/examples/grid/grid.css",
+      "upstreamSha256": "fbab034f308c3c46a78951288433b6ed13175583d6397bb3667a17eabb264bc4",
+      "currentSha256": "aa0b0f854e14d809909e986cd3d1de818a232db99650920f1e7b95b1639f898a",
+      "substitutions": [
+        {
+          "from": "rgba(112.520718, 44.062154, 249.437846,",
+          "to": "rgba(227, 27, 35,",
+          "count": 4,
+          "reason": "TQ red grid illustration paint retains each native fill/border alpha"
+        }
+      ]
+    },
+    {
+      "path": "site/src/assets/examples/cheatsheet/cheatsheet.css",
+      "upstreamSha256": "cc50b89ba99e15af31158dd3444cca3b4eddc499c5990de7ecfdfafdf6edfb9c",
+      "currentSha256": "6a6d4aec047c344b8915235f4a212b6b2fd3da75fc57a5fb0d21634ffca0e0a3",
+      "substitutions": [
+        {
+          "from": "%23999",
+          "to": "%23696567",
+          "count": 1,
+          "reason": "TQ muted neutral notebook SVG paint"
+        },
+        {
+          "from": "rgba(121, 82, 179,",
+          "to": "rgba(227, 27, 35,",
+          "count": 3,
+          "reason": "TQ red highlighted navigation; native background and focus-shadow alpha retained"
+        },
+        {
+          "from": "%23ccc",
+          "to": "%23fc1721",
+          "count": 1,
+          "reason": "TQ bright red disclosure SVG paint remains distinct on both light and dark reading surfaces"
+        }
+      ]
+    },
+    {
+      "path": "site/src/assets/examples/cheatsheet/cheatsheet.rtl.css",
+      "upstreamSha256": "82bbae104724865cb7a54146ff864267b97f7d15c33e5909496fabfcc2656482",
+      "currentSha256": "b6e1e87c6760e2e5347acea772bd1b81facd568e3ecf25a923c1143052bc9bf8",
+      "substitutions": [
+        {
+          "from": "%23999",
+          "to": "%23696567",
+          "count": 1,
+          "reason": "TQ muted neutral notebook SVG paint"
+        },
+        {
+          "from": "rgba(121, 82, 179,",
+          "to": "rgba(227, 27, 35,",
+          "count": 3,
+          "reason": "TQ red highlighted navigation; native background and focus-shadow alpha retained"
+        },
+        {
+          "from": "%23ccc",
+          "to": "%23fc1721",
+          "count": 1,
+          "reason": "TQ bright red disclosure SVG paint remains distinct on both light and dark reading surfaces"
+        }
+      ]
+    },
+    {
+      "path": "site/src/assets/examples/cheatsheet/index.astro",
+      "upstreamSha256": "aa255a14afd42d29912a810adf5fab7ea2c2c10cc52578b4f98897a3b3d702ec",
+      "currentSha256": "b0148c2e0b86768375a13f3c108c97b07aa82cfff3929206b5f45987dbeb78e7",
+      "substitutions": [
+        {
+          "from": "color=\"#555\" background=\"#777\"",
+          "to": "color=\"var(--bs-body-bg)\" background=\"var(--bs-body-color)\"",
+          "count": 1,
+          "reason": "Mode-aware body paint keeps the native half-opacity white carousel controls distinct in light mode and inverted controls distinct in dark mode",
+          "kind": "paint-alias"
+        },
+        {
+          "from": "color=\"#444\" background=\"#666\"",
+          "to": "color=\"var(--bs-body-bg)\" background=\"var(--bs-body-color)\"",
+          "count": 1,
+          "reason": "Mode-aware native Bootstrap body/surface paint keeps slide labels, captions and controls readable in both colour modes without changing carousel markup or behaviour",
+          "kind": "paint-alias"
+        },
+        {
+          "from": "color=\"#333\" background=\"#555\"",
+          "to": "color=\"var(--bs-body-bg)\" background=\"var(--bs-emphasis-color)\"",
+          "count": 1,
+          "reason": "Mode-aware native Bootstrap body/surface paint keeps slide labels, captions and controls readable in both colour modes without changing carousel markup or behaviour",
+          "kind": "paint-alias"
+        },
+        {
+          "from": "#007aff",
+          "to": "#e31b23",
+          "count": 1,
+          "reason": "TQ red toast example marker"
+        }
+      ]
+    },
+    {
+      "path": "site/src/assets/examples/cheatsheet-rtl/index.astro",
+      "upstreamSha256": "ac94196d34817f661f7bdc6aa0d4fb64a88715316d92839a1a2b99f2a84ad3fe",
+      "currentSha256": "a494c81d08b411a99c50932a5de0cdfeb0f2b30c379ba4bdd58ad3455f63b8e7",
+      "substitutions": [
+        {
+          "from": "color=\"#555\" background=\"#777\"",
+          "to": "color=\"var(--bs-body-bg)\" background=\"var(--bs-body-color)\"",
+          "count": 1,
+          "reason": "Mode-aware body paint keeps the native half-opacity white carousel controls distinct in light mode and inverted controls distinct in dark mode",
+          "kind": "paint-alias"
+        },
+        {
+          "from": "color=\"#444\" background=\"#666\"",
+          "to": "color=\"var(--bs-body-bg)\" background=\"var(--bs-body-color)\"",
+          "count": 1,
+          "reason": "Mode-aware native Bootstrap body/surface paint keeps slide labels, captions and controls readable in both colour modes without changing carousel markup or behaviour",
+          "kind": "paint-alias"
+        },
+        {
+          "from": "color=\"#333\" background=\"#555\"",
+          "to": "color=\"var(--bs-body-bg)\" background=\"var(--bs-emphasis-color)\"",
+          "count": 1,
+          "reason": "Mode-aware native Bootstrap body/surface paint keeps slide labels, captions and controls readable in both colour modes without changing carousel markup or behaviour",
+          "kind": "paint-alias"
+        },
+        {
+          "from": "#007aff",
+          "to": "#e31b23",
+          "count": 1,
+          "reason": "TQ red toast example marker"
+        }
+      ]
+    },
+    {
+      "path": "site/src/assets/examples/offcanvas-navbar/offcanvas-navbar.css",
+      "upstreamSha256": "a19141255b2e8bc6b3f9bb85ba855f66af7f2472c47cdb9cff98205bc9ac8252",
+      "currentSha256": "70fd0867083aafb72b5a9c442ee985dc12b7c97658597db41d2e24415fc1e6c9",
+      "substitutions": [
+        {
+          "from": "background-color: #343a40;",
+          "to": "background-color: #373234;",
+          "count": 1,
+          "reason": "TQ charcoal responsive navigation surface"
+        },
+        {
+          "from": "color: #343a40;",
+          "to": "color: var(--bs-emphasis-color);",
+          "count": 1,
+          "kind": "paint-alias",
+          "reason": "Native Bootstrap emphasis paint follows TQ light/dark mode for readable active navigation text"
+        },
+        {
+          "from": "#6c757d",
+          "to": "var(--bs-secondary-color)",
+          "count": 1,
+          "reason": "Native Bootstrap secondary text paint follows the TQ light/dark neutral pair",
+          "kind": "paint-alias"
+        },
+        {
+          "from": "#007bff",
+          "to": "var(--bs-link-color)",
+          "count": 1,
+          "reason": "Native Bootstrap link paint follows TQ light/dark mode for readable hovered navigation text",
+          "kind": "paint-alias"
+        },
+        {
+          "from": "#6f42c1",
+          "to": "#e31b23",
+          "count": 1,
+          "reason": "TQ red accent panel; existing utility selector retained"
+        },
+        {
+          "from": ".bg-purple {\n  background-color: #e31b23;\n}\n",
+          "to": ".bg-purple {\n  background-color: #e31b23;\n}\n\n.navbar-dark .btn-outline-success {\n  --bs-btn-color: #fff;\n  --bs-btn-border-color: #fff;\n  --bs-btn-hover-color: #373234;\n  --bs-btn-hover-bg: #fff;\n  --bs-btn-hover-border-color: #fff;\n  --bs-btn-active-color: #373234;\n  --bs-btn-active-bg: #fff;\n  --bs-btn-active-border-color: #fff;\n  --bs-btn-disabled-color: #fff;\n  --bs-btn-disabled-border-color: #fff;\n  --bs-btn-focus-shadow-rgb: 255, 255, 255;\n}\n",
+          "count": 1,
+          "kind": "contrast-paint-rule",
+          "reason": "Local paint-only contrast correction for the original navbar-dark Search button: white outline/text and focus paint, white hover/active surface with TQ charcoal text. Original classes, framework defaults, dimensions, alpha, font and behaviour remain unchanged outside this supplied dark-navbar context"
+        }
+      ]
+    },
+    {
+      "path": "site/src/assets/examples/offcanvas-navbar/index.astro",
+      "upstreamSha256": "c913964515f03622b56f1fe0866ed29e4966b647e5b977af07aaf1999e587568",
+      "currentSha256": "acf2a8a7525c6cdad05e9e3d24f99feae9e48725623c859d4ccd5a07da88b11a",
+      "substitutions": [
+        {
+          "from": "#007bff",
+          "to": "#e31b23",
+          "count": 8,
+          "reason": "TQ red avatar placeholder"
+        },
+        {
+          "from": "#e83e8c",
+          "to": "#f32a7c",
+          "count": 2,
+          "reason": "TQ pink avatar placeholder"
+        },
+        {
+          "from": "#6f42c1",
+          "to": "#373234",
+          "count": 2,
+          "reason": "TQ charcoal avatar placeholder"
+        }
+      ]
+    },
+    {
+      "path": "site/src/assets/examples/product/product.css",
+      "upstreamSha256": "3f6e18b2d3b1b6378ab957a193139f73944feaf0d6d2c7684fe6f6a3964ee910",
+      "currentSha256": "b1d6ed0bc0576d5d4f7ca02a7e963498d30f317615ccbda0b4bfd6756462ac82",
+      "substitutions": [
+        {
+          "from": "rgba(0, 0, 0,",
+          "to": "rgba(55, 50, 52,",
+          "count": 1,
+          "reason": "TQ charcoal replaces black while retaining the existing alpha and shadow geometry"
+        },
+        {
+          "from": "#8e8e8e",
+          "to": "#d7d2cb",
+          "count": 1,
+          "reason": "TQ koala navigation labels on charcoal"
+        },
+        {
+          "from": "#333",
+          "to": "#373234",
+          "count": 1,
+          "reason": "TQ charcoal decorative device"
+        },
+        {
+          "from": "#e5e5e5",
+          "to": "#e1ddd8",
+          "count": 1,
+          "reason": "TQ divider neutral decorative device"
+        }
+      ]
+    },
+    {
+      "path": "site/src/assets/examples/carousel/index.astro",
+      "substitutions": [
+        {
+          "from": "<Placeholder width=\"100%\" height=\"100%\" background=\"var(--bs-secondary-color)\" text={false} title={false} />",
+          "to": "<Placeholder width=\"100%\" height=\"100%\" background=\"var(--bs-body-color)\" text={false} title={false} />",
+          "count": 3,
+          "kind": "paint-alias",
+          "reason": "Use mode-aware body paint for the three full-size carousel slides so native half-opacity controls remain distinct in both modes; marketing circles and geometry unchanged"
+        }
+      ],
+      "upstreamSha256": "b38449a178fca75b1db8d3328757112ee3c6a221fd42e341d150a1e928da76a6",
+      "currentSha256": "4cd62cbc877c071261029bf41c7916a5fb70ce9cc69512c247c698232e4d361d"
+    },
+    {
+      "path": "site/src/assets/examples/carousel-rtl/index.astro",
+      "substitutions": [
+        {
+          "from": "<Placeholder width=\"100%\" height=\"100%\" background=\"var(--bs-secondary-color)\" text={false} title={false} />",
+          "to": "<Placeholder width=\"100%\" height=\"100%\" background=\"var(--bs-body-color)\" text={false} title={false} />",
+          "count": 3,
+          "kind": "paint-alias",
+          "reason": "Use mode-aware body paint for the three full-size carousel slides so native half-opacity controls remain distinct in both modes; marketing circles and geometry unchanged"
+        }
+      ],
+      "upstreamSha256": "d71db66ec4dc8999398dd9831f32953b11cfae1172768816bfe1ac138bbfc0c6",
+      "currentSha256": "42a4cf434e914a476cdd2a3fb8a9c6f2ba67df1f3692cb1bf373d01d46ce4438"
+    },
+    {
+      "path": "site/src/assets/examples/dropdowns/dropdowns.css",
+      "substitutions": [
+        {
+          "from": ".dropdown-item-danger {\n  color: var(--bs-red);\n}",
+          "to": ".dropdown-item-danger {\n  color: var(--bs-danger-text-emphasis);\n}",
+          "count": 1,
+          "kind": "paint-alias",
+          "reason": "Native semantic emphasis foreground is readable in both TQ modes; original red hover/active background and white hover text remain unchanged"
+        }
+      ],
+      "upstreamSha256": "62959ed2f27c460b00821ecc4e65c73c1176df3deee97fc29d11b6308f76c9b4",
+      "currentSha256": "e424b04241b740b27746b8a59f86447c5565524c0d0b0295a5f14c30a37fc4c1"
+    },
+    {
+      "path": "site/src/assets/examples/carousel/carousel.css",
+      "substitutions": [
+        {
+          "from": "@media (min-width: 62em) {\n  .featurette-heading {\n    margin-top: 7rem;\n  }\n}\n",
+          "to": "@media (min-width: 62em) {\n  .featurette-heading {\n    margin-top: 7rem;\n  }\n}\n\n.navbar-dark .btn-outline-success {\n  --bs-btn-color: #fff;\n  --bs-btn-border-color: #fff;\n  --bs-btn-hover-color: #373234;\n  --bs-btn-hover-bg: #fff;\n  --bs-btn-hover-border-color: #fff;\n  --bs-btn-active-color: #373234;\n  --bs-btn-active-bg: #fff;\n  --bs-btn-active-border-color: #fff;\n  --bs-btn-disabled-color: #fff;\n  --bs-btn-disabled-border-color: #fff;\n  --bs-btn-focus-shadow-rgb: 255, 255, 255;\n}\n",
+          "count": 1,
+          "kind": "contrast-paint-rule",
+          "reason": "Local paint-only contrast correction for the original navbar-dark Search button: white outline/text and focus paint, white hover/active surface with TQ charcoal text. Original classes, framework defaults, dimensions, alpha, font and behaviour remain unchanged outside this supplied dark-navbar context"
+        }
+      ],
+      "upstreamSha256": "dab0f441b45b1915f4be64532526bca9111ab74e3afdf3c299c895d9130a53fe",
+      "currentSha256": "d4d392f6c7d74ff49e3a7e1d9ccb8c2c503bf64fbbbf0c806f827e916921cbf3"
+    },
+    {
+      "path": "site/src/assets/examples/carousel/carousel.rtl.css",
+      "substitutions": [
+        {
+          "from": "@media (min-width: 62em) {\n  .featurette-heading {\n    margin-top: 7rem;\n  }\n}\n",
+          "to": "@media (min-width: 62em) {\n  .featurette-heading {\n    margin-top: 7rem;\n  }\n}\n\n.navbar-dark .btn-outline-success {\n  --bs-btn-color: #fff;\n  --bs-btn-border-color: #fff;\n  --bs-btn-hover-color: #373234;\n  --bs-btn-hover-bg: #fff;\n  --bs-btn-hover-border-color: #fff;\n  --bs-btn-active-color: #373234;\n  --bs-btn-active-bg: #fff;\n  --bs-btn-active-border-color: #fff;\n  --bs-btn-disabled-color: #fff;\n  --bs-btn-disabled-border-color: #fff;\n  --bs-btn-focus-shadow-rgb: 255, 255, 255;\n}\n",
+          "count": 1,
+          "kind": "contrast-paint-rule",
+          "reason": "Local paint-only contrast correction for the original navbar-dark Search button: white outline/text and focus paint, white hover/active surface with TQ charcoal text. Original classes, framework defaults, dimensions, alpha, font and behaviour remain unchanged outside this supplied dark-navbar context"
+        }
+      ],
+      "upstreamSha256": "ed13d93e7416b7db9d6c6ef84e33e54c4c8b2a7f2043ecb61c167e0d0ec3082d",
+      "currentSha256": "1aea18e6ef33b2f341e9136e513e742f3f571fd1789fcafe6b4eb94fad1682f1"
+    }
+  ],
+  "changedFileCount": 26,
+  "substitutionCount": 136
+}

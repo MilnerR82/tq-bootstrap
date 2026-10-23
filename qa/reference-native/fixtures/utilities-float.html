@@ -1,0 +1,19 @@
+<!doctype html><html lang="en" data-bs-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>utilities-float native comparison fixture</title><link id="framework" rel="stylesheet" href="/qa/reference-native/css/bootstrap.css"><link rel="stylesheet" href="/qa/reference-native/docs-themed.css"></head><body><main class="bd-content" style="margin:16px">   <h2 id="overview">Overview<a class="anchor-link" aria-label="Link to this section: Overview" href="#overview"> </a></h2>
+<p>These utility classes float an element to the left or right, or disable floating, based on the current viewport size using the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">CSS <code>float</code> property</a>. <code>!important</code> is included to avoid specificity issues. These use the same viewport breakpoints as our grid system. Please be aware float utilities have no effect on flex items.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <div class="float-start">Float start on all viewport sizes</div><br>
+<div class="float-end">Float end on all viewport sizes</div><br>
+<div class="float-none">Don’t float on all viewport sizes</div> </div>  <div>   </div>  </div>
+<p>Use the <a href="/docs/5.3/helpers/clearfix">clearfix helper</a> on a parent element to clear floats.</p>
+<h2 id="responsive">Responsive<a class="anchor-link" aria-label="Link to this section: Responsive" href="#responsive"> </a></h2>
+<p>Responsive variations also exist for each <code>float</code> value.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <div class="float-sm-end">Float end on viewports sized SM (small) or wider</div><br>
+<div class="float-md-end">Float end on viewports sized MD (medium) or wider</div><br>
+<div class="float-lg-end">Float end on viewports sized LG (large) or wider</div><br>
+<div class="float-xl-end">Float end on viewports sized XL (extra large) or wider</div><br>
+<div class="float-xxl-end">Float end on viewports sized XXL (extra extra large) or wider</div><br> </div>  <div>   </div>  </div>
+<p>Here are all the support classes:</p>
+<ul><li><code>.float-start</code></li><li><code>.float-end</code></li><li><code>.float-none</code></li><li><code>.float-sm-start</code></li><li><code>.float-sm-end</code></li><li><code>.float-sm-none</code></li><li><code>.float-md-start</code></li><li><code>.float-md-end</code></li><li><code>.float-md-none</code></li><li><code>.float-lg-start</code></li><li><code>.float-lg-end</code></li><li><code>.float-lg-none</code></li><li><code>.float-xl-start</code></li><li><code>.float-xl-end</code></li><li><code>.float-xl-none</code></li><li><code>.float-xxl-start</code></li><li><code>.float-xxl-end</code></li><li><code>.float-xxl-none</code></li></ul>
+<h2 id="css">CSS<a class="anchor-link" aria-label="Link to this section: CSS" href="#css"> </a></h2>
+<h3 id="sass-utilities-api">Sass utilities API<a class="anchor-link" aria-label="Link to this section: Sass utilities API" href="#sass-utilities-api"> </a></h3>
+<p>Float utilities are declared in our utilities API in <code>scss/_utilities.scss</code>. <a href="/docs/5.3/utilities/api#using-the-api">Learn how to use the utilities API.</a></p>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>  </main><script src="/dist/js/bootstrap.bundle.min.js"></script></body></html>

@@ -1,0 +1,106 @@
+{
+  "captured": "2026-10-20T19:38:46.799Z",
+  "scope": "Current compiled framework before restoration to colour-only Bootstrap. Source snapshot is best-effort during root source restoration; compiled CSS is the authoritative pre-restoration evidence.",
+  "files": {
+    "dist/css/bootstrap-grid.css": {
+      "bytes": 91483,
+      "sha256": "2066337fde0c70d9cda8e32c36d945a7ccfc06571c31f188dc32e76c489a8e86"
+    },
+    "dist/css/bootstrap-grid.min.css": {
+      "bytes": 67667,
+      "sha256": "9deb8ba18a73069fc14c881fa72c0635aa0cc22ae7dcbcdb2ccf884917f4b760"
+    },
+    "dist/css/bootstrap-grid.rtl.css": {
+      "bytes": 91558,
+      "sha256": "28d5fef70450b2bdad0a1369eefcc939a15045f5ad97109cfffdb2edba12ab5a"
+    },
+    "dist/css/bootstrap-grid.rtl.min.css": {
+      "bytes": 67742,
+      "sha256": "68f0bacf45bb836e26aafbd5894fddcd124e10fcc00cf6f7b9817fca5819e460"
+    },
+    "dist/css/bootstrap-reboot.css": {
+      "bytes": 17283,
+      "sha256": "425c3efb40a0af6dfcccfbec4511be422f0c7941dab0bf8aa4d4d114bd2f76dc"
+    },
+    "dist/css/bootstrap-reboot.min.css": {
+      "bytes": 14115,
+      "sha256": "22b077cebbd3433ae67ced0b55327bfc4f71b9e9eaff91543492280803c4ba41"
+    },
+    "dist/css/bootstrap-reboot.rtl.css": {
+      "bytes": 17277,
+      "sha256": "ee151cd98c538833063aa1518d28a90a245924db814a36a23a4058372919fd19"
+    },
+    "dist/css/bootstrap-reboot.rtl.min.css": {
+      "bytes": 14187,
+      "sha256": "778ae1dc173bdb36a480b18bb53edebab3414571a49ae8a255a9c0677aa03423"
+    },
+    "dist/css/bootstrap-utilities.css": {
+      "bytes": 125244,
+      "sha256": "fe1a7b5f0c40ab46275226c3b6b7a0bb2a87811bd4af107a3ffc5642e5c65a0d"
+    },
+    "dist/css/bootstrap-utilities.min.css": {
+      "bytes": 97928,
+      "sha256": "fe0760acc257cabb831c7a3a58d5a9c94969d456bfddd363e67c22bd3fd7baae"
+    },
+    "dist/css/bootstrap-utilities.rtl.css": {
+      "bytes": 125113,
+      "sha256": "e3f83a2f6cf548be67731a2faaea569c35089710977ebe3de9eff64ade10bed9"
+    },
+    "dist/css/bootstrap-utilities.rtl.min.css": {
+      "bytes": 97857,
+      "sha256": "a63dd8d7517413e0b6cbe66c7ab6e4bad8810ffdfcc1015717ce95aadeae6a25"
+    },
+    "dist/css/bootstrap.css": {
+      "bytes": 321135,
+      "sha256": "3c0548d7c8aa0209f75298e25b2efac3bc3a5610bfc4e9c352a16c835476735f"
+    },
+    "dist/css/bootstrap.min.css": {
+      "bytes": 259154,
+      "sha256": "9e5c3830bcd7566184bcd8a72685f4553701439f3b81ea9194a352782679c6ac"
+    },
+    "dist/css/bootstrap.rtl.css": {
+      "bytes": 320352,
+      "sha256": "1a8b54e397d24833236af179a80892465a02d41c56f093698897689382e59d70"
+    },
+    "dist/css/bootstrap.rtl.min.css": {
+      "bytes": 259262,
+      "sha256": "56ef4a4bd5f5a94ab2622a518f6156607498da228295f059095d24a97e556850"
+    },
+    "src/scss/tq-bootstrap-grid.scss": {
+      "bytes": 175,
+      "sha256": "795a90f2c8de501d7737e315bdd6db4fde10384ee33007ceb0899b92bfc37272"
+    },
+    "src/scss/tq-bootstrap-reboot.scss": {
+      "bytes": 226,
+      "sha256": "ac24b223215da279a994b78e304aad8e2074c5d595bc52194db9eec4e7379f9f"
+    },
+    "src/scss/tq-bootstrap-utilities.scss": {
+      "bytes": 242,
+      "sha256": "400feadbc69fdd01d712ab02c6ee36ab0f8a5c85807cd96ad39fd5a5cd2b2d7a"
+    },
+    "src/scss/tq-bootstrap.scss": {
+      "bytes": 336,
+      "sha256": "475b3a207526db322f931e33436689ca4d3121cfef0d90c092844010c2bed626"
+    },
+    "src/scss/_accessibility.scss": {
+      "bytes": 3860,
+      "sha256": "588846dd398d1d2538a550f416aad55efef0e12d8574c9a36f95895d639a3dfa"
+    },
+    "src/scss/_components.scss": {
+      "bytes": 10372,
+      "sha256": "67f594baa9b566526a52782ae2a91b1f391df1fb353aca37a202e0acf3cbaa46"
+    },
+    "src/scss/_properties.scss": {
+      "bytes": 1280,
+      "sha256": "9f6f878bf07125e110aa2d8983df00df53a70cdab8c37f10f66ead9b3f07523a"
+    },
+    "src/scss/_tokens.scss": {
+      "bytes": 13050,
+      "sha256": "d3fb979c22b80c2a1ca6440537a0ac68e40b4d222ed20fbcc0548f6eb566062a"
+    },
+    "src/scss/_utilities.scss": {
+      "bytes": 1166,
+      "sha256": "5018f30c1137c2c8895b41688c20b66a963a1630701cb91fea3ac53f38eb0863"
+    }
+  }
+}

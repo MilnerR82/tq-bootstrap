@@ -1,0 +1,26 @@
+<!doctype html><html lang="en" data-bs-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>forms-range native comparison fixture</title><link id="framework" rel="stylesheet" href="/qa/reference-native/css/bootstrap.css"><link rel="stylesheet" href="/qa/reference-native/docs-themed.css"></head><body><main class="bd-content" style="margin:16px">   <h2 id="overview">Overview<a class="anchor-link" aria-label="Link to this section: Overview" href="#overview"> </a></h2>
+<p>Create custom <code>&lt;input type="range"&gt;</code> controls with <code>.form-range</code>. The track (the background) and thumb (the value) are both styled to appear the same across browsers. As only Firefox supports “filling” their track from the left or right of the thumb as a means to visually indicate progress, we do not currently support it.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <label for="range1" class="form-label">Example range</label>
+<input type="range" class="form-range" id="range1"> </div>  <div>   </div>  </div>
+<h2 id="disabled">Disabled<a class="anchor-link" aria-label="Link to this section: Disabled" href="#disabled"> </a></h2>
+<p>Add the <code>disabled</code> boolean attribute on an input to give it a grayed out appearance, remove pointer events, and prevent focusing.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <label for="disabledRange" class="form-label">Disabled range</label>
+<input type="range" class="form-range" id="disabledRange" disabled=""> </div>  <div>   </div>  </div>
+<h2 id="min-and-max">Min and max<a class="anchor-link" aria-label="Link to this section: Min and max" href="#min-and-max"> </a></h2>
+<p>Range inputs have implicit values for <code>min</code> and <code>max</code>—<code>0</code> and <code>100</code>, respectively. You may specify new values for those using the <code>min</code> and <code>max</code> attributes.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <label for="range2" class="form-label">Example range</label>
+<input type="range" class="form-range" min="0" max="5" id="range2"> </div>  <div>   </div>  </div>
+<h2 id="steps">Steps<a class="anchor-link" aria-label="Link to this section: Steps" href="#steps"> </a></h2>
+<p>By default, range inputs “snap” to integer values. To change this, you can specify a <code>step</code> value. In the example below, we double the number of steps by using <code>step="0.5"</code>.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <label for="range3" class="form-label">Example range</label>
+<input type="range" class="form-range" min="0" max="5" step="0.5" id="range3"> </div>  <div>   </div>  </div>
+<h2 id="output-value">Output value<a class="anchor-link" aria-label="Link to this section: Output value" href="#output-value"> </a></h2>
+<p>The value of the range input can be shown using the <code>output</code> element and a bit of JavaScript.</p>
+<div class="bd-example-snippet bd-code-snippet"> <div class="bd-example m-0 border-0"> <label for="range4" class="form-label">Example range</label>
+<input type="range" class="form-range" min="0" max="100" value="50" id="range4">
+<output for="range4" id="rangeValue" aria-hidden="true"></output>
+
+ </div>  <div>   </div>  </div>
+<h2 id="css">CSS<a class="anchor-link" aria-label="Link to this section: CSS" href="#css"> </a></h2>
+<h3 id="sass-variables">Sass variables<a class="anchor-link" aria-label="Link to this section: Sass variables" href="#sass-variables"> </a></h3>
+ <div class="bd-code-snippet bd-example-snippet bd-file-ref">   </div>  </main><script src="/dist/js/bootstrap.bundle.min.js"></script></body></html>

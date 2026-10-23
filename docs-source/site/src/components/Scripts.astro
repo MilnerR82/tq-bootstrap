@@ -1,0 +1,21 @@
+---
+import { getVersionedBsJsProps } from '@libs/bootstrap'
+import type { Layout } from '@libs/layout'
+import DocsScripts from './DocsScripts.astro'
+import { getConfig } from '@libs/config'
+
+interface Props {
+  layout: Layout
+}
+
+const { layout } = Astro.props
+---
+
+<script is:inline {...getVersionedBsJsProps()}></script>
+<script is:inline src={`/docs/${getConfig().docs_version}/dist/tq/tq-accessibility.min.js`}></script>
+<script is:inline>window.TQAccessibility.init()</script>
+
+<script src="../assets/application.js"></script>
+<script src="../assets/search.js"></script>
+
+{layout === 'docs' && <DocsScripts />}

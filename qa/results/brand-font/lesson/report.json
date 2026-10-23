@@ -1,0 +1,71 @@
+{
+  "scope": "Standalone typography lesson; automated workflow, responsive, keyboard and accessibility checks. No full WCAG conformance claim.",
+  "browsers": [
+    {
+      "name": "chromium",
+      "workflow": "passed",
+      "keyboard": "Tab to skip link, range inputs and quiz focus passed"
+    },
+    {
+      "name": "firefox",
+      "workflow": "passed",
+      "keyboard": "Tab to skip link, range inputs and quiz focus passed"
+    },
+    {
+      "name": "webkit",
+      "workflow": "passed",
+      "keyboard": "Explicitly focused skip link activation, range inputs and quiz focus passed; runner defaults to form-only Tab navigation"
+    }
+  ],
+  "scans": [
+    {
+      "theme": "light",
+      "width": 320,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "width": 768,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "width": 768,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "textResize": "200% base font plus text-spacing overrides: no page overflow",
+  "offline": "Local file opens with relative assets, remote requests blocked and storage unavailable",
+  "summary": {
+    "workflowBrowsers": 3,
+    "scans": 8,
+    "violations": 0,
+    "errors": []
+  }
+}

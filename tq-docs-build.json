@@ -1,0 +1,575 @@
+{
+  "bootstrap": "5.3.8",
+  "template": "Original Bootstrap 5.3.8 Astro documentation",
+  "adaptation": "TAFE Queensland colours with native framework geometry and unchanged Bootstrap JavaScript; separate accessibility companion and explicit documentation corrections recorded in the remediation evidence",
+  "localInfrastructure": [
+    "Local framework asset/download URLs and SRI",
+    "Independent distribution/source/example ZIPs survive relocation without recursively embedding the complete release",
+    "Fathom and Carbon Ads loader scripts omitted; no replacement UI",
+    "Five remaining stale upstream documentation hrefs target their existing current sections",
+    "Native version menu is restricted to Bootstrap5.3",
+    "All80 gallery PNGs are captured from the themed pages at the native sizes and URLs",
+    "Theme controls tolerate unavailable storage; StackBlitz projects carry their local themed assets"
+  ],
+  "navigationRepairs": [
+    {
+      "page": "docs/5.3/components/progress/index.html",
+      "beforeSHA256": "ae93d3d00457f755ba6a18b958785da3d8ec1d642b3c19a0f64d440c00fcde64",
+      "afterSHA256": "9f85a463abd0775413cb2a8114fe990f79a975c1e1c341eb2ca8ab50d65213bd",
+      "substitutions": [
+        {
+          "from": "/docs/5.3/migration#improved-markup-for-progress-bars",
+          "to": "/docs/5.3/migration/#progress-bars",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "page": "docs/5.3/content/tables/index.html",
+      "beforeSHA256": "c49f5fb21691c53589c6a56f4697cdb7aeaa2b3b7163aa24fd9db9944be2be82",
+      "afterSHA256": "dbd38353d830dd22859b81345021862260f68dbe3d71b78e195d20137b80a091",
+      "substitutions": [
+        {
+          "from": "/docs/5.3/utilities/borders#border-color",
+          "to": "/docs/5.3/utilities/borders/#color",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "page": "docs/5.3/customize/overview/index.html",
+      "beforeSHA256": "2bb28db3050b550f3666ef8d0b9f3d63642e1782d8568e85e96817bbb0ca545c",
+      "afterSHA256": "60267716617227fe351b78cf4be913fd4f18b2bcc825b4e87906800e219d3675",
+      "substitutions": [
+        {
+          "from": "/docs/5.3/components/carousel#with-controls",
+          "to": "/docs/5.3/components/carousel/#basic-examples",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "page": "docs/5.3/migration/index.html",
+      "beforeSHA256": "ff87239783852b6fad3c8afd101732fa286d33aaf92d4e488b65e9177ff33212",
+      "afterSHA256": "fbe48e45a14b6522c427ec3997a37e2e5c0ed85344cd1d909f82961a495e024d",
+      "substitutions": [
+        {
+          "from": "/docs/5.3/utilities/text#opacity",
+          "to": "/docs/5.3/utilities/colors/#opacity",
+          "count": 1
+        },
+        {
+          "from": "/docs/5.3/utilities/borders#border-width",
+          "to": "/docs/5.3/utilities/borders/#width",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "galleryPreviews": [
+    {
+      "file": "album-rtl.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "9e175157e32fa8cfb99e38e619e2680f4eee7e81c6a853d810c3ff117cbeda69"
+    },
+    {
+      "file": "album-rtl@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "f2045737de5bd94c88f5a6c5f0d702c6f764226d0117b90948f11b5e529b1912"
+    },
+    {
+      "file": "album.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "9f768bb0d384e99721d6f0b33372bc6393131148f4877d87f2f047d31031e98d"
+    },
+    {
+      "file": "album@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "c2bf06a2008acc5f85fc9f227e822424daafa93a06870ae4012d9b2e50c90100"
+    },
+    {
+      "file": "badges.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "bafc5b912cc7e89ff282363e9fc256a69fea496898f40757505cfebf9ce4d607"
+    },
+    {
+      "file": "badges@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "71e46779c8d207c49068ea39cbc0ce782b0e24b015f392cd8fcb84ef139e8e1b"
+    },
+    {
+      "file": "blog-rtl.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "0f9b273b222c45f436c90865e324d62eee742e38588346d522644f835b7cf3de"
+    },
+    {
+      "file": "blog-rtl@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "dea8ef59e18fb8d7e69dce05e023356926d10ea95f2cae489c42094cde5de1e6"
+    },
+    {
+      "file": "blog.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "ac87f430908f125fbdd2aa4eb643c2a762d77b3ca30b835985e7e5a9ca8dfa1b"
+    },
+    {
+      "file": "blog@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "fd3aa2b01c4140c64924a06d3eb362e9791fc1abe408a798f5c99d7735bdbd78"
+    },
+    {
+      "file": "breadcrumbs.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "fc9bef0ceed775d9a271bf73be1d4ce10f9ff6cf205ab52c898d587aaa854608"
+    },
+    {
+      "file": "breadcrumbs@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "f7c2172ff76921bd0002e753fd6e8922e3c062fbf1d68df4a1d7ac061f69f40e"
+    },
+    {
+      "file": "buttons.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "633fe95b9c4890f024fe8b46e198711a2edcb787450ceb1b8ddb55070e1c807c"
+    },
+    {
+      "file": "buttons@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "97493a36eb4330a06e7cecf94b0c4b09edcd5a3e3317066f43c30df48f0e81e5"
+    },
+    {
+      "file": "carousel-rtl.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "002df7b68832217baa5c7b6aa18ff03734037bf5ddf5bf8b13c6d0a9a798f772"
+    },
+    {
+      "file": "carousel-rtl@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "cf65e75fe24d91ac635d3d336605f6ed14db4818789ef1c8136bd9dd0a020965"
+    },
+    {
+      "file": "carousel.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "7f794dacdbf9897efb778dafaf0047f363f5680268881cc132145fd3aba7cf3a"
+    },
+    {
+      "file": "carousel@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "2b45fc52a6278b1539aaeb81fa6e136ec998e0c8c8e4e8968b57848e0f58b293"
+    },
+    {
+      "file": "cheatsheet-rtl.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "b7b0919a05484e09d460868cf7480c08a78ebb4eb98002d5656f708a34d6c714"
+    },
+    {
+      "file": "cheatsheet-rtl@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "746b21231db2897f3f5f2b48f8821e24a389e28b86afd7d93a229b64387a064d"
+    },
+    {
+      "file": "cheatsheet.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "67af84bfd2f99631dce9e8194b6a82d117f977e1eed17cd5049280e9dd2389e2"
+    },
+    {
+      "file": "cheatsheet@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "1d9e28fea36001635c719942d5608eb63c0a6de3419a0a09313f44d789e60187"
+    },
+    {
+      "file": "checkout-rtl.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "16b7c70529ded4df7dcaa7ea1258e188adfc4ae9a37d68b9e442619eaf457d45"
+    },
+    {
+      "file": "checkout-rtl@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "96cbc35d4e846ced26e82607e47464d835f5a120ed347e7aa1c8c046403d75d1"
+    },
+    {
+      "file": "checkout.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "77abded75f5528c09b678a860def1ebbb4d67f120b06810d212586d5bfb2af27"
+    },
+    {
+      "file": "checkout@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "abfc125923fa41f6aed3b3764293da8b52b4b0bc81718df1e222da4425aca16f"
+    },
+    {
+      "file": "cover.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "9891f319c73276b6e846123a4d1b119888158beb47ea2e8c088533a9c91b25fb"
+    },
+    {
+      "file": "cover@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "14f891ef9a2d1ca4f39e39b2cfe7bc0293c154c0d1e12ac120f0cc6611abb367"
+    },
+    {
+      "file": "dashboard-rtl.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "6fd5819f71355adf392b58af0e7d04ecd32598d4d561ec4b521589bf9b8d001e"
+    },
+    {
+      "file": "dashboard-rtl@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "fdd547161cc3ed5609d4f8b4a1312e18f935db63b45402be089ec1cdd5e331d5"
+    },
+    {
+      "file": "dashboard.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "0d7fe47973e4c923bfd7e0ddb87f3523b8c18ed2ca05b2a37824c4bc53ccfc94"
+    },
+    {
+      "file": "dashboard@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "48f8c97c6e2096463743ee6ee61416d04642bd2b1058d9e48d0e76b51e127ce6"
+    },
+    {
+      "file": "dropdowns.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "1a3bb9272e5ae78d775bd0443c4cdf2435b8e703643c9721ca04dc4b729953e6"
+    },
+    {
+      "file": "dropdowns@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "c5fd0d44b534acc94e682431f695029deab485af69da98a6d1638019a5ad5e0f"
+    },
+    {
+      "file": "features.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "4eb3c981fa11dd3503d22100452fbccabe7bb51da1284c7c00936e820a226788"
+    },
+    {
+      "file": "features@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "2f99c37ec16b046623f26ce9e33c9afaf3fe5eca90e2c05767d404ce4578e3a4"
+    },
+    {
+      "file": "footers.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "619e587dd844cd4d389d327c01033cb0fcfffce9616c1b32a2a835f7452284b2"
+    },
+    {
+      "file": "footers@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "fafd5389867c81d9cd13b2edd8a73eb6d824a204f50e1e3be41e949e82dd80cb"
+    },
+    {
+      "file": "grid.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "9a89e89d3b989292c8684ee5655895084115218f0bb0aaa3b9f117904d883daf"
+    },
+    {
+      "file": "grid@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "48338b7223c1d1efc1196ed0f6f3cd6ad76f1a44b6fd08a08ebb5748e82514fb"
+    },
+    {
+      "file": "headers.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "8acda48eb241f035a0d72dc11a6d35abf1d71fd7210eebc708c39bb7e331f61a"
+    },
+    {
+      "file": "headers@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "f178dab9b5c51cbaf010904516fa6d3f99dc8384b9861742a6562b245fe5c38c"
+    },
+    {
+      "file": "heroes.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "c0045214f70587c9720a9e89dde0764693a2b6568f9d37769e72d148b791ae50"
+    },
+    {
+      "file": "heroes@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "7723898f5837a14d2a462538b4f2511fd80f7be9c7cc96eeead8dea2b281bb78"
+    },
+    {
+      "file": "jumbotron.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "edc0e8c01ecc15c82e31061c625ab8e82d049299939bf860dfc177ee64406cc1"
+    },
+    {
+      "file": "jumbotron@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "94738e9e137b3d20c786e05805fc18ae243e6fdc58f6b368f5d54509bf0c0928"
+    },
+    {
+      "file": "jumbotrons.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "6033ab8e4f33fd7cd7a9ca200279d930a95ae66d99d63e6f86c161e514fe3148"
+    },
+    {
+      "file": "jumbotrons@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "7b6126e5100eb3d1a006ea1e46ebb07e2ce52c1bb38815210d238023de1ef198"
+    },
+    {
+      "file": "list-groups.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "97a65787def8aa5158b0b48223ad4a8c8b7ccf014334391883b92db6ccbc739e"
+    },
+    {
+      "file": "list-groups@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "6ae5ee8440e67c542d65ab79ce1fbe0310c37e2b16a39075963d8983b4449a88"
+    },
+    {
+      "file": "masonry.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "4cba004ba639465a5d2ea13366940359351eade6c160bc14dd7532ee1e62ab22"
+    },
+    {
+      "file": "masonry@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "bdfeb5af8ad257f729c0bd7a53be1e25e3f2ee849e05859e81cf3e46e7e1c461"
+    },
+    {
+      "file": "modals.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "e5c974a55a892b309b16c93248051e80c3032b396ef873534135e81c0184a962"
+    },
+    {
+      "file": "modals@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "3bf3d880fb19c4a564fac283024eb368ed27b9c0d6e3058544375862f490100c"
+    },
+    {
+      "file": "navbar-bottom.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "2097d655b7c8f6436658100cdbd47e48a5f888b443e6877247f21b31a21d6eb3"
+    },
+    {
+      "file": "navbar-bottom@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "f5cb6f7b065efcb672137e4dae44822b6d75f0a4d8ba05bddfe7b90922117a34"
+    },
+    {
+      "file": "navbar-fixed.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "5ca86dbe9c81aa95fc7988bdb04585556376fdccf058c15fadf65e631aaf1352"
+    },
+    {
+      "file": "navbar-fixed@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "1e1bd9d8fae7e59f245e6e99c2f415a1a85a48911020550fa75169d2836467cf"
+    },
+    {
+      "file": "navbar-static.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "380fddd0768e0adbf66a987642e9db1fafb84b11193cc6c13c4dbc84f06c1c97"
+    },
+    {
+      "file": "navbar-static@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "bc6dc2b207264acd05a694b4b496e0705f90fc5dc3056c8424957cfd2176a2f2"
+    },
+    {
+      "file": "navbars-offcanvas.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "ef3776c926f562b2e9c570fcb4950a47ac1cb3e96ce64b712d7a6fd68fae5539"
+    },
+    {
+      "file": "navbars-offcanvas@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "5d3df8f010a53ed99b8cd6d4b9cd61d4d746310bf4f16a477f4eefe4a9dd55cf"
+    },
+    {
+      "file": "navbars.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "a4c23135a093d9f4e37e473664d2bc190dc57f66068a59d5cbbeb59a07055471"
+    },
+    {
+      "file": "navbars@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "19085c5a5d620878d86ba6fb4070c01ceb043fbdd4c3c75e09584b0a6b4ce70b"
+    },
+    {
+      "file": "offcanvas-navbar.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "1b09d0753a760f459b6d7a1acafc8f499cffa297abee86a44b4ef13a2f5ac39e"
+    },
+    {
+      "file": "offcanvas-navbar@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "8c9b3d878cea371ce099cb11c002fcc55643d9c75992b220042263640991e980"
+    },
+    {
+      "file": "pricing.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "28a0d2e12b77ebe71c46aa4185ae4e4d775b4f507e1f3527536c351bba528e53"
+    },
+    {
+      "file": "pricing@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "21cbd3ac2b6ffc7b10b29f2fbda215ee407d5b93637a7b303ddd06d0e4148994"
+    },
+    {
+      "file": "product.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "c4e5a643274d742d0fdf248c8d2a5b34c489e1313973fbec2d83e99acc0b3ef1"
+    },
+    {
+      "file": "product@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "9935dfc4b18a1e533e930ab0bb8fe7a8ad4ba47a745cb726b82a51f402622080"
+    },
+    {
+      "file": "sidebars.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "9cc65f2bbc72839e44f85da4a41c8189f84dfae949945f2db22fd1fd0d11f582"
+    },
+    {
+      "file": "sidebars@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "7d39b9be168fce111ed1a51d18be3f0dd8f3b1d4fbd34abe50d8ed7c63ecde74"
+    },
+    {
+      "file": "sign-in.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "96c56abb9b1c66421eecc9bf9c51fb09f557d53fc78ed72e1d7da597ab94ce00"
+    },
+    {
+      "file": "sign-in@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "c261ab7771a943943c472e4b3910baa13e897c9852a61ebdc9e78e93412c577f"
+    },
+    {
+      "file": "starter-template.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "45d4b4d05f7f8bc3a8a222f40fdd63a01494b98c7021748a43c52ace06c34023"
+    },
+    {
+      "file": "starter-template@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "f41c6cc013b69c29742eece0ddbfb9667a3f20c1085f38207bb86e189e12d15c"
+    },
+    {
+      "file": "sticky-footer-navbar.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "a94dabfcfc87721b8967946036ebfcdbfd2b78478801dd5106d6bd193c74b2b3"
+    },
+    {
+      "file": "sticky-footer-navbar@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "649c782d5ecbb6de831900bceba6a1833ac336635be09289c38178bad9d350c6"
+    },
+    {
+      "file": "sticky-footer.png",
+      "width": 480,
+      "height": 300,
+      "sha256": "1915da0646c469e829a2a45f2da5d461958a7c4155998a66efb81db0e5d3f0f7"
+    },
+    {
+      "file": "sticky-footer@2x.png",
+      "width": 960,
+      "height": 600,
+      "sha256": "1a4b608b87f933a67f783380ef932e631c208a8cb5e5950ef0e9aef80335b568"
+    }
+  ],
+  "downloads": [
+    {
+      "kind": "dist",
+      "file": "tq-bootstrap-1.0.0-dist.zip",
+      "bytes": 1847380,
+      "sha256": "c0745b3c1c146af6bcef787b9f5cfe7ae6aa27b2ed45f79a6e68b852b17ba01a"
+    },
+    {
+      "kind": "source",
+      "file": "tq-bootstrap-1.0.0-source.zip",
+      "bytes": 10558869,
+      "sha256": "5274f8b7e97471aabfb531781b7cff3368e7c8344e693ba46af8589542be6a24"
+    },
+    {
+      "kind": "examples",
+      "file": "tq-bootstrap-1.0.0-examples.zip",
+      "bytes": 9717841,
+      "sha256": "a14cb221489d8b0b62ca7b8d4a1f2a85efbc3edb9ac1b0a4a1db03502278b60e"
+    }
+  ],
+  "search": "Original native hosted Bootstrap DocSearch",
+  "omittedServiceLoaders": 223,
+  "javascript": "Unmodified Bootstrap5.3.8 bundle plus separately built TQ accessibility companion for tooltip dismissal/persistence, paused carousels and persistent form feedback; recorded theme-storage and self-contained snippet export repairs",
+  "builtAt": "2026-10-23T01:15:56.295Z"
+}

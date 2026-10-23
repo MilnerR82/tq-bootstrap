@@ -1,0 +1,171 @@
+// Explicit accessibility adaptation for system high-contrast colour modes.
+// Normal-mode Bootstrap geometry, focus paint and native APIs are unchanged.
+@media (forced-colors: active) {
+  .btn:focus-visible,
+  .btn-close:focus-visible,
+  .navbar-toggler:focus-visible,
+  .nav-link:focus-visible,
+  .accordion-button:focus-visible,
+  .page-link:focus-visible,
+  .form-control:focus-visible,
+  .form-control-plaintext:focus-visible,
+  .form-select:focus-visible,
+  .form-check-input[type="checkbox"]:focus-visible,
+  .form-check-input[type="radio"]:focus-visible,
+  .form-range:focus-visible,
+  .focus-ring:focus-visible,
+  .carousel-control-prev:focus-visible,
+  .carousel-control-next:focus-visible,
+  .btn-check:focus-visible + .btn {
+    outline: 2px solid CanvasText;
+    outline-offset: 2px;
+  }
+
+  // System colours suppress the CSS fill but retain white SVG check glyphs.
+  // Native controls restore visible checked state, including checkbox switches.
+  .form-check-input[type="checkbox"],
+  .form-check-input[type="radio"] {
+    appearance: auto;
+    background-image: none;
+  }
+
+  // Native custom range track/thumb fills both become Canvas and disappear.
+  // System paint restores the track and thumb boundary in either colour scheme.
+  .form-range::-webkit-slider-runnable-track { background-color: CanvasText; }
+  .form-range::-moz-range-track { background-color: CanvasText; }
+  .form-range::-webkit-slider-thumb {
+    background-color: Canvas;
+    border: 1px solid CanvasText;
+  }
+  .form-range::-moz-range-thumb {
+    background-color: Canvas;
+    border: 1px solid CanvasText;
+  }
+  // Mask only glyph surfaces: native SVG paths/sizes and outer focus survive.
+  .btn-close {
+    position: relative;
+    background-image: none;
+    filter: none;
+  }
+  .btn-close::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    pointer-events: none;
+    forced-color-adjust: none;
+    background-color: CanvasText;
+    mask-image: var(--#{$prefix}btn-close-bg);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: #{$btn-close-width} auto;
+  }
+  .navbar-toggler-icon {
+    forced-color-adjust: none;
+    background-color: CanvasText;
+    background-image: none;
+    mask-image: var(--#{$prefix}navbar-toggler-icon-bg);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+  }
+  .accordion-button::after {
+    forced-color-adjust: none;
+    background-color: CanvasText;
+    background-image: none;
+    mask-image: var(--#{$prefix}accordion-btn-icon);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: var(--#{$prefix}accordion-btn-icon-width);
+  }
+  .accordion-button:not(.collapsed)::after {
+    background-image: none;
+    mask-image: var(--#{$prefix}accordion-btn-active-icon);
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    filter: none;
+    forced-color-adjust: none;
+    background-color: Canvas;
+  }
+  .carousel-control-prev:focus-visible,
+  .carousel-control-next:focus-visible {
+    outline-offset: -4px;
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    forced-color-adjust: none;
+    background-color: CanvasText;
+    background-image: none;
+    filter: none !important;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+  }
+  .carousel-control-prev-icon {
+    mask-image: escape-svg($carousel-control-prev-icon-bg) #{"/*rtl:" + escape-svg($carousel-control-next-icon-bg) + "*/"};
+  }
+  .carousel-control-next-icon {
+    mask-image: escape-svg($carousel-control-next-icon-bg) #{"/*rtl:" + escape-svg($carousel-control-prev-icon-bg) + "*/"};
+  }
+  .form-select:not([multiple]):not([size]),
+  .form-select:not([multiple])[size="1"] {
+    appearance: auto;
+    background-image: none;
+    min-height: calc(#{$form-select-line-height * 1em} + #{$form-select-padding-y * 2} + #{$form-select-border-width} * 2);
+  }
+  .form-select.form-select-sm:not([multiple]):not([size]),
+  .form-select.form-select-sm:not([multiple])[size="1"] {
+    min-height: calc(#{$form-select-line-height * 1em} + #{$form-select-padding-y-sm * 2} + #{$form-select-border-width} * 2);
+  }
+  .form-select.form-select-lg:not([multiple]):not([size]),
+  .form-select.form-select-lg:not([multiple])[size="1"] {
+    min-height: calc(#{$form-select-line-height * 1em} + #{$form-select-padding-y-lg * 2} + #{$form-select-border-width} * 2);
+  }
+  // Firefox's native Bootstrap workaround hides focused text with a shadow;
+  // forced colours suppress that shadow, so restore real native field ink.
+  .form-select:-moz-focusring {
+    color: FieldText;
+    text-shadow: none;
+  }
+
+  // The user's contrasting system pair keeps values and selected labels readable.
+  // Highlight/HighlightText is below AA text contrast in Firefox's light palette.
+  .progress-bar,
+  .btn-check:checked + .btn,
+  .btn.active,
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link,
+  .nav-tabs .nav-link.active,
+  .nav-tabs .nav-item.show .nav-link,
+  .list-group-item.active,
+  .dropdown-item.active,
+  .page-item.active .page-link,
+  .page-link.active {
+    forced-color-adjust: none;
+    color: Canvas;
+    background-color: CanvasText;
+    border-color: CanvasText;
+  }
+  // Native bg-* and text-bg-* utilities use !important. Keep every documented
+  // progress value and its label on the system pair even in those contexts.
+  .progress-bar {
+    color: Canvas !important;
+    background-color: CanvasText !important;
+  }
+  .spinner-grow {
+    forced-color-adjust: none;
+    background-color: CanvasText;
+  }
+  .carousel-indicators {
+    forced-color-adjust: none;
+    background-color: Canvas;
+  }
+  .carousel-indicators [data-bs-target] {
+    forced-color-adjust: none;
+    background-color: CanvasText !important;
+  }
+  .carousel-indicators [data-bs-target]:focus-visible {
+    outline: 2px solid CanvasText;
+    outline-offset: -2px;
+  }
+}

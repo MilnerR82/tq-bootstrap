@@ -1,0 +1,116 @@
+html { scroll-padding-block: 5rem; }
+body { overflow-wrap: break-word; }
+a { text-underline-offset: .18em; text-decoration-thickness: .075em; }
+::selection { color: var(--tq-selection-color); background: var(--tq-selection-bg); }
+[id] { scroll-margin-block-start: 5rem; }
+
+// Two opaque rings remain visible on light, dark, red and photographic surfaces.
+// Important is intentional: upstream focus rules must not hide keyboard focus.
+:focus-visible,
+.focus-ring:focus {
+  outline: 3px solid #{$tq-white} !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 5px #{$tq-ink} !important;
+}
+
+.btn-check:focus-visible + .btn {
+  outline: 3px solid #{$tq-white} !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 5px #{$tq-ink} !important;
+}
+
+// Visually-hidden focusable content can serve as a skip link without extra CSS.
+a.visually-hidden-focusable:focus {
+  position: fixed !important;
+  inset-block-start: 1rem;
+  inset-inline-start: 1rem;
+  z-index: 1100;
+  inline-size: auto !important;
+  block-size: auto !important;
+  padding: .75rem 1rem;
+  color: #{$tq-white};
+  background: #{$tq-ink};
+  border-radius: .5rem;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition: none !important;
+  }
+  .progress-bar-animated, .placeholder-wave::before { animation: none !important; }
+}
+
+@media (forced-colors: active) {
+  :focus-visible, .focus-ring:focus, .btn-check:focus-visible + .btn {
+    outline: 3px solid Highlight !important;
+    box-shadow: none !important;
+  }
+  .btn, .form-control, .form-select, .form-check-input, .page-link,
+  .accordion-button, .list-group-item-action, .navbar-toggler {
+    border-color: ButtonText !important;
+  }
+  .form-check-input {
+    appearance: auto;
+    background-image: none !important;
+    forced-color-adjust: auto;
+  }
+  .form-switch .form-check-input { inline-size: 1.5em; }
+  .progress { border: 1px solid CanvasText; }
+  .progress-bar { background: Highlight; color: HighlightText; }
+  .accordion-button::after, .btn-close {
+    forced-color-adjust: none;
+    background-color: #fff;
+    border: 1px solid #373234;
+    border-radius: 2px;
+    filter: none !important;
+  }
+  .accordion-button::after {
+    background-image: #{escape-svg($accordion-button-icon)} !important;
+  }
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    forced-color-adjust: none;
+    background-color: #373234;
+    border-color: #fff;
+  }
+}
+
+@media print {
+  :root, [data-bs-theme] {
+    color-scheme: light;
+    --bs-body-color: #{$tq-ink};
+    --bs-body-color-rgb: #{to-rgb($tq-ink)};
+    --bs-body-bg: #{$tq-white};
+    --bs-body-bg-rgb: #{to-rgb($tq-white)};
+    --bs-emphasis-color: #{$tq-ink};
+    --bs-emphasis-color-rgb: #{to-rgb($tq-ink)};
+    --bs-secondary-color: #{$tq-muted};
+    --bs-secondary-bg: #{$tq-white};
+    --bs-tertiary-color: #{$tq-muted};
+    --bs-tertiary-bg: #{$tq-white};
+    --bs-link-color: #{$tq-ink};
+    --bs-link-color-rgb: #{to-rgb($tq-ink)};
+    --tq-control-border: #{$tq-muted};
+    --tq-control-border-rgb: #{to-rgb($tq-muted)};
+  }
+  body { color: #{$tq-ink} !important; background: #{$tq-white} !important; }
+  .card, .accordion-item, .alert, .table, blockquote { break-inside: avoid; }
+  .card, .alert, .accordion-item {
+    color: #{$tq-ink} !important;
+    background: #{$tq-white} !important;
+    box-shadow: none !important;
+    border-color: #{$tq-muted} !important;
+  }
+  a { color: #{$tq-ink} !important; }
+  @each $name in map-keys($theme-colors) {
+    .text-bg-#{$name} {
+      color: #{$tq-ink} !important;
+      background: #{$tq-white} !important;
+      border: 1px solid #{$tq-muted};
+    }
+  }
+  .modal-backdrop, .offcanvas-backdrop, .toast-container { display: none !important; }
+}
