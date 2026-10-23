@@ -7,8 +7,8 @@
       "kind": "dist",
       "url": "/release/tq-bootstrap-1.0.0-dist.zip",
       "file": "tq-bootstrap-1.0.0-dist.zip",
-      "bytes": 1847380,
-      "sha256": "c0745b3c1c146af6bcef787b9f5cfe7ae6aa27b2ed45f79a6e68b852b17ba01a",
+      "bytes": 1849778,
+      "sha256": "985c50492ca21e889cb5a666aa00b78c378e9939bd493b0f338c0f72ed36bba0",
       "entries": [
         {
           "name": "tq-bootstrap-dist/css/bootstrap-grid.css",
@@ -671,9 +671,19 @@
           "sha256": "bf67e2c9b7974543bb18ced3a0b37f53729aaff953b442dd89a3adaf90fd93e8"
         },
         {
+          "name": "tq-bootstrap-dist/LICENSE",
+          "bytes": 1431,
+          "sha256": "a9a2a92429cabdb4097cb678a0eef1fc09ac152179aeb0b40d0013174ab67ef1"
+        },
+        {
+          "name": "tq-bootstrap-dist/THIRD-PARTY-NOTICES.md",
+          "bytes": 2863,
+          "sha256": "1ac298729e275222e4581852305f193e0d614299b88f3b6644239706d928bcd8"
+        },
+        {
           "name": "tq-bootstrap-dist/README.txt",
-          "bytes": 645,
-          "sha256": "1163dc1acfbdc349f0bb7f479f79e013250a5e21482c4c5ead4a704dceaebd0e"
+          "bytes": 670,
+          "sha256": "3418aa5c9a626b6a638dd9f391a6b925b3fb6a8c8c90f9204ecac7867b345645"
         }
       ]
     },
@@ -681,8 +691,8 @@
       "kind": "source",
       "url": "/release/tq-bootstrap-1.0.0-source.zip",
       "file": "tq-bootstrap-1.0.0-source.zip",
-      "bytes": 10558869,
-      "sha256": "5274f8b7e97471aabfb531781b7cff3368e7c8344e693ba46af8589542be6a24",
+      "bytes": 10559079,
+      "sha256": "90cc4333e696461fccf885118ecb12bbf5bae637cb82d62c1a8775aff3be02c3",
       "entries": [
         {
           "name": "tq-bootstrap-source/src/scss/_accessible-colours.scss",
@@ -5731,8 +5741,8 @@
         },
         {
           "name": "tq-bootstrap-source/scripts/build-downloads.mjs",
-          "bytes": 7213,
-          "sha256": "d3e5f5c85cf20990a55867f1f2cb3860dd0a97ca8764512978d3b59325f36a1d"
+          "bytes": 7331,
+          "sha256": "3bf1ddb32f2106c859726a5048ae9013e6bced8b3c8e78a5600fb1192891f889"
         },
         {
           "name": "tq-bootstrap-source/scripts/serve.mjs",
@@ -5751,8 +5761,8 @@
         },
         {
           "name": "tq-bootstrap-source/docs/INTEGRATION.md",
-          "bytes": 8410,
-          "sha256": "192b5cd4d371629d8017bc3b3369b953f3a004efee434cb18e2689363e96276f"
+          "bytes": 8710,
+          "sha256": "166f975bb4e0b47f76f1e98387334468881d72c2486df090739f69aa9459d20e"
         },
         {
           "name": "tq-bootstrap-source/upstream/bootstrap-source/.browserslistrc",
@@ -5766,8 +5776,8 @@
         },
         {
           "name": "tq-bootstrap-source/THIRD-PARTY-NOTICES.md",
-          "bytes": 2794,
-          "sha256": "5c8cf901b0417877b58c53256afd2ff7d94f26309ba6623433333e7dc2aa6ef2"
+          "bytes": 2863,
+          "sha256": "1ac298729e275222e4581852305f193e0d614299b88f3b6644239706d928bcd8"
         },
         {
           "name": "tq-bootstrap-source/docs-source/_tq-tokens.scss",
@@ -5840,8 +5850,8 @@
       "kind": "examples",
       "url": "/release/tq-bootstrap-1.0.0-examples.zip",
       "file": "tq-bootstrap-1.0.0-examples.zip",
-      "bytes": 9717841,
-      "sha256": "a14cb221489d8b0b62ca7b8d4a1f2a85efbc3edb9ac1b0a4a1db03502278b60e",
+      "bytes": 9717896,
+      "sha256": "7cc772a4a78c06844e2a8accc1820fd505fb1396c1752d802792db727951bf54",
       "entries": [
         {
           "name": "tq-bootstrap-examples/docs/5.3/examples/album/index.html",
@@ -7555,8 +7565,8 @@
         },
         {
           "name": "tq-bootstrap-examples/THIRD-PARTY-NOTICES.md",
-          "bytes": 2794,
-          "sha256": "5c8cf901b0417877b58c53256afd2ff7d94f26309ba6623433333e7dc2aa6ef2"
+          "bytes": 2863,
+          "sha256": "1ac298729e275222e4581852305f193e0d614299b88f3b6644239706d928bcd8"
         },
         {
           "name": "tq-bootstrap-examples/README.txt",

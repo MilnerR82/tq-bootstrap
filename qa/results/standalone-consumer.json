@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-23T02:09:13.243Z",
+  "scope": "Extracted standalone ZIP, no installed runtime dependencies; Chromium/Firefox file URLs offline, Windows WebKit local server with external requests blocked.",
+  "results": [
+    {
+      "browser": "chromium",
+      "access": "file URL; offline context",
+      "modal": true,
+      "dropdown": true,
+      "theme": true,
+      "icons": true,
+      "lessonLoads": true,
+      "errors": [],
+      "externalRequests": []
+    },
+    {
+      "browser": "firefox",
+      "access": "file URL; offline context",
+      "modal": true,
+      "dropdown": true,
+      "theme": true,
+      "icons": true,
+      "lessonLoads": true,
+      "errors": [],
+      "externalRequests": []
+    },
+    {
+      "browser": "webkit",
+      "access": "local server; external requests blocked",
+      "modal": true,
+      "dropdown": true,
+      "theme": true,
+      "icons": true,
+      "lessonLoads": true,
+      "errors": [],
+      "externalRequests": []
+    }
+  ]
+}

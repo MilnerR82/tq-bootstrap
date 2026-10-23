@@ -8,7 +8,7 @@ The documentation and official examples are derived from the pinned Bootstrap 5.
 
 The original Sass recalculates diagnostic colour-swatch contrast-ratio labels from the substituted palette. Additional documentation changes distinguish local TQ downloads from stock upstream packages and explain the accessibility companion, supported colour contexts and corrected examples. The exact source changes and verification evidence are recorded under qa/remediation-source and qa/results/remediation; they do not alter the attribution or licences of the original work.
 
-Downloaded official archives are retained under upstream/archives. Their URLs, versions, SHA-256 values and npm integrity values are recorded in upstream/provenance.json.
+Official archive URLs, versions, SHA-256 values and npm integrity values are recorded in upstream/provenance.json in the full repository. Downloaded archive caches are excluded from Git.
 
 ## Bootstrap Icons 1.13.2
 
@@ -20,6 +20,6 @@ Copyright Federico Zivolo and contributors. Popper is MIT licensed and is includ
 
 ## TAFE Queensland colours
 
-The Sass theme substitutes TAFE Queensland colour values. The framework retains original Bootstrap typography, shapes, spacing and JavaScript. TAFE Queensland brand names and marks remain their owner's property. This independently maintained colour theme is not an official Bootstrap or TAFE Queensland release and does not establish Corporate Marketing approval.
+The Sass theme substitutes TAFE Queensland colour values and the brand font family. The framework retains Bootstrap's type scale, shapes, spacing and JavaScript. TAFE Queensland brand names and marks remain their owner's property. This independently maintained theme is not an official Bootstrap or TAFE Queensland release and does not establish Corporate Marketing approval.
 
-The package retains Bootstrap's original system font stack.
+The theme uses installed Helvetica Neue with Arial fallback. No proprietary font files are supplied.

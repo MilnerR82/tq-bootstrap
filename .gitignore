@@ -8,6 +8,8 @@ test-results/
 !/release/tq-bootstrap-1.0.0-source.zip
 !/release/tq-bootstrap-1.0.0-examples.zip
 !/release/downloads.json
+!/release/tq-bootstrap-1.0.0-standalone.zip
+!/release/tq-bootstrap-1.0.0-standalone.zip.sha256
 
 # Rebuildable duplicate output and tool state.
 .astro/

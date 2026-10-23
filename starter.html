@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TQ Bootstrap starter</title>
+  <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+  <main class="container py-5">
+    <h1>TQ Bootstrap starter</h1>
+    <p class="lead">Your local framework is ready. Edit this page to start your project.</p>
+    <p>All styles, scripts and icons on this page load from this folder.</p>
+    <div class="d-flex flex-wrap gap-2 mb-4">
+      <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Open example dialog</button>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Explore</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="lessons/typography/">Typography lesson</a></li>
+          <li><a class="dropdown-item" href="https://github.com/MilnerR82/tq-bootstrap">Source on GitHub (online)</a></li>
+        </ul>
+      </div>
+      <button class="btn btn-outline-secondary" id="themeToggle" type="button" aria-pressed="false">Dark mode</button>
+    </div>
+    <div class="alert alert-success"><i class="bi bi-check-circle me-2" aria-hidden="true"></i><strong>Ready:</strong> no CDN or package installation is needed to use this page.</div>
+    <p>Read <a href="START-HERE.md">START-HERE.md</a> for installation and reuse instructions.</p>
+  </main>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog"><div class="modal-content">
+      <div class="modal-header"><h2 class="modal-title fs-5" id="exampleModalLabel">Bootstrap is working</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+      <div class="modal-body">This dialog uses the local Bootstrap bundle, including its keyboard and focus behaviour.</div>
+      <div class="modal-footer"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close dialog</button></div>
+    </div></div>
+  </div>
+  <script src="dist/js/bootstrap.bundle.min.js"></script>
+  <script src="dist/tq/tq-accessibility.min.js"></script>
+  <script>
+    TQAccessibility.init();
+    document.getElementById('themeToggle').addEventListener('click', function () {
+      const dark = document.documentElement.dataset.bsTheme !== 'dark';
+      document.documentElement.dataset.bsTheme = dark ? 'dark' : 'light';
+      this.setAttribute('aria-pressed', String(dark));
+    });
+  </script>
+</body>
+</html>

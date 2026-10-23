@@ -1,5 +1,9 @@
 # TQ Bootstrap
 
+**[Download the ready-to-use framework](https://github.com/MilnerR82/tq-bootstrap/releases/latest)** · **[Getting started](START-HERE.md)** · **[Report an issue](https://github.com/MilnerR82/tq-bootstrap/issues)**
+
+New users: download `tq-bootstrap-1.0.0-standalone.zip`, extract it and open `starter.html`. The starter, framework, icons and typography lesson need no CDN, npm installation or build step.
+
 Bootstrap 5.3.8 with TAFE Queensland colours and brand font family. The framework, website, documentation and examples come from Bootstrap's pinned official source. The theme uses Helvetica Neue with Arial fallback and preserves Bootstrap's original type sizes, weights, line heights, spacing, corners, shadows, classes, breakpoints, Sass interfaces, APIs and data-bs-* attributes. A separate accessibility companion and small documented example corrections address the issues found in the independent audit. Bootstrap's original JavaScript files are unchanged.
 
 This is an independently maintained theme. Bootstrap and Bootstrap Icons retain their original licences; TAFE Queensland brand names remain their owner's property.

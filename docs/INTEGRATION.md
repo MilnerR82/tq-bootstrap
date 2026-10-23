@@ -1,6 +1,6 @@
 # Bootstrap integration
 
-Use the official Bootstrap documentation included in this package for markup, component options and APIs. Its examples are built from the pinned Bootstrap 5.3.8 source and rendered with TAFE Queensland colour substitutions. Typography, component dimensions, spacing, corners, shadows and public APIs retain Bootstrap’s defaults. The documented accessibility layer and scoped example/documentation corrections address the missed-work audit; their changes are separate from the colour theme and original upstream JavaScript.
+Use the official Bootstrap documentation included in this package for markup, component options and APIs. Its examples are built from the pinned Bootstrap 5.3.8 source and rendered with TAFE Queensland colour substitutions. The font family is Helvetica Neue with Arial fallback. Type sizes, weights, line heights, component dimensions, spacing, corners, shadows and public APIs retain Bootstrap’s defaults. The documented accessibility layer and scoped example/documentation corrections address the missed-work audit; their changes are separate from the colour theme and original upstream JavaScript.
 
 ## Stylesheets
 
@@ -37,7 +37,7 @@ Diagnostic colour-swatch contrast labels are recalculated by Bootstrap's origina
 
 ## TQ downloads and upstream packages
 
-Use the local compiled download for TQ colours. Copy its `dist` directory to your own site and include exactly one TQ Bootstrap CSS file. The source download contains the TQ Sass inputs and reproducible build instructions. Public `npm install bootstrap`, yarn, RubyGems, Composer and CDN packages install stock Bootstrap; they do not contain this independently packaged theme. Keep their original JavaScript imports if needed, and replace their default stylesheet with the local TQ CSS. Do not load both copies of the CSS.
+Use the standalone download for the easiest start: copy its `dist` directory to your own site or edit its `starter.html`. The smaller compiled download instead places `css`, `js` and `tq` directly at its top level; use the corresponding paths from its README. Include exactly one TQ Bootstrap CSS file. The source download contains the TQ Sass inputs and rebuild instructions. Public `npm install bootstrap`, yarn, RubyGems, Composer and CDN packages install stock Bootstrap; they do not contain this independently packaged theme. Keep their original JavaScript imports if needed, and replace their default stylesheet with the local TQ CSS. Do not load both copies of the CSS.
 
 External repositories and hosted starter projects linked by the retained bundler/framework guides use stock colours. They are labelled as upstream references. Individual documentation snippet exports and the 40 local examples are distinct and include the TQ theme. No hosted TQ npm package or externally published TQ starter is implied.
 
